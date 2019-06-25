@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>class</title>
+	<title>animation</title>
 	<style>
 		canvas {
 			position: absolute;
@@ -20,6 +20,8 @@
 	<canvas></canvas>
 </body>
 <script>
+(function () {
+
 	var canvas = document.querySelector('canvas');
 	var c = canvas.getContext('2d');
 
@@ -49,7 +51,7 @@
 		'#F23030',
 	];
 
-	window.addEventListener('mousemove', function (event) {
+	window.addEventListener('mousemove' || 'touchmove', function (event) {
 			mouse.x = event.x;
 			mouse.y = event.y;
 			//console.log(mouse);
@@ -136,6 +138,7 @@
 
 	init();
 	animate();
+})();
 </script>
 
 </html>
