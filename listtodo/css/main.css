@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 920px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #4A8C7A;
+    padding: 30px 40px;
+    color: rgb(253, 253, 253);
+    text-align: center;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.do {
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    border: none;
+}
+
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #49BF94;
+    color: #eee;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.addBtn:hover {
+    background-color: #49A684;
+    color: #eee;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #49A684;
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:nth-child(odd) {
+    background: rgba(73, 166, 132, 0.363);
+}
+
+ul li:hover {
+    background: rgba(252, 255, 254, 0.596);
+}
+
+ul li.checked {
+    background: rgba(151, 149, 149, 0.658);
+    color: rgb(255, 255, 255);
+    text-decoration: line-through;
+    font-weight: bolder;
+}
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: rgb(247, 244, 244);
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+.delete {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    border: none;
+    font-size: 18px;
+    background-color: rgba(243, 243, 243, 0);
+}
+
+.delete:hover {
+    background-color: #A65149;
+    color: white;
+}
+
+.checkBtn {
+    cursor: pointer;
+    position: absolute;
+    right: 47px;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    border: none;
+    font-size: 18px;
+    background-color: rgba(243, 243, 243, 0);
+}
+
+.checkBtn:hover {
+    background-color: #A65149;
+    color: white;
+}
+
+.saveBtn {
+    cursor: pointer;
+    position: absolute;
+    right: 96px;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    border: none;
+    font-size: 18px;
+    background-color: rgba(52, 255, 1, 0);
+}
+
+.saveBtn:hover {
+    background-color: #A65149;
+    color: white;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Список задач</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="header">
+            <img src="img/cat.png" alt="" style="max-width:150px">
+            <h1>Список задач</h1>
+            <form action="javascript:void(0)">
+                <input type="text" placeholder="Введите новую задачу" id="toDo" class="do" value />
+                <button type="submit" id="add-btn" class="addBtn">Добавить</button>
+            </form>
+        </div>
+        <ul id="list">
+
+        </ul>
+    </div>
+</body>
+<script>
+    (function () { //для целостности кода
+
+        class Parent {
+
+            getAdd() {
+                this.mass = document.getElementById('list');
+                this.task = document.getElementById('toDo').value;
+                document.getElementById('toDo').value = '';
+                if (this.task == "") {
+                    alert('Введите задачу!');
+                } else {
+                    this.mass.insertAdjacentHTML('beforeEnd', [
+                        '<li contentEditable="true" >' + this.task +
+                        '<button id="btn" class="delete"><i class="far fa-trash-alt"></i></button>',
+                        '<button id="saveId" class="saveBtn"><i class="far fa-save"></i></button>',
+                        '<button id="check" class="checkBtn"><i class="fas fa-check-double"></i></button>',
+                        '</li>',
+                    ].join(''));
+                    saveFun();
+                }
+            }
+        }
+
+        var add = document.getElementById('add-btn');
+
+        add.addEventListener('click', function (event) {
+            var child = new Parent();
+            child.getAdd();
+        });
+
+        var newlist = document.querySelector('ul');
+
+        newlist.addEventListener('click', function (event) {
+            if (event.target.id === 'check') {
+                var chk = event.target.parentNode;
+                chk.classList.toggle('checked'); //добавляет класс чекбокс со стилями и реализацией повторного нажатия
+                saveFun();
+            } else if (event.target.id === 'saveId') {
+                alert('Изменения сохранены')
+                saveFun();
+            } else if (event.target.id === 'btn') {
+                var del = event.target.parentNode;
+                del.remove(); //обнуляет
+                saveFun();
+            }
+        });
+
+        var save;
+
+        function saveFun() {
+            save = newlist.innerHTML;
+            localStorage.setItem('myKey', JSON.stringify(save));
+        }
+
+        if (localStorage.getItem('myKey')) {
+            newlist.innerHTML = JSON.parse(localStorage.getItem('myKey')); //можно не парсить
+        }
+    })();
+</script>
+
+</html>
