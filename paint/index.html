@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Paint</title>
+    <style>
+        canvas {
+            position: absolute;
+            border: 1.5px solid rgb(8, 8, 8);
+            border-radius: 10px;
+        }
+
+        input.col {
+            position: absolute;
+            top: 10px;
+            left: 750px;
+        }
+
+        .range {
+            position: absolute;
+            top: 100px;
+            left: 750px;
+        }
+
+        button {
+            position: absolute;
+            top: 60px;
+            left: 750px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="700" height="600"></canvas>
+    <input type="color" id='col' class="col">
+    <input id="range" class="range" type="range" min="0" max="100" step="1" value="6">
+    <button id="clear">Очистить</button>
+</body>
+<script>
+    (function () {
+        const canvas = document.querySelector('canvas');
+        const c = canvas.getContext('2d');
+
+        var size = 6;
+
+        document.getElementById('range').oninput = function () {
+            size = this.value;
+            //console.log(size);
+        }
+
+        var color;
+
+        document.getElementById('col').oninput = function () {
+            color = this.value;
+        }
+
+        canvas.onmousedown = function (event) {
+            canvas.onmousemove = function (event) {
+                let x = event.offsetX;
+                let y = event.offsetY;
+                c.beginPath();
+                c.arc(x, y, size, 0, Math.PI * 2, false);
+                c.fillStyle = color;
+                c.fill();
+            }
+
+            canvas.onmouseup = function () {
+                canvas.onmousemove = false;
+            }
+        }
+
+        document.getElementById('clear').onclick = function () {
+            c.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+    })();
+</script>
+
+</html>
