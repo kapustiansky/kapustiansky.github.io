@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Крестики-нолики</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body id="id">
+    <div>
+        <div class="title">
+            <span class="vs">
+                <svg class="x" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+                    width="50px" height="45px" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
+                    <style type="text/css">
+                        .ais {
+                            fill: none;
+                            stroke: #FC6170;
+                            stroke-width: 0.25;
+                            stroke-miterlimit: 10;
+                        }
+
+                        .sml {
+                            fill: #FC6170;
+                        }
+
+                        .fill {
+                            display: none;
+                        }
+                    </style>
+                    <line class="ais" x1="6.9" y1="5.31" x2="8.34" y2="5.32" />
+                    <line class="ais" x1="6.9" y1="3.87" x2="8.34" y2="3.87" />
+                    <line class="ais" x1="1.34" y1="5.44" x2="3.1" y2="5.43" />
+                    <line class="ais" x1="1.34" y1="3.87" x2="3.1" y2="3.87" />
+                    <g>
+                        <g>
+                            <path class="sml" d="M8.67,9.61C7.56,8.48,6.56,7,6.24,5.42C5.91,3.77,6.59,1.14,8.32,0.42C8.78,0.23,8.36-0.04,8.02,0.1
+			                C6.53,0.72,5.58,2.6,5.42,4.15C5.2,6.26,6.59,8.46,8,9.9C8.19,10.09,8.88,9.82,8.67,9.61L8.67,9.61z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path class="sml" d="M1,0.48c1.4,0.7,3.29,2.48,3.48,4.1c0.27,2.36-1.53,3.98-3.23,5.28C0.94,10.08,1.66,10,1.8,9.9
+			                c1.51-1.15,3.09-2.42,3.36-4.42c0.3-2.22-1.59-4.31-3.49-5.25C1.48,0.12,0.88,0.42,1,0.48L1,0.48z" />
+                        </g>
+                    </g>
+                    <g id="Слой_2" class="fill">
+                    </g>
+                </svg>&nbsp&nbsp&nbspVS.&nbsp&nbsp&nbsp<svg class="o" version="1.1" id="Слой_1"
+                    xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="50px" height="50px"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                    style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                    <style type="text/css">
+                        .bg {
+                            fill: none;
+                            stroke: #FFD747;
+                            stroke-width: 4;
+                            stroke-miterlimit: 10;
+                        }
+
+                        .ai {
+                            fill: none;
+                            stroke: #FFD747;
+                            stroke-width: 5;
+                            stroke-miterlimit: 10;
+                        }
+
+                        .smile {
+                            fill: #FFD747;
+                        }
+                    </style>
+                    <circle class="bg" cx="50" cy="50" r="47.5" />
+                    <line class="ai" x1="34.36" y1="17.8" x2="35" y2="52.2" />
+                    <line class="ai" x1="67.47" y1="17.17" x2="67.97" y2="52.04" />
+                    <g>
+                        <g>
+                            <path class="smile"
+                                d="M21.55,62.63c7.35,10.22,18.76,17.5,31.74,16c12.5-1.44,22.53-10.12,28.8-20.59c1.4-2.34-4.41-1.82-5.4-0.15
+                            c-5.21,8.72-13.66,17.43-24.54,17.61c-10.55,0.17-19.36-7.01-25.22-15.15C25.77,58.73,20.16,60.69,21.55,62.63L21.55,62.63z" />
+                        </g>
+                    </g>
+                    <g id="Слой_2">
+                    </g>
+                </svg>
+            </span>
+
+        </div>
+
+        <table id="board" class="table">
+            <tr id="row1">
+                <td id="squere" class="square"></td>
+                <td id="squere" class="square v"></td>
+                <td id="squere" class="square"></td>
+            </tr>
+            <tr id="row2">
+                <td id="squere" class="square h"></td>
+                <td id="squere" class="square v h"></td>
+                <td id="squere" class="square h"></td>
+            </tr>
+            <tr id="row3">
+                <td id="squere" class="square"></td>
+                <td id="squere" class="square v"></td>
+                <td id="squere" class="square"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="button">
+        <button id="refresh" class="refresh">Сброс</button>
+    </div>
+
+</body>
+<script>
+    (function () {
+        let stepCount = 0;
+
+        let clik = document.getElementById('board');
+        clik.addEventListener('click', event => {
+            let target = event.target;
+
+            if (target.tagName != 'TD') return;
+
+            if (stepCount % 2 == 0) {
+                target.innerHTML = 'x';
+                target.style.color = '#FC6170';
+                target.style.fontSize = '65px';
+                //или так:
+                target.className += ' movi';
+                win();
+            } else {
+                target.innerHTML = 'o';
+                target.style.color = '#FFD747';
+                target.style.fontSize = '65px';
+                //или так:
+                target.classList.add('movi');
+                win();
+            }
+            stepCount++;
+        });
+
+        function win() {
+            let cell = document.querySelectorAll('td');
+            if (cell[0].innerHTML == "x" && cell[1].innerHTML == "x" && cell[2].innerHTML == "x" ||
+                cell[3].innerHTML == "x" && cell[4].innerHTML == "x" && cell[5].innerHTML == "x" ||
+                cell[6].innerHTML == "x" && cell[7].innerHTML == "x" && cell[8].innerHTML == "x" ||
+                cell[0].innerHTML == "x" && cell[3].innerHTML == "x" && cell[6].innerHTML == "x" ||
+                cell[1].innerHTML == "x" && cell[4].innerHTML == "x" && cell[7].innerHTML == "x" ||
+                cell[2].innerHTML == "x" && cell[5].innerHTML == "x" && cell[8].innerHTML == "x" ||
+                cell[0].innerHTML == "x" && cell[4].innerHTML == "x" && cell[8].innerHTML == "x" ||
+                cell[2].innerHTML == "x" && cell[4].innerHTML == "x" && cell[6].innerHTML == "x") {
+
+                let add = document.getElementById('id');
+                add.insertAdjacentHTML('beforeEnd',
+                    '<div class="win"><span class="text">Победили крестики!</span></div>');
+
+            } else if (cell[0].innerHTML == "o" && cell[1].innerHTML == "o" && cell[2].innerHTML == "o" ||
+                cell[3].innerHTML == "o" && cell[4].innerHTML == "o" && cell[5].innerHTML == "o" ||
+                cell[6].innerHTML == "o" && cell[7].innerHTML == "o" && cell[8].innerHTML == "o" ||
+                cell[0].innerHTML == "o" && cell[3].innerHTML == "o" && cell[6].innerHTML == "o" ||
+                cell[1].innerHTML == "o" && cell[4].innerHTML == "o" && cell[7].innerHTML == "o" ||
+                cell[2].innerHTML == "o" && cell[5].innerHTML == "o" && cell[8].innerHTML == "o" ||
+                cell[0].innerHTML == "o" && cell[4].innerHTML == "o" && cell[8].innerHTML == "o" ||
+                cell[2].innerHTML == "o" && cell[4].innerHTML == "o" && cell[6].innerHTML == "o") {
+
+                let add = document.getElementById('id');
+                add.insertAdjacentHTML('beforeEnd',
+                    '<div class="win"><span class="text">Победили нолики!</span></div>');
+
+            } else if (stepCount == 8) {
+                let add = document.getElementById('id');
+                add.insertAdjacentHTML('beforeEnd',
+                    '<div class="win"><span class="text">Ничья!</span></div>');
+            }
+        }
+
+        let refresh = document.getElementById('refresh');
+        refresh.addEventListener('click', event => {
+            stepCount = 0;
+
+            let td = document.querySelectorAll('td');
+            td.forEach(element => {
+                element.innerHTML = '';
+                element.classList.remove('movi');
+            });
+
+            let del = document.querySelector('.win');
+            del.remove();
+        });
+
+    })();
+</script>
+
+</html>

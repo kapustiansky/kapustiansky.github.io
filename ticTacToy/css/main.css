@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.title {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.vs {
+    color: #26BFBF;
+    font-size: 35px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.76);
+}
+
+        /*****SVG.X*****/
+.x {
+    -webkit-transition: .6s ease-in-out;
+
+}
+
+.x:hover {
+    -webkit-transform: rotate(-360deg);
+}
+
+        /*****SVG.O*****/
+.o {
+    -webkit-transition: .6s ease-in-out;
+
+}
+
+.o:hover {
+    -webkit-transform: rotate(-360deg);
+}
+
+        /*****TABLE*****/
+.table {
+    background-color: #8CEEEE;
+    box-shadow: 5px 5px 16px -6px rgba(0, 0, 0, 0.36);
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 2%;          
+}
+
+.square {           
+    height: 100px;
+    text-align: center;
+    width: 100px;
+}
+
+#squere:hover {
+    background-color: rgba(255, 255, 255, 0.479);
+}
+
+.v {
+    border-left: 2px solid #26BFBF;
+    border-right: 2px solid #26BFBF;
+}
+
+.h {
+    border-bottom: 2px solid #26BFBF;
+    border-top: 2px solid #26BFBF;         
+}
+
+        /*****Footer*****/
+.button {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.refresh {
+    background-color: #FF8A47;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px 16px -6px rgba(0, 0, 0, 0.36);
+    cursor: pointer;
+    color: rgb(35, 168, 168);
+    font-size: 20px;
+    height: 35px;
+    margin-top: 2%;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
+    width: 300px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+.refresh:hover {
+    background-color: rgba(255, 138, 71, 0.596);
+}
+
+        /*****JS.Class*****/
+.movi {
+    pointer-events: none;
+}
+
+.win {
+    background-color: #ff8a47ec;
+    box-shadow: 5px 5px 16px -4px rgba(0, 0, 0, 0.36);
+    position: absolute;
+    color: #22a9a9;
+    height: 125px;
+    width: 100%;
+    text-align: center;
+    top: 39%;
+}
+
+.text {
+    text-shadow: 1px 1px 1px rgba(2, 2, 2, 0.404);
+    top: 35%;
+    font-size: 35px;
+    position: relative;
+}
