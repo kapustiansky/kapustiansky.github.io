@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+</head>
+
+<body>
+    <div>
+        <ul id="title">
+        </ul>
+    </div>
+</body>
+<script>
+    (function () {
+        'use strict'
+
+        const status = response => {
+            if (response.status !== 200) {
+                return Promise.reject(new Error(response.statusText))
+            }
+            return Promise.resolve(response);
+        }
+
+        //console.log(status);
+
+        const json = response => {
+            return response.json();
+        }
+
+        fetch('http://jsonplaceholder.typicode.com/photos')
+            .then(status)
+            .then(json)
+            .then(data => {
+                const count = data.length;
+
+                for (let i = 0; i < count; i++) {
+                    //var id = data[i].id;
+                    let url = data[i].url;
+                    let title = data[i].title;
+
+                    let ul = document.getElementById('title');
+                    ul.insertAdjacentHTML('beforeEnd',
+                        '<li><a href="' + url + '">' + title + '</a></li>');
+                }
+
+                let link = document.getElementById('title');
+                link.onclick = event => {
+                    if (event.target.nodeName != 'A') return;
+
+                    let href = event.target.getAttribute('href');
+                    //console.log(href); может быть подгрузка с сервера, генерация интерфейса и т.п.
+                    let li = event.target;
+                    li.insertAdjacentHTML('beforeEnd',
+                        '<div><img src="' + href + '" width="50" height="50"></div>');
+
+                    return false; // отменить переход по url
+                }
+            })
+
+            .catch(error => {
+                console.log(error);
+            })
+    })();
+</script>
+
+</html>
