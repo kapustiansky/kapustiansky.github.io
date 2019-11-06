@@ -38,8 +38,8 @@
 		/* SECTIONS*/
 		.sections-wrapper {
 			width: 100%;
-			/* height: 100vh; */
-			height: 100%;
+  			height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+  			height: calc(var(--vh, 1vh) * 100);
 			display: flex;
 			justify-content: center;
 		}
@@ -448,6 +448,11 @@
 			only screen and (                min-resolution: 192dpi) and (max-width: 375px),
 			only screen and (                min-resolution: 2dppx)  and (max-width: 375px) { 
 
+		.sections-wrapper {
+			height: 100%;
+			/* height: 100vh; */
+		}
+				
 			#logo {
 				animation: logo-retina 2s ease forwards 2.5s;
 			}
@@ -568,7 +573,7 @@ n
 g</a></li>
 		</ul>
 	</nav>
-	<!--<footer class="connect">
+	<footer class="connect">
 		<div class="lin-cont">
 			<link itemprop="sameAs" href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/">
 			<a href="https://www.linkedin.com/in/oleg-kapustiansky-b73303183/" target="_blank" rel="noopener">
@@ -621,7 +626,7 @@ g</a></li>
 				telegram<br>contact
 			</a>
 		</div>
-	</footer>-->
+	</footer>
 	<script>
 		(function () {
 
