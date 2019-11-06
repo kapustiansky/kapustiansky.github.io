@@ -22,7 +22,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	<style>
-		* {
+				* {
 			padding: 0;
 			margin: 0;
 			box-sizing: border-box;
@@ -290,7 +290,7 @@
 		/* MEDIA-ANIMATION*/
 		@keyframes logo-min {
 				to {
-					top: 240px;
+					top: 15rem;
 					width: 240px;
 					height: 160px;
 				}
@@ -298,7 +298,15 @@
 
 		@keyframes logo-tablet {
 				to {
-					top: 13rem;
+					top: 15rem;
+					width: 260px;
+					height: 180px;
+				}
+		}
+
+		@keyframes logo-retina {
+				to {
+					top: 180px;
 					width: 260px;
 					height: 180px;
 				}
@@ -429,7 +437,8 @@
 				margin-top: 4rem;
 			}
 		}
-				@media
+
+		@media
 			only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
 			only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
 			only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
@@ -437,7 +446,11 @@
 			only screen and (                min-resolution: 192dpi) and (min-width: 320px),
 			only screen and (                min-resolution: 2dppx)  and (min-width: 320px) { 
 
-				li {
+			#logo {
+				animation: logo-retina 2s ease forwards 2.5s;
+			}
+
+			li {
                 font-size: 0.7em;
 			}
 
@@ -447,7 +460,7 @@
 			.tg {
 				width: 25px;
 				height: 25px;
-				filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .8));
+				filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, .8));
 			}
 
 			.connect {
