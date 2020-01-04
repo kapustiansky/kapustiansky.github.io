@@ -3,9 +3,59 @@
 
 <head>
 	<title>logo</title>
-
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <style>
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -13,18 +63,20 @@
     font-size: 16px;
 }
 
+body {
+	background: url(board80.jpg) 100% 100% no-repeat; /* Добавляем фон */
+    background-size: cover;
+}
+
 @font-face {
     font-family: Appetite;
     src: url(Appetite.ttf);
    }
 
-section {
-	/* background-image: url(board30.jpg);
-	background-repeat: no-repeat; */
+/* section {
 	height: 100vh;
 	width: 100%;
-	/* background-size: contain; */
-}
+} */
 
 .board {
 	position: fixed;
@@ -34,13 +86,13 @@ section {
 
 .logo {
 	filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
-	width: 140px;
+	width: 125px;
 }
 
 .logo-cont {
 	position: fixed;
 	top: 10px;
-	left: 46%;
+	left: 45%;
 }
 
 /* header {
@@ -50,7 +102,8 @@ section {
 } */
 
 header {
-	position: sticky;
+	position: fixed;
+	top: 0;
 	display: flex;
 	box-shadow: 0px 3px 10px 6px rgba(0,0,0,0.74);
 	width: 100%;
@@ -132,10 +185,46 @@ header {
 	padding-right: 15%;
 }
 
+.first-block {
+	text-align: center;
+	width: 100%;
+	padding-top: 13rem;
+	color: #f37b03;
+	font-family: Appetite;
+	font-size: 36px;
+	letter-spacing: 0.2em;
+	font-weight: bold;
+}
+
+.bread-line {
+	width: 350px;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.bread {
+	width: 100%;
+	position: sticky;
+	bottom: 0;
+}
+
+.botton-about {
+	margin-top: 4rem;
+	text-decoration:none; 
+	text-align:center; 
+	padding:11px 32px; 
+	border:solid 2px #cc6600;
+	border-radius: 30px;
+	background: #ffffff73;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	/* box-shadow: 0 0 7px 0px rgba(0,0,0,0.75); */
+}
+
 </style>
 
 <body>
-	<img class="board" src="board30.jpg" alt="board">
+	<!-- <img class="board" src="board30.jpg" alt="board"> -->
 	<section>
 		<header>
 			<div class="nav">
@@ -157,14 +246,19 @@ header {
 			</div>
 			</div>
 		</header>
-		<h1 class="logo-cont">
+		<div class="logo-cont">
 			<!-- удалить класс лого -->
 			<img class="logo" src="22211.svg" alt="logo">
-		</h1>
+		</div>
+	</section>
+	<section class="first-block">
+		<h1>СІЛЬ ЗЕМЛІ</h1>
+		<img class="bread-line" src="bread-line.svg" alt="bread-line">
+		<h2>«НАШ ХЛІБ - СМАЧНИЙ»</h2>
+		<button class="botton-about">ДІЗНАТИСЬ БІЛЬШЕ</button>
+		<img class="bread" src="bread2.png" alt="bread">
 	</section>
 	<!-- <section>
-	</section>
-	<section>
 		<footer>
 
 		</footer>
