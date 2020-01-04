@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>logo</title>
+
+</head>
+<style>
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: Appetite;
+    src: url(Appetite.ttf);
+   }
+
+section {
+	/* background-image: url(board30.jpg);
+	background-repeat: no-repeat; */
+	height: 100vh;
+	width: 100%;
+	/* background-size: contain; */
+}
+
+.board {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+}
+
+.logo {
+	filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
+	width: 140px;
+}
+
+.logo-cont {
+	position: fixed;
+	top: 10px;
+	left: 46%;
+}
+
+/* header {
+	position: sticky;
+	display: flex;
+	box-shadow: 0px 3px 10px 6px rgba(0,0,0,0.74);
+} */
+
+header {
+	position: sticky;
+	display: flex;
+	box-shadow: 0px 3px 10px 6px rgba(0,0,0,0.74);
+	width: 100%;
+	height: 100px;
+	background: url(head30.jpg) 100% 100% no-repeat; /* Добавляем фон */
+    background-size: cover;
+	
+}
+
+.nav {
+	display: flex;
+  	justify-content: space-between;
+	width: 40%;
+	padding-top: 1.2rem;
+	padding-left: 5%;
+}
+
+/* .back {
+	position: sticky;
+	width: 100%;
+	height: 100px;
+} */
+
+.push {
+    margin-left: auto;
+	display: flex;
+  	justify-content: space-between;
+	  width: 35%;
+	/* width: 35%; */
+}
+
+.main, .about, .products, .contacts {
+	/* padding: 2rem;
+	padding-right: unset; */
+	/* font-weight: bolder; */
+	/* margin-top: 0.5rem; */
+	color: #cc9933;
+	font-family: Appetite;
+	letter-spacing: 0.1em;
+	/* -webkit-text-stroke: 1px rgb(255, 255, 255); */
+	line-height: 65px;
+	/* text-shadow: 0 1px 0 rgb(7, 7, 7); */
+	font-size: 18px;
+	/* font-size: 20px; медиа */
+}
+
+.phone {
+	width: 25px;
+}
+
+.clock {
+	width: 25px;
+}
+
+.namber {
+	color: #cc9933;
+	font-family: Appetite;
+	letter-spacing: 0.1em;
+	padding-top: 2.3em;
+	padding-left: 2em;
+}
+
+.working-time {
+	color: #cc9933;
+	font-family: Appetite;
+	padding-left: 2em;
+	letter-spacing: 0.1em;
+	text-align: center;
+	font-size: 12px;
+	line-height: 13px;
+	padding-top: 1.5em;
+}
+
+.contackt-namber, .time-to-work {
+	display: inline-flex;
+}
+
+.time-to-work {
+	padding-right: 15%;
+}
+
+</style>
+
+<body>
+	<img class="board" src="board30.jpg" alt="board">
+	<section>
+		<header>
+			<div class="nav">
+			<!-- картинку сделать бэкграундом -->
+			<!-- <img class="back" src="head.jpg" alt="back"> -->
+			<a class="main">ГОЛОВНА</a>
+			<a class="about">ПРО НАС</a>
+			<a class="products">ПРОДУКЦІЯ</a>
+			<a class="contacts">КОНТАКТИ</a>
+			</div>
+			<div class="push">
+				<div class="contackt-namber">
+					<img class="phone" src="phone.svg" alt="phone">
+					<div class="namber">+38 (099) 214-14-68</div>
+				</div>
+			<div class="time-to-work">
+					<img class="clock" src="clock.svg" alt="clock">
+					<div class="working-time">пн-пт<br/>з 9-00 до 20-00<br/>сб<br/>з 9-00 до 17-00</div>
+			</div>
+			</div>
+		</header>
+		<h1 class="logo-cont">
+			<!-- удалить класс лого -->
+			<img class="logo" src="22211.svg" alt="logo">
+		</h1>
+	</section>
+	<!-- <section>
+	</section>
+	<section>
+		<footer>
+
+		</footer>
+	</section> -->
+</body>
+
+</html>
