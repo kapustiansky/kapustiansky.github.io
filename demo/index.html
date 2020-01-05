@@ -64,8 +64,9 @@ table {
 }
 
 body {
-	background: url(board80.jpg) 100% 100% no-repeat; /* Добавляем фон */
+	background: url(board752.jpg) 100% 100% no-repeat; /* Добавляем фон */
     background-size: cover;
+	background-attachment: fixed;
 }
 
 @font-face {
@@ -92,7 +93,7 @@ body {
 .logo-cont {
 	position: fixed;
 	top: 10px;
-	left: 45%;
+	left: 46%;
 }
 
 /* header {
@@ -116,9 +117,9 @@ header {
 .nav {
 	display: flex;
   	justify-content: space-between;
-	width: 40%;
+	width: 34em;
 	padding-top: 1.2rem;
-	padding-left: 5%;
+	padding-left: 2em;
 }
 
 /* .back {
@@ -144,10 +145,39 @@ header {
 	font-family: Appetite;
 	letter-spacing: 0.1em;
 	/* -webkit-text-stroke: 1px rgb(255, 255, 255); */
-	line-height: 65px;
+	line-height: 35px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 30px;
+	margin-top: 17px;
 	/* text-shadow: 0 1px 0 rgb(7, 7, 7); */
-	font-size: 18px;
+	font-size: 16px;
 	/* font-size: 20px; медиа */
+	border-radius: 30px;
+}
+
+.main:hover {
+	cursor: pointer;
+	background-color: rgba(252, 252, 252, 0.212);
+	color: #f37b03;
+}
+
+.about:hover {
+	cursor: pointer;
+	background-color: rgba(252, 252, 252, 0.212);
+	color: #f37b03;
+}
+
+.products:hover {
+	cursor: pointer;
+	background-color: rgba(252, 252, 252, 0.212);
+	color: #f37b03;
+}
+
+.contacts:hover {
+	cursor: pointer;
+	background-color: rgba(252, 252, 252, 0.212);
+	color: #f37b03;
 }
 
 .phone {
@@ -162,7 +192,7 @@ header {
 	color: #cc9933;
 	font-family: Appetite;
 	letter-spacing: 0.1em;
-	padding-top: 2.3em;
+	padding-top: 2.4em;
 	padding-left: 2em;
 }
 
@@ -188,10 +218,10 @@ header {
 .first-block {
 	text-align: center;
 	width: 100%;
-	padding-top: 13rem;
+	padding-top: 11rem;
 	color: #f37b03;
 	font-family: Appetite;
-	font-size: 36px;
+	font-size: 30px;
 	letter-spacing: 0.2em;
 	font-weight: bold;
 }
@@ -204,21 +234,33 @@ header {
 
 .bread {
 	width: 100%;
-	position: sticky;
+	/* position: sticky; */
 	bottom: 0;
 }
 
 .botton-about {
-	margin-top: 4rem;
+	margin-top: 3rem;
 	text-decoration:none; 
 	text-align:center; 
-	padding:11px 32px; 
+	padding: 9px 25px; 
 	border:solid 2px #cc6600;
 	border-radius: 30px;
 	background: #ffffff73;
 	font-family: 'Comfortaa', cursive;
 	font-weight: bold;
-	/* box-shadow: 0 0 7px 0px rgba(0,0,0,0.75); */
+	color: #330000;
+}
+
+.botton-about:hover {
+	color: #cc6600;
+	cursor: pointer;
+	background-color: #cc66002d;
+	box-shadow: 0 0 7px 0px rgba(0,0,0,0.75);
+	border:solid 2px #cc66002d;
+}
+
+h1 {
+	font-size: 36px;
 }
 
 </style>
