@@ -91,9 +91,11 @@ body {
 }
 
 .logo-cont {
-	position: fixed;
+	margin-top: 10px;
+	/* position: sticky;
 	top: 10px;
-	left: 46%;
+	display: flex;
+  	justify-content: center; */
 }
 
 /* header {
@@ -106,6 +108,7 @@ header {
 	position: fixed;
 	top: 0;
 	display: flex;
+	justify-content: center;
 	box-shadow: 0px 3px 10px 6px rgba(0,0,0,0.74);
 	width: 100%;
 	height: 100px;
@@ -117,9 +120,9 @@ header {
 .nav {
 	display: flex;
   	justify-content: space-between;
-	width: 34em;
-	padding-top: 1.2rem;
-	padding-left: 2em;
+	width: 40%;
+	padding-top: 1em;
+	margin-right: 3%;
 }
 
 /* .back {
@@ -129,11 +132,10 @@ header {
 } */
 
 .push {
-    margin-left: auto;
 	display: flex;
-  	justify-content: space-between;
-	  width: 35%;
-	/* width: 35%; */
+  	justify-content: space-evenly;
+	width: 40%;
+	margin-left: 3%;
 }
 
 .main, .about, .products, .contacts {
@@ -211,9 +213,9 @@ header {
 	display: inline-flex;
 }
 
-.time-to-work {
+/* .time-to-work {
 	padding-right: 15%;
-}
+} */
 
 .first-block {
 	text-align: center;
@@ -263,6 +265,29 @@ h1 {
 	font-size: 36px;
 }
 
+.second {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+ 	justify-content: center;
+}
+
+.production {
+	margin-top: 5rem;
+	width: 800px;
+	height: 400px;
+	background: url(kisspng2.png) no-repeat;
+	background-size: 800px 400px;
+	/* box-shadow: 0 0 32px 1px rgba(0,0,0,0.75) inset; */
+}
+
+.property {
+	margin-top: 7rem;
+	width: 85%;
+	height: 100px;
+	background-color:black;
+}
+
 </style>
 
 <body>
@@ -273,9 +298,13 @@ h1 {
 			<!-- картинку сделать бэкграундом -->
 			<!-- <img class="back" src="head.jpg" alt="back"> -->
 			<a class="main">ГОЛОВНА</a>
-			<a class="about">ПРО НАС</a>
+			<a class="about">ПРО&nbspНАС</a>
 			<a class="products">ПРОДУКЦІЯ</a>
 			<a class="contacts">КОНТАКТИ</a>
+			</div>
+			<div class="logo-cont">
+				<!-- удалить класс лого -->
+				<img class="logo" src="22211.svg" alt="logo">
 			</div>
 			<div class="push">
 				<div class="contackt-namber">
@@ -288,10 +317,6 @@ h1 {
 			</div>
 			</div>
 		</header>
-		<div class="logo-cont">
-			<!-- удалить класс лого -->
-			<img class="logo" src="22211.svg" alt="logo">
-		</div>
 	</section>
 	<section class="first-block">
 		<h1>СІЛЬ ЗЕМЛІ</h1>
@@ -300,11 +325,10 @@ h1 {
 		<button class="botton-about">ДІЗНАТИСЬ БІЛЬШЕ</button>
 		<img class="bread" src="bread2.png" alt="bread">
 	</section>
-	<!-- <section>
-		<footer>
-
-		</footer>
-	</section> -->
+	<section class="second">
+		<div class="production"></div>
+		<div class="property"></div>
+	</section>
 </body>
 
 </html>
