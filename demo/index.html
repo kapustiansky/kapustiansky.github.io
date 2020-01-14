@@ -240,7 +240,7 @@ header {
 	bottom: 0;
 }
 
-.botton-about {
+.botton {
 	margin-top: 3rem;
 	text-decoration:none; 
 	text-align:center; 
@@ -253,7 +253,7 @@ header {
 	color: #330000;
 }
 
-.botton-about:hover {
+.botton:hover {
 	color: #cc6600;
 	cursor: pointer;
 	background-color: #cc66002d;
@@ -276,9 +276,55 @@ h1 {
 	margin-top: 5rem;
 	width: 800px;
 	height: 400px;
-	background: url(kisspng2.png) no-repeat;
-	background-size: 800px 400px;
+	background: url(kisspng8002.png) no-repeat;
+	background-size: 100% 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+ 	justify-content: center;
 	/* box-shadow: 0 0 32px 1px rgba(0,0,0,0.75) inset; */
+}
+
+.prod-menu {
+	display: flex;
+	/* align-items: center;
+ 	justify-content: center; */
+}
+
+.buns-menu, .bread-menu, .other-menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+ 	justify-content: center;
+	text-align:center;
+	font-family: Appetite;
+	font-size: 26px;
+	color: #330000;
+}
+
+.bread-menu {
+	width: 100%;
+	margin-right: 2rem;
+	margin-left: 2rem;
+}
+
+.buns-link, .bread-link, .other-link {
+	margin-top: 40px;
+}
+
+.buns-link:hover {
+	color: #f37b03;
+	cursor: pointer;
+} 
+
+.bread-link:hover {
+	color: #f37b03;
+	cursor: pointer;
+}
+
+.other-link:hover {
+	color: #f37b03;
+	cursor: pointer;
 }
 
 .property {
@@ -322,11 +368,29 @@ h1 {
 		<h1>СІЛЬ ЗЕМЛІ</h1>
 		<img class="bread-line" src="bread-line.svg" alt="bread-line">
 		<h2>«НАШ ХЛІБ - СМАЧНИЙ»</h2>
-		<button class="botton-about">ДІЗНАТИСЬ БІЛЬШЕ</button>
+		<button class="botton">ДІЗНАТИСЬ БІЛЬШЕ</button>
 		<img class="bread" src="bread2.png" alt="bread">
 	</section>
 	<section class="second">
-		<div class="production"></div>
+		<div class="production">
+			<div class="prod-menu">
+				<div class="buns-menu">
+					<img src="bun1.png" alt="bun">
+					<a class="buns-link">Булочні&nbspвироби</a>
+				</div>
+				<div class="bread-menu">
+					<img src="bread1.png" alt="bun">
+					<a class="bread-link">Хліб</a>
+				</div>
+				<div class="other-menu">
+					<img src="other1.png" alt="bun">
+					<a class="other-link">Хлібо&nbsp-&nbspбулочні вироби</a>
+				</div>
+			</div>
+			<div class="prod-link">
+				<button class="botton">ПРОДУКЦІЯ</button>
+			</div>
+		</div>
 		<div class="property"></div>
 	</section>
 </body>
