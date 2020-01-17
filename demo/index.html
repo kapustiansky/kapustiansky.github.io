@@ -330,14 +330,45 @@ h1 {
 .property {
 	margin-top: 7rem;
 	width: 85%;
-	height: 100px;
-	background-color:black;
+	display: flex;
+	justify-content: space-between;
+}
+
+.quality, .natural, .care, .fresh {
+	border:solid 2px #CC9933;
+	border-radius: 65px;
+	width: 130px;
+	height: 130px;
+	display: flex;
+	align-items: center;
+ 	justify-content: center;
+}
+
+.property-setup {
+	font-family: 'Comfortaa', cursive;
+	color: #330000;
+	font-weight: bold;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+p {
+	margin-top: 1rem;
+	font-size: 18px;
+}
+
+.footer {
+	margin-top: 7rem;
+	width: 100%;
+    height: 100px;
+    background: url(head30.jpg) 100% 100% no-repeat;
+    background-size: cover;
 }
 
 </style>
 
 <body>
-	<!-- <img class="board" src="board30.jpg" alt="board"> -->
 	<section>
 		<header>
 			<div class="nav">
@@ -391,7 +422,35 @@ h1 {
 				<button class="botton">ПРОДУКЦІЯ</button>
 			</div>
 		</div>
-		<div class="property"></div>
+		<div class="property">
+			<div class="property-setup">
+				<div class="quality">
+					<img width="100" height="100" src="okay-chaf.svg" alt="quality">
+				</div>
+				<p>Якість</p>
+			</div>
+			<div class="property-setup">
+				<div class="natural">
+					<img width="100" height="100" src="gmo.svg" alt="natural">
+				</div>
+				<p>Натуральність</p>
+			</div>
+			<div class="property-setup">
+				<div class="care">
+					<img width="80" height="80" src="heart.svg" alt="care">
+				</div>
+				<p>Дбайливе&nbspставлення</p>
+			</div>
+			<div class="property-setup">
+				<div class="fresh">
+					<img width="90" height="90" src="fresh-bread.svg" alt="fresh">
+				</div>
+				<p>Завжди&nbspсвіже</p>
+			</div>
+		</div>
+	</section>
+	<section class="footer">
+		<div></div>
 	</section>
 </body>
 
