@@ -260,7 +260,7 @@ header {
 	font-weight: bold;
 	color: #330000;
 	opacity: 1;
-	transition: 1s;
+	transition: 2s;
 }
 
 .botton:hover {
@@ -273,8 +273,12 @@ header {
 
 .display-none {
 	opacity: 0;
-	transition: 1s;
+	transition: 2s;
 	/* position: sticky; */
+}
+
+.opacity {
+	opacity: 0.5;
 }
 
 h1 {
@@ -608,7 +612,11 @@ footer {
 	window.oldScrollY = window.scrollY;
     document.onscroll = event => {
         let res = window.oldScrollY > window.scrollY ? 1 : 2;
-        window.oldScrollY = window.scrollY;
+		window.oldScrollY = window.scrollY;
+		
+		if (res == 2 && window.scrollY < 100) {
+			opacity();
+		}
 
         if (res == 2 && window.scrollY > 150) {
 			add();
@@ -622,12 +630,17 @@ footer {
 		document.querySelector('.bread').classList.add('display-none');
 		document.querySelector('.botton').classList.add('display-none');
 		// document.querySelector('.first-block').classList.add('display-none');
+		document.querySelector('.bread').classList.remove('opacity');
 	}
 
 	function del() {
 		document.querySelector('.bread').classList.remove('display-none');
 		document.querySelector('.botton').classList.remove('display-none');
 		// document.querySelector('.first-block').classList.remove('display-none');
+	}
+
+	function opacity() {
+		document.querySelector('.bread').classList.add('opacity');
 	}
 })();
 </script>
