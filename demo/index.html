@@ -612,7 +612,10 @@ footer {
 
         if (res == 2 && window.scrollY > 150) {
 			add();
-		} else del();
+		// } else del();
+		} if (res == 1 && window.scrollY < 250) {
+			del();
+		}
 	}
 	
 	function add() {
