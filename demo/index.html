@@ -90,6 +90,11 @@ body {
 	width: 125px;
 }
 
+.little-logo {
+	width: 100px;
+	transition: 1s;
+}
+
 .logo-cont {
 	margin-top: 10px;
 	/* position: sticky;
@@ -104,7 +109,7 @@ body {
 	box-shadow: 0px 3px 10px 6px rgba(0,0,0,0.74);
 } */
 
-header {
+.header {
 	position: fixed;
 	top: 0;
 	display: flex;
@@ -114,12 +119,18 @@ header {
 	height: 100px;
 	background: url(head30.png) 100% 100% no-repeat; /* Добавляем фон */
     background-size: cover;
-	
+	/* transition: 1s;	 */
+}
+
+.little-had {
+	height: 70px;
+	/* transition: 1s; */
 }
 
 .nav {
 	display: flex;
   	justify-content: space-between;
+	align-items: center;
 	width: 40%;
 	padding-top: 1em;
 	margin-right: 3%;
@@ -138,7 +149,19 @@ header {
 	margin-left: 3%;
 }
 
-.main, .about, .products, .contacts {
+.main {
+	color: #f37b03;
+	cursor: pointer;
+	font-family: Appetite;
+	letter-spacing: 0.1em;
+	line-height: 35px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 30px;
+	margin-top: 17px;
+}
+
+.about, .products, .contacts {
 	/* padding: 2rem;
 	padding-right: unset; */
 	/* font-weight: bolder; */
@@ -156,12 +179,6 @@ header {
 	/* font-size: 16px; */
 	/* font-size: 20px; медиа */
 	border-radius: 30px;
-}
-
-.main:hover {
-	cursor: pointer;
-	background-color: rgba(252, 252, 252, 0.212);
-	color: #f37b03;
 }
 
 .about:hover {
@@ -194,7 +211,7 @@ header {
 	color: #cc9933;
 	font-family: Appetite;
 	letter-spacing: 0.1em;
-	padding-top: 2.4em;
+	/* padding-top: 2.4em; */
 	padding-left: 2em;
 }
 
@@ -206,11 +223,12 @@ header {
 	text-align: center;
 	font-size: 0.8em;
 	line-height: 13px;
-	padding-top: 1.5em;
 }
 
 .contackt-namber, .time-to-work {
-	display: inline-flex;
+	display: flex;
+	align-items: center;
+ 	justify-content: center;
 }
 
 /* .time-to-work {
@@ -260,7 +278,6 @@ header {
 	font-weight: bold;
 	color: #330000;
 	opacity: 1;
-	transition: 2s;
 }
 
 .botton:hover {
@@ -274,7 +291,6 @@ header {
 .display-none {
 	opacity: 0;
 	transition: 2s;
-	/* position: sticky; */
 }
 
 .opacity {
@@ -488,8 +504,50 @@ footer {
 </style>
 
 <body>
+
+	<script>
+		(function () {
+			window.oldScrollY = window.scrollY;
+			document.onscroll = event => {
+				let res = window.oldScrollY > window.scrollY ? 1 : 2;
+				window.oldScrollY = window.scrollY;
+				
+				if (res == 2 && window.scrollY < 100) {
+					opacity();
+					document.querySelector('.header').classList.add('little-had');
+					document.querySelector('.logo').classList.add('little-logo');
+				}
+		
+				if (res == 2 && window.scrollY > 150) {
+					add();
+				// } else del();
+				} if (res == 1 && window.scrollY < 250) {
+					del();
+					document.querySelector('.header').classList.remove('little-had');
+					document.querySelector('.logo').classList.remove('little-logo');
+				}
+			}
+			
+			function add() {
+				document.querySelector('.bread').classList.add('display-none');
+				document.querySelector('.botton').classList.add('display-none');
+				// document.querySelector('.first-block').classList.add('display-none');
+				document.querySelector('.bread').classList.remove('opacity');
+			}
+		
+			function del() {
+				document.querySelector('.bread').classList.remove('display-none');
+				document.querySelector('.botton').classList.remove('display-none');
+				// document.querySelector('.first-block').classList.remove('display-none');
+			}
+		
+			function opacity() {
+				document.querySelector('.bread').classList.add('opacity');
+			}
+		})();
+		</script>
 	
-	<header>
+	<header class="header">
 		<div class="nav">
 			<!-- картинку сделать бэкграундом -->
 			<!-- <img class="back" src="head.jpg" alt="back"> -->
@@ -607,42 +665,5 @@ footer {
 		</section>
 	</footer>
 </body>
-<script>
-(function () {
-	window.oldScrollY = window.scrollY;
-    document.onscroll = event => {
-        let res = window.oldScrollY > window.scrollY ? 1 : 2;
-		window.oldScrollY = window.scrollY;
-		
-		if (res == 2 && window.scrollY < 100) {
-			opacity();
-		}
-
-        if (res == 2 && window.scrollY > 150) {
-			add();
-		// } else del();
-		} if (res == 1 && window.scrollY < 250) {
-			del();
-		}
-	}
-	
-	function add() {
-		document.querySelector('.bread').classList.add('display-none');
-		document.querySelector('.botton').classList.add('display-none');
-		// document.querySelector('.first-block').classList.add('display-none');
-		document.querySelector('.bread').classList.remove('opacity');
-	}
-
-	function del() {
-		document.querySelector('.bread').classList.remove('display-none');
-		document.querySelector('.botton').classList.remove('display-none');
-		// document.querySelector('.first-block').classList.remove('display-none');
-	}
-
-	function opacity() {
-		document.querySelector('.bread').classList.add('opacity');
-	}
-})();
-</script>
 
 </html>
