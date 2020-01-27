@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Про нас - Сіль Землі</title>
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<style>
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* HEADER */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+	background: url(images/board-back.jpg) 100% 100% no-repeat;
+    background-size: cover;
+	background-attachment: fixed;
+}
+
+@font-face {
+    font-family: Appetite;
+    src: url(founts/Appetite.ttf);
+   }
+
+.board {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+}
+
+.logo {
+	filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
+	width: 125px;
+	transition: 1s;
+}
+
+.little-logo {
+	width: 100px;
+	transition: 1s;
+}
+
+.logo-cont {
+	margin-top: 10px;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	box-shadow: 0px 3px 10px 6px rgba(0,0,0,0.74);
+	width: 100%;
+	height: 100px;
+	background: url(images/brown-board.png) 100% 100% no-repeat;
+    background-size: cover;
+	/* transition: 1s;	 */
+}
+
+.little-had {
+	height: 70px;
+	/* transition: 1s; */
+}
+
+.nav {
+	display: flex;
+  	justify-content: space-between;
+	align-items: center;
+	width: 40%;
+	padding-top: 1em;
+	margin-right: 3%;
+}
+
+.push {
+	display: flex;
+  	justify-content: space-evenly;
+	width: 40%;
+	margin-left: 3%;
+}
+
+.about {
+	color: #f37b03;
+	cursor: pointer;
+	font-family: Appetite;
+	letter-spacing: 0.1em;
+	line-height: 35px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 30px;
+	margin-top: 17px;
+}
+
+.main, .products, .contacts {
+	color: #cc9933;
+	font-family: Appetite;
+	letter-spacing: 0.1em;
+	line-height: 35px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 30px;
+	margin-top: 17px;
+	/* text-shadow: 0 1px 0 rgb(7, 7, 7); */
+	/* font-size: 16px; */
+	/* font-size: 20px; медиа */
+	border-radius: 30px;
+}
+
+.main:hover {
+	cursor: pointer;
+	background-color: rgba(252, 252, 252, 0.212);
+	color: #f37b03;
+}
+
+.products:hover {
+	cursor: pointer;
+	background-color: rgba(252, 252, 252, 0.212);
+	color: #f37b03;
+}
+
+.contacts:hover {
+	cursor: pointer;
+	background-color: rgba(252, 252, 252, 0.212);
+	color: #f37b03;
+}
+
+.phone {
+	width: 25px;
+}
+
+.clock {
+	width: 25px;
+}
+
+.namber {
+	color: #cc9933;
+	font-family: Appetite;
+	letter-spacing: 0.1em;
+	padding-left: 2em;
+}
+
+.working-time {
+	color: #cc9933;
+	font-family: Appetite;
+	padding-left: 2em;
+	letter-spacing: 0.1em;
+	text-align: center;
+	font-size: 0.8em;
+	line-height: 13px;
+}
+
+.contackt-namber, .time-to-work {
+	display: flex;
+	align-items: center;
+ 	justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* .time-to-work {
+	padding-right: 15%;
+} */
+
+/* MAIN */
+
+.about-bakery {
+    width: 100%;
+    height: 30rem;
+    padding-top: 7rem;
+    display: flex;
+	align-items: center;
+ 	justify-content: space-evenly;
+    /* align-content: space-evenly; */
+}
+
+.logo-about {
+    width: 300px;
+    height: 300px;
+    /* filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.9)); */
+}
+
+.main-task {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+    color: #330000;
+	font-family: 'Comfortaa', cursive;
+	/* font-size: 0.9em; */
+    font-weight: bold;
+    width: 45%;
+    text-align: center;
+}
+
+p {
+    line-height: 1.2em;
+}
+
+.values {
+    width: 100%;
+    height: 400px;
+    background: url(images/about/bread-logo2.png) 100% 100% no-repeat;
+    background-color:rgb(0, 0, 0);
+    box-shadow: 0 0 8px 5px rgba(0,0,0,0.75);
+    margin-top: 3rem;
+    /* background-size: cover;*/
+}
+
+/* FOOTER */
+
+footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 7rem;
+	width: 100%;
+    height: 100px;
+    background: url(images/brown-board.png) 100% 100% no-repeat;
+    background-size: cover;
+}
+
+.footer {
+	width: 95%;
+	display: flex;
+	align-items: center;
+ 	justify-content: space-between;
+}
+
+.footer-logo {
+	width: 95px;
+	height: 95px;
+	filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
+}
+
+.address, .schedule, .contact-footer {
+	margin-top: 0;
+	font-size: 0.8em;
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	color: #cc9933;
+}
+
+.social-link {
+	margin-right: 130px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.email-link {
+	width: 90px;
+	height: 25px;
+	cursor: pointer;
+	text-decoration: none;
+	color: #cc9933;
+	font-family: 'Comfortaa', cursive;
+	font-size: 0.9em;
+	border:solid 2px #cc6600;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+ 	justify-content: center;
+}
+
+.email-link:hover {
+	background-color: #bbbbbb4b;
+}
+
+.social-icons {
+	margin-top: 10px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%; 
+}
+
+.created-link {
+	cursor: pointer;
+	text-decoration: none;
+	color: #cc9933;
+	font-weight: bold;
+	font-size: 14px;
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	margin-top: 6px; 
+}
+
+</style>
+
+<body>
+
+	<script>
+		(function () {
+			window.oldScrollY = window.scrollY;
+			document.onscroll = event => {
+				let res = window.oldScrollY > window.scrollY ? 1 : 2;
+				window.oldScrollY = window.scrollY;
+				
+				if (res == 2 && window.scrollY < 100) {
+					document.querySelector('.header').classList.add('little-had');
+					document.querySelector('.logo').classList.add('little-logo');
+				}
+		
+                 if (res == 1 && window.scrollY < 250) {
+					document.querySelector('.header').classList.remove('little-had');
+					document.querySelector('.logo').classList.remove('little-logo');
+				}
+			}
+		})();
+	</script>
+	
+	<header class="header">
+		<div class="nav">
+		<a href="home.html" class="main">ГОЛОВНА</a>
+		<a class="about">ПРО&nbspНАС</a>
+		<a class="products">ПРОДУКЦІЯ</a>
+		<a class="contacts">КОНТАКТИ</a>
+		</div>
+		<div class="logo-cont">
+			<a href="home.html">
+                <img class="logo" src="images/logo.svg" alt="logo">
+            </a>
+		</div>
+		<div class="push">
+				<div class="contackt-namber">
+					<img class="phone" src="images/phone.svg" alt="phone">
+					<div class="namber">+38 (099) 214-14-68</div>
+				</div>
+			<div class="time-to-work">
+					<img class="clock" src="images/clock.svg" alt="clock">
+					<div class="working-time">пн-пт<br/>з 9-00 до 20-00<br/>сб<br/>з 9-00 до 17-00</div>
+			</div>
+		</div>
+	</header>
+	<main>
+        <section class="about-bakery">
+            <img class="logo-about" src="images/logo.svg" alt="logo">
+            <div class="main-task">
+                <p>Наша міні - пекарня «Сіль Землі» знаходиться в смт. Буштино, Закарпатської області у мальовничій місцині Тячівського району.</p>
+                <img width="250" height="50" src="images/bread-line.svg" alt="logo">
+                <p>Головне завдання підприємства - створити для клієнтів максимально вигідні умови ефективного розвитку всіх каналів збиту, забезпечити високий рівень сервісу, точність і пунктуальність виконання всіх замовлень, свіжість і якість продукції. Саме зараз на підприємстві виробляється асортимент з більш 30 найменувань хлібобулочних виробів, що складається із пшеничних, житньо-пшеничних, булочних і здобних виробів.</p>
+            </div>
+        </section>
+        <section class="values">
+            <!-- <picture>
+                <img src="images/about/bread-logo.png"
+                     alt="Man with a dog"
+                     style="object-fit: cover;"
+                />
+              </picture> -->
+        </section>
+        <section class="about-business"></section>
+        <section class="awards"></section>
+	</main>
+	<footer>
+		<section class="footer">
+			<div>
+				<img class="footer-logo" src="images/logo.svg" alt="logo">
+			</div>
+			<p class="address">
+				Міні-пекарня</br>«Сіль Землі»</br>Україна, Закарпатська область, смт. Буштино,</br>вулиця Заводська, 13</br>© «Сіль Землі» 2019. Всі права захищені
+			</p>
+			<div class="social-link">
+				<a class="email-link" href="" target="_blank">email</a>
+				<div class="social-icons">
+					<a href="" target="_blank" rel="noopener">
+						<img width="20" height="20" src="images/instagram.svg" alt="instagram">
+					</a>
+					<a href="" target="_blank" rel="noopener">
+						<img width="20" height="20" src="images/viber.svg" alt="viber">
+					</a>
+					<a href="" target="_blank" rel="noopener">
+						<img width="20" height="20" src="images/facebook.svg" alt="facebook">
+					</a>
+				</div>
+			</div>
+			<p class="schedule">
+				пн-пт: з 9-00 до 20-00</br>сб: з 9-00 до 17-00</br>неділя: вихідний
+			</p>
+			<div class="cont-tel">
+				<p class="contact-footer">
+					+38 (067) 460 80 15
+				</br>+38 (067) 622 20 52</br></br>Email: info@hleb10.com
+				</p>
+					<a class="created-link" href="" target="_blank">Created by&nbsp&nbsp
+						<img width="20" height="20" src="images/smile.svg" alt="facebook">
+					</a>
+			</div>
+		</section>
+    </footer>
+    
+</body>
+
+</html>
