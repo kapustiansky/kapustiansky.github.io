@@ -234,9 +234,9 @@ a {
 	align-items: center;
     color: #330000;
 	font-family: 'Comfortaa', cursive;
-	/* font-size: 0.9em; */
+	font-size: 1.1em;
     font-weight: bold;
-    width: 45%;
+    width: 50%;
     text-align: center;
 }
 
@@ -244,15 +244,88 @@ p {
     line-height: 1.2em;
 }
 
-.values {
+.values-section {
     width: 100%;
     height: 400px;
     background: url(images/about/bread-logo2.png) 100% 100% no-repeat;
     background-color:rgb(0, 0, 0);
     box-shadow: 0 0 8px 5px rgba(0,0,0,0.75);
     margin-top: 3rem;
-    /* background-size: cover;*/
+	display: flex;
+	align-items: center;
 }
+
+.values-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+ 	justify-content: center;
+	color: #cc9933;
+	width: 50%;
+	text-align: center;
+	margin-left: 1.5rem;
+}
+
+.mission, .values {
+	font-size: 1.6em;
+	font-family: Appetite;
+	letter-spacing: 0.1em;
+}
+
+.mission-text, .values-text {
+	font-family: 'Comfortaa', cursive;
+	padding-top: 1rem;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+
+.bread-line-values {
+	margin: 1.5rem;
+	width: 250px;
+	height: 50;
+}
+
+.about-business {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+ 	justify-content: center;
+	background: url(images/about/mill.png) no-repeat;
+  	background-position: center bottom;
+}
+
+.quality, .care, .natural, .fresh {
+	display: flex;
+	align-items: center;
+	margin-top: 2rem;
+ 	/* justify-content: center;	 */
+	width: 90%;
+}
+
+
+.quality-text, .care-text, .natural-text,.fresh-text {
+	color: #330000;
+	font-family: 'Comfortaa', cursive;
+	/* font-size: 1em; */
+    font-weight: bold;
+	margin-left: 2rem;
+}
+
+.awards {
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.awards-title {
+	font-size: 1.4em;
+	font-family: Appetite;
+	letter-spacing: 0.1em;
+	color: #f37b03;
+}
+
 
 /* FOOTER */
 
@@ -360,13 +433,13 @@ footer {
 	
 	<header class="header">
 		<div class="nav">
-		<a href="home.html" class="main">ГОЛОВНА</a>
+		<a href="index.html" class="main">ГОЛОВНА</a>
 		<a class="about">ПРО&nbspНАС</a>
 		<a class="products">ПРОДУКЦІЯ</a>
 		<a class="contacts">КОНТАКТИ</a>
 		</div>
 		<div class="logo-cont">
-			<a href="home.html">
+			<a href="index.html">
                 <img class="logo" src="images/logo.svg" alt="logo">
             </a>
 		</div>
@@ -390,16 +463,43 @@ footer {
                 <p>Головне завдання підприємства - створити для клієнтів максимально вигідні умови ефективного розвитку всіх каналів збиту, забезпечити високий рівень сервісу, точність і пунктуальність виконання всіх замовлень, свіжість і якість продукції. Саме зараз на підприємстві виробляється асортимент з більш 30 найменувань хлібобулочних виробів, що складається із пшеничних, житньо-пшеничних, булочних і здобних виробів.</p>
             </div>
         </section>
-        <section class="values">
-            <!-- <picture>
-                <img src="images/about/bread-logo.png"
-                     alt="Man with a dog"
-                     style="object-fit: cover;"
-                />
-              </picture> -->
+        <section class="values-section">
+			<div class="values-box">
+				<p class="mission">МІСІЯ :</p>
+				<p class="mission-text">Метою нашого підприємства є забезпечення споживачів найсмачнішою продукцією 24 години 7 днів на тиждень.</p>
+				<img class="bread-line-values" src="images/bread-line.svg" alt="logo">
+				<p class="values">ЦІННОСТІ :</p>
+				<p class="values-text">Ми поєднуємо дбайливу ручну роботу з новітніми технологіями хлібопекарського ремесла.
+				</p>
+			</div>
         </section>
-        <section class="about-business"></section>
-        <section class="awards"></section>
+        <section class="about-business">
+			<div class="quality">
+				<img width="130" height="130" src="images/okay-chaf0.svg" alt="quality">
+				<p class="quality-text">Кожен наш співробітник точно знає, що якість продукції залежить від зусиль усієї команди професіоналів. У хлібному виробництві немає дрібниць, на всіх етапах - від замісу тіста, до упаковки та доставки споживачеві, все повинно бути виконано бездоганно.</p>
+			</div>
+			<div class="care">
+				<img width="130" height="130" src="images/heart0.svg" alt="care">
+				<p class="care-text">Важливою частиною нашої роботи є особлива увага до кожного клієнта і його замовлення, тому компанія готова запропонувати максимальний сервіс на всіх етапах.</p>
+			</div>
+			<div class="natural">
+				<img width="130" height="130" src="images/gmo0.svg" alt="natural">
+				<p class="natural-text">Продукція виготовляється виключно з натуральної сировини без використання консервантів та ГМО. На виробництві проводиться обов'язковий і ретельний контроль на всіх етапах виготовлення - від перевірки сировини до готового продукту.</p>
+			</div>
+			<div class="fresh">
+				<img width="130" height="130" src="images/fresh-bread0.svg" alt="fresh">
+				<p class="fresh-text">На даний момент ми маємо більше ніж 500 точок збуту продукції, які розташовані у чотирьох районах Закарпатської області: Тячівський, Хустський, Виноградівський, Іршавський. Загальна площа цих районів - 4434 км2. Сукупна кількість населення цих районів - близько пів мільйона осіб. Компанія має власний автопарк та широку дистриб’юторську мережу, що дозволяє забезпечити своєчасну доставку свіжого хліба та ароматної випічки на прилавки магазинів.</p>
+			</div>
+		</section>
+        <section class="awards">
+			<p class="awards-title">НАШІ НАГОРОДИ :</p>
+			<div class="awards-box">
+				<div class="awards-img"></div>
+				<div class="awards-img"></div>
+				<div class="awards-img"></div>
+				<div class="awards-img"></div>
+			</div>
+		</section>
 	</main>
 	<footer>
 		<section class="footer">
