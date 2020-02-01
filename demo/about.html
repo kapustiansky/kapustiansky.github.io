@@ -326,6 +326,11 @@ p {
 	color: #f37b03;
 }
 
+.awards-box {
+	display: flex;
+	align-items: center;
+}
+
 
 /* FOOTER */
 
@@ -352,16 +357,21 @@ footer {
 	filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
 }
 
-.address, .schedule, .contact-footer {
+.address, .schedule {
 	margin-top: 0;
 	font-size: 0.8em;
 	text-align: center;
 	font-family: 'Comfortaa', cursive;
 	color: #cc9933;
+	line-height: 1.1em;
+}
+
+.schedule {
+	line-height: 1.5em;
 }
 
 .social-link {
-	margin-right: 130px;
+	margin-right: 100px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -370,8 +380,6 @@ footer {
 .email-link {
 	width: 90px;
 	height: 25px;
-	cursor: pointer;
-	text-decoration: none;
 	color: #cc9933;
 	font-family: 'Comfortaa', cursive;
 	font-size: 0.9em;
@@ -384,6 +392,7 @@ footer {
 
 .email-link:hover {
 	background-color: #bbbbbb4b;
+	cursor: pointer;
 }
 
 .social-icons {
@@ -396,8 +405,6 @@ footer {
 }
 
 .created-link {
-	cursor: pointer;
-	text-decoration: none;
 	color: #cc9933;
 	font-weight: bold;
 	font-size: 14px;
@@ -405,6 +412,19 @@ footer {
 	align-items: baseline;
 	justify-content: center;
 	margin-top: 6px; 
+}
+
+.cont-tel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contackt-link {
+	color: #cc9933;
+	font-family: 'Comfortaa', cursive;
+	font-size: 0.8em;
+	line-height: 1.2em;
 }
 
 </style>
@@ -440,17 +460,17 @@ footer {
 		</div>
 		<div class="logo-cont">
 			<a href="index.html">
-                <img class="logo" src="images/logo.svg" alt="logo">
-            </a>
+			<img class="logo" src="images/logo.svg" alt="Сіль Землі">
+			</a>
 		</div>
 		<div class="push">
 				<div class="contackt-namber">
 					<img class="phone" src="images/phone.svg" alt="phone">
-					<div class="namber">+38 (099) 214-14-68</div>
+					<a class="namber" href="tel:+380673102145">+38 (067) 310 21 45</a>
 				</div>
 			<div class="time-to-work">
 					<img class="clock" src="images/clock.svg" alt="clock">
-					<div class="working-time">пн-пт<br/>з 9-00 до 20-00<br/>сб<br/>з 9-00 до 17-00</div>
+					<div class="working-time">Пн-Сб:<br/>цілодобово<br/>Нд:<br/>вихідний</div>
 			</div>
 		</div>
 	</header>
@@ -475,19 +495,19 @@ footer {
         </section>
         <section class="about-business">
 			<div class="quality">
-				<img width="130" height="130" src="images/okay-chaf0.svg" alt="quality">
+				<img width="130" height="130" src="images/okay-chaf.svg" alt="quality">
 				<p class="quality-text">Кожен наш співробітник точно знає, що якість продукції залежить від зусиль усієї команди професіоналів. У хлібному виробництві немає дрібниць, на всіх етапах - від замісу тіста, до упаковки та доставки споживачеві, все повинно бути виконано бездоганно.</p>
 			</div>
 			<div class="care">
-				<img width="130" height="130" src="images/heart0.svg" alt="care">
+				<img width="130" height="130" src="images/heart.svg" alt="care">
 				<p class="care-text">Важливою частиною нашої роботи є особлива увага до кожного клієнта і його замовлення, тому компанія готова запропонувати максимальний сервіс на всіх етапах.</p>
 			</div>
 			<div class="natural">
-				<img width="130" height="130" src="images/gmo0.svg" alt="natural">
+				<img width="130" height="130" src="images/gmo.svg" alt="natural">
 				<p class="natural-text">Продукція виготовляється виключно з натуральної сировини без використання консервантів та ГМО. На виробництві проводиться обов'язковий і ретельний контроль на всіх етапах виготовлення - від перевірки сировини до готового продукту.</p>
 			</div>
 			<div class="fresh">
-				<img width="130" height="130" src="images/fresh-bread0.svg" alt="fresh">
+				<img width="130" height="130" src="images/fresh-bread.svg" alt="fresh">
 				<p class="fresh-text">На даний момент ми маємо більше ніж 500 точок збуту продукції, які розташовані у чотирьох районах Закарпатської області: Тячівський, Хустський, Виноградівський, Іршавський. Загальна площа цих районів - 4434 км2. Сукупна кількість населення цих районів - близько пів мільйона осіб. Компанія має власний автопарк та широку дистриб’юторську мережу, що дозволяє забезпечити своєчасну доставку свіжого хліба та ароматної випічки на прилавки магазинів.</p>
 			</div>
 		</section>
@@ -498,45 +518,45 @@ footer {
 				<div class="awards-img"></div>
 				<div class="awards-img"></div>
 				<div class="awards-img"></div>
+				<div class="awards-img"></div>
 			</div>
 		</section>
 	</main>
 	<footer>
 		<section class="footer">
 			<div>
-				<img class="footer-logo" src="images/logo.svg" alt="logo">
+				<img class="footer-logo" loading="lazy" src="images/logo.svg" alt="Сіль Землі">
 			</div>
 			<p class="address">
-				Міні-пекарня</br>«Сіль Землі»</br>Україна, Закарпатська область, смт. Буштино,</br>вулиця Заводська, 13</br>© «Сіль Землі» 2019. Всі права захищені
+				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська область, смт. Буштино,</br>вулиця Заводська, 13.</br>© «Сіль Землі» 2019. Всі права захищені.
 			</p>
 			<div class="social-link">
-				<a class="email-link" href="" target="_blank">email</a>
+				<a class="email-link" href="mailto:ivanovichsb@gmail.com" target="_blank">email</a>
 				<div class="social-icons">
 					<a href="" target="_blank" rel="noopener">
-						<img width="20" height="20" src="images/instagram.svg" alt="instagram">
+						<img width="20" height="20" loading="lazy" src="images/instagram.svg" alt="instagram">
 					</a>
 					<a href="" target="_blank" rel="noopener">
-						<img width="20" height="20" src="images/viber.svg" alt="viber">
+						<img width="20" height="20" loading="lazy" src="images/viber.svg" alt="viber">
 					</a>
-					<a href="" target="_blank" rel="noopener">
-						<img width="20" height="20" src="images/facebook.svg" alt="facebook">
+					<a href="https://m.facebook.com/Пекарня-Сіль-Землі-799960886817298/" target="_blank" rel="noopener">
+						<img width="20" height="20" loading="lazy" src="images/facebook.svg" alt="facebook">
 					</a>
 				</div>
 			</div>
 			<p class="schedule">
-				пн-пт: з 9-00 до 20-00</br>сб: з 9-00 до 17-00</br>неділя: вихідний
+				пн-сб: цілодобово;</br>неділя: вихідний;
 			</p>
 			<div class="cont-tel">
-				<p class="contact-footer">
-					+38 (067) 460 80 15
-				</br>+38 (067) 622 20 52</br></br>Email: info@hleb10.com
-				</p>
-					<a class="created-link" href="" target="_blank">Created by&nbsp&nbsp
-						<img width="20" height="20" src="images/smile.svg" alt="facebook">
-					</a>
+				<a class="contackt-link" href="tel:+380673102145">Замовлення: +38 (067) 310 21 45</a>
+				<a class="contackt-link" href="tel:+380673122909">Директор: +38 (067) 312 29 09</a>
+				<a class="contackt-link" href="mailto:ivanovichsb@gmail.com" target="_blank">Email: ivanovichsb@gmail.com</a>
+				<a class="created-link" href="https://kapustiansky.tk/" target="_blank">Created by&nbsp&nbsp
+					<img width="20" height="20" loading="lazy" src="images/smile.svg" alt="facebook">
+				</a>
 			</div>
 		</section>
-    </footer>
+	</footer>
     
 </body>
 
