@@ -2,8 +2,12 @@
 <html lang="en">
 
 <head>
-	<title>Головна - Сіль Землі</title>
+	<title>Про нас - Сіль Землі</title>
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -59,6 +63,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* HEADER */
 
 * {
     padding: 0;
@@ -133,7 +139,7 @@ body {
 	margin-left: 3%;
 }
 
-.main {
+.products {
 	color: #f37b03;
 	cursor: pointer;
 	font-family: Appetite;
@@ -145,7 +151,7 @@ body {
 	margin-top: 17px;
 }
 
-.about, .products, .contacts {
+.main, .about, .contacts {
 	color: #cc9933;
 	font-family: Appetite;
 	letter-spacing: 0.1em;
@@ -154,19 +160,16 @@ body {
 	padding-right: 10px;
 	margin-bottom: 30px;
 	margin-top: 17px;
-	/* text-shadow: 0 1px 0 rgb(7, 7, 7); */
-	/* font-size: 16px; */
-	/* font-size: 20px; медиа */
 	border-radius: 30px;
 }
 
-.about:hover {
+.main:hover {
 	cursor: pointer;
 	background-color: rgba(252, 252, 252, 0.212);
 	color: #f37b03;
 }
 
-.products:hover {
+.about:hover {
 	cursor: pointer;
 	background-color: rgba(252, 252, 252, 0.212);
 	color: #f37b03;
@@ -212,189 +215,18 @@ body {
 a {
     text-decoration: none;
 }
-/* .time-to-work {
-	padding-right: 15%;
-} */
 
-.first-block {
-	width: 100%;
-	height: 100vh;
-	padding-top: 18%;
-	color: #f37b03;
-	font-family: Appetite;
-	font-size: 1.9em;
-	letter-spacing: 0.2em;
-	font-weight: bold;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
+/* MAIN */
 
-.bread-line {
-	width: 350px;
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-}
 
-.bread {
-	width: 100%;
-	display: flex;
-	position: absolute;
-	bottom: 0;
-	opacity: 1;
-	filter: drop-shadow(0 -1px 5px rgba(100,0,0,0.5));
-}
 
-.botton-about {
-	position: sticky;
-	width: 224px;
-	height: 40px;
-	font-size: 0.5em;
-	margin-top: 3rem;
-	border:solid 2px #cc6600;
-	border-radius: 30px;
-	background: #ffffff73;
-	font-family: 'Comfortaa', cursive;
-	font-weight: bold;
-	color: #330000;
-	opacity: 1;
-	letter-spacing: 0;
-	display: flex;
-	align-items: center;
- 	justify-content: center;
-}
 
-.botton-about:hover {
-	color: #cc6600;
-	cursor: pointer;
-	background-color: #cc66002d;
-	box-shadow: 0 0 7px 0px rgba(0,0,0,0.75);
-	border:solid 2px #cc66002d;
-}
-
-.display-none {
-	opacity: 0;
-	/* transition: 2s; */
-}
-
-.opacity {
-	opacity: 0.5;
-}
-
-h1 {
-	font-size: 1.2em;
-}
-
-.second {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
- 	justify-content: center;
-}
-
-.production {
-	margin-top: 5rem;
-	width: 800px;
-	height: 400px;
-	background: url(images/home/catalog-back.png) no-repeat;
-	background-size: 100% 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
- 	justify-content: center;
-	 /* filter: drop-shadow(0 0 3px rgba(100,0,0,0.5)); */
-}
-
-.prod-menu {
-	display: flex;
-}
-
-.buns-menu, .bread-menu, .other-menu {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
- 	justify-content: center;
-	text-align:center;
-	font-family: Appetite;
-	font-size: 1.6em;
-	color: #330000;
-	/* filter: drop-shadow(0 0 3px rgba(100,0,0,0.5)); */
-}
-
-.bread-menu {
-	width: 100%;
-	margin-right: 2rem;
-	margin-left: 2rem;
-}
-
-.buns-link, .bread-link, .other-link {
-	margin-top: 40px;
-	font-size: 1em;
-}
-
-.buns-menu:hover {
-	color: #f37b03;
-	cursor: pointer;
-} 
-
-.bread-menu:hover {
-	color: #f37b03;
-	cursor: pointer;
-}
-
-.other-menu:hover {
-	color: #f37b03;
-	cursor: pointer;
-}
-
-.botton-prod {
-	width: 156px;
-	height: 40px;
-	display: flex;
-	align-items: center;
- 	justify-content: center;
-	margin-top: 3rem;
-	border:solid 2px #cc6600;
-	border-radius: 30px;
-	background: #ffffff73;
-	font-family: 'Comfortaa', cursive;
-	font-weight: bold;
-	color: #330000;
-}
-
-.botton-prod:hover {
-	color: #cc6600;
-	cursor: pointer;
-	background-color: #cc66002d;
-	box-shadow: 0 0 7px 0px rgba(0,0,0,0.75);
-	border:solid 2px #cc66002d;
-}
-
-.property {
-	margin-top: 7rem;
-	width: 85%;
-	display: flex;
-	justify-content: space-between;
-}
-
-.property-setup {
-	font-family: 'Comfortaa', cursive;
-	color: #330000;
-	font-weight: bold;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-p {
-	margin-top: 1rem;
-	font-size: 1.1em;
-}
+/* FOOTER */
 
 footer {
 	display: flex;
 	justify-content: center;
-	margin-top: 7rem;
+	margin-top: 3rem;
 	width: 100%;
     height: 100px;
     background: url(images/brown-board.png) 100% 100% no-repeat;
@@ -485,6 +317,7 @@ footer {
 }
 
 </style>
+
 <body>
 	<script>
 		(function () {
@@ -494,44 +327,23 @@ footer {
 				window.oldScrollY = window.scrollY;
 				
 				if (res == 2 && window.scrollY < 100) {
-					opacity();
 					document.querySelector('.header').classList.add('little-had');
 					document.querySelector('.logo').classList.add('little-logo');
 				}
 		
-				if (res == 2 && window.scrollY > 150) {
-					add();
-				} if (res == 1 && window.scrollY < 250) {
-					del();
+                 if (res == 1 && window.scrollY < 250) {
 					document.querySelector('.header').classList.remove('little-had');
 					document.querySelector('.logo').classList.remove('little-logo');
 				}
-			}
-			
-			function add() {
-				document.querySelector('.bread').classList.add('display-none');
-				document.querySelector('.botton-about').classList.add('display-none');
-				document.querySelector('.first-block').style.height = '100%';
-				document.querySelector('.bread').classList.remove('opacity');
-			}
-		
-			function del() {
-				document.querySelector('.bread').classList.remove('display-none');
-				document.querySelector('.botton-about').classList.remove('display-none');
-				document.querySelector('.first-block').style.height = '100vh';
-			}
-		
-			function opacity() {
-				document.querySelector('.bread').classList.add('opacity');
 			}
 		})();
 	</script>
 	
 	<header class="header">
 		<div class="nav">
-		<a class="main">ГОЛОВНА</a>
+		<a href="index.html" class="main">ГОЛОВНА</a>
 		<a href="about.html" class="about">ПРО&nbspНАС</a>
-		<a href="catalog.html" class="products">ПРОДУКЦІЯ</a>
+		<a class="products">ПРОДУКЦІЯ</a>
 		<a class="contacts">КОНТАКТИ</a>
 		</div>
 		<div class="logo-cont">
@@ -551,58 +363,7 @@ footer {
 		</div>
 	</header>
 	<main>
-	<section class="first-block">
-		<h1>СІЛЬ ЗЕМЛІ</h1>
-		<img class="bread-line" loading="lazy" src="images/bread-line.svg" alt="bread-line">
-		<h2>«НАШ ХЛІБ - СМАЧНИЙ»</h2>
-		<img class="bread" loading="lazy" src="images/home/bread-main.png" alt="bread">
-		<a href="about.html" class="botton-about">ДІЗНАТИСЬ&nbspБІЛЬШЕ</a>
-	</section>
-	<section class="second">
-		<div class="production">
-			<div class="prod-menu">
-				<div class="buns-menu">
-					<a>
-						<img src="images/bun.png" loading="lazy" alt="bun">
-						<h2 class="buns-link">Булочні&nbspвироби</h2>
-					</a>
-				</div>
-				<div class="bread-menu">
-					<a>
-						<img src="images/bread.png" loading="lazy" alt="bun">
-						<h1 class="bread-link">Хліб</h1>
-					</a>
-				</div>
-				<div class="other-menu">
-					<a>
-						<img src="images/other.png" loading="lazy" alt="bun">
-						<h3 class="other-link">Хлібобулочні вироби</h3>
-					</a>
-				</div>
-			</div>
-			<div class="prod-link">
-				<a class="botton-prod">ПРОДУКЦІЯ</a>
-			</div>
-		</div>
-		<div class="property">
-			<div class="property-setup">
-				<img width="130" height="130" loading="lazy" src="images/okay-chaf.svg" alt="quality">
-				<p>Якість</p>
-			</div>
-			<div class="property-setup">
-				<img width="130" height="130" loading="lazy" src="images/gmo.svg" alt="natural">
-				<p>Натуральність</p>
-			</div>
-			<div class="property-setup">
-				<img width="130" height="130" loading="lazy" src="images/heart.svg" alt="care">
-				<p>Дбайливе&nbspставлення</p>
-			</div>
-			<div class="property-setup">
-				<img width="130" height="130" loading="lazy" src="images/fresh-bread.svg" alt="fresh">
-				<p>Завжди&nbspсвіже</p>
-			</div>
-		</div>
-	</section>
+
 	</main>
 	<footer>
 		<section class="footer">
@@ -638,6 +399,6 @@ footer {
 				</a>
 			</div>
 		</section>
-	</footer>
+	</footer>   
 </body>
 </html>
