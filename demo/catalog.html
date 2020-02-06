@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Про нас - Сіль Землі</title>
+	<title>Продкція - Сіль Землі</title>
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
@@ -71,6 +71,8 @@ table {
     margin: 0;
     box-sizing: border-box;
     font-size: 16px;
+	text-decoration: none;
+	list-style: none;
 }
 
 body {
@@ -212,9 +214,9 @@ body {
  	justify-content: center;
 }
 
-a {
+/* a {
     text-decoration: none;
-}
+} */
 
 
 
@@ -418,12 +420,13 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	/* background-color:rgb(238, 235, 235); */
 }
 
 .bread-head {
 	display: flex;
-	/* align-items: center;
-	justify-content: center; */
+	/* align-items: center; */
+	/* justify-content: center; */
 }
 
 .bread-menu {
@@ -432,8 +435,52 @@ footer {
   justify-content: space-around;
   
   padding: 0;
-  margin: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   /* list-style: none; */
+}
+
+#bread {
+    color: #f37b03;
+    font-family: Appetite;
+    font-size: 1.7em;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+	margin: 0.5rem;
+}
+
+.img-style {
+	border-radius: 5px;
+	box-shadow: 0 0 15px -6px rgb(0, 0, 0);
+}
+
+.prod-box {
+	color: #330000;
+	font-family: 'Comfortaa', cursive;
+	font-size: 0.8em;
+	font-weight: bold;
+	line-height: 1.2em;
+	text-align: center;
+	padding: 1rem;
+	padding-bottom: 1.7rem;
+	margin: 1rem;
+	/* transition: 0.5s; */
+	/* outline: black; */
+}
+
+.prod-box:hover {
+	border-radius: 5px;
+	/* box-shadow: 0 0 24px -10px rgba(0,0,0,0.75) inset; */
+	box-shadow: 0 0 24px -10px rgba(0,0,0,0.75);
+	transition: 0.5s;
+}
+
+.prod-name {
+	color: #cc9933;
+	margin-top: 0.7rem;
+	font-size: 1.1em;
+	margin-bottom: 0.3rem;
 }
 
 </style>
@@ -511,68 +558,70 @@ footer {
 		</section>
 		<section class="bread-container">
 			<div class="bread-head">
-				<img class="colos" src="" alt="colos-left">
+				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
 				<h1 id="bread">ХЛІБ</h1>
-				<img class="colos" src="" alt="colos-right">
+				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
 			</div>
 			<div class="bread-menu">
-				<div>
-					<a data-fancybox="gallery" href="images/catalog/smachniy-big.png" data-caption="Хліб - Смачний. Не різаний - 600г">
-						<img src="images/catalog/smachniy-small.png" loading="lazy" alt="smachniy">
+				<div class="prod-box">
+					<a data-fancybox="gallery" href="images/catalog/smachniy-big.png" data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, рослинний маргарин, вода питна, харчові добавки.">
+						<img class="img-style" src="images/catalog/smachniy-small.png" loading="lazy" alt="smachniy">
+					</a>
+					<p class="prod-name">Хліб «Смачний» в/г</p>
+					<p>Із пшеничного борошна вищого</br>сорту. Без ГМО.
+					</br>Маса нетто: 0,600 кг (+-2,5%).</p>
+				</div>
+				<div class="prod-box">
+					<a data-fancybox="gallery" href="images/catalog/smachniy-riz-big.png" data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, рослинний маргарин, вода питна, харчові добавки.">
+						<img class="img-style" src="images/catalog/smachniy-riz-small.png" loading="lazy" alt="smachniy-riz">
+					</a>
+					<p></p>
+				</div >
+				<div class="prod-box">
+					<a data-fancybox="gallery" href="images/catalog/siriy-big.png" data-caption="Склад : борошно пшеничне вищого сорту, борошно пшеничне 2-го сорту, борошно пшеничне 1-го сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, харчові добавки.">
+						<img class="img-style" src="images/catalog/siriy-small.png" loading="lazy" alt="siriy">
 					</a>
 					<p></p>
 				</div>
-				<div>
-					<a data-fancybox="gallery" href="images/catalog/smachniy-riz-big.png" data-caption="Хліб - Смачний. Різаний - 600г">
-						<img src="images/catalog/smachniy-riz-small.png" loading="lazy" alt="smachniy-riz">
+				<div class="prod-box">
+					<a data-fancybox="gallery" href="images/catalog/podoviy-big.png" data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, рослинний маргарин, вода питна, харчові добавки.">
+						<img class="img-style" src="images/catalog/podoviy-small.png" loading="lazy" alt="podoviy">
 					</a>
 					<p></p>
 				</div>
-				<div>
-					<a data-fancybox="gallery" href="images/catalog/siriy-big.png" data-caption="Хліб - Смачний. 2-й гатунок - 600г">
-						<img src="images/catalog/siriy-small.png" loading="lazy" alt="siriy">
+				<div class="prod-box">
+					<a data-fancybox="gallery" href="images/catalog/kupecheskiy-big.png" data-caption="Склад : борошно пшеничне вищого сорту, борошно житнє, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, солод, мед штучний, маргарин, харчові добавки.">
+						<img class="img-style" src="images/catalog/kupecheskiy-small.png" loading="lazy" alt="kupecheskiy">
 					</a>
 					<p></p>
 				</div>
-				<div>
-					<a data-fancybox="gallery" href="images/catalog/podoviy-big.png" data-caption="Хліб - Смачний. Подовий - 800г">
-						<img src="images/catalog/podoviy-small.png" loading="lazy" alt="podoviy">
+				<div class="prod-box">
+					<a data-fancybox="gallery" href="images/catalog/kupecheskiy-riz-big.png" data-caption="Склад : борошно пшеничне вищого сорту, борошно житнє, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, солод, мед штучний, маргарин, харчові добавки.">
+						<img class="img-style" src="images/catalog/kupecheskiy-riz-small.png" loading="lazy" alt="kupecheskiy">
 					</a>
 					<p></p>
 				</div>
-				<div>
-					<a data-fancybox="gallery" href="images/catalog/kupecheskiy-big.png" data-caption="Хліб - Купечеський. Житній не різаний - 500г">
-						<img src="images/catalog/kupecheskiy-small.png" loading="lazy" alt="kupecheskiy">
+				<div class="prod-box">
+					<a data-fancybox="gallery" href="images/catalog/borodino-big.png" data-caption="Склад : борошно пшеничне вищого сорту, борошно житнє, дріжджі хлібопекарські пресовані, сіль кухонна харчова, рослинний маргарин, вода питна, цукор-пісок, харчові добавки, солод, коріандр.">
+						<img class="img-style" src="images/catalog/borodino-small.png" loading="lazy" alt="borodino">
 					</a>
 					<p></p>
 				</div>
-				<div>
-					<a data-fancybox="gallery" href="images/catalog/kupecheskiy-riz-big.png" data-caption="Хліб - Купечеський. Житній різаний - 500г">
-						<img src="images/catalog/kupecheskiy-riz-small.png" loading="lazy" alt="kupecheskiy">
-					</a>
-					<p></p>
-				</div>
-				<div>
-					<a data-fancybox="gallery" href="images/catalog/borodino-big.png" data-caption="Хліб - Бородінський. Не різаний - ???г">
-						<img src="images/catalog/borodino-small.png" loading="lazy" alt="borodino">
-					</a>
-					<p></p>
-				</div>
-				<div>
+				<div class="prod-box">
 					<a data-fancybox="gallery" href="images/catalog/kukuruza-big.png" data-caption="Хліб - Кукурудзяний - ???г">
-						<img src="images/catalog/kukuruza-small.png" loading="lazy" alt="kukuruza">
+						<img class="img-style" src="images/catalog/kukuruza-small.png" loading="lazy" alt="kukuruza">
 					</a>
 					<p></p>
 				</div>
-				<div>
+				<div class="prod-box">
 					<a data-fancybox="gallery" href="images/catalog/zavarniy-big.png" data-caption="Хліб - Заварний - ???г">
-						<img src="images/catalog/zavarniy-small.png" loading="lazy" alt="zavarniy">
+						<img class="img-style" src="images/catalog/zavarniy-small.png" loading="lazy" alt="zavarniy">
 						<p></p>
 					</a>
 				</div>
-				<div>
+				<div class="prod-box">
 					<a data-fancybox="gallery" href="images/catalog/visivka-big.png" data-caption="Хліб - Висівковий - ???г">
-						<img src="images/catalog/visivka-small.png" loading="lazy" alt="visivka">
+						<img class="img-style" src="images/catalog/visivka-small.png" loading="lazy" alt="visivka">
 						<p></p>
 					</a>
 				</div>

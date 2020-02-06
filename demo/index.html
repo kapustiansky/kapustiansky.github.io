@@ -309,7 +309,7 @@ h1 {
 	display: flex;
 }
 
-.buns-menu, .bread-menu, .other-menu {
+.menu {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -317,34 +317,27 @@ h1 {
 	text-align:center;
 	font-family: Appetite;
 	font-size: 1.6em;
-	color: #330000;
 	/* filter: drop-shadow(0 0 3px rgba(100,0,0,0.5)); */
 }
 
-.bread-menu {
+.bread-menu-link {
 	width: 100%;
 	margin-right: 2rem;
 	margin-left: 2rem;
 }
 
+.link-style {
+	color: #330000;
+}
+
+.link-style:hover {
+	color: #f37b03;
+	cursor: pointer;
+}
+
 .buns-link, .bread-link, .other-link {
 	margin-top: 40px;
 	font-size: 1em;
-}
-
-.buns-menu:hover {
-	color: #f37b03;
-	cursor: pointer;
-} 
-
-.bread-menu:hover {
-	color: #f37b03;
-	cursor: pointer;
-}
-
-.other-menu:hover {
-	color: #f37b03;
-	cursor: pointer;
 }
 
 .botton-prod {
@@ -561,21 +554,21 @@ footer {
 	<section class="second">
 		<div class="production">
 			<div class="prod-menu">
-				<div class="buns-menu">
-					<a>
+				<div class="menu">
+					<a class="link-style" href="catalog.html#bun">
 						<img src="images/bun.png" loading="lazy" alt="bun">
 						<h2 class="buns-link">Булочні&nbspвироби</h2>
 					</a>
 				</div>
-				<div class="bread-menu">
-					<a href="catalog.html#bread">
-						<img src="images/bread.png" loading="lazy" alt="bun">
+				<div class="menu bread-menu-link">
+					<a class="link-style" href="catalog.html#bread">
+						<img src="images/bread.png" loading="lazy" alt="bread">
 						<h1 class="bread-link">Хліб</h1>
 					</a>
 				</div>
-				<div class="other-menu">
-					<a>
-						<img src="images/other.png" loading="lazy" alt="bun">
+				<div class="menu">
+					<a class="link-style" href="catalog.html#other">
+						<img src="images/other.png" loading="lazy" alt="other">
 						<h3 class="other-link">Хлібобулочні вироби</h3>
 					</a>
 				</div>
