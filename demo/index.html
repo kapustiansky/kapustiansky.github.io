@@ -109,6 +109,7 @@ body {
 	height: 100px;
 	background: url(images/brown-board.png) 100% 100% no-repeat;
     background-size: cover;
+	z-index: 9999999;
 	/* transition: 1s;	 */
 }
 
@@ -164,18 +165,21 @@ body {
 	cursor: pointer;
 	background-color: rgba(252, 252, 252, 0.212);
 	color: #f37b03;
+	transition: 0.2s;
 }
 
 .products:hover {
 	cursor: pointer;
 	background-color: rgba(252, 252, 252, 0.212);
 	color: #f37b03;
+	transition: 0.2s;
 }
 
 .contacts:hover {
 	cursor: pointer;
 	background-color: rgba(252, 252, 252, 0.212);
 	color: #f37b03;
+	transition: 0.2s;
 }
 
 .phone {
@@ -270,6 +274,7 @@ a {
 	background-color: #cc66002d;
 	box-shadow: 0 0 7px 0px rgba(0,0,0,0.75);
 	border:solid 2px #cc66002d;
+	transition: 0.2s;
 }
 
 .display-none {
@@ -302,7 +307,7 @@ h1 {
 	flex-direction: column;
 	align-items: center;
  	justify-content: center;
-	 /* filter: drop-shadow(0 0 3px rgba(100,0,0,0.5)); */
+	filter: drop-shadow(0 0 3px rgba(100,0,0,0.5));
 }
 
 .prod-menu {
@@ -333,6 +338,12 @@ h1 {
 .link-style:hover {
 	color: #f37b03;
 	cursor: pointer;
+	transition: 0.2s;
+}
+
+.link-style:hover img {
+	filter: drop-shadow(0 0 3px rgba(100,0,0,0.5));
+	transition: 0.2s;
 }
 
 .buns-link, .bread-link, .other-link {
@@ -361,6 +372,7 @@ h1 {
 	background-color: #cc66002d;
 	box-shadow: 0 0 7px 0px rgba(0,0,0,0.75);
 	border:solid 2px #cc66002d;
+	transition: 0.2s;
 }
 
 .property {
@@ -443,6 +455,7 @@ footer {
 .email-link:hover {
 	background-color: #bbbbbb4b;
 	cursor: pointer;
+	transition: 0.2s;
 }
 
 .social-icons {
@@ -476,6 +489,12 @@ footer {
 	font-size: 0.8em;
 	line-height: 1.2em;
 }
+
+/* @media screen and (max-width:700px) {
+	.first-block {
+		padding-top: 50%;
+	}
+} */
 
 </style>
 <body>
