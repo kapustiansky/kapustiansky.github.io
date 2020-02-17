@@ -9,6 +9,9 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
+
+<script type="text/javascript" src="jquery.lazy.min.js"></script>
+
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -203,7 +206,7 @@
 		height: 100px;
 		background: url(images/brown-board.png) 100% 100% no-repeat;
 		background-size: cover;
-		z-index: 9999999;
+		z-index: 1;
 		/* transition: 1s;	 */
 	}
 
@@ -523,14 +526,14 @@
 		font-size: 1em;
 	}
 
-	.bread-container {
+	.product-container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		/* background-color:rgb(238, 235, 235); */
+		margin-top: 0.5rem;
 	}
 
-	.bread-head {
+	.head-product {
 		display: flex;
 	}
 
@@ -538,11 +541,10 @@
 	filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
 } */
 
-	.bread-menu {
+	.product-menu {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-around;
-
 		padding: 0;
 		margin-left: 1rem;
 		margin-right: 1rem;
@@ -550,7 +552,7 @@
 		/* list-style: none; */
 	}
 
-	#bread {
+	#bread, #bun, #other {
 		color: #f37b03;
 		font-family: Appetite;
 		font-size: 1.7em;
@@ -562,6 +564,8 @@
 	.img-style {
 		border-radius: 5px;
 		box-shadow: 0 0 15px -6px rgb(0, 0, 0);
+	
+		/* position: relative; */
 	}
 
 	.prod-box {
@@ -574,6 +578,7 @@
 		padding: 1rem;
 		margin: 1rem;
 		position: relative;
+		/* z-index: -999999; */
 		top: -300px;
 	}
 
@@ -618,6 +623,10 @@
 		stroke-width: 3px;
 		stroke-dashoffset: 0;
 		stroke-dasharray: 1200;
+	}
+
+	.lol {
+		z-index: 9999999;
 	}
 
 	@media screen and (min-width:1439px) {
@@ -698,13 +707,13 @@
 				</div>
 			</div>
 		</section>
-		<section class="bread-container">
-			<div class="bread-head">
+		<section class="product-container">
+			<div class="head-product">
 				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
 				<h1 id="bread">ХЛІБ</h1>
 				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
 			</div>
-			<div class="bread-menu">
+			<div class="product-menu">
 				<div class="svg-wrapper">
 					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
 						<rect class="shape" height="300" width="300" />
@@ -715,7 +724,7 @@
 									alt="smachniy">
 							</a>
 							<p class="prod-name">Хліб «Смачний» в/г</p>
-							<p>Із пшеничного борошна вищого</br>сорту. Без ГМО.
+							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
 								</br>Маса нетто: 0,600 кг (+-2,5%).</p>
 						</div>
 					</svg>
@@ -730,7 +739,7 @@
 									alt="smachniy-riz">
 							</a>
 							<p class="prod-name">Хліб «Смачний» в/г - різаний</p>
-							<p>Із пшеничного борошна вищого</br>сорту. Без ГМО.
+							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
 								</br>Маса нетто: 0,600 кг (+-2,5%).</p>
 						</div>
 					</svg>
@@ -744,7 +753,7 @@
 								<img class="img-style" src="images/catalog/siriy-small.png" loading="lazy" alt="siriy">
 							</a>
 							<p class="prod-name">Хліб «Смачний» 2-й/г</p>
-							<p>Із пшеничного борошна другого</br>сорту. Без ГМО.
+							<p>Із пшеничного борошна другого</br>гатунку. Без ГМО.
 								</br>Маса нетто: 0,600 кг (+-2,5%).</p>
 						</div>
 					</svg>
@@ -759,7 +768,7 @@
 									alt="podoviy">
 							</a>
 							<p class="prod-name">Хліб «Смачний» в/г - подовий</p>
-							<p>Із пшеничного борошна вищого</br>сорту. Без ГМО.
+							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
 								</br>Маса нетто: 0,900 кг (+-2,5%).</p>
 						</div>
 					</svg>
@@ -774,7 +783,7 @@
 									alt="kupecheskiy">
 							</a>
 							<p class="prod-name">Хліб «Купєчєський»</p>
-							<p>Із житнього борошна.</br> Без ГМО.
+							<p>Із житнім борошном.</br> Без ГМО.
 								</br>Маса нетто: 0,500 кг (+-2,5%).</p>
 						</div>
 					</svg>
@@ -789,7 +798,7 @@
 									alt="kupecheskiy">
 							</a>
 							<p class="prod-name">Хліб «Купєчєський» різаний</p>
-							<p>Із житнього борошна.</br> Без ГМО.
+							<p>Із житнім борошном.</br> Без ГМО.
 								</br>Маса нетто: 0,500 кг (+-2,5%).</p>
 						</div>
 					</svg>
@@ -804,7 +813,7 @@
 									alt="borodino">
 							</a>
 							<p class="prod-name">Хліб «Бородінський» формовий</p>
-							<p>Із житнього борошна.</br> Без ГМО.
+							<p>Із житнім борошном.</br> Без ГМО.
 								</br>Маса нетто: 0,500 кг (+-2,5%).</p>
 						</div>
 					</svg>
@@ -814,13 +823,13 @@
 						<rect class="shape" height="300" width="300" />
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/kukuruza-big.png"
-								data-caption="Хліб - Кукурудзяний - ???г">
+								data-caption="Склад : борошно пшеничне вищого сорту, борошно кукурудзяне, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, закваска, харчові добавки.">
 								<img class="img-style" src="images/catalog/kukuruza-small.png" loading="lazy"
 									alt="kukuruza">
 							</a>
-							<p class="prod-name">???</p>
-							<p>???</br> Без ГМО.
-								</br>Маса нетто: ??? кг (+-2,5%).</p>
+							<p class="prod-name">Хліб «Кукурудзяний» формовий</p>
+							<p>Із кукурудзяним борошном</br> Без ГМО.
+								</br>Маса нетто: 0.350 кг (+-2,5%).</p>
 						</div>
 					</svg>
 				</div>
@@ -829,13 +838,13 @@
 						<rect class="shape" height="300" width="300" />
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/zavarniy-big.png"
-								data-caption="Хліб - Заварний - ???г">
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, закваска, харчові добавки.">
 								<img class="img-style" src="images/catalog/zavarniy-small.png" loading="lazy"
 									alt="zavarniy">
 							</a>
-							<p class="prod-name">???</p>
-							<p>???</br> Без ГМО.
-								</br>Маса нетто: ??? кг (+-2,5%).</p>
+							<p class="prod-name">Хліб «Заварний» формовий</p>
+							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
+								</br>Маса нетто: 0.350 кг (+-2,5%).</p>
 						</div>
 					</svg>
 				</div>
@@ -844,20 +853,394 @@
 						<rect class="shape" height="300" width="300" />
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/visivka-big.png"
-								data-caption="Хліб - Висівковий - ???г">
+								data-caption="Склад : борошно пшеничне 1-го сорту, борошно 2-го сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, закваска, висівки харчові.">
 								<img class="img-style" src="images/catalog/visivka-small.png" loading="lazy"
 									alt="visivka">
 							</a>
-							<p class="prod-name">???</p>
-							<p>???</br> Без ГМО.
-								</br>Маса нетто: ??? кг (+-2,5%).</p>
+							<p class="prod-name">Хліб «Висівковий» формовий</p>
+							<p>Із харчовою висівкою</br> Без ГМО.
+								</br>Маса нетто: 0.350 кг (+-2,5%).</p>
 						</div>
 					</svg>
 				</div>
 			</div>
 		</section>
-		<section></section>
-		<section></section>
+		<section class="product-container">
+			<div class="head-product">
+				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
+				<h1 id="bun">БУЛОЧНІ ВИРОБИ</h1>
+				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
+			</div>
+			<div class="product-menu">
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/vanil-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор ванільний, пудра цукрова, вода питна, харчові добавки.">
+								<img class="img-style lazy" data-src="images/catalog/vanil-small.png" loading="lazy"
+									alt="vanil">
+							</a>
+							<p class="prod-name">Булочка «Ванільна»</p>
+							<p>Ванільна булочка із пудрою.</br> Без ГМО.
+								</br>Маса нетто: 0,078 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/konjut-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, кунжут, рослинний маргарин, вода питна, харчові добавки.">
+								<img class="img-style" src="images/catalog/konjut-small.png" loading="lazy"
+									alt="konjut">
+							</a>
+							<p class="prod-name">Булочка «Кунжутна»</p>
+							<p>Із кунжутом і маргарином.</br> Без ГМО.
+								</br>Маса нетто: 0,9 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/abrikos-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, наповнювач абрикосовий.">
+								<img class="img-style" src="images/catalog/abrikos-small.png" loading="lazy" alt="abrikos">
+							</a>
+							<p class="prod-name">Булочка «Абрикос»</p>
+							<p>З абрикосовою начінкою.</br> Без ГМО.
+								</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/banan-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, наповнювач банановий.">
+								<img class="img-style" src="images/catalog/banan-small.png" loading="lazy"
+									alt="banan">
+							</a>
+							<p class="prod-name">Булочка «Банан»</p>
+							<p>Із банановою начінкою.</br> Без ГМО.
+								</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/cocos-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, кокосова стружка.">
+								<img class="img-style" src="images/catalog/cocos-small.png" loading="lazy"
+									alt="cocos">
+							</a>
+							<p class="prod-name">Булочка «Кокос»</p>
+							<p>Із кокосовою начінкою.</br> Без ГМО.
+								</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/iris-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, згущене молоко.">
+								<img class="img-style" src="images/catalog/iris-small.png" loading="lazy"
+									alt="iris">
+							</a>
+							<p class="prod-name">Булочка «Згущене молоко»</p>
+							<p>Із згущеним молоком.</br> Без ГМО.
+								</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/klubnyka-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, борошно житнє, дріжджі хлібопекарські пресовані, сіль кухонна харчова, рослинний маргарин, вода питна, цукор-пісок, харчові добавки, полуничний наповнювач.">
+								<img class="img-style" src="images/catalog/klubnyka-small.png" loading="lazy"
+									alt="klubnyka">
+							</a>
+							<p class="prod-name">Булочка «Полуниця»</p>
+							<p>Із полуничною начінкою.</br> Без ГМО.
+							</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/mak-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, мак.">
+								<img class="img-style" src="images/catalog/mak-small.png" loading="lazy"
+									alt="mak">
+							</a>
+							<p class="prod-name">Булочка «Мак»</p>
+							<p>Із маковою начінкою.</br> Без ГМО.
+								</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/oreh-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, горіх мелений.">
+								<img class="img-style" src="images/catalog/oreh-small.png" loading="lazy"
+									alt="oreh">
+							</a>
+							<p class="prod-name">Булочка «Горіх»</p>
+							<p>З горіхом.</br> Без ГМО.
+								</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/shokolad-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, шоколадний наповнювач.">
+								<img class="img-style" src="images/catalog/shokolad-small.png" loading="lazy"
+									alt="shokolad">
+							</a>
+							<p class="prod-name">Булочка «Шоколад»</p>
+							<p>Із шоколадом.</br> Без ГМО.
+							</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/tvorog-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, творог домашній.">
+								<img class="img-style" src="images/catalog/tvorog-small.png" loading="lazy"
+									alt="tvorog">
+							</a>
+							<p class="prod-name">Булочка «Творог»</p>
+							<p>Із творогом.</br> Без ГМО.
+							</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/vishny-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, вишньовим наповнювач.">
+								<img class="img-style" src="images/catalog/vishny-small.png" loading="lazy"
+									alt="vishny">
+							</a>
+							<p class="prod-name">Булочка «Вишня»</p>
+							<p>Із вишньовою начінкою.</br> Без ГМО.
+							</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/yabloko-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, яблучний наповнювач.">
+								<img class="img-style" src="images/catalog/yabloko-small.png" loading="lazy"
+									alt="yabloko">
+							</a>
+							<p class="prod-name">Булочка «Яблуко»</p>
+							<p>З яблучною начінкою.</br> Без ГМО.
+							</br>Маса нетто: 0,1 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/kvitka-banan-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, банановий наповнювач.">
+								<img class="img-style" src="images/catalog/kvitka-banan-small.png" loading="lazy"
+									alt="kvitka-banan">
+							</a>
+							<p class="prod-name">Булочка «Квіточка»</p>
+							<p>Із банановою начінкою.</br> Без ГМО.
+							</br>Маса нетто: 0,24 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/kvitka-mak-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, мак.">
+								<img class="img-style" src="images/catalog/kvitka-mak-small.png" loading="lazy"
+									alt="kvitka-mak">
+							</a>
+							<p class="prod-name">Булочка «Квіточка»</p>
+							<p>Із маковою начінкою.</br> Без ГМО.
+							</br>Маса нетто: 0,24 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/kvitka-smorodina-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, повидло із смородини.">
+								<img class="img-style" src="images/catalog/kvitka-smorodina-small.png" loading="lazy"
+									alt="kvitka-smorodina">
+							</a>
+							<p class="prod-name">Булочка «Квіточка»</p>
+							<p>Із повидлом смородини.</br> Без ГМО.
+							</br>Маса нетто: 0,24 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/kvitka-tvorog-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, домашній творог.">
+								<img class="img-style" src="images/catalog/kvitka-tvorog-small.png" loading="lazy"
+									alt="kvitka-tvorog">
+							</a>
+							<p class="prod-name">Булочка «Квіточка»</p>
+							<p>Із домашнім творогом.</br> Без ГМО.
+							</br>Маса нетто: 0,24 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+			</div>
+		</section>
+		<section class="product-container">
+			<div class="head-product">
+				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
+				<h1 id="other">ХЛІБОБУЛОЧНІ ВИРОБИ</h1>
+				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
+			</div>
+			<div class="product-menu">
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/pletenik-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, цукор, кунжут, харчові добавки.">
+								<img class="img-style" src="images/catalog/pletenik-small.png" loading="lazy"
+									alt="pletenik">
+							</a>
+							<p class="prod-name">«Плетеник»</p>
+							<p>Із борошна вищого гатунку,</br>з кунжутом. Без ГМО.
+								</br>Маса нетто: 0,300 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/rogalik-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, цукор, кунжут, харчові добавки.">
+								<img class="img-style" src="images/catalog/rogalik-small.png" loading="lazy"
+									alt="rogalik">
+							</a>
+							<p class="prod-name">«Рогалик»</p>
+							<p>Із борошна вищого гатунку,</br>з кунжутом. Без ГМО.
+								</br>Маса нетто: 0,078 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/chabata-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, суміш італійських трав, харчові добавки.">
+								<img class="img-style" src="images/catalog/chabata-small.png" loading="lazy"
+									alt="chabata">
+							</a>
+							<p class="prod-name">«Чіабата»</p>
+							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
+								</br>Маса нетто: 0,250 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/baget-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, харчові добавки.">
+								<img class="img-style" src="images/catalog/baget-small.png" loading="lazy"
+									alt="baget">
+							</a>
+							<p class="prod-name">«Багет»</p>
+							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
+								</br>Маса нетто: 0,350 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/pizza-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, цукор, харчові добавки.">
+								<img class="img-style" src="images/catalog/pizza-small.png" loading="lazy"
+									alt="pizza">
+							</a>
+							<p class="prod-name">Заготовка для піцци</p>
+							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
+								</br>Маса нетто: 0,140 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/hotdog-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, цукор, харчові добавки.">
+								<img class="img-style" src="images/catalog/hotdog-small.png" loading="lazy"
+									alt="hotdog">
+							</a>
+							<p class="prod-name">Булка «ХОТ-ДОГ»</p>
+							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
+								</br>Маса нетто: 0,009 ??? кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+				<div class="svg-wrapper">
+					<svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+						<rect class="shape" height="300" width="300" />
+						<div class="prod-box">
+							<a data-fancybox="gallery" href="images/catalog/gamburger-big.png"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, цукор, кунжут, харчові добавки.">
+								<img class="img-style" src="images/catalog/gamburger-small.png" loading="lazy" alt="gamburger">
+							</a>
+							<p class="prod-name">Булка «Гамбургер»</p>
+							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
+								</br>Маса нетто: 0,100 кг (+-2,5%).</p>
+						</div>
+					</svg>
+				</div>
+			</div>
+		</section>
 	</main>
 	<footer>
 		<section class="footer">
@@ -909,6 +1292,10 @@
 				"close"
 			]
 		});
+
+		$(function() {
+        $('.lazy').Lazy();
+    });
 	</script>
 </body>
 
