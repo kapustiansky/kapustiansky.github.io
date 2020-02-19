@@ -22,6 +22,12 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <style>
+
+@font-face {
+		font-family: Appetite;
+		src: url(founts/Appetite.ttf);
+	}
+	
 	html,
 	body,
 	div,
@@ -168,11 +174,6 @@
 		/* background: url(images/board-back.jpg) 100% 100% no-repeat;
     background-size: cover;
 	background-attachment: fixed; */
-	}
-
-	@font-face {
-		font-family: Appetite;
-		src: url(founts/Appetite.ttf);
 	}
 
 	.board {
@@ -625,8 +626,16 @@
 		stroke-dasharray: 1200;
 	}
 
-	.lol {
-		z-index: 9999999;
+	#topBtn {
+		bottom: 12rem;
+		display: none;
+		cursor: pointer;
+		left: 0.5rem;
+		position: fixed;
+	}
+
+	.UpImg {
+		height: 3rem;
 	}
 
 	@media screen and (min-width:1439px) {
@@ -653,6 +662,12 @@
 					document.querySelector('.header').classList.remove('little-had');
 					document.querySelector('.logo').classList.remove('little-logo');
 				}
+
+				if (res == 2 && window.scrollY > 1000) {
+					//namb++;
+					//getLenqth();
+					document.getElementById('topBtn').style.display = 'block';
+				} else document.getElementById('topBtn').style.display = 'none';
 			}
 		})();
 	</script>
@@ -689,19 +704,19 @@
 			<div class="prod-menu">
 				<div class="menu">
 					<a class="link-style" href="#bun">
-						<img class="lol" width="100" height="80" src="images/bun.png" loading="lazy" alt="bun">
+						<img width="100" height="80" src="images/bun.png" alt="bun">
 						<h3 class="buns-link">Булочні&nbspвироби</h3>
 					</a>
 				</div>
 				<div class="menu bread-menu-link">
 					<a class="link-style" href="#bread">
-						<img width="80" height="80" src="images/bread.png" loading="lazy" alt="bread">
+						<img width="80" height="80" src="images/bread.png" alt="bread">
 						<h2 class="bread-link">Хліб</h2>
 					</a>
 				</div>
 				<div class="menu">
 					<a class="link-style" href="#other">
-						<img width="80" height="80" src="images/other.png" loading="lazy" alt="other">
+						<img width="80" height="80" src="images/other.png" alt="other">
 						<h4 class="other-link">Хлібобулочні вироби</h4>
 					</a>
 				</div>
@@ -720,7 +735,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/smachniy-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, рослинний маргарин, вода питна, харчові добавки.">
-								<img class="img-style" src="images/catalog/smachniy-small.png" loading="lazy"
+								<img class="img-style" src="images/catalog/smachniy-small.png"
 									alt="smachniy">
 							</a>
 							<p class="prod-name">Хліб «Смачний» в/г</p>
@@ -735,7 +750,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/smachniy-riz-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, рослинний маргарин, вода питна, харчові добавки.">
-								<img class="img-style" src="images/catalog/smachniy-riz-small.png" loading="lazy"
+								<img class="img-style" src="images/catalog/smachniy-riz-small.png"
 									alt="smachniy-riz">
 							</a>
 							<p class="prod-name">Хліб «Смачний» в/г - різаний</p>
@@ -750,7 +765,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/siriy-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, борошно пшеничне 2-го сорту, борошно пшеничне 1-го сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, харчові добавки.">
-								<img class="img-style" src="images/catalog/siriy-small.png" loading="lazy" alt="siriy">
+								<img class="img-style" src="images/catalog/siriy-small.png"  alt="siriy">
 							</a>
 							<p class="prod-name">Хліб «Смачний» 2-й/г</p>
 							<p>Із пшеничного борошна другого</br>гатунку. Без ГМО.
@@ -764,7 +779,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/podoviy-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, рослинний маргарин, вода питна, харчові добавки.">
-								<img class="img-style" src="images/catalog/podoviy-small.png" loading="lazy"
+								<img class="img-style" src="images/catalog/podoviy-small.png" 
 									alt="podoviy">
 							</a>
 							<p class="prod-name">Хліб «Смачний» в/г - подовий</p>
@@ -779,7 +794,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/kupecheskiy-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, борошно житнє, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, солод, мед штучний, маргарин, харчові добавки.">
-								<img class="img-style" src="images/catalog/kupecheskiy-small.png" loading="lazy"
+								<img class="img-style" src="images/catalog/kupecheskiy-small.png" 
 									alt="kupecheskiy">
 							</a>
 							<p class="prod-name">Хліб «Купєчєський»</p>
@@ -794,7 +809,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/kupecheskiy-riz-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, борошно житнє, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, солод, мед штучний, маргарин, харчові добавки.">
-								<img class="img-style" src="images/catalog/kupecheskiy-riz-small.png" loading="lazy"
+								<img class="img-style" src="images/catalog/kupecheskiy-riz-small.png" 
 									alt="kupecheskiy">
 							</a>
 							<p class="prod-name">Хліб «Купєчєський» різаний</p>
@@ -809,7 +824,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/borodino-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, борошно житнє, дріжджі хлібопекарські пресовані, сіль кухонна харчова, рослинний маргарин, вода питна, цукор-пісок, харчові добавки, солод, коріандр.">
-								<img class="img-style" src="images/catalog/borodino-small.png" loading="lazy"
+								<img class="img-style" src="images/catalog/borodino-small.png" 
 									alt="borodino">
 							</a>
 							<p class="prod-name">Хліб «Бородінський» формовий</p>
@@ -824,7 +839,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/kukuruza-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, борошно кукурудзяне, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, закваска, харчові добавки.">
-								<img class="img-style" src="images/catalog/kukuruza-small.png" loading="lazy"
+								<img class="img-style" src="images/catalog/kukuruza-small.png" 
 									alt="kukuruza">
 							</a>
 							<p class="prod-name">Хліб «Кукурудзяний» формовий</p>
@@ -839,7 +854,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/zavarniy-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, закваска, харчові добавки.">
-								<img class="img-style" src="images/catalog/zavarniy-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/zavarniy-small.png" 
 									alt="zavarniy">
 							</a>
 							<p class="prod-name">Хліб «Заварний» формовий</p>
@@ -854,7 +869,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/visivka-big.png"
 								data-caption="Склад : борошно пшеничне 1-го сорту, борошно 2-го сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, закваска, висівки харчові.">
-								<img class="img-style" src="images/catalog/visivka-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/visivka-small.png" 
 									alt="visivka">
 							</a>
 							<p class="prod-name">Хліб «Висівковий» формовий</p>
@@ -878,7 +893,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/vanil-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор ванільний, пудра цукрова, вода питна, харчові добавки.">
-								<img class="img-style lazy" data-src="images/catalog/vanil-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/vanil-small.png" 
 									alt="vanil">
 							</a>
 							<p class="prod-name">Булочка «Ванільна»</p>
@@ -893,7 +908,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/konjut-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, кунжут, рослинний маргарин, вода питна, харчові добавки.">
-								<img class="img-style" src="images/catalog/konjut-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/konjut-small.png" 
 									alt="konjut">
 							</a>
 							<p class="prod-name">Булочка «Кунжутна»</p>
@@ -908,7 +923,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/abrikos-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, наповнювач абрикосовий.">
-								<img class="img-style" src="images/catalog/abrikos-small.png" loading="lazy" alt="abrikos">
+								<img class="img-style lazy" data-src="images/catalog/abrikos-small.png"  alt="abrikos">
 							</a>
 							<p class="prod-name">Булочка «Абрикос»</p>
 							<p>З абрикосовою начінкою.</br> Без ГМО.
@@ -922,7 +937,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/banan-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, наповнювач банановий.">
-								<img class="img-style" src="images/catalog/banan-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/banan-small.png" 
 									alt="banan">
 							</a>
 							<p class="prod-name">Булочка «Банан»</p>
@@ -937,7 +952,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/cocos-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, кокосова стружка.">
-								<img class="img-style" src="images/catalog/cocos-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/cocos-small.png" 
 									alt="cocos">
 							</a>
 							<p class="prod-name">Булочка «Кокос»</p>
@@ -952,7 +967,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/iris-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, згущене молоко.">
-								<img class="img-style" src="images/catalog/iris-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/iris-small.png" 
 									alt="iris">
 							</a>
 							<p class="prod-name">Булочка «Згущене молоко»</p>
@@ -967,7 +982,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/klubnyka-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, борошно житнє, дріжджі хлібопекарські пресовані, сіль кухонна харчова, рослинний маргарин, вода питна, цукор-пісок, харчові добавки, полуничний наповнювач.">
-								<img class="img-style" src="images/catalog/klubnyka-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/klubnyka-small.png" 
 									alt="klubnyka">
 							</a>
 							<p class="prod-name">Булочка «Полуниця»</p>
@@ -982,7 +997,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/mak-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, мак.">
-								<img class="img-style" src="images/catalog/mak-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/mak-small.png" 
 									alt="mak">
 							</a>
 							<p class="prod-name">Булочка «Мак»</p>
@@ -996,8 +1011,8 @@
 						<rect class="shape" height="300" width="300" />
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/oreh-big.png"
-								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, горіх мелений.">
-								<img class="img-style" src="images/catalog/oreh-small.png" loading="lazy"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, горіх грецький мелений.">
+								<img class="img-style lazy" data-src="images/catalog/oreh-small.png" 
 									alt="oreh">
 							</a>
 							<p class="prod-name">Булочка «Горіх»</p>
@@ -1012,7 +1027,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/shokolad-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, шоколадний наповнювач.">
-								<img class="img-style" src="images/catalog/shokolad-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/shokolad-small.png" 
 									alt="shokolad">
 							</a>
 							<p class="prod-name">Булочка «Шоколад»</p>
@@ -1027,7 +1042,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/tvorog-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, творог домашній.">
-								<img class="img-style" src="images/catalog/tvorog-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/tvorog-small.png" 
 									alt="tvorog">
 							</a>
 							<p class="prod-name">Булочка «Творог»</p>
@@ -1042,7 +1057,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/vishny-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, вишньовим наповнювач.">
-								<img class="img-style" src="images/catalog/vishny-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/vishny-small.png" 
 									alt="vishny">
 							</a>
 							<p class="prod-name">Булочка «Вишня»</p>
@@ -1057,7 +1072,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/yabloko-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, яблучний наповнювач.">
-								<img class="img-style" src="images/catalog/yabloko-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/yabloko-small.png" 
 									alt="yabloko">
 							</a>
 							<p class="prod-name">Булочка «Яблуко»</p>
@@ -1072,7 +1087,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/kvitka-banan-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, банановий наповнювач.">
-								<img class="img-style" src="images/catalog/kvitka-banan-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/kvitka-banan-small.png" 
 									alt="kvitka-banan">
 							</a>
 							<p class="prod-name">Булочка «Квіточка»</p>
@@ -1087,7 +1102,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/kvitka-mak-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, мак.">
-								<img class="img-style" src="images/catalog/kvitka-mak-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/kvitka-mak-small.png" 
 									alt="kvitka-mak">
 							</a>
 							<p class="prod-name">Булочка «Квіточка»</p>
@@ -1102,7 +1117,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/kvitka-smorodina-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, повидло із смородини.">
-								<img class="img-style" src="images/catalog/kvitka-smorodina-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/kvitka-smorodina-small.png" 
 									alt="kvitka-smorodina">
 							</a>
 							<p class="prod-name">Булочка «Квіточка»</p>
@@ -1116,12 +1131,12 @@
 						<rect class="shape" height="300" width="300" />
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/kvitka-tvorog-big.png"
-								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, домашній творог.">
-								<img class="img-style" src="images/catalog/kvitka-tvorog-small.png" loading="lazy"
+								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, горіх грецький мелений.">
+								<img class="img-style lazy" data-src="images/catalog/kvitka-tvorog-small.png" 
 									alt="kvitka-tvorog">
 							</a>
 							<p class="prod-name">Булочка «Квіточка»</p>
-							<p>Із домашнім творогом.</br> Без ГМО.
+							<p>Із горіхом.</br> Без ГМО.
 							</br>Маса нетто: 0,24 кг (+-2,5%).</p>
 						</div>
 					</svg>
@@ -1141,7 +1156,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/pletenik-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, цукор, кунжут, харчові добавки.">
-								<img class="img-style" src="images/catalog/pletenik-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/pletenik-small.png" 
 									alt="pletenik">
 							</a>
 							<p class="prod-name">«Плетеник»</p>
@@ -1156,7 +1171,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/rogalik-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, цукор, кунжут, харчові добавки.">
-								<img class="img-style" src="images/catalog/rogalik-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/rogalik-small.png" 
 									alt="rogalik">
 							</a>
 							<p class="prod-name">«Рогалик»</p>
@@ -1171,7 +1186,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/chabata-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, суміш італійських трав, харчові добавки.">
-								<img class="img-style" src="images/catalog/chabata-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/chabata-small.png" 
 									alt="chabata">
 							</a>
 							<p class="prod-name">«Чіабата»</p>
@@ -1186,7 +1201,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/baget-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, харчові добавки.">
-								<img class="img-style" src="images/catalog/baget-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/baget-small.png" 
 									alt="baget">
 							</a>
 							<p class="prod-name">«Багет»</p>
@@ -1201,7 +1216,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/pizza-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, цукор, харчові добавки.">
-								<img class="img-style" src="images/catalog/pizza-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/pizza-small.png" 
 									alt="pizza">
 							</a>
 							<p class="prod-name">Заготовка для піцци</p>
@@ -1216,12 +1231,12 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/hotdog-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, цукор, харчові добавки.">
-								<img class="img-style" src="images/catalog/hotdog-small.png" loading="lazy"
+								<img class="img-style lazy" data-src="images/catalog/hotdog-small.png" 
 									alt="hotdog">
 							</a>
 							<p class="prod-name">Булка «ХОТ-ДОГ»</p>
 							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
-								</br>Маса нетто: 0,009 ??? кг (+-2,5%).</p>
+								</br>Маса нетто: 0,09 кг (+-2,5%).</p>
 						</div>
 					</svg>
 				</div>
@@ -1231,7 +1246,7 @@
 						<div class="prod-box">
 							<a data-fancybox="gallery" href="images/catalog/gamburger-big.png"
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, цукор, кунжут, харчові добавки.">
-								<img class="img-style" src="images/catalog/gamburger-small.png" loading="lazy" alt="gamburger">
+								<img class="img-style lazy" data-src="images/catalog/gamburger-small.png"  alt="gamburger">
 							</a>
 							<p class="prod-name">Булка «Гамбургер»</p>
 							<p>Із пшеничного борошна вищого</br>гатунку. Без ГМО.
@@ -1241,11 +1256,12 @@
 				</div>
 			</div>
 		</section>
+		<div id="topBtn"><img class="UpImg" src="images/catalog/up.svg" alt="up" /></div>
 	</main>
 	<footer>
 		<section class="footer">
 			<div>
-				<img class="footer-logo" loading="lazy" src="images/logo.svg" alt="Сіль Землі">
+				<img class="footer-logo"  src="images/logo.svg" alt="Сіль Землі">
 			</div>
 			<p class="address">
 				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська область, смт. Буштино,</br>вулиця Заводська,
@@ -1255,13 +1271,13 @@
 				<a class="email-link" href="mailto:ivanovichsb@gmail.com" target="_blank">email</a>
 				<div class="social-icons">
 					<a href="" target="_blank" rel="noopener">
-						<img width="20" height="20" loading="lazy" src="images/instagram.svg" alt="instagram">
+						<img width="20" height="20"  src="images/instagram.svg" alt="instagram">
 					</a>
 					<a href="" target="_blank" rel="noopener">
-						<img width="20" height="20" loading="lazy" src="images/viber.svg" alt="viber">
+						<img width="20" height="20"  src="images/viber.svg" alt="viber">
 					</a>
 					<a href="https://m.facebook.com/Пекарня-Сіль-Землі-799960886817298/" target="_blank" rel="noopener">
-						<img width="20" height="20" loading="lazy" src="images/facebook.svg" alt="facebook">
+						<img width="20" height="20"  src="images/facebook.svg" alt="facebook">
 					</a>
 				</div>
 			</div>
@@ -1274,7 +1290,7 @@
 				<a class="contackt-link" href="mailto:ivanovichsb@gmail.com" target="_blank">Email:
 					ivanovichsb@gmail.com</a>
 				<a class="created-link" href="https://kapustiansky.tk/" target="_blank">Created by&nbsp&nbsp
-					<img width="20" height="20" loading="lazy" src="images/smile.svg" alt="facebook">
+					<img width="20" height="20"  src="images/smile.svg" alt="facebook">
 				</a>
 			</div>
 		</section>
@@ -1295,7 +1311,14 @@
 
 		$(function() {
         $('.lazy').Lazy();
-    });
+	});
+	
+	document.getElementById('topBtn').onclick = () => {
+				window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				});
+			}
 	</script>
 </body>
 

@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
+	<script type="text/javascript" src="dist/js/jquery.lazy.min.js"></script>
+
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -19,6 +21,11 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <style>
+
+@font-face {
+    font-family: Appetite;
+    src: url(founts/Appetite.ttf);
+   }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -79,10 +86,6 @@ body {
 	background-attachment: fixed;
 }
 
-@font-face {
-    font-family: Appetite;
-    src: url(founts/Appetite.ttf);
-   }
 
 .board {
 	position: fixed;
@@ -533,19 +536,19 @@ footer {
 			<h1 class="awards-title">НАШІ НАГОРОДИ :</h1>
 			<div class="awards-box">
 				<a data-fancybox="gallery" class="awards-img" href="images/about/reward-children-big.png" data-caption="За вагомий внесок у покращення умов проживання дитячого будинку-інтернату.">
-					<img src="images/about/reward-children-small.png" loading="lazy" alt="reward-children">
+					<img class="lazy" data-src="images/about/reward-children-small.png" alt="reward-children">
 				</a>
 				<a data-fancybox="gallery" class="awards-img" href="images/about/reward-bread-big.png" data-caption="За вагомий внесок у соціально-економічний розвиток району.">
-					<img src="images/about/reward-bread-small.png" loading="lazy" alt="reward-children">
+					<img class="lazy" data-src="images/about/reward-bread-small.png" alt="reward-children">
 				</a>
 				<a data-fancybox="gallery" class="awards-img" href="images/about/reward-quality-big.png" data-caption="За високі показники у господарській діяльності. Номінація - Продовольчі товари." >
-					<img src="images/about/reward-quality-small.png" loading="lazy" alt="reward-children">
+					<img class="lazy" data-src="images/about/reward-quality-small.png" alt="reward-children">
 				</a>
 				<a data-fancybox="gallery" class="awards-img" href="images/about/reward-employer-big.png" data-caption="Номінація - кращий роботодавець. За вагомий внесок у розвиток підприємництва в районі.">
-					<img src="images/about/reward-employer-small.png" loading="lazy" alt="reward-children">
+					<img class="lazy" data-src="images/about/reward-employer-small.png" alt="reward-children">
 				</a>
 				<a data-fancybox="gallery" class="awards-img" href="images/about/reward-spirit-big.png" data-caption="За допомогу в підтриманні обороноздатності держави.">
-					<img src="images/about/reward-spirit-small.png" loading="lazy" alt="reward-children">
+					<img class="lazy" data-src="images/about/reward-spirit-small.png" alt="reward-children">
 				</a>
 			</div>
 		</section>
@@ -553,7 +556,7 @@ footer {
 	<footer>
 		<section class="footer">
 			<div>
-				<img class="footer-logo" loading="lazy" src="images/logo.svg" alt="Сіль Землі">
+				<img class="footer-logo" src="images/logo.svg" alt="Сіль Землі">
 			</div>
 			<p class="address">
 				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська область, смт. Буштино,</br>вулиця Заводська, 13.</br>© «Сіль Землі» 2019. Всі права захищені.
@@ -562,13 +565,13 @@ footer {
 				<a class="email-link" href="mailto:ivanovichsb@gmail.com" target="_blank">email</a>
 				<div class="social-icons">
 					<a href="" target="_blank" rel="noopener">
-						<img width="20" height="20" loading="lazy" src="images/instagram.svg" alt="instagram">
+						<img width="20" height="20" src="images/instagram.svg" alt="instagram">
 					</a>
 					<a href="" target="_blank" rel="noopener">
-						<img width="20" height="20" loading="lazy" src="images/viber.svg" alt="viber">
+						<img width="20" height="20" src="images/viber.svg" alt="viber">
 					</a>
 					<a href="https://m.facebook.com/Пекарня-Сіль-Землі-799960886817298/" target="_blank" rel="noopener">
-						<img width="20" height="20" loading="lazy" src="images/facebook.svg" alt="facebook">
+						<img width="20" height="20" src="images/facebook.svg" alt="facebook">
 					</a>
 				</div>
 			</div>
@@ -580,7 +583,7 @@ footer {
 				<a class="contackt-link" href="tel:+380673122909">Директор: +38 (067) 312 29 09</a>
 				<a class="contackt-link" href="mailto:ivanovichsb@gmail.com" target="_blank">Email: ivanovichsb@gmail.com</a>
 				<a class="created-link" href="https://kapustiansky.tk/" target="_blank">Created by&nbsp&nbsp
-					<img width="20" height="20" loading="lazy" src="images/smile.svg" alt="facebook">
+					<img width="20" height="20" src="images/smile.svg" alt="facebook">
 				</a>
 			</div>
 		</section>
@@ -597,7 +600,23 @@ footer {
 				//"thumbs",
 				"close"
 			]
-		});			
+		});		
 	</script> 
+	<!-- <script>
+		if ('loading' in HTMLImageElement.prototype) {
+		  const images = document.querySelectorAll('img[loading="lazy"]');
+		  images.forEach(img => {
+			img.src = img.dataset.src;
+		  });
+		} else {
+		  const script = document.createElement('script');
+		  script.src = '/dist/js/jquery.lazy.min.js';
+		  document.body.appendChild(script);
+
+		  $(function() {
+        	$('.lazy').Lazy();
+   		  });	
+		}
+	  </script> -->
 </body>
 </html>

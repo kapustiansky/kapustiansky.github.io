@@ -15,6 +15,13 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <style>
+
+
+	@font-face {
+			font-family: Appetite;
+			src: url(founts/Appetite.ttf);
+		}
+		
 	html,
 	body,
 	div,
@@ -161,11 +168,6 @@
 		background: url(images/board-back.jpg) 100% 100% no-repeat;
         background-size: cover;
         background-attachment: fixed;
-	}
-
-	@font-face {
-		font-family: Appetite;
-		src: url(founts/Appetite.ttf);
 	}
 
 	.board {
@@ -423,41 +425,104 @@
 	/* MAIN */
 
 .contact-box {
-    padding-top: 10%;
+    padding-top: 13%;
     display: flex;
-    align-items: center;
-	justify-content: space-around;
+	justify-content: space-evenly;
 }
 
-.adres-img {
-    background-color:black;
-    height: 300px;
-    width: 400px;
+.bakery-img {
+    /* height: 300px;
+    width: 450px; media */
+	box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.993);
 }
 
 .contact-form {
-    background-color:black;
-    height: 300px;
-    width: 600px; 
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact-h1 {
+	color: #f37b03;
+	font-family: Appetite;
+	letter-spacing: 0.1em;
+	font-size: 2em;
+	margin: 1rem;
+	padding-top: 1rem;
+}
+
+.contact-h2 {
+	margin: 1rem;
+}
+
+.contact-data {
+	display: flex;
+	justify-content: space-between;
+	width: 40rem;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: #330000;
+	font-size: 1.1em;
+}
+
+.contact-blocks {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contackt-link-main {
+	color: #cc9933;
+	line-height: 1.6em;
+}
+
+.email-link-main {
+    width: 130px;
+    height: 35px;
+    color: #cc9933;
+    font-family: 'Comfortaa', cursive;
+	font-size: 1.1em;
+	letter-spacing: 0.1em;
+    border: solid 2px #cc6600;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+	background: #ffffff73;
+	box-shadow: 0 0 3px 0px rgba(0,0,0,0.75);
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.email-link-main:hover {
+	background-color: #cc9933;
+	cursor: pointer;
+	transition: 0.2s;
+	background-color: #cc66002d;
+	box-shadow: 0 0 7px 0px rgba(0,0,0,0.75);
+	border:solid 2px #cc66002d;
 }
 
 .adres-box {
     display: flex;
 	flex-direction: column;
 	align-items: center;
-    margin-top: 1rem;
+	margin-top: 2rem;
+	background: url(images/contacts/lol.png) no-repeat;
+	background-size: 100% 100%;
+	/* box-shadow: 0 0 7px 0px rgba(0,0,0,0.75); */
+	filter: drop-shadow(0 -1px 5px rgba(100,0,0,0.5));
 }
 
 .adres {
-    background-color:rgb(226, 11, 11);
-    height: 150px;
+    height: 130px;
     width: 100%;
 }
 
 .social-info {
-    background-color:rgb(11, 86, 226);
+    /* background-color:rgb(11, 86, 226);
     height: 100px;
-    width: 100%;
+    width: 100%; */
 }
 
 .map {
@@ -552,8 +617,23 @@
 	</header>
 	<main>
 		<section class="contact-box">
-            <div class="adres-img"></div>
-            <div class="contact-form"></div>
+			<img class="bakery-img" src="images/contacts/bakery.png" alt="bakery">
+            <div class="contact-form">
+				<h1 class="contact-h1">Зв’язатися з нами:</h1>
+				<div class="contact-data">
+					<div class="contact-blocks">
+						<h2 class="contact-h2">Контактні телефони:</h2>
+						<a class="contackt-link-main" href="tel:+380673102145">Замовлення: +38 (067) 310 21 45</a>
+						<a class="contackt-link-main" href="tel:+380673122909">Директор: +38 (067) 312 29 09</a>
+						<a class="contackt-link-main" href="fax:+0313469205">Тел/факс: 0 (3134) 6 92 05</a>
+					</div>
+					<div class="contact-blocks">
+						<h2 class="contact-h2">Надіслати нам листа:</h2>
+						<a class="email-link-main" href="mailto:ivanovichsb@gmail.com" target="_blank">Email</a>
+						<p style="color:#cc9933">ivanovichsb@gmail.com</p>
+					</div>
+				</div>
+			</div>
         </section>
 		<section class="adres-box">
             <div class="adres"></div>
@@ -859,7 +939,7 @@
 	<footer>
 		<section class="footer">
 			<div>
-				<img class="footer-logo" loading="lazy" src="images/logo.svg" alt="Сіль Землі">
+				<img class="footer-logo"  src="images/logo.svg" alt="Сіль Землі">
 			</div>
 			<p class="address">
 				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська область, смт. Буштино,</br>вулиця Заводська,
@@ -869,13 +949,13 @@
 				<a class="email-link" href="mailto:ivanovichsb@gmail.com" target="_blank">email</a>
 				<div class="social-icons">
 					<a href="" target="_blank" rel="noopener">
-						<img width="20" height="20" loading="lazy" src="images/instagram.svg" alt="instagram">
+						<img width="20" height="20"  src="images/instagram.svg" alt="instagram">
 					</a>
 					<a href="" target="_blank" rel="noopener">
-						<img width="20" height="20" loading="lazy" src="images/viber.svg" alt="viber">
+						<img width="20" height="20"  src="images/viber.svg" alt="viber">
 					</a>
 					<a href="https://m.facebook.com/Пекарня-Сіль-Землі-799960886817298/" target="_blank" rel="noopener">
-						<img width="20" height="20" loading="lazy" src="images/facebook.svg" alt="facebook">
+						<img width="20" height="20"  src="images/facebook.svg" alt="facebook">
 					</a>
 				</div>
 			</div>
