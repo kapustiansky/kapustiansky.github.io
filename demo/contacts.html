@@ -427,6 +427,7 @@
 .contact-box {
     padding-top: 13%;
     display: flex;
+	flex-flow: row wrap;
 	justify-content: space-evenly;
 }
 
@@ -457,6 +458,7 @@
 
 .contact-data {
 	display: flex;
+	/* flex-flow: row wrap; */
 	justify-content: space-between;
 	width: 40rem;
 	font-family: 'Comfortaa', cursive;
@@ -508,21 +510,49 @@
 	flex-direction: column;
 	align-items: center;
 	margin-top: 2rem;
-	background: url(images/contacts/background-adress.png) no-repeat;
-	background-size: 100% 100%;
-	box-shadow: 0 0 10px 0px rgba(0,0,0,0.75);
+
 	/* filter: drop-shadow(0 -1px 5px rgba(100,0,0,0.5)); */
 }
 
 .adres {
     height: 130px;
     width: 100%;
+	background: url(images/contacts/background-adress.png) no-repeat;
+	background-size: 100% 100%;
+	box-shadow: 0 0 10px 0px rgba(0,0,0,0.75);
+	display: flex;
+	/* flex-flow: row wrap; */
+	align-items: center;
+	justify-content: center;
+}
+
+.map-link {
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: #330000;
+	/* font-size: 1.1em; */
+	text-align: center;
+	line-height: 1.2em;
+}
+
+.adres-main {
+	display: flex;
+	margin: 1.2rem;
+}
+
+.adres-h1 {
+	color: #f37b03;
+		font-family: Appetite;
+		font-size: 1.4em;
+		letter-spacing: 0.2em;
+		font-weight: bold;
+		margin: 0.5rem;
 }
 
 .social-info {
-    /* background-color:rgb(11, 86, 226);
+    /* background-color:rgb(11, 86, 226);*/
     height: 100px;
-    width: 100%; */
+    width: 100%; 
 }
 
 .map {
@@ -636,7 +666,15 @@
 			</div>
         </section>
 		<section class="adres-box">
-            <div class="adres"></div>
+            <div class="adres">
+				<a class="map-link" href="https://goo.gl/maps/P7V6F6ZkQUoYj3UDA" target="_blank">Україна, Закарпатська область, смт. Буштино, вулиця Заводська, 13.</a>
+				<div class="adres-main">
+					<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
+					<h1 class="adres-h1">НАШІ&nbspАДРЕСИ</h1>
+					<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
+				</div>
+				<a class="map-link" href="https://goo.gl/maps/wuTYJerMKGGVD9BZA" target="_blank">Україна, Закарпатська область, смт. Буштино, вулиця Богдана Хмельницького, 4.</a>
+			</div>
             <div class="social-info"></div>
         </section>
 		<section class="map">
