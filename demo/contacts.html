@@ -508,14 +508,11 @@
 .adres-box {
     display: flex;
 	flex-direction: column;
-	align-items: center;
 	margin-top: 2rem;
-
-	/* filter: drop-shadow(0 -1px 5px rgba(100,0,0,0.5)); */
 }
 
 .adres {
-    height: 130px;
+    /* height: 130px; */
     width: 100%;
 	background: url(images/contacts/background-adress.png) no-repeat;
 	background-size: 100% 100%;
@@ -533,6 +530,9 @@
 	/* font-size: 1.1em; */
 	text-align: center;
 	line-height: 1.2em;
+	width: 35%;
+	margin-bottom: 2.8rem;
+    margin-top: 2.8rem;
 }
 
 .adres-main {
@@ -542,18 +542,62 @@
 
 .adres-h1 {
 	color: #f37b03;
-		font-family: Appetite;
-		font-size: 1.4em;
-		letter-spacing: 0.2em;
-		font-weight: bold;
-		margin: 0.5rem;
+	font-family: Appetite;
+	font-size: 1.6em;
+	letter-spacing: 0.2em;
+	margin: 0.5rem;
 }
 
 .social-info {
-    /* background-color:rgb(11, 86, 226);*/
-    height: 100px;
     width: 100%; 
+	display: flex;
+	/* flex-flow: row wrap; */
+	align-items: center;
+	justify-content: space-around;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: #cc9933;
+	text-align: center;
+	line-height: 1.2em;
 }
+
+.soc-img {
+	display: flex;
+	align-items: center;
+	/* padding-right: 7rem; */
+}
+
+.soc-img-heading {
+	color: #f37b03;
+	font-family: Appetite;
+	font-size: 2em;
+	letter-spacing: 0.2em;
+	padding-top: 1.2rem;
+}
+
+.logo-main-center {
+	filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
+	margin: 0.7rem;
+}
+
+.social-heading {
+	color: #330000;
+	margin-bottom: 0.6rem;
+}
+
+.social-icons-main {
+    margin-top: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+
+
 
 .map {
     background-color:rgb(7, 7, 7);
@@ -596,6 +640,30 @@
     stroke-opacity: 0;
 	r: 20px;
   }
+}
+
+@media all and (min-width: 1340px) {
+	.soc-img {
+    padding-right: 7rem;
+}
+}
+
+@media all and (max-width: 900px) {
+  .adres {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column;
+  }
+
+  .contact-data {
+	/* width: 40rem; */
+	flex-direction: column;
+	}
+
+	.social-info {
+		flex-direction: column;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
 }
 
 </style>
@@ -670,12 +738,36 @@
 				<a class="map-link" href="https://goo.gl/maps/P7V6F6ZkQUoYj3UDA" target="_blank">Україна, Закарпатська область, смт. Буштино, вулиця Заводська, 13.</a>
 				<div class="adres-main">
 					<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
-					<h1 class="adres-h1">НАШІ&nbspАДРЕСИ</h1>
+					<h1 class="adres-h1">Наші&nbspАдреси</h1>
 					<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
 				</div>
 				<a class="map-link" href="https://goo.gl/maps/wuTYJerMKGGVD9BZA" target="_blank">Україна, Закарпатська область, смт. Буштино, вулиця Богдана Хмельницького, 4.</a>
 			</div>
-            <div class="social-info"></div>
+            <div class="social-info">
+				<div>
+					<p class="social-heading">Прийом замовлень:</p>
+					<p>Пн-Сб: Цілодобово</br>Неділя та святкові дні: Вихідний</p>
+				</div>
+				<div class="soc-img">
+					<p class="soc-img-heading">Сіль&nbspЗемлі</p>
+					<img class="logo-main-center" width="85" height="85" src="images/logo.svg" alt="Сіль Землі">
+					<p class="soc-img-heading">Пекарня</p>
+				</div>
+				<div>
+					<p class="social-heading">Ми у соціальних мережах:</p>
+					<div class="social-icons-main">
+						<a href="" target="_blank" rel="noopener">
+							<img width="30" height="30"  src="images/instagram.svg" alt="instagram">
+						</a>
+						<a href="" target="_blank" rel="noopener">
+							<img width="30" height="30"  src="images/viber.svg" alt="viber">
+						</a>
+						<a href="https://m.facebook.com/Пекарня-Сіль-Землі-799960886817298/" target="_blank" rel="noopener">
+							<img width="30" height="30"  src="images/facebook.svg" alt="facebook">
+						</a>
+					</div>
+				</div>
+			</div>
         </section>
 		<section class="map">
 <?xml version="1.0" encoding="utf-8"?>
