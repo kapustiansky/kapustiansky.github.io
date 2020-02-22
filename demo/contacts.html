@@ -328,6 +328,7 @@
 	footer {
 		display: flex;
 		justify-content: center;
+		/* flex-flow: row wrap; */
 		/* margin-top: 3rem; */
 		width: 100%;
 		height: 100px;
@@ -654,7 +655,7 @@
 
 	body {
 		background-image: none;
-		background-color:rgba(255, 249, 161, 0.644);
+		background-color:rgba(255, 249, 161, 0.37);
 	}
 
 	.header {
@@ -667,7 +668,7 @@
 	}
 
 	.logo-cont {
-    	margin: 10px;
+    	margin: 7px;
 	}
 
 	.logo {
@@ -711,22 +712,16 @@
 		background-image: none;
 		background-color:rgba(248, 248, 248, 0.753);
 		flex-direction: column;
-		box-shadow: 0 0 13px 0px rgba(0,0,0,0.75);
+		box-shadow: 0 0 13px 0 rgba(0,0,0,0.75);
 	}
 
 	.map-link { 
 		margin-bottom: 20px;
     	margin-top: 0;
 		order: 2;
+		width: 80%;
 	}
 
-	.footer {
-    width: 100%;
-}
-
-.social-link {
-    margin: 0;
-}
 
 	.map {
     height: auto;
@@ -752,17 +747,56 @@
 		display: none;
 	}
 
+
+
+
 	footer {
 		background-image: none;
 		background-color:rgb(51, 33, 17);
-		flex-direction: column;
 		height: auto;
 	}
 
 	.footer {
 		flex-direction: column;
-	
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+    	width: 100%;
 	}
+
+	.address {
+		order: 4;
+		margin-bottom: 0.5rem;
+	}
+
+	.footer-logo-box {
+		order: 3;
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.footer-logo {
+		width: 70px;
+    	height: 70px;
+	}
+
+	.schedule {
+		order: 1;
+		margin-bottom: 0.5rem;
+	}
+
+	.social-link {
+   		 margin: 0;
+		 order: 2;
+	}
+
+	.contackt-link {
+		display: none;
+	}
+
+	.cont-tel {
+		order: 5;
+	}
+
 }
 
 </style>
@@ -1167,8 +1201,8 @@
 	</main>
 	<footer>
 		<section class="footer">
-			<div>
-				<img class="footer-logo"  src="images/logo.svg" alt="Сіль Землі">
+			<div class="footer-logo-box">
+				<a href="index.html"><img class="footer-logo"  src="images/logo.svg" alt="Сіль Землі"></a>
 			</div>
 			<p class="address">
 				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська область, смт. Буштино,</br>вулиця Заводська,
@@ -1189,7 +1223,7 @@
 				</div>
 			</div>
 			<p class="schedule">
-				пн-сб: цілодобово;</br>неділя: вихідний;
+				пн-сб: цілодобово</br>неділя: вихідний
 			</p>
 			<div class="cont-tel">
 				<a class="contackt-link" href="tel:+380673102145">Замовлення: +38 (067) 310 21 45</a>
