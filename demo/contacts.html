@@ -655,6 +655,11 @@
 	}
 
 
+	.social-icons-header {
+			display: none;
+		}
+
+
 
 
 
@@ -723,9 +728,7 @@ nav {
   stroke-dashoffset: -83px;
 }
 
-/* li a {
-	color: #cc9933;
-} */
+
 
 	@keyframes pulse {
 		from {
@@ -760,7 +763,7 @@ nav {
 
 		.logo-cont {
 			margin: 7px;
-			padding-left: 8%;
+			/* padding-left: 8%; */
 		}
 
 		.logo {
@@ -768,8 +771,7 @@ nav {
 		}
 
 		.push {
-			justify-content: space-evenly;
-			width: auto;
+			width: 80px;
 			margin: 0;
 		}
 
@@ -778,16 +780,7 @@ nav {
 		}
 
 		.contackt-namber {
-			flex-direction: column;
-		}
-
-		.phone {
-			width: 20px;
-		}
-
-		.namber {
-			padding-left: 0;
-			padding-top: 0.7rem;
+			display: none;
 		}
 
 
@@ -883,6 +876,18 @@ nav {
 			order: 5;
 		}
 
+		.social-icons-header {
+			width: 100%;
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.social-icons-header a {
+			margin: 3px;
+		}
+
 
 
 
@@ -941,13 +946,13 @@ nav {
 		font-size: 0.7em;
 	}
 
-	.namber {
+	/* .namber {
 		font-size: 0.7em;
 	}
 
 	.phone {
     	width: 15px;
-	}
+	} */
 
 	}
 
@@ -960,10 +965,6 @@ nav {
 
 	.main, .about, .products {
 		padding-right: 0;
-	}
-
-	.namber {
-    	letter-spacing: 0;
 	}
 	}
 
@@ -1027,6 +1028,20 @@ nav {
 			<div class="time-to-work">
 				<img class="clock" src="images/clock.svg" alt="clock">
 				<div class="working-time">Пн-Сб:<br />цілодобово<br />Нд:<br />вихідний</div>
+			</div>
+			<div class="social-icons-header">			
+				<a href="" target="_blank" rel="noopener">
+					<img width="25" height="25" src="images/phone.svg" alt="phone">
+				</a>
+				<a href="" target="_blank" rel="noopener">
+					<img width="25" height="25" src="images/instagram.svg" alt="instagram">
+				</a>
+				<a href="" target="_blank" rel="noopener">
+					<img width="25" height="25" src="images/viber.svg" alt="viber">
+				</a>
+				<a href="https://m.facebook.com/Пекарня-Сіль-Землі-799960886817298/" target="_blank" rel="noopener">
+					<img width="25" height="25" src="images/facebook.svg" alt="facebook">
+				</a>
 			</div>
 		</div>
 	</header>
