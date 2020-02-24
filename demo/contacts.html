@@ -729,6 +729,11 @@ nav {
 }
 
 
+.i-tel {
+	width: 25px;
+	height: 25px;
+}
+
 
 	@keyframes pulse {
 		from {
@@ -949,16 +954,17 @@ nav {
 
 	@media all and (max-width: 500px) {
 		.main, .about, .products, .contacts {
-		font-size: 0.7em;
-	}
+			font-size: 0.7em;
+		}
 
-	/* .namber {
-		font-size: 0.7em;
-	}
+		.social-icons-header>a:not(:first-child) {
+			display: none;
+		}
 
-	.phone {
-    	width: 15px;
-	} */
+		.i-tel {
+			width: 30px;
+			height: 30px;
+		}
 
 	}
 
@@ -1036,8 +1042,8 @@ nav {
 				<div class="working-time">Пн-Сб:<br />цілодобово<br />Нд:<br />вихідний</div>
 			</div>
 			<div class="social-icons-header">			
-				<a href="" target="_blank" rel="noopener">
-					<img width="25" height="25" src="images/phone.svg" alt="phone">
+				<a href="tel:+380673102145">
+					<img class="i-tel" src="images/phone.svg" alt="phone">
 				</a>
 				<a href="" target="_blank" rel="noopener">
 					<img width="25" height="25" src="images/instagram.svg" alt="instagram">
