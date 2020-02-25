@@ -563,9 +563,9 @@
 		/* list-style: none; */
 	}
 
-	#bread,
-	#bun,
-	#other {
+	.bread,
+	.bun,
+	.other {
 		color: #f37b03;
 		font-family: Appetite;
 		font-size: 1.7em;
@@ -734,6 +734,22 @@ nav {
 	height: 25px;
 }
 
+
+
+.block {
+  position: relative;
+}
+
+
+#bread, #bun, #other {
+  position: absolute;
+  top: -135px;
+  /* top: -8rem; */
+  left: 0;
+  width: 0px;
+  height: 0px;
+}
+
 	@media all and (max-width: 1100px) {
 
 		body {
@@ -820,7 +836,7 @@ nav {
 			margin-top: 10px;
 		}
 
-		#bread, #bun, #other {
+		.bread, .bun, .other {
 			font-size: 1.2em;
 			padding-top: 0.2rem;
 		}
@@ -943,6 +959,14 @@ nav {
 			margin-right: 0;
 			width: auto;
 		}
+
+
+
+
+
+		#bread, #bun, #other {
+  top: -90px;
+}
 
 	}
 
@@ -1086,11 +1110,13 @@ nav {
 					</a>
 				</div>
 			</div>
+			<!-- <div id="bread"></div> -->
 		</section>
 		<section class="product-container">
 			<div class="head-product">
 				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
-				<h1 id="bread">ХЛІБ</h1>
+				<div class="block"><i id="bread"></i></div>
+				<h1 class="bread">ХЛІБ</h1>
 				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
 			</div>
 			<div class="product-menu">
@@ -1229,6 +1255,7 @@ nav {
 							<a data-fancybox="gallery" href="images/catalog/visivka-big.png"
 								data-caption="Склад : борошно пшеничне 1-го сорту, борошно 2-го сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, вода питна, закваска, висівки харчові.">
 								<img class="img-style lazy" data-src="images/catalog/visivka-small.png" alt="visivka">
+								<!-- <div id="bun"></div> -->
 							</a>
 							<p class="prod-name">Хліб «Висівковий» формовий</p>
 							<p>Із харчовою висівкою</br> Без ГМО.
@@ -1241,7 +1268,8 @@ nav {
 		<section class="product-container">
 			<div class="head-product">
 				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
-				<h1 id="bun">БУЛОЧНІ ВИРОБИ</h1>
+				<div class="block"><i id="bun"></i></div>
+				<h1 class="bun">БУЛОЧНІ ВИРОБИ</h1>
 				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
 			</div>
 			<div class="product-menu">
@@ -1480,6 +1508,7 @@ nav {
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, горіх грецький мелений.">
 								<img class="img-style lazy" data-src="images/catalog/kvitka-tvorog-small.png"
 									alt="kvitka-tvorog">
+									<!-- <div id="other"></div> -->
 							</a>
 							<p class="prod-name">Булочка «Квіточка»</p>
 							<p>Із горіхом.</br> Без ГМО.
@@ -1492,7 +1521,8 @@ nav {
 		<section class="product-container">
 			<div class="head-product">
 				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
-				<h1 id="other">ХЛІБОБУЛОЧНІ&nbspВИРОБИ</h1>
+				<div class="block"><i id="other"></i></div>
+				<h1 class="other">ХЛІБОБУЛОЧНІ&nbspВИРОБИ</h1>
 				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
 			</div>
 			<div class="product-menu">
