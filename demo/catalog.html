@@ -1110,12 +1110,11 @@ nav {
 					</a>
 				</div>
 			</div>
-			<!-- <div id="bread"></div> -->
 		</section>
 		<section class="product-container">
 			<div class="head-product">
 				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
-				<div class="block"><i id="bread"></i></div>
+				<div class="block"><i id="bread"></i></div><!--элемент для якоря -->
 				<h1 class="bread">ХЛІБ</h1>
 				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
 			</div>
@@ -1677,7 +1676,12 @@ nav {
 				//"download",
 				"thumbs",
 				"close"
-			]
+			],
+			mobile: {
+					clickContent: function(current, event) {
+					return current.type === "image" ? "toggleControls" : "close";
+					}
+			}
 		});
 
 		$(function () {
