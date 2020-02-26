@@ -538,6 +538,15 @@ nav {
 
 
 
+.quality-img, .care-img, .natural-img, .fresh-img {
+    width: 130px;
+	height: 130px;
+}
+
+
+
+
+
 
 @media all and (max-width: 1100px) {
 
@@ -619,7 +628,9 @@ body {
 }
 
 .awards {
-    margin-top: 1rem;
+    margin-top: 0;
+	padding-top: 1rem;
+	box-shadow: 0 0 8px 2px rgba(0,0,0,0.75);
 }
 
 .awards-box {
@@ -632,6 +643,25 @@ body {
     margin: 1rem;
 }
 
+.quality, .care, .natural, .fresh {
+    flex-direction: column;
+	text-align: center;
+    width: 100%;
+	margin-top: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.quality-text, .care-text, .natural-text, .fresh-text {
+    margin-left: 0;
+	margin-top: 1rem;
+}
+
+.quality-img, .care-img, .natural-img, .fresh-img {
+    width: 90px;
+	height: 90px;
+}
+
 
 
 
@@ -639,6 +669,7 @@ footer {
 	background-image: none;
 	background-color: rgb(51, 33, 17);
 	height: auto;
+	margin-top: 0;
 }
 
 .footer {
@@ -881,19 +912,19 @@ nav {
         </section>
         <section class="about-business">
 			<div class="quality">
-				<img width="130" height="130" src="images/okay-chaf.svg" alt="quality">
+				<img class="quality-img" src="images/okay-chaf.svg" alt="quality">
 				<p class="quality-text">Кожен наш співробітник точно знає, що якість продукції залежить від зусиль усієї команди професіоналів. У хлібному виробництві немає дрібниць, на всіх етапах - від замісу тіста, до упаковки та доставки споживачеві, все повинно бути виконано бездоганно.</p>
 			</div>
 			<div class="care">
-				<img width="130" height="130" src="images/heart.svg" alt="care">
+				<img class="care-img" src="images/heart.svg" alt="care">
 				<p class="care-text">Важливою частиною нашої роботи є особлива увага до кожного клієнта і його замовлення, тому компанія готова запропонувати максимальний сервіс на всіх етапах.</p>
 			</div>
 			<div class="natural">
-				<img width="130" height="130" src="images/gmo.svg" alt="natural">
+				<img class="natural-img" src="images/gmo.svg" alt="natural">
 				<p class="natural-text">Продукція виготовляється виключно з натуральної сировини без використання консервантів та ГМО. На виробництві проводиться обов'язковий і ретельний контроль на всіх етапах виготовлення - від перевірки сировини до готового продукту.</p>
 			</div>
 			<div class="fresh">
-				<img width="130" height="130" src="images/fresh-bread.svg" alt="fresh">
+				<img class="fresh-img" src="images/fresh-bread.svg" alt="fresh">
 				<p class="fresh-text">На даний момент ми маємо більше ніж 500 точок збуту продукції, які розташовані у чотирьох районах Закарпатської області: Тячівський, Хустський, Виноградівський, Іршавський. Загальна площа цих районів - 4434 км2. Сукупна кількість населення цих районів - близько пів мільйона осіб. Компанія має власний автопарк та широку дистриб’юторську мережу, що дозволяє забезпечити своєчасну доставку свіжого хліба та ароматної випічки на прилавки магазинів.</p>
 			</div>
 		</section>
