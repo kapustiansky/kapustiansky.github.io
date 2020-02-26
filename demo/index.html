@@ -2,8 +2,8 @@
 <html lang="ua-UA">
 
 <head>
-	<title>Головна - Сіль Землі</title>
 	<meta charset="UTF-8">
+	<title>Головна - Сіль Землі</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 
@@ -68,100 +68,98 @@ table {
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-}
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		font-size: 16px;
+		text-decoration: none;
+		list-style: none;
+	}
 
-body {
-	background: url(images/board-back.jpg) 100% 100% no-repeat;
-    background-size: cover;
-	background-attachment: fixed;
-}
+	body {
+		background: url(images/board-back.jpg) 100% 100% no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
 
+	.board {
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+	}
 
-.board {
-	position: fixed;
-	height: 100vh;
-	width: 100%;
-}
+	.logo {
+		filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
+		width: 125px;
+		transition: 1s;
+	}
 
-.logo {
-	filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
-	width: 125px;
-	transition: 1s;
-}
+	.little-logo {
+		width: 100px;
+		transition: 1s;
+	}
 
-.little-logo {
-	width: 100px;
-	transition: 1s;
-}
-
-.logo-cont {
-	margin-top: 10px;
-}
+	.logo-cont {
+		margin-top: 10px;
+	}
 
 .header {
-	position: fixed;
-	top: 0;
-	display: flex;
-	justify-content: center;
-	box-shadow: 0px 3px 10px 6px rgba(0,0,0,0.74);
-	width: 100%;
-	height: 100px;
-	background: url(images/brown-board.png) 100% 100% no-repeat;
-    background-size: cover;
-	z-index: 1;
-	/* transition: 1s;	 */
-}
+		position: sticky;
+		top: 0;
+		display: flex;
+		justify-content: center;
+		box-shadow: 0px 3px 10px 6px rgba(0, 0, 0, 0.74);
+		width: 100%;
+		height: 100px;
+		background: url(images/brown-board.png) 100% 100% no-repeat;
+		background-size: cover;
+		z-index: 1;
+		/* transition: 1s;	 */
+	}
 
-.little-had {
-	height: 70px;
-	/* transition: 1s; */
-}
+	.little-had {
+		height: 70px;
+		/* transition: 1s; */
+	}
 
-.nav {
-	display: flex;
-  	justify-content: space-between;
-	align-items: center;
-	width: 40%;
-	padding-top: 1em;
-	margin-right: 3%;
-}
+	.nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		/* padding-top: 1em;
+		margin-right: 3%; */
+	}
 
-.push {
-	display: flex;
-  	justify-content: space-evenly;
-	width: 40%;
-	margin-left: 3%;
-}
+	.push {
+		display: flex;
+		justify-content: space-evenly;
+		width: 40%;
+		margin-left: 3%;
+	}
 
 .main {
 	color: #f37b03;
-	cursor: pointer;
-	font-family: Appetite;
-	letter-spacing: 0.1em;
-	line-height: 35px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 30px;
-	margin-top: 17px;
+		cursor: pointer;
+		font-family: Appetite;
+		letter-spacing: 0.1em;
+		line-height: 35px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 30px;
+		margin-top: 17px;
 }
 
 .about, .products, .contacts {
 	color: #cc9933;
-	font-family: Appetite;
-	letter-spacing: 0.1em;
-	line-height: 35px;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-bottom: 30px;
-	margin-top: 17px;
-	/* text-shadow: 0 1px 0 rgb(7, 7, 7); */
-	/* font-size: 16px; */
-	/* font-size: 20px; медиа */
-	border-radius: 30px;
+		font-family: Appetite;
+		letter-spacing: 0.1em;
+		line-height: 35px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 30px;
+		margin-top: 17px;
+		border-radius: 30px;
 }
 
 .about:hover {
@@ -186,39 +184,30 @@ body {
 }
 
 .phone {
-	width: 25px;
-}
+		width: 25px;
+	}
 
-.clock {
-	width: 25px;
-}
+	.clock {
+		width: 25px;
+	}
 
-.namber {
-	color: #cc9933;
-	font-family: Appetite;
-	letter-spacing: 0.1em;
-	padding-left: 2em;
-}
+	.namber {
+		color: #cc9933;
+		font-family: Appetite;
+		letter-spacing: 0.1em;
+		padding-left: 2em;
+	}
 
-.working-time {
-	color: #cc9933;
-	font-family: Appetite;
-	padding-left: 2em;
-	letter-spacing: 0.1em;
-	text-align: center;
-	font-size: 0.8em;
-	line-height: 13px;
-}
+	.working-time {
+		color: #cc9933;
+		font-family: Appetite;
+		padding-left: 2em;
+		letter-spacing: 0.1em;
+		text-align: center;
+		font-size: 0.8em;
+		line-height: 13px;
+	}
 
-.contackt-namber, .time-to-work {
-	display: flex;
-	align-items: center;
- 	justify-content: center;
-}
-
-a {
-    text-decoration: none;
-}
 /* .time-to-work {
 	padding-right: 15%;
 } */
@@ -399,105 +388,422 @@ p {
 	font-size: 1.1em;
 }
 
+
+
+
 footer {
+		display: flex;
+		justify-content: center;
+		margin-top: 3rem;
+		/* flex-flow: row wrap; */
+		/* margin-top: 3rem; */
+		width: 100%;
+		height: 100px;
+		background: url(images/brown-board.png) 100% 100% no-repeat;
+		background-size: cover;
+	}
+
+	.footer {
+		width: 95%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+.footer-logo {
+		width: 95px;
+		height: 95px;
+		filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
+	}
+
+	.address,
+	.schedule {
+		margin-top: 0;
+		font-size: 0.8em;
+		text-align: center;
+		font-family: 'Comfortaa', cursive;
+		color: #cc9933;
+		line-height: 1.1em;
+	}
+
+.schedule {
+		line-height: 1.5em;
+	}
+
+	.social-link {
+		margin-right: 100px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.email-link {
+		width: 90px;
+		height: 25px;
+		color: #cc9933;
+		font-family: 'Comfortaa', cursive;
+		font-size: 0.9em;
+		border: solid 2px #cc6600;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.email-link:hover {
+		background-color: #bbbbbb4b;
+		cursor: pointer;
+		transition: 0.2s;
+	}
+
+
+.social-icons {
+		margin-top: 10px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.created-link {
+		color: #cc9933;
+		font-weight: bold;
+		font-size: 14px;
+		display: flex;
+		align-items: baseline;
+		justify-content: center;
+		margin-top: 6px;
+	}
+
+	.cont-tel {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contackt-link {
+		color: #cc9933;
+		font-family: 'Comfortaa', cursive;
+		font-size: 0.8em;
+		line-height: 1.2em;
+	}
+
+
+
+
+
+.social-icons-header {
+			display: none;
+		}
+
+
+
+
+
+
+
+
+	#check {
+  display: none;
+}
+
+.checkbtn {
+  display: none;
+}
+
+nav {
 	display: flex;
-	justify-content: center;
-	margin-top: 7rem;
-	width: 100%;
-    height: 100px;
-    background: url(images/brown-board.png) 100% 100% no-repeat;
-    background-size: cover;
+	padding-top: 1em;
+	margin-right: 3%;
+	width: 40%;
+}
+
+
+
+
+
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:#cc9933;
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+.ham7 .top {
+  stroke-dasharray: 40 82;
+}
+.ham7 .middle {
+  stroke-dasharray: 40 111;
+}
+.ham7 .bottom {
+  stroke-dasharray: 40 161;
+}
+.ham7.active .top {
+  stroke-dasharray: 17 82;
+  stroke-dashoffset: -62px;
+}
+.ham7.active .middle {
+  stroke-dashoffset: 23px;
+}
+.ham7.active .bottom {
+  stroke-dashoffset: -83px;
+}
+
+
+
+	.i-tel {
+	width: 25px;
+	height: 25px;
+}
+
+
+
+
+@media all and (max-width: 1100px) {
+
+body {
+	background-image: none;
+	background-color: rgba(248, 248, 248, 0.753);
+}
+
+.header {
+	height: auto;
+	justify-content: space-around;
+	background: url(images/brown-board-small.png) 100% 100% no-repeat;
+	background-size: cover;
+}
+
+.logo-cont {
+	margin: 7px;
+	padding-left: 1rem;
+}
+
+.logo {
+	width: 70px;
+}
+
+.push {
+	width: 80px;
+	margin: 0;
+}
+
+.time-to-work {
+	display: none;
+}
+
+.contackt-namber {
+	display: none;
+}
+
+
+
+.first-block {
+    height: auto;
+	padding-top: 3.5rem;
+}
+
+.bread {
+    display: none;
+}
+
+.bread-line {
+    width: 275px;
+}
+
+h1 {
+	font-size: 1em;
+}
+
+h2 {
+	font-size: .7em;
+}
+
+.production {
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    background-image:none;
+	background-color: rgba(255, 249, 161, 0.37);
+	filter: none;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+	background-image: none;
+	background-color: rgb(51, 33, 17);
+	height: auto;
+	margin-top: 0;
 }
 
 .footer {
-	width: 95%;
-	display: flex;
-	align-items: center;
- 	justify-content: space-between;
+	flex-direction: column;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
+}
+
+.address {
+	order: 4;
+	margin-bottom: 0.5rem;
+}
+
+.footer-logo-box {
+	order: 3;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .footer-logo {
-	width: 95px;
-	height: 95px;
-	filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
-}
-
-.address, .schedule {
-	margin-top: 0;
-	font-size: 0.8em;
-	text-align: center;
-	font-family: 'Comfortaa', cursive;
-	color: #cc9933;
-	line-height: 1.1em;
+	width: 70px;
+	height: 70px;
 }
 
 .schedule {
-	line-height: 1.5em;
+	order: 1;
+	margin-bottom: 0.5rem;
 }
 
 .social-link {
-	margin-right: 100px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.email-link {
-	width: 90px;
-	height: 25px;
-	color: #cc9933;
-	font-family: 'Comfortaa', cursive;
-	font-size: 0.9em;
-	border:solid 2px #cc6600;
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
- 	justify-content: center;
-}
-
-.email-link:hover {
-	background-color: #bbbbbb4b;
-	cursor: pointer;
-	transition: 0.2s;
-}
-
-.social-icons {
-	margin-top: 10px;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%; 
-}
-
-.created-link {
-	color: #cc9933;
-	font-weight: bold;
-	font-size: 14px;
-	display: flex;
-	align-items: baseline;
-	justify-content: center;
-	margin-top: 6px; 
-}
-
-.cont-tel {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	margin: 0;
+	order: 2;
 }
 
 .contackt-link {
-	color: #cc9933;
-	font-family: 'Comfortaa', cursive;
-	font-size: 0.8em;
-	line-height: 1.2em;
+	display: none;
 }
 
-/* @media screen and (max-width:700px) {
-	.first-block {
-		padding-top: 50%;
-	}
-} */
+.cont-tel {
+	order: 5;
+}
+
+.social-icons-header {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.social-icons-header a {
+	margin: 3px;
+}
+
+.order-footer {
+	display: block;
+}
+
+
+
+
+
+
+
+.checkbtn {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.nav {
+	position: fixed;
+	width: 100%;
+	/* background-color: rgb(95, 54, 0); */
+	/* background-color: rgb(0, 0, 0); */
+	background-color: rgb(43, 24, 1);
+	top: 84px;
+	/* top: -100%; */
+	left: -100%;
+	display: flex;
+	justify-content: space-around;
+	transition: all .5s;
+	z-index: 99999;
+}
+
+.main,
+.about,
+.products,
+.contacts {
+	display: block;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	line-height: 25px;
+}
+
+#check:checked~.nav {
+	/* top: 84px; */
+	left: 0;
+}
+
+nav {
+	padding-top: 0;
+	margin-right: 0;
+	width: auto;
+}
+
+}
+
+
+
+@media all and (max-width: 500px) {
+
+.main,
+.about,
+.products,
+.contacts {
+	font-size: 0.7em;
+}
+
+.social-icons-header>a:not(:first-child) {
+	display: none;
+}
+
+.i-tel {
+	width: 30px;
+	height: 30px;
+}
+
+}
+
+
+@media all and (max-width: 350px) {
+
+* {
+	font-size: 13px;
+}
+
+.main,
+.about,
+.products {
+	padding-right: 0;
+}
+}
 
 </style>
 <body>
@@ -543,25 +849,52 @@ footer {
 	</script>
 	
 	<header class="header">
-		<div class="nav">
-		<a class="main">ГОЛОВНА</a>
-		<a href="about.html" class="about">ПРО&nbspНАС</a>
-		<a href="catalog.html" class="products">ПРОДУКЦІЯ</a>
-		<a href="contacts.html" class="contacts">КОНТАКТИ</a>
-		</div>
-		<div class="logo-cont">
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<svg class="ham hamRotate ham7" viewBox="0 0 100 100" width="65"
+					onclick="this.classList.toggle('active')">
+					<path class="line top"
+						d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013" />
+					<path class="line middle" d="m 70,50 h -40" />
+					<path class="line bottom"
+						d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40" />
+				</svg>
+			</label>
+			<div class="nav">
+				<a class="main">ГОЛОВНА</a>
+				<a class="about" href="about.html">ПРО&nbspНАС</a>
+				<a class="products" href="catalog.html">ПРОДУКЦІЯ</a>
+				<a class="contacts" href="contacts.html">КОНТАКТИ</a>
+			</div>
+		</nav>
+		<label class="logo-cont">
 			<a href="index.html">
-			<img class="logo" src="images/logo.svg" alt="Сіль Землі">
+				<img class="logo" src="images/logo.svg" alt="Сіль Землі">
 			</a>
-		</div>
+		</label>
 		<div class="push">
-				<div class="contackt-namber">
-					<img class="phone" src="images/phone.svg" alt="phone">
-					<a class="namber" href="tel:+380673102145">+38 (067) 310 21 45</a>
-				</div>
+			<div class="contackt-namber">
+				<img class="phone" src="images/phone.svg" alt="phone">
+				<a class="namber" href="tel:+380673102145">+38 (067) 310 21 45</a>
+			</div>
 			<div class="time-to-work">
-					<img class="clock" src="images/clock.svg" alt="clock">
-					<div class="working-time">Пн-Сб:<br/>цілодобово<br/>Нд:<br/>вихідний</div>
+				<img class="clock" src="images/clock.svg" alt="clock">
+				<div class="working-time">Пн-Сб:<br />цілодобово<br />Нд:<br />вихідний</div>
+			</div>
+			<div class="social-icons-header">
+				<a href="tel:+380673102145">
+					<img class="i-tel" src="images/phone.svg" alt="phone">
+				</a>
+				<a href="" target="_blank" rel="noopener">
+					<img width="25" height="25" src="images/instagram.svg" alt="instagram">
+				</a>
+				<a href="" target="_blank" rel="noopener">
+					<img width="25" height="25" src="images/viber.svg" alt="viber">
+				</a>
+				<a href="https://m.facebook.com/Пекарня-Сіль-Землі-799960886817298/" target="_blank" rel="noopener">
+					<img width="25" height="25" src="images/facebook.svg" alt="facebook">
+				</a>
 			</div>
 		</div>
 	</header>
@@ -621,11 +954,12 @@ footer {
 	</main>
 	<footer>
 		<section class="footer">
-			<div>
-				<img class="footer-logo" src="images/logo.svg" alt="Сіль Землі">
+			<div class="footer-logo-box">
+				<a href="index.html"><img class="footer-logo" src="images/logo.svg" alt="Сіль Землі"></a>
 			</div>
 			<p class="address">
-				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська область, смт. Буштино,</br>вулиця Заводська, 13.</br>© «Сіль Землі» 2019. Всі права захищені.
+				Міні-пекарня:</br>«Сіль Землі»</br>Україна, Закарпатська область, смт. Буштино,</br>вулиця Заводська,
+				13.</br>© «Сіль Землі» 2019. Всі права захищені.
 			</p>
 			<div class="social-link">
 				<a class="email-link" href="mailto:ivanovichsb@gmail.com" target="_blank">email</a>
@@ -642,14 +976,15 @@ footer {
 				</div>
 			</div>
 			<p class="schedule">
-				пн-сб: цілодобово;</br>неділя: вихідний;
+				пн-сб: цілодобово</br>неділя: вихідний
 			</p>
 			<div class="cont-tel">
-				<a class="contackt-link" href="tel:+380673102145">Замовлення: +38 (067) 310 21 45</a>
+				<a class="contackt-link order-footer" href="tel:+380673102145">Замовлення: +38 (067) 310 21 45</a>
 				<a class="contackt-link" href="tel:+380673122909">Директор: +38 (067) 312 29 09</a>
-				<a class="contackt-link" href="mailto:ivanovichsb@gmail.com" target="_blank">Email: ivanovichsb@gmail.com</a>
+				<a class="contackt-link" href="mailto:ivanovichsb@gmail.com" target="_blank">Email:
+					ivanovichsb@gmail.com</a>
 				<a class="created-link" href="https://kapustiansky.tk/" target="_blank">Created by&nbsp&nbsp
-					<img width="20" height="20" src="images/smile.svg" alt="facebook">
+					<img width="20" height="20" loading="lazy" src="images/smile.svg" alt="facebook">
 				</a>
 			</div>
 		</section>
