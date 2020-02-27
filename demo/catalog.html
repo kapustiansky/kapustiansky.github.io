@@ -631,6 +631,17 @@
 		transition: 0.5s;
 	}
 
+	.svg-wrapper:active {
+		box-shadow: 0 0 20px -2px rgba(0, 0, 0, 0.75);
+		transition: 0.5s;
+	}
+
+	.svg-wrapper:active .shape {
+		stroke-width: 3px;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 1200;
+	}
+
 	.svg-wrapper:hover .shape {
 		stroke-width: 3px;
 		stroke-dashoffset: 0;
