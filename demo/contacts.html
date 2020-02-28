@@ -572,6 +572,31 @@
 		stroke-dashoffset: 300;
 	}
 
+	.svg-line-mobi-1 {
+		animation: line-mov .7s 1;
+	}
+
+	.svg-line-mobi-2 {
+		animation: line-mov-2 .7s 1;
+	}
+
+
+	@keyframes line-mov {
+  to {
+    stroke-width: 1;
+		stroke-dasharray: -200;
+		stroke-dashoffset: 100;
+  }
+}
+
+@keyframes line-mov-2 {
+  to {
+		stroke-width: 1;
+		stroke-dasharray: 300;
+		stroke-dashoffset: 300;
+  }
+}
+
 	.adres-main {
 		display: flex;
 		margin: 1.2rem;
@@ -646,11 +671,19 @@
 		animation-iteration-count: infinite;
 	}
 
-	.mobile-map-link {
+	.mobile-map-link-1 {
 		position: absolute; 
 		left:0;
 		right:0;
 		top:0;
+		bottom: 50%;
+	}
+
+	.mobile-map-link-2 {
+		position: absolute; 
+		left:0;
+		right:0;
+		top: 50%;
 		bottom:0;
 	}
 
@@ -1148,8 +1181,8 @@ nav {
 				<a class="map-link" href="https://goo.gl/maps/P7V6F6ZkQUoYj3UDA" target="_blank">
 					<p class="adrress-text">Україна, Закарпатська область, смт. Буштино, вулиця Заводська, 13.</p>
 					<svg class="svg-line-box" xmlns="http://www.w3.org/2000/svg">
-						<line class="svg-line" y1="3" x2="300" y2="3" />
-						<line class="svg-line-2" x1="0" y1="3" x2="300" y2="3" />
+						<line id="line1" class="svg-line" y1="3" x2="300" y2="3" />
+						<line id="line2" class="svg-line-2" x1="0" y1="3" x2="300" y2="3" />
 					</svg>
 				</a>
 				<div class="adres-main">
@@ -1161,8 +1194,8 @@ nav {
 					<p class="adrress-text">Україна, Закарпатська область, смт. Буштино, вулиця Богдана Хмельницького,
 						4.</p>
 					<svg class="svg-line-box" xmlns="http://www.w3.org/2000/svg">
-						<line class="svg-line" y1="3" x2="300" y2="3" />
-						<line class="svg-line-2" x1="0" y1="3" x2="300" y2="3" />
+						<line id="line3" class="svg-line" y1="3" x2="300" y2="3" />
+						<line id="line4" class="svg-line-2" x1="0" y1="3" x2="300" y2="3" />
 					</svg>
 				</a>
 			</div>
@@ -1657,8 +1690,36 @@ nav {
 	<script>
 		if (window.matchMedia("(max-width: 1100px)").matches) {
 			document.querySelector('.map').insertAdjacentHTML('afterbegin',
-				`<a class="mobile-map-link" href="https://goo.gl/maps/P7V6F6ZkQUoYj3UDA" target="_blank">`);
+				`<a class="mobile-map-link-1" href="https://goo.gl/maps/P7V6F6ZkQUoYj3UDA" target="_blank">
+					<a class="mobile-map-link-2" href="https://goo.gl/maps/94JpX2q9QV4jjnft7" target="_blank">`);
 		}
+
+		let options = {
+			root: null,
+			rootMargin: '0px',
+			threshold: 1.0
+		}
+		let callback = function(entries, observer) { 
+	
+			for (entry of entries) {
+			// console.log(entry);
+	
+			if (entry.isIntersecting) {
+				document.getElementById('line1').classList.add('svg-line-mobi-1');
+				document.getElementById('line2').classList.add('svg-line-mobi-2');
+				document.getElementById('line3').classList.add('svg-line-mobi-1');
+				document.getElementById('line4').classList.add('svg-line-mobi-2');
+			} else {
+				document.getElementById('line1').classList.remove('svg-line-mobi-1');
+				document.getElementById('line2').classList.remove('svg-line-mobi-2');
+				document.getElementById('line3').classList.remove('svg-line-mobi-1');
+				document.getElementById('line4').classList.remove('svg-line-mobi-2');
+			}
+		}
+		}
+	
+		let observer = new IntersectionObserver(callback, options);
+		observer.observe(document.querySelector('.adres'));
 	</script>
 </body>
 
