@@ -20,11 +20,11 @@
 		<linearGradient id="st5" x1="50%" y1="0%" x2="50%" y2="100%" > 
             
             <stop offset="0%" stop-color="#EF7F1A">
-                <animate attributeName="stop-color" values="#EF7F1A; #ED2E0C; #EF7F1A" dur="3s" repeatCount="indefinite"></animate>
+                <animate attributeName="stop-color" values="#EF7F1A; #DE2B0B; #EF7F1A" dur="3s" repeatCount="indefinite"></animate>
             </stop>
 
-            <stop offset="100%" stop-color="#ED2E0C">
-                <animate attributeName="stop-color" values="#ED2E0C; #EF7F1A; #ED2E0C" dur="3s" repeatCount="indefinite"></animate>
+            <stop offset="100%" stop-color="#DE2B0B">
+                <animate attributeName="stop-color" values="#DE2B0B; #EF7F1A; #DE2B0B" dur="3s" repeatCount="indefinite"></animate>
             </stop>
 
 			<!-- "#EF7F1A; #F8380F; #EF7F1A      -->
