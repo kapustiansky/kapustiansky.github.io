@@ -6,11 +6,11 @@
         <linearGradient id="st0" x1="50%" y1="0%" x2="50%" y2="100%" > 
             
             <stop offset="0%" stop-color="#FFC31F">
-                <animate attributeName="stop-color" values="#FFC31F; #FF8A12; #FFC31F" dur="3s" repeatCount="indefinite"></animate>
+                <animate attributeName="stop-color" values="#FFC31F; #EF7F1A; #FFC31F" dur="3s" repeatCount="indefinite"></animate>
             </stop>
 
-            <stop offset="100%" stop-color="#FF8A12">
-                <animate attributeName="stop-color" values="#FF8A12; #FFC31F; #FF8A12" dur="3s" repeatCount="indefinite"></animate>
+            <stop offset="100%" stop-color="#EF7F1A">
+                <animate attributeName="stop-color" values="#FFC31F; #EF7F1A; #FFC31F" dur="3s" repeatCount="indefinite"></animate>
             </stop>
 
         </linearGradient> 
@@ -20,24 +20,26 @@
 		<linearGradient id="st5" x1="50%" y1="0%" x2="50%" y2="100%" > 
             
             <stop offset="0%" stop-color="#EF7F1A">
-                <animate attributeName="stop-color" values="#EF7F1A; #F8380F; #EF7F1A" dur="3s" repeatCount="indefinite"></animate>
+                <animate attributeName="stop-color" values="#EF7F1A; #ED2E0C; #EF7F1A" dur="3s" repeatCount="indefinite"></animate>
             </stop>
 
-            <stop offset="100%" stop-color="#F8380F">
-                <animate attributeName="stop-color" values="#F8380F; #EF7F1A; #F8380F" dur="3s" repeatCount="indefinite"></animate>
+            <stop offset="100%" stop-color="#ED2E0C">
+                <animate attributeName="stop-color" values="#ED2E0C; #EF7F1A; #ED2E0C" dur="3s" repeatCount="indefinite"></animate>
             </stop>
+
+			<!-- "#EF7F1A; #F8380F; #EF7F1A      -->
 
         </linearGradient>
 
 
 				<linearGradient id="st1" x1="50%" y1="0%" x2="50%" y2="100%" > 
             
-            <stop offset="0%" stop-color="#F7AA47">
-                <animate attributeName="stop-color" values="#F7AA47; #FC713C; #F7AA47" dur="3s" repeatCount="indefinite"></animate>
+            <stop offset="0%" stop-color="#F7AC48">
+                <animate attributeName="stop-color" values="#F7AC48; #EF7F1A; #F7AC48" dur="3s" repeatCount="indefinite"></animate>
             </stop>
 
-            <stop offset="100%" stop-color="#FC713C">
-                <animate attributeName="stop-color" values="#FC713C; #F7AA47; #FC713C" dur="3s" repeatCount="indefinite"></animate>
+            <stop offset="100%" stop-color="#EF7F1A">
+                <animate attributeName="stop-color" values="#F7AC48; #EF7F1A; #F7AC48" dur="3s" repeatCount="indefinite"></animate>
             </stop>
 
         </linearGradient> 
@@ -45,12 +47,12 @@
 
 				<linearGradient id="st3" x1="50%" y1="0%" x2="50%" y2="100%" > 
             
-            <stop offset="0%" stop-color="#D19563">
-                <animate attributeName="stop-color" values="#D19563; #DE725D; #D19563" dur="3s" repeatCount="indefinite"></animate>
+            <stop offset="0%" stop-color="#523A26">
+                <animate attributeName="stop-color" values="#523A26; #D19563; #523A26" dur="3s" repeatCount="indefinite"></animate>
             </stop>
 
-            <stop offset="100%" stop-color="#DE725D">
-                <animate attributeName="stop-color" values="#DE725D; #D19563; #DE725D" dur="3s" repeatCount="indefinite"></animate>
+            <stop offset="100%" stop-color="#D19563">
+                <animate attributeName="stop-color" values="#D19563; #523A26; #D19563" dur="3s" repeatCount="indefinite"></animate>
             </stop>
 
         </linearGradient> 
