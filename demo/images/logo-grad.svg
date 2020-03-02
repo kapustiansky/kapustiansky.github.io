@@ -3,36 +3,11 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1099 1062" style="enable-background:new 0 0 1099 1062;" xml:space="preserve">
 	     <defs>  
-        <linearGradient id="st0" x1="50%" y1="0%" x2="50%" y2="100%" > 
-            
-            <stop offset="0%" stop-color="#FFC31F">
-                <animate attributeName="stop-color" values="#FFC31F; #EF7F1A; #FFC31F" dur="3s" repeatCount="indefinite"></animate>
-            </stop>
-
-            <stop offset="100%" stop-color="#EF7F1A">
-                <animate attributeName="stop-color" values="#FFC31F; #EF7F1A; #FFC31F" dur="3s" repeatCount="indefinite"></animate>
-            </stop>
-
-        </linearGradient> 
 
 
 
-		<linearGradient id="st5" x1="50%" y1="0%" x2="50%" y2="100%" > 
-            
-            <stop offset="0%" stop-color="#EF7F1A">
-                <animate attributeName="stop-color" values="#EF7F1A; #DE2B0B; #EF7F1A" dur="3s" repeatCount="indefinite"></animate>
-            </stop>
 
-            <stop offset="100%" stop-color="#DE2B0B">
-                <animate attributeName="stop-color" values="#DE2B0B; #EF7F1A; #DE2B0B" dur="3s" repeatCount="indefinite"></animate>
-            </stop>
-
-			<!-- "#EF7F1A; #F8380F; #EF7F1A      -->
-
-        </linearGradient>
-
-
-				<linearGradient id="st1" x1="50%" y1="0%" x2="50%" y2="100%" > 
+		 				<!-- <linearGradient id="st1" x1="50%" y1="0%" x2="50%" y2="100%" > 
             
             <stop offset="0%" stop-color="#F7AC48">
                 <animate attributeName="stop-color" values="#F7AC48; #EF7F1A; #F7AC48" dur="3s" repeatCount="indefinite"></animate>
@@ -42,20 +17,67 @@
                 <animate attributeName="stop-color" values="#F7AC48; #EF7F1A; #F7AC48" dur="3s" repeatCount="indefinite"></animate>
             </stop>
 
-        </linearGradient> 
+        </linearGradient>  -->
+
+				    <linearGradient id="st0">
+      <stop offset="0%" stop-color="#FFC31F" />
+      <stop offset="33%" stop-color="#FFC31F" />
+      <stop offset="50%" stop-color="#f2f2f2" />
+      <stop offset="67%" stop-color="#FFC31F" />
+      <stop offset="100%" stop-color="#FFC31F" />
+      <animateTransform attributeName="gradientTransform"
+        type="translate"
+		values="-2 0; 5 0; -1 0"
+        begin="0s"
+        dur="11s"
+        repeatCount="indefinite"/>
+    </linearGradient>
+
+		
+				    <linearGradient id="st5">
+      <stop offset="0%" stop-color="#EF7F1A" />
+      <stop offset="33%" stop-color="#EF7F1A" />
+      <stop offset="50%" stop-color="#f2f2f2" />
+      <stop offset="67%" stop-color="#EF7F1A" />
+      <stop offset="100%" stop-color="#EF7F1A" />
+      <animateTransform attributeName="gradientTransform"
+        type="translate"
+		values="-2 0; 5 0; -1 0"
+        begin="0s"
+        dur="11s"
+        repeatCount="indefinite"/>
+    </linearGradient>
 
 
-				<linearGradient id="st3" x1="50%" y1="0%" x2="50%" y2="100%" > 
-            
-            <stop offset="0%" stop-color="#523A26">
-                <animate attributeName="stop-color" values="#523A26; #D19563; #523A26" dur="3s" repeatCount="indefinite"></animate>
-            </stop>
+				    <linearGradient id="st1">
+      <stop offset="0%" stop-color="#F7AC48" />
+      <stop offset="33%" stop-color="#F7AC48" />
+      <stop offset="50%" stop-color="#f2f2f2" />
+      <stop offset="67%" stop-color="#F7AC48" />
+      <stop offset="100%" stop-color="#F7AC48" />
+      <animateTransform attributeName="gradientTransform"
+        type="translate"
+		values="-2 0; 5 0; -1 0"
+        begin="0s"
+        dur="11s"
+        repeatCount="indefinite"/>
+    </linearGradient>
 
-            <stop offset="100%" stop-color="#D19563">
-                <animate attributeName="stop-color" values="#D19563; #523A26; #D19563" dur="3s" repeatCount="indefinite"></animate>
-            </stop>
 
-        </linearGradient> 
+		    <linearGradient id="st3">
+      <stop offset="0%" stop-color="#CF9261" />
+      <stop offset="33%" stop-color="#CF9261" />
+      <stop offset="50%" stop-color="#f2f2f2" />
+      <stop offset="67%" stop-color="#CF9261" />
+      <stop offset="100%" stop-color="#CF9261" />
+      <animateTransform attributeName="gradientTransform"
+        type="translate"
+		values="-2 0; 5 0; -1 0"
+        begin="0s"
+        dur="11s"
+        repeatCount="indefinite"/>
+    </linearGradient>
+
 
     </defs>
 <style type="text/css">
@@ -149,6 +171,9 @@
 				c46,46,81,56,127,34c42-20,63-66,63-140c0-66,15-78,97-80c83-1,142,55,150,141c12,119-82,214-246,249c-72,15-122,16-191,4
 				c-102-18-177-58-252-135c-87-87-148-240-148-370c0-199,120-399,286-477c66-32,74-33,189-33s123,1,185,32
 				C2835,934,2897,994,2934,1064z"/>
+
+
+
 			<path class="st3" d="M6486,2631c44-20,46-22,40-53c-4-18-18-51-33-72c-51-77-202-243-237-260c-114-54-246-12-246,78
 				c1,80,110,261,180,296c22,11,57,25,77,30C6323,2664,6433,2654,6486,2631z"/>
 			<path class="st3" d="M10062,6714c0-37-7-57-34-94c-50-73-562-637-606-669l-27-19l-68,61c-44,39-67,66-64,77c5,21,302,452,382,555
@@ -157,6 +182,9 @@
 				c-408-474-674-768-688-759c-5,3-32,41-60,84c-105,164-264,276-479,336c-52,15-97,28-99,30c-11,10,34,80,115,180
 				c365,452,702,866,779,954c49,58,110,130,135,160c206,255,864,963,935,1005c46,28,116,33,168,11C9114,6002,9432,5725,9467,5657z"
 				/>
+
+
+
 			<path class="st4" d="M7403,3228c40-67,49-124,22-135c-21-8-105,50-196,136c-48,44-89,73-108,77c-17,4-31,3-31-2c1-5,28-40,61-79
 				c221-257,232-272,209-314c-8-15-20-21-45-21c-30,0-46,12-127,94c-51,51-113,104-138,116c-55,28-108,41-116,29
 				c-10-17,40-84,144-191c111-114,136-158,121-211c-11-40-37-67-65-67c-23,0-44,19-163,155c-55,63-131,125-153,125c-4,0-8-13-8-29
