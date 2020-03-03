@@ -717,7 +717,7 @@ body {
 
 
 .first-block {
-    height: auto;
+    height: 90vh;
 	padding-top: 3.5rem;
 }
 
@@ -912,6 +912,8 @@ nav {
 <body>
 	<script>
 		(function () {
+			if (window.matchMedia("(min-width: 1100px)").matches) {
+
 			window.oldScrollY = window.scrollY;
 			document.onscroll = event => {
 				let res = window.oldScrollY > window.scrollY ? 1 : 2;
@@ -947,6 +949,7 @@ nav {
 		
 			function opacity() {
 				document.querySelector('.bread').classList.add('opacity');
+			}
 			}
 		})();
 	</script>
