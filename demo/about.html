@@ -782,17 +782,14 @@ nav {
 	display: none;
 	margin-left: 1rem;
 	margin-right: 1rem;
-	width: 30px;
-	height: 30px;
+	margin-top: 0.5rem;
+	width: 25px;
+	height: 25px;
 }
 
 .business-svg-box {
 	display: flex;
-	align-items: flex-end;
-}
-
-.quality-img, .care-img, .natural-img, .fresh-img {
-	opacity: 1;
+	/* align-items: flex-end; */
 }
 
 .bounce-in-fwd {
@@ -806,7 +803,7 @@ nav {
             transform: scale(0);
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
-    opacity: 0;
+    opacity: 0.5;
   }
   38% {
     -webkit-transform: scale(1);
@@ -822,8 +819,8 @@ nav {
             animation-timing-function: ease-in;
   }
   72% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
@@ -834,8 +831,8 @@ nav {
             animation-timing-function: ease-in;
   }
   89% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
   }
@@ -846,10 +843,11 @@ nav {
             animation-timing-function: ease-in;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
+			opacity: 1;
   }
 }
 
@@ -1620,16 +1618,16 @@ nav {
 	}
 
 	let observerQ = new IntersectionObserver(Q, options);
-	observerQ.observe(document.querySelector('.quality-text'));
+	observerQ.observe(document.querySelector('.quality-img'));
 
 	let observerC = new IntersectionObserver(C, options);
-	observerC.observe(document.querySelector('.care-text'));
+	observerC.observe(document.querySelector('.care-img'));
 
 	let observerN = new IntersectionObserver(N, options);
-	observerN.observe(document.querySelector('.natural-text'));
+	observerN.observe(document.querySelector('.natural-img'));
 
 	let observerF = new IntersectionObserver(F, options);
-	observerF.observe(document.querySelector('.fresh-text'));
+	observerF.observe(document.querySelector('.fresh-img'));
 	}
 
 
