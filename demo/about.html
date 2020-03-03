@@ -778,7 +778,7 @@ nav {
 
 
 
-.circle-svg {
+.mill-svg {
 	display: none;
 	margin-left: 1rem;
 	margin-right: 1rem;
@@ -1053,7 +1053,7 @@ nav {
 	margin-top: 1rem;
 }
 
-.circle-svg {
+.mill-svg {
 	display: block;
 }
 
@@ -1286,33 +1286,33 @@ nav {
         <section class="about-business">
 			<div class="quality">
 				<div class="business-svg-box">
-					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="mill-svg" src="images/mill.svg" alt="mill">
 					<img class="quality-img" src="images/okay-chaf.svg" alt="quality">
-					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="mill-svg" src="images/mill.svg" alt="mill">
 				</div>
 				<p class="quality-text">Кожен наш співробітник точно знає, що якість продукції залежить від зусиль усієї команди професіоналів. У хлібному виробництві немає дрібниць, на всіх етапах - від замісу тіста, до упаковки та доставки споживачеві, все повинно бути виконано бездоганно.</p>
 			</div>
 			<div class="care">
 				<div class="business-svg-box">
-					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="mill-svg" src="images/mill.svg" alt="mill">
 					<img class="care-img" src="images/heart.svg" alt="care">
-					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="mill-svg" src="images/mill.svg" alt="mill">
 				</div>
 				<p class="care-text">Важливою частиною нашої роботи є особлива увага до кожного клієнта і його замовлення, тому компанія готова запропонувати максимальний сервіс на всіх етапах.</p>
 			</div>
 			<div class="natural">
 				<div class="business-svg-box">
-					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="mill-svg" src="images/mill.svg" alt="mill">
 					<img class="natural-img" src="images/gmo.svg" alt="natural">
-					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="mill-svg" src="images/mill.svg" alt="mill">
 				</div>
 				<p class="natural-text">Продукція виготовляється виключно з натуральної сировини без використання консервантів та ГМО. На виробництві проводиться обов'язковий і ретельний контроль на всіх етапах виготовлення - від перевірки сировини до готового продукту.</p>
 			</div>
 			<div class="fresh">
 				<div class="business-svg-box">
-					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="mill-svg" src="images/mill.svg" alt="mill">
 					<img class="fresh-img" src="images/fresh-bread.svg" alt="fresh">
-					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="mill-svg" src="images/mill.svg" alt="mill">
 				</div>
 				<p class="fresh-text">На даний момент ми маємо більше ніж пів тисячі точок збуту продукції, які розташовані у чотирьох районах Закарпатської області: Тячівський, Хустський, Виноградівський, Іршавський. Загальна площа цих районів - 4434 км2. Сукупна кількість населення цих районів - 500 000 осіб. Компанія має власний автопарк та широку дистриб’юторську мережу, що дозволяє забезпечити своєчасну доставку свіжого хліба та ароматної випічки на прилавки магазинів.</p>
 			</div>
@@ -1445,6 +1445,10 @@ nav {
 	let observerTwo = new IntersectionObserver(callbackTwo, options);
 	observerTwo.observe(document.querySelector('.bread-line-values'));
 
+
+
+
+
 	if (window.matchMedia("(min-width: 500px)").matches) {
 
 		
@@ -1507,6 +1511,67 @@ nav {
 	let observerF = new IntersectionObserver(F, options);
 	observerF.observe(document.querySelector('.fresh-text'));
 
+	} else {
+		
+		
+		let options = {
+		root: null,
+		rootMargin: '0px',
+		threshold: 0.25
+	}
+
+
+	let Q = function(entries, observer) { 
+		for (entry of entries) {
+		if (entry.isIntersecting) {
+			document.querySelector('.quality-img').classList.add('bounce-in-anim');
+		} else {
+			document.querySelector('.quality-img').classList.remove('bounce-in-anim');
+		}
+	}
+	}
+
+	let C = function(entries, observer) { 
+		for (entry of entries) {
+		if (entry.isIntersecting) {
+			document.querySelector('.care-img').classList.add('bounce-in-anim');
+		} else {
+			document.querySelector('.care-img').classList.remove('bounce-in-anim');
+		}
+	}
+	}
+
+	let N = function(entries, observer) { 
+		for (entry of entries) {
+		if (entry.isIntersecting) {
+			document.querySelector('.natural-img').classList.add('bounce-in-anim');
+		} else {
+			document.querySelector('.natural-img').classList.remove('bounce-in-anim');
+		}
+	}
+	}
+
+	let F = function(entries, observer) { 
+		for (entry of entries) {
+		if (entry.isIntersecting) {
+			document.querySelector('.fresh-img').classList.add('bounce-in-anim');
+		} else {
+			document.querySelector('.fresh-img').classList.remove('bounce-in-anim');
+		}
+	}
+	}
+
+	let observerQ = new IntersectionObserver(Q, options);
+	observerQ.observe(document.querySelector('.quality-text'));
+
+	let observerC = new IntersectionObserver(C, options);
+	observerC.observe(document.querySelector('.care-text'));
+
+	let observerN = new IntersectionObserver(N, options);
+	observerN.observe(document.querySelector('.natural-text'));
+
+	let observerF = new IntersectionObserver(F, options);
+	observerF.observe(document.querySelector('.fresh-text'));
 	}
 
 
