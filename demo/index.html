@@ -389,11 +389,6 @@ h1 {
 	align-items: center;
 }
 
-p {
-	margin-top: 1rem;
-	font-size: 1.1em;
-}
-
 
 
 
@@ -677,6 +672,28 @@ nav {
 
 
 
+.menu-img-bun {
+	width: 122px;
+	height: 100px;
+}
+
+.menu-img {
+	width: 97px;
+	height: 99px;
+}
+
+.quality-img, .care-img, .natural-img, .fresh-img {
+	width: 130px;
+	height: 130px;
+}
+
+.quality-text, .care-text, .natural-text, .fresh-text {
+	display: flex;
+	margin-top: 1rem;
+    font-size: 1.1em;
+}
+
+
 
 @media all and (max-width: 1100px) {
 
@@ -717,7 +734,7 @@ body {
 
 
 .first-block {
-    height: 90vh;
+    height: auto;
 	padding-top: 3.5rem;
 }
 
@@ -727,18 +744,19 @@ body {
 
 .bread-line {
     width: 275px;
+	margin-bottom: 2rem;
 }
 
 h1 {
 	font-size: 1em;
 }
 
-h2 {
+.H-2-first {
 	font-size: .7em;
 }
 
 .production {
-    margin-top: 0;
+    margin-top: 1rem;
     width: 100%;
     height: auto;
 	box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.75);
@@ -747,11 +765,65 @@ h2 {
 	filter: none;
 }
 
+.property {
+    margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+    width: 100%;
+	flex-flow: row wrap;
+	font-size: 0.8em;
+	justify-content: space-evenly;
+}
 
+.prod-link {
+	padding-bottom: 1rem;
+}
 
+.prod-menu {
+    justify-content: space-evenly;
+	margin-top: 1rem;
+}
 
+.bread-menu-link {
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
+}
 
+.menu-img {
+    width: 40px;
+    height: 40px;
+}
 
+.menu-img-bun {
+    width: 50px;
+    height: 40px;
+}
+
+.buns-link, .bread-link, .other-link {
+    margin-top: 10px;
+    font-size: 0.6em;
+}
+
+.botton-about {
+    position: inherit;
+    margin-top: 2rem;
+}
+
+.botton-prod {
+    margin-top: 2rem;
+}
+
+.quality-img, .care-img, .natural-img, .fresh-img {
+    width: 60px;
+    height: 60px;
+}
+
+.property-setup {
+	padding: 0.4rem;
+}
+
+/* .care-text {
+	word-wrap: break-word;
+} */
 
 
 
@@ -891,6 +963,20 @@ nav {
 	width: 30px;
 	height: 30px;
 }
+
+.property {
+    margin-top: 1rem;
+	margin-bottom: 1rem;
+	width: 80%;
+}
+
+.quality-text, .care-text, .natural-text, .fresh-text {
+    margin-top: 0.7rem;
+}
+
+/* .property-setup {
+	padding: 0.7rem;
+} */
 
 }
 
@@ -1073,7 +1159,7 @@ nav {
 				c-0.5-1.2-0.8-2.5-1-3.8c-0.4-2.6,0-5.2,0.7-7.5c1.5-4.7,4.1-8.7,7.1-12.3c0.1-0.1,0.2-0.1,0.4,0C408.6,7.9,408.6,8,408.6,8.1z"/>
 		</g>
 		</svg>
-		<h2>«НАШ ХЛІБ - СМАЧНИЙ»</h2>
+		<h2 class="H-2-first">«НАШ ХЛІБ - СМАЧНИЙ»</h2>
 		<img class="bread" src="images/home/bread-main.png" alt="bread">
 		<a href="about.html" class="botton-about">ДІЗНАТИСЬ&nbspБІЛЬШЕ</a>
 	</section>
@@ -1082,19 +1168,19 @@ nav {
 			<div class="prod-menu">
 				<div class="menu">
 					<a class="link-style" href="catalog.html#bun">
-						<img src="images/bun.png" alt="bun">
+						<img class="menu-img-bun" src="images/bun.png" alt="bun">
 						<h2 class="buns-link">Булочні&nbspвироби</h2>
 					</a>
 				</div>
 				<div class="menu bread-menu-link">
 					<a class="link-style" href="catalog.html#bread">
-						<img src="images/bread.png" alt="bread">
+						<img class="menu-img" src="images/bread.png" alt="bread">
 						<h1 class="bread-link">Хліб</h1>
 					</a>
 				</div>
 				<div class="menu">
 					<a class="link-style" href="catalog.html#other">
-						<img src="images/other.png" alt="other">
+						<img class="menu-img" src="images/other.png" alt="other">
 						<h3 class="other-link">Хлібобулочні вироби</h3>
 					</a>
 				</div>
@@ -1105,20 +1191,20 @@ nav {
 		</div>
 		<div class="property">
 			<div class="property-setup">
-				<img width="130" height="130" src="images/okay-chaf.svg" alt="quality">
-				<p>Якість</p>
+				<img class="quality-img" width="130" height="130" src="images/okay-chaf.svg" alt="quality">
+				<p class="quality-text">Якість</p>
 			</div>
 			<div class="property-setup">
-				<img width="130" height="130" src="images/gmo.svg" alt="natural">
-				<p>Натуральність</p>
+				<img class="natural-img" width="130" height="130" src="images/gmo.svg" alt="natural">
+				<p class="natural-text">Натуральність</p>
 			</div>
 			<div class="property-setup">
-				<img width="130" height="130" src="images/heart.svg" alt="care">
-				<p>Дбайливе&nbspставлення</p>
+				<img class="care-img" width="130" height="130" src="images/heart.svg" alt="care">
+				<p class="care-text">Дбайливе</br>ставлення</p>
 			</div>
 			<div class="property-setup">
-				<img width="130" height="130" src="images/fresh-bread.svg" alt="fresh">
-				<p>Завжди&nbspсвіже</p>
+				<img class="fresh-img" width="130" height="130" src="images/fresh-bread.svg" alt="fresh">
+				<p class="fresh-text">Завжди&nbspсвіже</p>
 			</div>
 		</div>
 	</section>
