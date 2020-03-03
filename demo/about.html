@@ -672,11 +672,127 @@ nav {
 
 
 
+
+
+
+
+
+/* svg blok */
+
+
 .quality-img, .care-img, .natural-img, .fresh-img {
     width: 130px;
 	height: 130px;
+	opacity: 0;
 }
 
+
+.bounce-in-anim {
+	animation: bounce-in-left 1.1s both;
+}
+
+@keyframes bounce-in-left {
+  0% {
+    -webkit-transform: translateX(-600px);
+            transform: translateX(-600px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateX(-68px);
+            transform: translateX(-68px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateX(-28px);
+            transform: translateX(-28px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+			opacity: 1;
+  }
+}
+
+/* .quality-svg, .care-svg {
+	width: 130px;
+	height: 130px;
+}
+
+.ok-svg, .ok-svg-circle, .heart, .heart-circle {
+  animation: dash 9s ease-in-out forwards;
+}
+
+.ok-svg {
+	stroke-dasharray: 431;
+  	stroke-dashoffset: 431;
+}
+
+.ok-svg-circle, .heart-circle {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation-duration: 1.5s;
+}
+
+.heart {
+	stroke-dasharray: 522;
+  	stroke-dashoffset: 522;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+} */
+
+
+
+.circle-svg {
+	display: none;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	width: 40px;
+	height: 40px;
+}
+
+.business-svg-box {
+	display: flex;
+}
+
+.quality-img, .care-img, .natural-img, .fresh-img {
+	opacity: 1;
+}
 
 
 
@@ -777,24 +893,11 @@ body {
     margin: 1rem;
 }
 
-.quality, .care, .natural, .fresh {
-    flex-direction: column;
-	text-align: center;
-    width: 100%;
-	margin-top: 1rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
-}
-
-.quality-text, .care-text, .natural-text, .fresh-text {
-    margin-left: 0;
-	margin-top: 1rem;
-}
-
 .quality-img, .care-img, .natural-img, .fresh-img {
-    width: 90px;
-	height: 90px;
+    width: 60px;
+	height: 60px;
 }
+
 
 
 
@@ -935,6 +1038,24 @@ nav {
 	height: 30px;
 }
 
+.quality, .care, .natural, .fresh {
+    flex-direction: column;
+	text-align: center;
+    width: 100%;
+	margin-top: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.quality-text, .care-text, .natural-text, .fresh-text {
+    margin-left: 0;
+	margin-top: 1rem;
+}
+
+.circle-svg {
+	display: block;
+}
+
 }
 
 
@@ -1060,7 +1181,7 @@ nav {
 					кришталево-чиста вода, тривалий досвід та турботливі людські руки-ось запорука
 					створення неповторного хліба з особливими смаковими якостями.
 				</h1>
-				<?xml version="1.0" encoding="utf-8"?>
+				<?xml version="1.1" encoding="utf-8"?>
 				<svg version="1.1" class="img-bread" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					viewBox="0 0 756 128.2" style="enable-background:new 0 0 756 128.2;" xml:space="preserve">
 				<style type="text/css">
@@ -1158,19 +1279,35 @@ nav {
         </section>
         <section class="about-business">
 			<div class="quality">
-				<img class="quality-img" src="images/okay-chaf.svg" alt="quality">
+				<div class="business-svg-box">
+					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="quality-img" src="images/okay-chaf.svg" alt="quality">
+					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+				</div>
 				<p class="quality-text">Кожен наш співробітник точно знає, що якість продукції залежить від зусиль усієї команди професіоналів. У хлібному виробництві немає дрібниць, на всіх етапах - від замісу тіста, до упаковки та доставки споживачеві, все повинно бути виконано бездоганно.</p>
 			</div>
 			<div class="care">
-				<img class="care-img" src="images/heart.svg" alt="care">
+				<div class="business-svg-box">
+					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="care-img" src="images/heart.svg" alt="care">
+					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+				</div>
 				<p class="care-text">Важливою частиною нашої роботи є особлива увага до кожного клієнта і його замовлення, тому компанія готова запропонувати максимальний сервіс на всіх етапах.</p>
 			</div>
 			<div class="natural">
-				<img class="natural-img" src="images/gmo.svg" alt="natural">
+				<div class="business-svg-box">
+					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="natural-img" src="images/gmo.svg" alt="natural">
+					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+				</div>
 				<p class="natural-text">Продукція виготовляється виключно з натуральної сировини без використання консервантів та ГМО. На виробництві проводиться обов'язковий і ретельний контроль на всіх етапах виготовлення - від перевірки сировини до готового продукту.</p>
 			</div>
 			<div class="fresh">
-				<img class="fresh-img" src="images/fresh-bread.svg" alt="fresh">
+				<div class="business-svg-box">
+					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+					<img class="fresh-img" src="images/fresh-bread.svg" alt="fresh">
+					<img class="circle-svg" src="images/bread-circle.svg" alt="circle">
+				</div>
 				<p class="fresh-text">На даний момент ми маємо більше ніж пів тисячі точок збуту продукції, які розташовані у чотирьох районах Закарпатської області: Тячівський, Хустський, Виноградівський, Іршавський. Загальна площа цих районів - 4434 км2. Сукупна кількість населення цих районів - 500 000 осіб. Компанія має власний автопарк та широку дистриб’юторську мережу, що дозволяє забезпечити своєчасну доставку свіжого хліба та ароматної випічки на прилавки магазинів.</p>
 			</div>
 		</section>
@@ -1301,6 +1438,75 @@ nav {
 
 	let observerTwo = new IntersectionObserver(callbackTwo, options);
 	observerTwo.observe(document.querySelector('.bread-line-values'));
+
+	if (window.matchMedia("(min-width: 500px)").matches) {
+
+		
+	let options = {
+		root: null,
+		rootMargin: '0px',
+		threshold: 0.25
+	}
+
+
+	let Q = function(entries, observer) { 
+		for (entry of entries) {
+		if (entry.isIntersecting) {
+			document.querySelector('.quality-img').classList.add('bounce-in-anim');
+		} else {
+			document.querySelector('.quality-img').classList.remove('bounce-in-anim');
+		}
+	}
+	}
+
+	let C = function(entries, observer) { 
+		for (entry of entries) {
+		if (entry.isIntersecting) {
+			document.querySelector('.care-img').classList.add('bounce-in-anim');
+		} else {
+			document.querySelector('.care-img').classList.remove('bounce-in-anim');
+		}
+	}
+	}
+
+	let N = function(entries, observer) { 
+		for (entry of entries) {
+		if (entry.isIntersecting) {
+			document.querySelector('.natural-img').classList.add('bounce-in-anim');
+		} else {
+			document.querySelector('.natural-img').classList.remove('bounce-in-anim');
+		}
+	}
+	}
+
+	let F = function(entries, observer) { 
+		for (entry of entries) {
+		if (entry.isIntersecting) {
+			document.querySelector('.fresh-img').classList.add('bounce-in-anim');
+		} else {
+			document.querySelector('.fresh-img').classList.remove('bounce-in-anim');
+		}
+	}
+	}
+
+	let observerQ = new IntersectionObserver(Q, options);
+	observerQ.observe(document.querySelector('.quality-text'));
+
+	let observerC = new IntersectionObserver(C, options);
+	observerC.observe(document.querySelector('.care-text'));
+
+	let observerN = new IntersectionObserver(N, options);
+	observerN.observe(document.querySelector('.natural-text'));
+
+	let observerF = new IntersectionObserver(F, options);
+	observerF.observe(document.querySelector('.fresh-text'));
+
+	}
+
+
+
+
+
 	</script> 
 </body>
 </html>
