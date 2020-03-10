@@ -691,6 +691,25 @@ nav {
 	display: flex;
 	margin-top: 1rem;
     font-size: 1.1em;
+	opacity: 0;
+}
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    /* opacity: 0; */
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
@@ -1271,6 +1290,28 @@ nav {
 
 		let observer = new IntersectionObserver(callback, options);
 		observer.observe(document.querySelector('.bread-line'));
+
+
+		let callbackText = function(entries, observerText) { 
+
+			for (entry of entries) {
+
+			if (entry.isIntersecting) {
+				document.querySelector('.quality-text').classList.add('tracking-in-expand');
+				document.querySelector('.care-text').classList.add('tracking-in-expand');
+				document.querySelector('.natural-text').classList.add('tracking-in-expand');
+				document.querySelector('.fresh-text').classList.add('tracking-in-expand');
+			} else {
+				document.querySelector('.quality-text').classList.remove('tracking-in-expand');
+				document.querySelector('.care-text').classList.remove('tracking-in-expand');
+				document.querySelector('.natural-text').classList.remove('tracking-in-expand');
+				document.querySelector('.fresh-text').classList.remove('tracking-in-expand');
+			}
+		}
+		}
+
+		let observerText = new IntersectionObserver(callbackText, options);
+		observerText.observe(document.querySelector('.property'));
 	</script>
 </body>
 </html>
