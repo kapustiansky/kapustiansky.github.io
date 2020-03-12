@@ -858,14 +858,28 @@ body {
 	width: 25%;
 }
 
-.baker-full {
-	width: 325px;
+.baker-anim {
+	width: 375px;
 	height: 325px;
+}
+
+.baker-full {
+	width: 375px;
+	height: 325px;
+	opacity: 0;
+	animation: opacity-baker 4s linear forwards;
+  	animation-delay: 4s;
+	position: absolute; 
+	left:0;
+	right:0;
+	top:0;
+	bottom: 0;
 }
 
 .baker-box {
     display: block;
     margin-top: 2rem;
+	position: relative;
 }
 
 .baker-line {
@@ -877,14 +891,22 @@ body {
   stroke-miterlimit:10;
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
-  animation: dash 10s linear forwards;
+  animation: dash-baker 8s linear forwards;
+  animation-delay: 1.4s;
 }
 
-@keyframes dash {
+@keyframes dash-baker {
   to {
     stroke-dashoffset: 0;
   }
 }
+
+@keyframes opacity-baker {
+  to {
+    opacity: 1;
+  }
+}
+
 
 
 
@@ -1107,6 +1129,17 @@ nav {
 /* .H-2-first {
     font-size: .6em;
 } */
+
+.baker-full {
+    width: 300px;
+    height: 300px;
+}
+
+.baker-anim {
+    width: 300px;
+    height: 300px;
+}
+
 }
 </style>
 <body>
@@ -1276,8 +1309,8 @@ nav {
 		<img class="bread" src="images/home/bread-main.png" alt="bread">
 		<a href="about.html" class="botton-about">ДІЗНАТИСЬ&nbspБІЛЬШЕ</a>
 		<div class="baker-box">
-			<!-- <img class="baker" src="images/home/baker.svg" alt="bread"> -->
-<svg version="1.1" class="baker-full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			<img class="baker-full" src="images/home/baker.svg" alt="bread">
+<svg version="1.1" class="baker-anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1986 977" style="enable-background:new 0 0 1986 977;" xml:space="preserve">
 <style type="text/css">
 	
