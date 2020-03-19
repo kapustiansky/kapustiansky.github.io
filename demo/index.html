@@ -646,12 +646,12 @@ nav {
 
 #line3, #line4 {
   display: none;
-  fill:none;
+  /* fill:none;
   stroke:#CC9933;
   stroke-width:2;
   stroke-linecap:round;
   stroke-linejoin:round;
-  stroke-miterlimit:10;
+  stroke-miterlimit:10; */
   stroke-dashoffset: -300;
   stroke-dasharray: 300;
   animation: line-move 1s forwards 1;
@@ -1186,6 +1186,8 @@ nav {
 			}
 		})();
 	</script>
+
+
 	
 	<header class="header">
 		<nav>
@@ -1283,8 +1285,8 @@ nav {
 		<line class="st1" x1="67" y1="82.3" x2="267.8" y2="83.1"/>
 		<line id="line" x1="4.6" y1="114.8" x2="291.8" y2="114.8"/>
 		<line id="line2" x1="37.6" y1="92.5" x2="270.2" y2="92.9"/>
-		<line id="line3" x1="483.5" y1="92.5" x2="716.1" y2="92.9"/>
-		<line id="line4" x1="463.4" y1="114.8" x2="750.6" y2="114.8"/>
+		<line id="line3" class="st2" x1="483.5" y1="92.5" x2="716.1" y2="92.9"/>
+		<line id="line4" class="st2" x1="463.4" y1="114.8" x2="750.6" y2="114.8"/>
 		<g>
 			<path class="smoke" d="M346.1,14.2c-1.2,1.9-2.4,3.8-3.3,5.8c-0.9,2-1.6,4.1-1.8,6.1c-0.2,2,0.2,4,1.1,5.6c0.5,0.8,1.1,1.5,1.8,2.2
 				c0.7,0.7,1.6,1.5,2.5,2.3c1.7,1.7,3.3,3.9,4.2,6.4c1,2.4,1.2,5,0.9,7.5c-0.2,2.5-0.9,4.8-1.8,7c-0.9,2.2-2.1,4.2-3.5,6.1
@@ -1524,10 +1526,10 @@ nav {
 			threshold: 1.0
 		}
 		let callback = function(entries, observer) { 
-
+	
 			for (entry of entries) {
-    		// console.log(entry);
-
+			// console.log(entry);
+	
 			if (entry.isIntersecting) {
 				document.getElementById('line').style.display = 'block';
 				document.getElementById('line2').style.display = 'block';
@@ -1541,15 +1543,15 @@ nav {
 			}
 		}
 		}
-
+	
 		let observer = new IntersectionObserver(callback, options);
 		observer.observe(document.querySelector('.bread-line'));
-
-
+	
+	
 		let callbackText = function(entries, observerText) { 
-
+	
 			for (entry of entries) {
-
+	
 			if (entry.isIntersecting) {
 				document.querySelector('.quality-text').classList.add('tracking-in-expand');
 				document.querySelector('.care-text').classList.add('tracking-in-expand');
@@ -1563,9 +1565,11 @@ nav {
 			}
 		}
 		}
-
+	
 		let observerText = new IntersectionObserver(callbackText, options);
 		observerText.observe(document.querySelector('.property'));
 	</script>
+
 </body>
+
 </html>
