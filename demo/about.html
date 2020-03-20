@@ -1381,7 +1381,7 @@
 	</header>
 	<main>
 		<section class="about-bakery">
-			<img class="logo-about" src="images/logo-grad.svg" alt="logo">
+			<!-- <img class="logo-about" src="images/logo-grad.svg" alt="logo"> -->
 			<div class="main-task">
 				<h1>
 					Наше виробництво знаходиться у мальовничій місцині Закарпаття. Свіже повітря,
@@ -1606,6 +1606,15 @@
 		</section>
 	</footer>
 	<script>
+
+		if (window.matchMedia("(max-width: 350px)").matches) {
+			document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+				`<img class="logo-about" src="images/logo.svg" alt="logo">`);
+		} else {
+			document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+				`<img class="logo-about" src="images/logo-grad.svg" alt="logo">`);
+		}
+
 		$('[data-fancybox="gallery"]').fancybox({
 			protect: true,
 			buttons: [
