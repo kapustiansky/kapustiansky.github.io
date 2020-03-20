@@ -167,7 +167,6 @@
 		border-spacing: 0;
 	}
 
-	/* HEADER */
 
 	* {
 		padding: 0;
@@ -184,26 +183,7 @@
 		background-attachment: fixed;
 	}
 
-	.board {
-		position: fixed;
-		height: 100vh;
-		width: 100%;
-	}
-
-	.logo {
-		filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
-		width: 125px;
-		transition: 1s;
-	}
-
-	.little-logo {
-		width: 100px;
-		transition: 1s;
-	}
-
-	.logo-cont {
-		margin-top: 10px;
-	}
+	/* HEADER desktop*/
 
 	.header {
 		position: sticky;
@@ -218,8 +198,11 @@
 		z-index: 1;
 	}
 
-	.little-had {
-		height: 70px;
+	nav {
+		display: flex;
+		padding-top: 1em;
+		margin-right: 3%;
+		width: 40%;
 	}
 
 	.nav {
@@ -227,13 +210,6 @@
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-	}
-
-	.push {
-		display: flex;
-		justify-content: space-evenly;
-		width: 40%;
-		margin-left: 3%;
 	}
 
 	.about {
@@ -262,20 +238,8 @@
 		border-radius: 30px;
 	}
 
-	.main:hover {
-		cursor: pointer;
-		background-color: rgba(252, 252, 252, 0.212);
-		color: #f37b03;
-		transition: 0.2s;
-	}
-
-	.products:hover {
-		cursor: pointer;
-		background-color: rgba(252, 252, 252, 0.212);
-		color: #f37b03;
-		transition: 0.2s;
-	}
-
+	.main:hover,
+	.products:hover,
 	.contacts:hover {
 		cursor: pointer;
 		background-color: rgba(252, 252, 252, 0.212);
@@ -283,11 +247,31 @@
 		transition: 0.2s;
 	}
 
-	.phone {
-		width: 25px;
+	.logo-cont {
+		margin-top: 10px;
 	}
 
-	.clock {
+	.logo {
+		filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, .8));
+		width: 125px;
+		transition: 1s;
+	}
+
+	.push {
+		display: flex;
+		justify-content: space-evenly;
+		width: 40%;
+		margin-left: 3%;
+	}
+
+	.contackt-namber,
+	.time-to-work {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.phone {
 		width: 25px;
 	}
 
@@ -296,6 +280,10 @@
 		font-family: Appetite;
 		letter-spacing: 0.1em;
 		padding-left: 2em;
+	}
+
+	.clock {
+		width: 25px;
 	}
 
 	.working-time {
@@ -308,12 +296,179 @@
 		line-height: 13px;
 	}
 
-	.contackt-namber,
-	.time-to-work {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	/* js add class*/
+
+	.little-had {
+		height: 70px;
 	}
+
+	.little-logo {
+		width: 100px;
+		transition: 1s;
+	}
+
+	/* HEADER mobile*/
+
+	#check {
+		display: none;
+	}
+
+	.checkbtn {
+		display: none;
+	}
+
+	.ham {
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		transition: transform 400ms;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.hamRotate.active {
+		transform: rotate(45deg);
+	}
+
+	.hamRotate180.active {
+		transform: rotate(180deg);
+	}
+
+	.ham7 .top {
+		stroke-dasharray: 40 82;
+	}
+
+	.ham7 .middle {
+		stroke-dasharray: 40 111;
+	}
+
+	.ham7 .bottom {
+		stroke-dasharray: 40 161;
+	}
+
+	.ham7.active .top {
+		stroke-dasharray: 17 82;
+		stroke-dashoffset: -62px;
+	}
+
+	.ham7.active .middle {
+		stroke-dashoffset: 23px;
+	}
+
+	.ham7.active .bottom {
+		stroke-dashoffset: -83px;
+	}
+
+	.line {
+		fill: none;
+		transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+		stroke: #cc9933;
+		stroke-width: 5.5;
+		stroke-linecap: round;
+	}
+
+	.social-icons-header {
+		display: none;
+	}
+
+	.i-tel {
+		width: 25px;
+		height: 25px;
+	}
+
+	.call-tel {
+		fill: #cc9933;
+		transform-origin: 50% 50%;
+		animation: call 6s infinite;
+	}
+
+	@keyframes call {
+
+		39%,
+		50%,
+		100% {
+			transform: rotate(0deg);
+		}
+
+		40% {
+			transform: rotate(8deg);
+		}
+
+		42%,
+		44%,
+		46% {
+			transform: rotate(-10deg);
+		}
+
+		43%,
+		45%,
+		47% {
+			transform: rotate(10deg);
+		}
+
+		48% {
+			transform: rotate(-8deg);
+		}
+
+		49% {
+			transform: rotate(8deg);
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.board {
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	/* MAIN */
@@ -329,25 +484,9 @@
 	.logo-about {
 		width: 300px;
 		height: 300px;
-		/* filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.9)); */
 		filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.9));
 		animation: flip-in-ver-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-		/* animation: roll-in-top 0.6s ease-out both; */
 	}
-
-
-	/* @keyframes roll-in-top {
-  0% {
-    -webkit-transform: translateY(-800px) rotate(-540deg);
-            transform: translateY(-800px) rotate(-540deg);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0) rotate(0deg);
-            transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-} */
 
 	@keyframes flip-in-ver-left {
 		0% {
@@ -587,9 +726,6 @@
 
 
 
-	.social-icons-header {
-		display: none;
-	}
 
 
 
@@ -598,122 +734,11 @@
 
 
 
-	#check {
-		display: none;
-	}
-
-	.checkbtn {
-		display: none;
-	}
-
-	nav {
-		display: flex;
-		padding-top: 1em;
-		margin-right: 3%;
-		width: 40%;
-	}
 
 
 
 
 
-
-	.ham {
-		cursor: pointer;
-		-webkit-tap-highlight-color: transparent;
-		transition: transform 400ms;
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
-
-	.hamRotate.active {
-		transform: rotate(45deg);
-	}
-
-	.hamRotate180.active {
-		transform: rotate(180deg);
-	}
-
-	.line {
-		fill: none;
-		transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-		stroke: #cc9933;
-		stroke-width: 5.5;
-		stroke-linecap: round;
-	}
-
-	.ham7 .top {
-		stroke-dasharray: 40 82;
-	}
-
-	.ham7 .middle {
-		stroke-dasharray: 40 111;
-	}
-
-	.ham7 .bottom {
-		stroke-dasharray: 40 161;
-	}
-
-	.ham7.active .top {
-		stroke-dasharray: 17 82;
-		stroke-dashoffset: -62px;
-	}
-
-	.ham7.active .middle {
-		stroke-dashoffset: 23px;
-	}
-
-	.ham7.active .bottom {
-		stroke-dashoffset: -83px;
-	}
-
-
-
-	.i-tel {
-		width: 25px;
-		height: 25px;
-	}
-
-	.call-tel {
-		fill: #cc9933;
-		transform-origin: 50% 50%;
-		animation: call 6s infinite;
-	}
-
-	@keyframes call {
-
-		39%,
-		50%,
-		100% {
-			transform: rotate(0deg);
-		}
-
-		40% {
-			transform: rotate(8deg);
-		}
-
-		42%,
-		44%,
-		46% {
-			transform: rotate(-10deg);
-		}
-
-		43%,
-		45%,
-		47% {
-			transform: rotate(10deg);
-		}
-
-		48% {
-			transform: rotate(-8deg);
-		}
-
-		49% {
-			transform: rotate(8deg);
-		}
-	}
 
 
 	.img-bread {
@@ -743,8 +768,7 @@
 		animation-delay: .2s;
 	}
 
-	#line,
-	#line2,
+	.line1, .line2,
 	#Tline,
 	#Tline2 {
 		display: none;
@@ -759,8 +783,8 @@
 		animation: line-move 1s forwards 1;
 	}
 
-	#line3,
-	#line4,
+	.line3,
+	.line4,
 	#Tline3,
 	#Tline4 {
 		display: none;
@@ -770,6 +794,8 @@
 		stroke-linecap: round;
 		stroke-linejoin: round;
 		stroke-miterlimit: 10;
+		-webkit-stroke-dashoffset: -300;
+		-webkit-stroke-dasharray: 300;
 		stroke-dashoffset: -300;
 		stroke-dasharray: 300;
 		animation: line-move 1s forwards 1;
@@ -1252,10 +1278,6 @@
 		.products {
 			padding-right: 0;
 		}
-
-		/* .logo-about {
-
-		} */
 	}
 </style>
 
@@ -1366,7 +1388,6 @@
 					кришталево-чиста вода, тривалий досвід та турботливі людські руки-ось запорука
 					створення неповторного хліба з особливими смаковими якостями.
 				</h1>
-				<?xml version="1.1" encoding="utf-8"?>
 				<svg version="1.1" class="img-bread" xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 756 128.2"
 					style="enable-background:new 0 0 756 128.2;" xml:space="preserve">
@@ -1379,10 +1400,10 @@
 					c0.2,0,0.4,0,0.6-0.1c1.7-0.3,2.8-2,2.4-3.7c-0.1-0.3-1.6-7.7-6.7-14.9c-0.1-0.1-0.2-0.3-0.3-0.4c12.5,0.1,19.8,4.2,23.8,7.8
 					c5,4.6,6.8,10.3,6.8,14C433.3,105.1,433.3,117.3,379.6,117.3z" />
 					<line fill="none" x1="67" y1="82.3" x2="267.8" y2="83.1" />
-					<line id="line" x1="4.6" y1="114.8" x2="291.8" y2="114.8" />
-					<line id="line2" x1="37.6" y1="92.5" x2="270.2" y2="92.9" />
-					<line id="line3" x1="483.5" y1="92.5" x2="716.1" y2="92.9" />
-					<line id="line4" x1="463.4" y1="114.8" x2="750.6" y2="114.8" />
+					<line class="line1" x1="4.6" y1="114.8" x2="291.8" y2="114.8" />
+					<line class="line2" x1="37.6" y1="92.5" x2="270.2" y2="92.9" />
+					<line class="line3" x1="483.5" y1="92.5" x2="716.1" y2="92.9" />
+					<line class="line4" x1="463.4" y1="114.8" x2="750.6" y2="114.8" />
 					<g>
 						<path class="smoke" d="M346.1,14.2c-1.2,1.9-2.4,3.8-3.3,5.8c-0.9,2-1.6,4.1-1.8,6.1c-0.2,2,0.2,4,1.1,5.6c0.5,0.8,1.1,1.5,1.8,2.2
 						c0.7,0.7,1.6,1.5,2.5,2.3c1.7,1.7,3.3,3.9,4.2,6.4c1,2.4,1.2,5,0.9,7.5c-0.2,2.5-0.9,4.8-1.8,7c-0.9,2.2-2.1,4.2-3.5,6.1
@@ -1616,15 +1637,15 @@
 				// console.log(entry);
 
 				if (entry.isIntersecting) {
-					document.getElementById('line').style.display = 'block';
-					document.getElementById('line2').style.display = 'block';
-					document.getElementById('line3').style.display = 'block';
-					document.getElementById('line4').style.display = 'block';
+					document.querySelector('.line1').style.display = 'block';
+					document.querySelector('.line2').style.display = 'block';
+					document.querySelector('.line3').style.display = 'block';
+					document.querySelector('.line4').style.display = 'block';
 				} else {
-					document.getElementById('line').style.display = 'none';
-					document.getElementById('line2').style.display = 'none';
-					document.getElementById('line3').style.display = 'none';
-					document.getElementById('line4').style.display = 'none';
+					document.querySelector('.line1').style.display = 'none';
+					document.querySelector('.line2').style.display = 'none';
+					document.querySelector('.line3').style.display = 'none';
+					document.querySelector('.line4').style.display = 'none';
 				}
 			}
 		}
