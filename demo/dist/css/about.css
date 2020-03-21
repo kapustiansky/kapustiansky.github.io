@@ -884,7 +884,7 @@ footer {
     .header {
         height: auto;
         justify-content: space-around;
-        background: url(images/brown-board-small.png) 100% 100% no-repeat;
+        background: url(../../images/brown-board-small.png) 100% 100% no-repeat;
         background-size: cover;
     }
 
