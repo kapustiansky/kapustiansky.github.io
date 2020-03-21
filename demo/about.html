@@ -36,15 +36,22 @@
 		(function () {
 			window.oldScrollY = window.scrollY;
 			document.onscroll = event => {
+
 				let res = window.oldScrollY > window.scrollY ? 1 : 2;
 				window.oldScrollY = window.scrollY;
 
+				let head = document.querySelector('.header');
+				let logo = document.querySelector('.logo');
+
 				if (res == 2 && window.scrollY < 100) {
-					document.querySelector('.header').classList.add('little-had');
-					document.querySelector('.logo').classList.add('little-logo');
-				} if (res == 1 && window.scrollY < 250) {
-					document.querySelector('.header').classList.remove('little-had');
-					document.querySelector('.logo').classList.remove('little-logo');
+					head.classList.add('little-had');
+					logo.classList.add('little-logo');
+				} else if (res == 1 && window.scrollY < 250) {
+					head.classList.remove('little-had');
+					logo.classList.remove('little-logo');
+				} else {
+					head.classList.add('little-had');
+					logo.classList.add('little-logo');
 				}
 			}
 		})();
