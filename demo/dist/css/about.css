@@ -504,12 +504,14 @@ p {
 @-webkit-keyframes line-move {
     to {
         stroke-dashoffset: 0;
+stroke-dasharray: 300;
     }
 }
 
 @keyframes line-move {
     to {
         stroke-dashoffset: 0;
+stroke-dasharray: 300;
     }
 }
 
