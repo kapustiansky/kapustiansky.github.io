@@ -479,6 +479,7 @@ p {
     stroke-miterlimit: 10;
     stroke-dashoffset: 300;
     stroke-dasharray: 300;
+-webkit-animation: line-move 1s forwards 1;
     animation: line-move 1s forwards 1;
 }
 
@@ -493,8 +494,6 @@ p {
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
-    -webkit-stroke-dashoffset: -300;
-    -webkit-stroke-dasharray: 300;
     stroke-dashoffset: -300;
     stroke-dasharray: 300;
     -webkit-animation: line-move 1s forwards 1;
