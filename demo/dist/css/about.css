@@ -497,19 +497,26 @@ p {
     -webkit-stroke-dasharray: 300;
     stroke-dashoffset: -300;
     stroke-dasharray: 300;
-    animation: line-move 1s forwards 1;
+    -webkit-animation: line-move 1s forwards 1;
+            animation: line-move 1s forwards 1;
 }
 
-@keyframes smoke {
+@-webkit-keyframes line-move {
     to {
-        transform: scale(1, 1.7);
-        opacity: 0;
+        stroke-dashoffset: 0;
     }
 }
 
 @keyframes line-move {
     to {
         stroke-dashoffset: 0;
+    }
+}
+
+@keyframes smoke {
+    to {
+        transform: scale(1, 1.7);
+        opacity: 0;
     }
 }
 
