@@ -491,9 +491,7 @@ p {
     fill: none;
     stroke: #CC9933;
     stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-miterlimit: 10;
+    
     stroke-dashoffset: -300;
     stroke-dasharray: 300;
     -webkit-animation: line-move 1s forwards 1;
