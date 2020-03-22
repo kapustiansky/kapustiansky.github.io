@@ -433,8 +433,8 @@
 	}
 
 	.bakery-img {
-		/* height: 300px;
-    width: 450px; media */
+		height: 300px;
+    	width: 450px;
 		box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.993);
 	}
 
@@ -878,6 +878,8 @@ nav {
 		}
 
 		.bakery-img {
+			margin-top: 2rem;
+			width: auto;
 			max-width: 100%;
 			height: auto;
 		}
@@ -1071,7 +1073,11 @@ nav {
 		.map-svg-title {
 			font-family: 'ArialMT';
 			font-weight: bold;
-			font-size: 23px;
+			font-size: 25px;
+		}
+
+		.bakery-img {
+			margin-top: 0;
 		}
 
 	}
@@ -1090,7 +1096,7 @@ nav {
 	.map-svg-title {
 		font-family: 'ArialMT';
 		font-weight: bold;
-		font-size: 21px;
+		font-size: 23px;
 	}
 
 	}
@@ -1200,7 +1206,13 @@ nav {
 	</header>
 	<main>
 		<section class="contact-box">
-			<img class="bakery-img" src="images/contacts/bakery.png" alt="bakery">
+			<picture>
+				<source srcset="images/contacts/bakery-350.png" media="(max-width: 350px)">
+				<source srcset="images/contacts/bakery-500.png" media="(max-width: 500px)">
+				<source srcset="images/contacts/bakery-600.png">
+				<img class="bakery-img" srcset="images/contacts/bakery-600.png" alt="bakery">
+			</picture>
+			<!-- <img class="bakery-img"  src="images/contacts/bakery-600.png" alt="bakery"> -->
 			<div class="contact-form">
 				<h1 class="contact-h1">ЗВ’ЯЗАТИСЯ&nbspЗ&nbspНАМИ:</h1>
 				<div class="contact-data">
