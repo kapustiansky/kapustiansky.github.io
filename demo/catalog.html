@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ua-UA">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage" prefix="og: http://ogp.me/ns#">
 
 <head>
 	<meta charset="UTF-8">
@@ -800,29 +800,23 @@ nav {
 }
 
 #line, #line2 {
-  display: none;
-  fill:none;
-  stroke:#CC9933;
-  stroke-width:2;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  stroke-miterlimit:10;
-  stroke-dashoffset: 300;
-  stroke-dasharray: 300;
-  animation: line-move 1s forwards 1;
+    display: none;
+    fill: none;
+    stroke: #CC9933;
+    stroke-width: 2;
+    stroke-dashoffset: 300;
+    stroke-dasharray: 300;
+    animation: line-move-left 1s forwards 1;
 }
 
 #line3, #line4 {
-  display: none;
-  fill:none;
-  stroke:#CC9933;
-  stroke-width:2;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  stroke-miterlimit:10;
-  stroke-dashoffset: -300;
-  stroke-dasharray: 300;
-  animation: line-move 1s forwards 1;
+    display: none;
+    fill: none;
+    stroke: #CC9933;
+    stroke-width: 2;
+    stroke-dashoffset: 300;
+    stroke-dasharray: 300;
+    animation: line-move-right 1s forwards 1;
 }
 
 @keyframes smoke {
@@ -832,10 +826,16 @@ nav {
     }
 }
 
-@keyframes line-move {
-  to {
-  stroke-dashoffset: 0;
+@keyframes line-move-right {
+    to {
+    stroke-dashoffset: 600;
+    }
   }
+
+@keyframes line-move-left {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 
@@ -852,6 +852,11 @@ nav {
   left: 0;
   width: 0px;
   height: 0px;
+}
+
+.colos-img {
+	width: 35px;
+	height: 35px;
 }
 
 	@media all and (max-width: 1100px) {
@@ -946,6 +951,8 @@ nav {
 			font-size: 1.2em;
 			padding-top: 0.2rem;
 		}
+
+
 
 
 
@@ -1096,6 +1103,16 @@ nav {
 			height: 30px;
 		}
 
+		.colos-img {
+			width: 25px;
+			height: 25px;
+		}
+
+		.bread, .bun, .other {
+			font-size: 1.1em;
+			padding-top: 0;
+		}
+
 	}
 
 
@@ -1109,6 +1126,10 @@ nav {
 		.about,
 		.products {
 			padding-right: 0;
+		}
+
+		.svg-wrapper {
+			 margin: 0;
 		}
 	}
 </style>
@@ -1220,22 +1241,16 @@ nav {
 		<section class="product-navigation">
 			<div class="navigation-head">
 				<h1>КАТАЛОГ</h1>
-								<?xml version="1.0" encoding="utf-8"?>
 				<svg version="1.1" class="img-bread" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					viewBox="0 0 756 128.2" style="enable-background:new 0 0 756 128.2;" xml:space="preserve">
-				<style type="text/css">
-					.st0{fill:#CC9933;}
-					.st1{fill:none;}
-					.st2{fill:none;stroke:#CC9933;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-				</style>
-				<path class="st0" d="M430.7,79.3c-5.4-5-15.6-10.5-33.5-9.3c-5.3-4.6-13-8.3-23.8-8c-5.5,0.2-17,2.6-23.6,10.5
+				<path fill="#CC9933" d="M430.7,79.3c-5.4-5-15.6-10.5-33.5-9.3c-5.3-4.6-13-8.3-23.8-8c-5.5,0.2-17,2.6-23.6,10.5
 					c-2.9-0.8-6-1.1-9.3-0.7c0,0,0,0-0.1,0c-10.3,1.3-24.6,11.4-24.6,27c0,9.1,3.9,14.8,12.6,18.6c9.6,4.2,25.9,6.1,51.3,6.1
 					c23.7,0,39.7-2.3,48.8-7.1c9.8-5.1,11.1-12.6,11.1-18.5C439.5,91.3,436.2,84.3,430.7,79.3z M379.6,117.3c-53.3,0-57.7-8.8-57.7-18.5
 					c0-11.8,11.3-19.8,19.2-20.8c16.5-1.6,21.8,16.6,22.1,17.4c0.5,1.7,2.2,2.6,3.8,2.2s2.6-2.2,2.1-3.8c-0.1-0.2-1.7-6-6-11.6
 					c-2.2-2.9-4.7-5.2-7.4-6.9c5-4.8,13.2-6.8,17.8-6.9c10.3-0.3,18.5,3.6,24.2,11.6c4.4,6.2,5.8,12.6,5.8,12.7c0.3,1.5,1.6,2.5,3,2.5
 					c0.2,0,0.4,0,0.6-0.1c1.7-0.3,2.8-2,2.4-3.7c-0.1-0.3-1.6-7.7-6.7-14.9c-0.1-0.1-0.2-0.3-0.3-0.4c12.5,0.1,19.8,4.2,23.8,7.8
 					c5,4.6,6.8,10.3,6.8,14C433.3,105.1,433.3,117.3,379.6,117.3z"/>
-				<line class="st1" x1="67" y1="82.3" x2="267.8" y2="83.1"/>
+				<line fill="none" x1="67" y1="82.3" x2="267.8" y2="83.1"/>
 				<line id="line" x1="4.6" y1="114.8" x2="291.8" y2="114.8"/>
 				<line id="line2" x1="37.6" y1="92.5" x2="270.2" y2="92.9"/>
 				<line id="line3" x1="483.5" y1="92.5" x2="716.1" y2="92.9"/>
@@ -1284,10 +1299,10 @@ nav {
 		</section>
 		<section class="product-container">
 			<div class="head-product">
-				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
+				<img class="colos-img" src="images/colos-left.svg" alt="colos-left">
 				<div class="block"><i id="bread"></i></div><!--элемент для якоря -->
 				<h1 class="bread">ХЛІБ</h1>
-				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
+				<img class="colos-img" src="images/colos-right.svg" alt="colos-right">
 			</div>
 			<div class="product-menu">
 				<div class="svg-wrapper">
@@ -1406,10 +1421,10 @@ nav {
 		</section>
 		<section class="product-container">
 			<div class="head-product">
-				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
+				<img class="colos-img" src="images/colos-left.svg" alt="colos-left">
 				<div class="block"><i id="bun"></i></div>
 				<h1 class="bun">БУЛОЧНІ ВИРОБИ</h1>
-				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
+				<img class="colos-img" src="images/colos-right.svg" alt="colos-right">
 			</div>
 			<div class="product-menu">
 				<div class="svg-wrapper">
@@ -1647,7 +1662,6 @@ nav {
 								data-caption="Склад : борошно пшеничне вищого сорту, дріжджі хлібопекарські пресовані, сіль кухонна харчова, цукор, рослинний маргарин, вода питна, харчові добавки, горіх грецький мелений.">
 								<img class="img-style lazy" data-src="images/catalog/kvitka-tvorog-small.png"
 									alt="kvitka-tvorog">
-									<!-- <div id="other"></div> -->
 							</a>
 							<p class="prod-name">Булочка «Квіточка»</p>
 							<p>Із горіхом.</br> Без ГМО.
@@ -1659,10 +1673,10 @@ nav {
 		</section>
 		<section class="product-container">
 			<div class="head-product">
-				<img width="35" height="35" src="images/colos-left.svg" alt="colos-left">
+				<img class="colos-img" src="images/colos-left.svg" alt="colos-left">
 				<div class="block"><i id="other"></i></div>
-				<h1 class="other">ХЛІБОБУЛОЧНІ&nbspВИРОБИ</h1>
-				<img width="35" height="35" src="images/colos-right.svg" alt="colos-right">
+				<h1 class="other">ХЛІБОБУЛОЧНІ&nbsp;ВИРОБИ</h1>
+				<img class="colos-img" src="images/colos-right.svg" alt="colos-right">
 			</div>
 			<div class="product-menu">
 				<div class="svg-wrapper">
