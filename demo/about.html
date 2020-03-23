@@ -34,24 +34,27 @@
 <body>
 	<script>
 		(function () {
-			window.oldScrollY = window.scrollY;
-			document.onscroll = event => {
-
-				let res = window.oldScrollY > window.scrollY ? 1 : 2;
+			if (window.matchMedia("(min-width: 1100px)").matches) {
 				window.oldScrollY = window.scrollY;
+				document.onscroll = event => {
 
-				let head = document.querySelector('.header');
-				let logo = document.querySelector('.logo');
+					let res = window.oldScrollY > window.scrollY ? 1 : 2;
+					window.oldScrollY = window.scrollY;
+					// console.log(window.oldScrollY);
 
-				if (res == 2 && window.scrollY < 100) {
-					head.classList.add('little-had');
-					logo.classList.add('little-logo');
-				} else if (res == 1 && window.scrollY < 250) {
-					head.classList.remove('little-had');
-					logo.classList.remove('little-logo');
-				} else {
-					head.classList.add('little-had');
-					logo.classList.add('little-logo');
+					let head = document.querySelector('.header');
+					let logo = document.querySelector('.logo');
+
+					if (res == 2 && window.scrollY > 100) {
+						head.classList.add('little-had');
+						logo.classList.add('little-logo');
+					} else if (res == 1 && window.scrollY < 250) {
+						head.classList.remove('little-had');
+						logo.classList.remove('little-logo');
+					} else {
+						head.classList.add('little-had');
+						logo.classList.add('little-logo');
+					}
 				}
 			}
 		})();
