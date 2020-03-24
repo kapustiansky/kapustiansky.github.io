@@ -2,19 +2,15 @@
 <html lang="uk" itemscope itemtype="http://schema.org/WebPage" prefix="og: http://ogp.me/ns#">
 
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161766012-1"></script>
 	<script>
-		window.dataLayer = window.dataLayer || [];
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
 
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-161766012-1');
+	gtag('config', 'UA-161766012-1');
 	</script>
-
 	<title>Про нас - Сіль Землі</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Приватна пекарня. Хліб та хлібобулочні вироби. Замовлення смтю Буштино. ">
@@ -34,7 +30,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 	<script src="dist/js/jquery.lazy.min.js"></script>
-
+	
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -43,7 +39,6 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="dist/css/about.css">
 </head>
-
 <body>
 	<script>
 		(function () {
@@ -257,8 +252,7 @@
 					<img class="quality-img" src="images/okay-chaf.svg" alt="quality">
 					<img class="mill-svg" src="images/mill.svg" alt="mill">
 				</div>
-				<h1 class="quality-text">Кожен наш співробітник точно знає, що якість продукції залежить від зусиль
-					усієї
+				<h1 class="quality-text">Кожен наш співробітник точно знає, що якість продукції залежить від зусиль усієї
 					команди професіоналів. У хлібному виробництві немає дрібниць, на всіх етапах - від замісу тіста, до
 					упаковки та доставки споживачеві, все повинно бути виконано бездоганно.</h1>
 			</div>
@@ -358,16 +352,13 @@
 		</section>
 	</footer>
 	<script>
-		// if (window.matchMedia("(max-width: 350px)").matches) {
-		// 	document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
-		// 		`<img class="logo-about" src="images/logo.svg" alt="logo">`);
-		// } else {
-		// 	document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
-		// 		`<img class="logo-about" src="images/logo-grad.svg" alt="logo">`);
-		// }
-
-		document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+		if (window.matchMedia("(max-width: 350px)").matches) {
+			document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+				`<img class="logo-about" src="images/logo.svg" alt="logo">`);
+		} else {
+			document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
 				`<img class="logo-about" src="images/logo-grad.svg" alt="logo">`);
+		}
 
 		$('[data-fancybox="gallery"]').fancybox({
 			protect: true,
