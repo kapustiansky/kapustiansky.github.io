@@ -352,13 +352,34 @@
 		</section>
 	</footer>
 	<script>
-		if (window.matchMedia("(max-width: 350px)").matches) {
-			document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
-				`<img class="logo-about" src="images/logo.svg" alt="logo">`);
-		} else {
-			document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
-				`<img class="logo-about" src="images/logo-grad.svg" alt="logo">`);
-		}
+		// if (window.matchMedia("(max-width: 350px)").matches) {
+		// 	document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+		// 		`<img class="logo-about" src="images/logo.svg" alt="logo">`);
+		// } else {
+		// 	document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+		// 		`<img class="logo-about" src="images/logo-grad.svg" alt="logo">`);
+		// }
+
+
+
+
+
+		// $(document).ready(function() {
+		// 	let userAgent = navigator.userAgent.toLowerCase();
+		// 	let Safari = /safari/.test(userAgent);
+		// 	// let Mozila = /firefox/.test(userAgent);
+
+		// 	if (Safari === true) {
+		// 		console.log(navigator.userAgent.toLowerCase())
+		// 		document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+		// 			`<img class="logo-about" src="images/logo.svg" alt="logo">`);
+		// 	} else {
+		// 		console.log(navigator.userAgent.toLowerCase())
+		// 		document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+		// 			`<img class="logo-about" src="images/logo-grad.svg" alt="logo">`);
+		// 	}
+		// });
+		
 
 		$('[data-fancybox="gallery"]').fancybox({
 			protect: true,
@@ -553,6 +574,48 @@
 			let observerF = new IntersectionObserver(F, options);
 			observerF.observe(document.querySelector('.fresh-img'));
 		}
+	</script>
+	<script>
+		// 		$(document).ready(function() {
+		// 	let userAgent = navigator.userAgent.toLowerCase();
+		// 	let Safari = /safari/.test(userAgent);
+		// 	// let Mozila = /firefox/.test(userAgent);
+		// 	console.log(window.navigator.userAgent);
+
+		// 	if (Safari === true) {
+		// 		// console.log(navigator.userAgent.toLowerCase())
+		// 		document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+		// 			`<img class="logo-about" src="images/logo.svg" alt="logo">`);
+		// 	} else {
+		// 		// console.log(navigator.userAgent.toLowerCase())
+		// 		document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+		// 			`<img class="logo-about" src="images/logo-grad.svg" alt="logo">`);
+		// 	}
+		// });
+
+		function getBrowserId () {
+
+			var
+				aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
+				sUsrAg = navigator.userAgent, nIdx = aKeys.length - 1;
+
+			for (nIdx; nIdx > -1 && sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
+
+			return nIdx
+
+			}
+
+			console.log(getBrowserId());
+
+			if (getBrowserId() == 2) {
+				//console.log(navigator.userAgent.toLowerCase())
+				document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+					`<img class="logo-about" src="images/logo.svg" alt="logo">`);
+			} else {
+				// console.log(navigator.userAgent.toLowerCase())
+				document.querySelector('.about-bakery').insertAdjacentHTML('afterbegin',
+					`<img class="logo-about" src="images/logo-grad.svg" alt="logo">`);
+			}
 	</script>
 </body>
 
