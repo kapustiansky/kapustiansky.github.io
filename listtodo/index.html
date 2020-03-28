@@ -15,7 +15,7 @@
         <div class="header">
             <img src="img/cat.png" alt="" style="max-width:150px">
             <h1>Список задач</h1>
-            <form action="javascript:void(0)">
+            <form>
                 <input type="text" placeholder="Введите новую задачу" id="toDo" class="do" value />
                 <button type="submit" id="add-btn" class="addBtn">Добавить</button>
             </form>
@@ -61,7 +61,7 @@
         newlist.addEventListener('click', function (event) {
             if (event.target.id === 'check') {
                 var chk = event.target.parentNode;
-                chk.classList.toggle('checked'); //добавляет класс чекбокс со стилями и реализацией повторного нажатия
+                chk.classList.toggle('checked'); //добавляет псевдо класс чекбокс со стилями и реализацией повторного нажатия
                 saveFun();
             } else if (event.target.id === 'saveId') {
                 alert('Изменения сохранены')
