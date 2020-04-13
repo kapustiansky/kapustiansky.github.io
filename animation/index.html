@@ -101,10 +101,10 @@ window.addEventListener('touchmove', function(e) {
 			if (touch.x - this.x < 50 && touch.x - this.x > -50 && touch.y - this.y < 50 && touch.y - this.y > -
 				50) { //финт ушами!
 				if (this.radius < maxRadius) {
-					this.radius += 3;
+					this.radius += 1;
 				}
 			} else if (this.radius > this.minRadius) {
-				this.radius -= 3; // исходя(после) из предыдущего условия, уменьшить радиус
+				this.radius -= 1; // исходя(после) из предыдущего условия, уменьшить радиус
 			}
 
 			this.draw();
@@ -118,7 +118,7 @@ window.addEventListener('touchmove', function(e) {
 
 		circleArray = []; //не дает запускать каждый цикл при динамическом расширении окна
 
-		for (var i = 0; i < 750; i++) {
+		for (var i = 0; i < 900; i++) {
 			var radius = Math.random() * 3 + 1;
 			var x = Math.random() * (innerWidth - radius * 2) + radius;
 			var y = Math.random() * (innerHeight - radius * 2) + radius;
