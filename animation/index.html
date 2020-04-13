@@ -98,7 +98,7 @@ window.addEventListener('touchmove', function(e) {
 
 			//interactiviti
 
-			if (mouse.x || touch.x - this.x < 50 && mouse.x || touch.x - this.x > -50 && mouse.y || touch.y - this.y < 50 && mouse.y || touch.y - this.y > -
+			if (touch.x - this.x < 50 && touch.x - this.x > -50 && touch.y - this.y < 50 && touch.y - this.y > -
 				50) { //финт ушами!
 				if (this.radius < maxRadius) {
 					this.radius += 1;
