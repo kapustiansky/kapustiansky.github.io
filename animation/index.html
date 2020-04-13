@@ -60,14 +60,13 @@
 var touch = {
 		x: undefined,
 		y: undefined
-	}
+}
 
-document.querySelector('.lol').addEventListener('touchmove', function(e) {
+window.addEventListener('touchmove', function(e) {
   
   touch.x = e.touches[0].clientX;
   touch.y = e.touches[0].clientY;
     
-   document.getElementById('xy').innerHTML = touch.x + ", " + touch.y;
 }, false);
 
 	function Circle(x, y, dx, dy, radius) {
