@@ -101,10 +101,10 @@ window.addEventListener('touchmove', function(e) {
 			if (touch.x - this.x < 50 && touch.x - this.x > -50 && touch.y - this.y < 50 && touch.y - this.y > -
 				50) { //финт ушами!
 				if (this.radius < maxRadius) {
-					this.radius += 1;
+					this.radius += 2;
 				}
 			} else if (this.radius > this.minRadius) {
-				this.radius -= 1; // исходя(после) из предыдущего условия, уменьшить радиус
+				this.radius -= 2; // исходя(после) из предыдущего условия, уменьшить радиус
 			}
 
 			this.draw();
