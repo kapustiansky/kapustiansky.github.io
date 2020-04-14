@@ -37,7 +37,7 @@
 
 	
 
-	var maxRadius = 50;
+	var maxRadius = 55;
 	// minRadius = 8;
 
 	var colorArray = [
@@ -90,8 +90,8 @@ window.addEventListener('touchmove', function(e) {
 
 			//interactiviti
 
-			if (touch.x - this.x < 70 && touch.x - this.x > -70 && touch.y - this.y < 70 && touch.y - this.y > -
-				70) { //финт ушами!
+			if (touch.x - this.x < 90 && touch.x - this.x > -90 && touch.y - this.y < 90 && touch.y - this.y > -
+				90) { //финт ушами!
 				if (this.radius < maxRadius) {
 					this.radius += 1;
 				}
@@ -110,7 +110,7 @@ window.addEventListener('touchmove', function(e) {
 
 		circleArray = []; //не дает запускать каждый цикл при динамическом расширении окна
 
-		for (var i = 0; i < 900; i++) {
+		for (var i = 0; i < 1000; i++) {
 			var radius = Math.random() * 3 + 1;
 			var x = Math.random() * (innerWidth - radius * 2) + radius;
 			var y = Math.random() * (innerHeight - radius * 2) + radius;
