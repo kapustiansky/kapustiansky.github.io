@@ -28,6 +28,81 @@ body {
   font-size: 1.25rem;
 }
 
+.container {
+  background-color: #222;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.name {
+  width: 20%;
+  margin: 10% auto 0;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  padding: 10px 0;
+  font-family: helvetica;
+}
+
+@-webkit-keyframes logo-animate {
+  0%   { opacity: 1; }
+  25%   { opacity: 0.1; }
+  50%   { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+.l {
+  -webkit-animation: logo-animate 2s infinite;
+  animation:         logo-animate 2s infinite;
+  animation-delay: 1.4s;
+}
+.u {
+  -webkit-animation: logo-animate 2s infinite;
+  animation:         logo-animate 2s infinite;
+  animation-delay: 1.5s;
+}
+.k {
+  -webkit-animation: logo-animate 2s infinite;
+  animation:         logo-animate 2s infinite;
+  animation-delay: 1.6s;
+}
+.e {
+  -webkit-animation: logo-animate 2s infinite;
+  animation:         logo-animate 4s infinite;
+  animation-delay: 1.7s;
+}
+
+.p {
+  -webkit-animation: logo-animate 2s infinite;
+  animation:         logo-animate 2s infinite;
+  animation-delay: 1.9s;
+}
+.e2 {
+    -webkit-animation: logo-animate 2s infinite;
+  animation:         logo-animate 2s infinite;
+  animation-delay: 2s;
+}
+.a {
+    -webkit-animation: logo-animate 2s infinite;
+  animation:         logo-animate 2s infinite;
+  animation-delay: 2.1s;
+}
+.r {
+    -webkit-animation: logo-animate 2s infinite;
+  animation:         logo-animate 2s infinite;
+  animation-delay: 2.2s;
+}
+.y {
+    -webkit-animation: logo-animate 2s infinite;
+  animation:         logo-animate 2s infinite;
+  animation-delay: 2.3s;
+}
+
 
 
 
@@ -396,7 +471,22 @@ body {
 
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Carousel</a>
+      <a class="navbar-brand" href="#">
+<div class="container">
+  <div class="name">
+    <span class="l">L</span>
+    <span class="u">U</span>
+    <span class="k">K</span>
+    <span class="e">E</span>
+    <span class="space">&nbsp;</span>
+    <span class="p">P</span>
+    <span class="e2">E</span>
+    <span class="a">A</span>
+    <span class="r">R</span>
+    <span class="y">Y</span>
+  </div>
+</div>
+</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
