@@ -12,110 +12,141 @@
   <title>Bootstrap4</title>
 </head>
 <style>
+  .bg-dark {
+    background-color: #151F42 !important;
+  }
 
-.bg-dark {
-    background-color: #151F42!important;
-}
-
-body {
+  body {
     min-height: 75rem;
-    padding-top: 10.7rem;
-}
+    padding-top: 4.6rem;
+  }
 
-.nav-link {
-  background: linear-gradient(to bottom right, #D93DCF, #F29F05);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.25rem;
-}
+  .nav-link {
+    background: linear-gradient(to bottom right, #D93DCF, #F29F05);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.25rem;
+  }
 
 
-@-webkit-keyframes logo-animate {
-  0%   { opacity: 1; }
-  25%   { opacity: 0.1; }
-  50%   { opacity: 1; }
-  100% { opacity: 1; }
-}
+  @-webkit-keyframes logo-animate {
+    0% {
+      opacity: 1;
+    }
 
-.l {
-  -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 2s infinite;
-  animation-delay: 1.4s;
-}
-.u {
-  -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 2s infinite;
-  animation-delay: 1.5s;
-}
-.k {
-  -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 2s infinite;
-  animation-delay: 1.6s;
-}
-.e {
-  -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 4s infinite;
-  animation-delay: 1.7s;
-}
+    25% {
+      opacity: 0.1;
+    }
 
-.s1 {
-  -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 4s infinite;
-  animation-delay: 1.8s;
-}
+    50% {
+      opacity: 1;
+    }
 
-.s2 {
-  -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 4s infinite;
-  animation-delay: 1.9s;
-}
+    100% {
+      opacity: 1;
+    }
+  }
 
-.p {
-  -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 2s infinite;
-  animation-delay: 2.1s;
-}
-.e2 {
+  .l {
     -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 2s infinite;
-  animation-delay: 2.2s;
-}
-.a {
+    animation: logo-animate 2s infinite;
+    animation-delay: 1.4s;
+  }
+
+  .u {
     -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 2s infinite;
-  animation-delay: 2.3s;
-}
-.r {
+    animation: logo-animate 2s infinite;
+    animation-delay: 1.5s;
+  }
+
+  .k {
     -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 2s infinite;
-  animation-delay: 2.4s;
-}
-.s3 {
+    animation: logo-animate 2s infinite;
+    animation-delay: 1.6s;
+  }
+
+  .e {
     -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 2s infinite;
-  animation-delay: 2.5s;
+    animation: logo-animate 4s infinite;
+    animation-delay: 1.7s;
+  }
+
+  .s1 {
+    -webkit-animation: logo-animate 2s infinite;
+    animation: logo-animate 4s infinite;
+    animation-delay: 1.8s;
+  }
+
+  .s2 {
+    -webkit-animation: logo-animate 2s infinite;
+    animation: logo-animate 4s infinite;
+    animation-delay: 1.9s;
+  }
+
+  .p {
+    -webkit-animation: logo-animate 2s infinite;
+    animation: logo-animate 2s infinite;
+    animation-delay: 2.1s;
+  }
+
+  .e2 {
+    -webkit-animation: logo-animate 2s infinite;
+    animation: logo-animate 2s infinite;
+    animation-delay: 2.2s;
+  }
+
+  .a {
+    -webkit-animation: logo-animate 2s infinite;
+    animation: logo-animate 2s infinite;
+    animation-delay: 2.3s;
+  }
+
+  .r {
+    -webkit-animation: logo-animate 2s infinite;
+    animation: logo-animate 2s infinite;
+    animation-delay: 2.4s;
+  }
+
+  .s3 {
+    -webkit-animation: logo-animate 2s infinite;
+    animation: logo-animate 2s infinite;
+    animation-delay: 2.5s;
+  }
+
+  .s4 {
+    -webkit-animation: logo-animate 2s infinite;
+    animation: logo-animate 4s infinite;
+    animation-delay: 2.6s;
+  }
+
+  .logo-text {}
+
+  .sc-link {
+    display: none !important;
+  }
+
+  .name span {
+    background-color: #F29F05;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
 }
 
-.s4 {
-  -webkit-animation: logo-animate 2s infinite;
-  animation:         logo-animate 4s infinite;
-  animation-delay: 2.6s;
+.logotipe {
+  width: 45px;
 }
 
-.logo-text {
 
-}
 
-.sc-link {
-  display: none!important;
-}
 
-.name span {
-  background-color:#F29F05;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.25rem;
-}
+
+
+
+
 
 
 
@@ -477,25 +508,28 @@ body {
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand logo-text" href="#">
-<div class="container">
-  <div class="name">
-    <span class="l">З</span>
-    <span class="u">А</span>
-    <span class="k">К</span>
-    <span class="e">А</span>
-    <span class="s1">Ж</span>
-    <span class="s2">Ы</span>
-<br>
-    <span class="space">&nbsp;</span>
-    <span class="p">С</span>
-    <span class="e2">Е</span>
-    <span class="a">Й</span>
-    <span class="r">Ч</span>
-    <span class="s3">А</span>
-    <span class="s4">С</span>
-  </div>
-</div>
-</a>
+        <div class="">
+          <div class="name">
+            <span class="l">З</span>
+            <span class="u">А</span>
+            <span class="k">К</span>
+            <span class="e">А</span>
+            <span class="s1">Ж</span>
+            <span class="s2">Ы</span>
+            <br>
+            <span class="space">&nbsp;</span>
+            <span class="p">С</span>
+            <span class="e2">Е</span>
+            <span class="a">Й</span>
+            <span class="r">Ч</span>
+            <span class="s3">А</span>
+            <span class="s4">С</span>
+          </div>
+        </div>
+      </a>
+      <a class="navbar-brand" href="#">
+        <img class="logotipe" src="images/game-console.svg" alt="">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -517,13 +551,33 @@ body {
       </div>
       <ul class="sc-link list-unstyled d-flex justify-content-around align-items-center flex-wrap">
         <li><a href="https://www.facebook.com/blackpizza?fref=ts" target="_blank" title="Join us on Facebook"
-            class=""><svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-5" d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z"/></svg></a></li>
-        <li><a href="http://instagram.com/blackpizzastudio" target="_blank" title="Join us on Instagram"
-            class=""><svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-5" d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z"/></svg></a></li>
-        <li><a href="" target="_blank" title="Join us on Telegram"
-            class=""><svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-5" d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z"/></svg></a></li>
-            <li><a href="" target="_blank" title="Join us on Telegram"
-              class=""><svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-5" d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z"/></svg></a></li>
+            class=""><svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+              style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+              <path id="telegram-5"
+                d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z" />
+              </svg></a></li>
+        <li><a href="http://instagram.com/blackpizzastudio" target="_blank" title="Join us on Instagram" class=""><svg
+              width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+              style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+              <path id="telegram-5"
+                d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z" />
+              </svg></a></li>
+        <li><a href="" target="_blank" title="Join us on Telegram" class=""><svg width="24px" height="24px"
+              version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              xml:space="preserve" xmlns:serif="http://www.serif.com/"
+              style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+              <path id="telegram-5"
+                d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z" />
+              </svg></a></li>
+        <li><a href="" target="_blank" title="Join us on Telegram" class=""><svg width="24px" height="24px"
+              version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              xml:space="preserve" xmlns:serif="http://www.serif.com/"
+              style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+              <path id="telegram-5"
+                d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z" />
+              </svg></a></li>
       </ul>
       </div>
     </nav>
@@ -549,8 +603,8 @@ body {
                     necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
                   <a href="#">BUY NOW</a>
                 </div>
-                <div class="col-md-5 col-12 order-md-2 order-1"><img src="images/Playstation-1.png"
-                    class="mx-auto" alt="slide"></div>
+                <div class="col-md-5 col-12 order-md-2 order-1"><img src="images/Playstation-1.png" class="mx-auto"
+                    alt="slide"></div>
               </div>
             </div>
           </div>
@@ -566,8 +620,8 @@ body {
                     necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
                   <a href="#">BUY NOW</a>
                 </div>
-                <div class="col-md-5 col-12 order-md-2 order-1"><img src="images/Playstation-gaming.jpg"
-                    class="mx-auto" alt="slide"></div>
+                <div class="col-md-5 col-12 order-md-2 order-1"><img src="images/Playstation-gaming.jpg" class="mx-auto"
+                    alt="slide"></div>
               </div>
             </div>
           </div>
@@ -583,8 +637,8 @@ body {
                     necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
                   <a href="#">BUY NOW</a>
                 </div>
-                <div class="col-md-5 col-12 order-md-2 order-1"><img src="images/dg.png"
-                    class="mx-auto" alt="slide"></div>
+                <div class="col-md-5 col-12 order-md-2 order-1"><img src="images/dg.png" class="mx-auto" alt="slide">
+                </div>
               </div>
             </div>
           </div>
@@ -741,18 +795,24 @@ body {
       <div class="">
         <ul class="list-unstyled">
           <li><a href="https://www.facebook.com/blackpizza?fref=ts" target="_blank" title="Join us on Facebook"
-              class=""><svg class="" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M5.5.5A.5.5 0 0 1 6 0h4a.5.5 0 0 1 0 1H9v1.07a7.002 7.002 0 0 1 3.537 12.26l.817.816a.5.5 0 0 1-.708.708l-.924-.925A6.967 6.967 0 0 1 8 16a6.967 6.967 0 0 1-3.722-1.07l-.924.924a.5.5 0 0 1-.708-.708l.817-.816A7.002 7.002 0 0 1 7 2.07V1H5.999a.5.5 0 0 1-.5-.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1zm-5 4a.5.5 0 0 0-1 0v3.882l-1.447 2.894a.5.5 0 1 0 .894.448l1.5-3A.5.5 0 0 0 8.5 9V5z"/>
+              class=""><svg class="" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M5.5.5A.5.5 0 0 1 6 0h4a.5.5 0 0 1 0 1H9v1.07a7.002 7.002 0 0 1 3.537 12.26l.817.816a.5.5 0 0 1-.708.708l-.924-.925A6.967 6.967 0 0 1 8 16a6.967 6.967 0 0 1-3.722-1.07l-.924.924a.5.5 0 0 1-.708-.708l.817-.816A7.002 7.002 0 0 1 7 2.07V1H5.999a.5.5 0 0 1-.5-.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1zm-5 4a.5.5 0 0 0-1 0v3.882l-1.447 2.894a.5.5 0 1 0 .894.448l1.5-3A.5.5 0 0 0 8.5 9V5z" />
               </svg></a></li>
-          <li><a href="http://instagram.com/blackpizzastudio" target="_blank" title="Join us on Instagram"
-              class=""><i class=""></i></a></li>
-          <li><a href="" target="_blank" title="Join us on Telegram"
-              class=""><svg width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-5" d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z"/></svg></a></li>
+          <li><a href="http://instagram.com/blackpizzastudio" target="_blank" title="Join us on Instagram" class=""><i
+                class=""></i></a></li>
+          <li><a href="" target="_blank" title="Join us on Telegram" class=""><svg width="24px" height="24px"
+                version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+                <path id="telegram-5"
+                  d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z" />
+                </svg></a></li>
         </ul>
       </div>
       <div>
-        <img class=""
-          src="http://blackpizza.com/wp-content/uploads/2014/12/slice-pizza.png" alt="Pizz and love">
+        <img class="" src="http://blackpizza.com/wp-content/uploads/2014/12/slice-pizza.png" alt="Pizz and love">
       </div>
       <div class="">
         <p>©2017 <span class="">BlackPizza</span></p>
