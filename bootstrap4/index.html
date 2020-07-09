@@ -226,13 +226,21 @@
     }
   }
 
-  /* .lol {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -22.5px;
-    margin-top: -22.5px;
-  } */
+  /* .carousel-but {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+} */
+
+#carousel-inner-padding {
+  padding-bottom: 8rem;
+}
+
+.row-top-padding {
+  padding-top: 1rem;
+}
+
+
 
 
 
@@ -618,8 +626,7 @@
         <img class="img-slide logotipe i4" src="images/Death_Star.svg" alt="">
         <img class="img-slide logotipe i5" src="images/Mario.svg" alt="">
         <img class="img-slide logotipe i6" src="images/Tic_Tac_Toe.svg" alt="">
-        <img class="img-slide logotipe i7" src="images/Avengers.svg" alt="">
-        
+        <img class="img-slide logotipe i7" src="images/Avengers.svg" alt="">      
         <!-- <img class="logotipe" src="images/game-console.svg" alt=""> -->
         <img class="img-slide logotipe i8" src="images/game-console.svg" alt="">
       </a>
@@ -706,7 +713,7 @@
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner">
+      <div id="carousel-inner-padding" class="carousel-inner">
         <div class="carousel-item active">
           <div class="mask flex-center">
 
@@ -781,7 +788,7 @@
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-4 row-top-padding">
           <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
             <title>Placeholder</title>
@@ -794,7 +801,7 @@
             magna.</p>
           <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-lg-4 row-top-padding">
           <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
             <title>Placeholder</title>
@@ -807,7 +814,7 @@
             condimentum nibh.</p>
           <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
+        <div class="col-lg-4 row-top-padding">
           <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140">
             <title>Placeholder</title>
@@ -959,6 +966,10 @@
         interval: 6000
       })
     })()
+
+    // $(document).ready(function(){
+    //   $('.carousel').height($(window).height());
+    // })
   </script>
 
 </body>
