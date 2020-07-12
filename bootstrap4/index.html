@@ -9,12 +9,33 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+
   <title>Bootstrap4</title>
 </head>
 <style>
+
+  body {
+    font-family: 'PT Mono', monospace;
+  }
+
+  /* #myCarousel h4 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.1rem;
+  } */
+
+  /* ul .nav-link {
+    font-family: 'PT Mono', monospace;
+  } */
+  
   .name {
-    margin-left: 3.9px;
-    margin-right: 3.9px;
+    /* margin-left: 3.9px;
+    margin-right: 3.9px; */
+    /* letter-spacing: 1px; */
+    /* font-family: 'PT Mono', monospace; */
+    /* font-size: 0.9rem;
+    letter-spacing: -0.1rem; */
   }
 
   .img-pl {
@@ -70,31 +91,31 @@
     animation-delay: 2.8s;
   }
 
-  .u {
+  .e {
     -webkit-animation: logo-animate 2s infinite;
     animation: logo-animate 2s infinite;
     animation-delay: 2.9s;
   }
 
-  .k {
+  .t {
     -webkit-animation: logo-animate 2s infinite;
     animation: logo-animate 2s infinite;
     animation-delay: 3s;
   }
 
-  .e {
+  .s {
     -webkit-animation: logo-animate 2s infinite;
     animation: logo-animate 4s infinite;
     animation-delay: 3.1s;
   }
 
-  .s1 {
+  .g {
     -webkit-animation: logo-animate 2s infinite;
     animation: logo-animate 4s infinite;
     animation-delay: 3.2s;
   }
 
-  .s2 {
+  .o {
     -webkit-animation: logo-animate 2s infinite;
     animation: logo-animate 4s infinite;
     animation-delay: 3.3s;
@@ -102,13 +123,13 @@
 
 
 
-  .p {
+  .o2 {
     -webkit-animation: logo-animate 2s infinite;
     animation: logo-animate 2s infinite;
     animation-delay: 3.5s;
   }
 
-  .e2 {
+  /* .e2 {
     -webkit-animation: logo-animate 2s infinite;
     animation: logo-animate 2s infinite;
     animation-delay: 3.6s;
@@ -136,7 +157,7 @@
     -webkit-animation: logo-animate 2s infinite;
     animation: logo-animate 4s infinite;
     animation-delay: 4s;
-  }
+  } */
 
   .logo-text {}
 
@@ -250,13 +271,20 @@
 } */
 
 main {
-	 text-align: center; 
+	text-align: center;
 }
 
 #myCarousel .featurette-divider {
 	margin-left: 4rem;
 	margin-right: 4rem;
   }
+
+.marketing h2 {
+  /* font-family: 'PT Mono', monospace; */
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 26px;
+  font-size: 1.6rem;
+}
 
 
 
@@ -281,13 +309,14 @@ main {
     background-attachment: fixed;
   }
 
-  #myCarousel h4 {
-    font-size: 50px;
+  #myCarousel h4 {  
+    margin-top: 15px;
     margin-bottom: 15px;
     color: #FFF;
     line-height: 100%;
     letter-spacing: 0.5px;
-    font-weight: 600;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
   }
 
   #myCarousel p {
@@ -540,7 +569,7 @@ main {
     /* position: relative; */
     /* width: 100%; */
     min-height: 260px;
-    background: #151F42;
+    background-color: #0D2840 !important;
     /* padding: 10px 0; */
     /* z-index: 1; */
   }
@@ -618,6 +647,10 @@ main {
     margin-top: -45px;
   } */
 
+  .footer-logo {
+    width: 80px;
+  }
+
   /* footer end */
 </style>
 
@@ -656,16 +689,16 @@ main {
         <div class="">
           <div class="name">
             <span class="l">L</span>
-            <span class="u">E</span>
-            <span class="k">T</span>
-            <span class="e">S</span>
+            <span class="e">E</span>
+            <span class="t">T</span>
+            <span class="s">S</span>
             <br>
             <span>&nbsp;</span>
-            <span class="p">G</span>
-            <span class="e2">O</span>
+            <span class="g">G</span>
+            <span class="o">O</span>
             <!-- <span class="a">G</span>
             <span class="r">I</span>-->
-            <span class="s3">!</span> 
+            <span class="o2">!</span> 
 
           </div>
         </div>
@@ -968,7 +1001,7 @@ main {
 	  </ul>
 	</div>
 	<div>
-	  <img class="" src="http://blackpizza.com/wp-content/uploads/2014/12/slice-pizza.png" alt="Pizz and love">
+	  <img class="footer-logo" src="images/game-console.svg" alt="">
 	</div>
 	<div class="">
 	  <p>©2017 <span class="">BlackPizza</span></p>
