@@ -9,13 +9,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 
   <title>Bootstrap4</title>
 </head>
 <style>
-
   body {
     font-family: 'PT Mono', monospace;
   }
@@ -28,7 +27,7 @@
   /* ul .nav-link {
     font-family: 'PT Mono', monospace;
   } */
-  
+
   .name {
     /* margin-left: 3.9px;
     margin-right: 3.9px; */
@@ -40,7 +39,7 @@
 
   .img-pl {
     width: 245px;
-	margin-top: 27px;
+    margin-top: 27px;
   }
 
   .img-pl-3 {
@@ -56,7 +55,7 @@
   body {
     min-height: 75rem;
     padding-top: 4.6rem;
-	background: linear-gradient(0.45turn, #F25C05 , #414AF2, #F085F2);
+    background: linear-gradient(0.45turn, #F25C05, #414AF2, #F085F2);
   }
 
   .nav-link {
@@ -152,10 +151,12 @@
     animation-delay: 4s;
   } */
 
-  .logo-text {}
+  .logo-text {
+    display: none;
+  }
 
   .sc-link {
-    display: none !important;
+    display: block;
   }
 
   .name span {
@@ -249,36 +250,40 @@
     overflow: visible;
 } */
 
-#carousel-inner-padding {
-  padding-bottom: 8rem;
-}
+  #carousel-inner-padding {
+    padding-bottom: 8rem;
+  }
 
-.row-top-padding {
-  padding-top: 1rem;
-}
+  .row-top-padding {
+    padding-top: 1rem;
+  }
 
 
 
-/* .long {
+  /* .long {
   border-bottom: 1px solid red;
   width: 12rem;
 } */
 
-main {
-	text-align: center;
-}
-
-#myCarousel .featurette-divider {
-	margin-left: 4rem;
-	margin-right: 4rem;
+  main {
+    text-align: center;
   }
 
-.marketing h2 {
-  /* font-family: 'PT Mono', monospace; */
-  font-family: 'Press Start 2P', cursive;
-  margin-top: 26px;
-  font-size: 1.6rem;
-}
+  #myCarousel .featurette-divider {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .marketing h2 {
+    /* font-family: 'PT Mono', monospace; */
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 26px;
+    font-size: 1.6rem;
+  }
+
+  .col-lg-4 p {
+    color:#ec9a01;
+  }
 
 
 
@@ -303,7 +308,7 @@ main {
     background-attachment: fixed;
   }
 
-  #myCarousel h4 {  
+  #myCarousel h4 {
     margin-top: 15px;
     margin-bottom: 15px;
     color: #FFF;
@@ -316,7 +321,7 @@ main {
   #myCarousel p {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #d5d5d5;
+    color: #ffffffc9;
   }
 
   #myCarousel .carousel-item a {
@@ -368,7 +373,7 @@ main {
 
   #myCarousel .container {
     max-width: 1430px;
-	padding-right: 45px;
+    padding-right: 45px;
     padding-left: 45px;
   }
 
@@ -379,7 +384,7 @@ main {
 
   #myCarousel {
     /* background-color: #ffffff2a; */
-	/* border-bottom: .3mm ridge rgba(0, 0, 0, 0.6); */
+    /* border-bottom: .3mm ridge rgba(0, 0, 0, 0.6); */
   }
 
   .carousel-control-next,
@@ -561,109 +566,89 @@ main {
 
   /* footer */
   footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     /* position: relative; */
     /* width: 100%; */
-    min-height: 260px;
+    min-height: 180px;
     background-color: #0D2840 !important;
+    text-align: center;
     /* padding: 10px 0; */
     /* z-index: 1; */
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 25px;
+    padding-bottom: 15px;
   }
-
-  /* .footer .social-area {
-    margin-top: 90px;
-    width: 40%;
-  }
-  .footer .social-area ul {
-    z-index: 1;
-    display: block;
-    width: 100%;
-    padding: 0;
-    text-align: right;
-    position: absolute;
-    right: 7%;
-    box-sizing: border-box;
-  }
-  .footer .social-area ul li {
-    display: inline-block;
-    text-align: center;
-    line-height: 0;
-  }
-  .footer .social-area ul li a {
-    font-size: 28px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    text-decoration: none;
-  }
-  .footer .social-area ul li a i {
-    display: block;
-    margin-left: 20px;
-    padding: 0 20px;
-    text-align: center;
-  }
-  .footer .shr-btn-facebook:hover {
-    color: #3b5998;
-  }
-  .footer .shr-btn-instagram:hover {
-    color: #3F729B;
-  }
-  .footer .shr-btn-soundcloud:hover {
-    color: #F76700;
-  }
-  .footer .credits {
-    font-weight: normal;
-    position: absolute;
-    width: 100%;
-    color: #474747;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 20px;
-    line-height: 1px;
-    padding: 0;
-  }
-  .footer .credits p {
-    position: absolute;
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 20px;
-    line-height: 1px;
-    padding: 0;
-    left: 9%;
-  } */
-
-  /* .footer-white {
-    color: #fff;
-    font-weight: normal;
-  } */
-
-  /* .slice-footer {
-    width: 100px;
-    height: 135px;
-    margin-top: -45px;
-  } */
 
   .footer-logo {
     width: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
     filter: drop-shadow(0px 3px 6px rgba(82, 233, 253, 0.493));
   }
 
-  .social-footer {
-    width: 25px;
+  .social-footer-icon {
+    width: 30px;
   }
 
   footer p {
-    color:rgba(82, 233, 253, 0.493);
-    font-size: x-small;
+    color: rgba(82, 233, 253, 0.493);
+    font-size: .8rem;
     margin-bottom: 0.4rem;
+  }
+
+  footer ul {
+    min-width: 200px;
+    justify-content: space-around;
+    margin-bottom: 0;
+    align-items:center;
+  }
+
+  /* footer li {
+    margin-left: 5px;
+    margin-right: 5px;
+  } */
+
+
+
+  /* на xs */
+  @media (max-width: 768px) {
+
+  .logo-text {
+    display: block;
+  }
+
+  .sc-link {
+    display: none !important;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .social-footer-icon {
+    width: 25px;
+    margin-top: 10px;
+  }
+
   }
 
   /* footer end */
 </style>
 
+
+
 <body>
 
   <header>
-  
+
 
 
 
@@ -685,7 +670,7 @@ main {
         <img class="img-slide logotipe i4" src="images/Death_Star.svg" alt="">
         <img class="img-slide logotipe i5" src="images/Mario.svg" alt="">
         <img class="img-slide logotipe i6" src="images/Tic_Tac_Toe.svg" alt="">
-        <img class="img-slide logotipe i7" src="images/Avengers.svg" alt="">      
+        <img class="img-slide logotipe i7" src="images/Avengers.svg" alt="">
         <!-- <img class="logotipe" src="images/game-console.svg" alt=""> -->
         <img class="img-slide logotipe i8" src="images/game-console.svg" alt="">
       </a>
@@ -704,7 +689,7 @@ main {
             <span class="o">O</span>
             <!-- <span class="a">G</span>
             <span class="r">I</span>-->
-            <span class="o2">!</span> 
+            <span class="o2">!</span>
 
           </div>
         </div>
@@ -741,13 +726,6 @@ main {
         <li><a href="http://instagram.com/blackpizzastudio" target="_blank" title="Join us on Instagram" class=""><svg
               width="24px" height="24px" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
-              style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-              <path id="telegram-5"
-                d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z" />
-            </svg></a></li>
-        <li><a href="" target="_blank" title="Join us on Telegram" class=""><svg width="24px" height="24px"
-              version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              xml:space="preserve" xmlns:serif="http://www.serif.com/"
               style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
               <path id="telegram-5"
                 d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z" />
@@ -835,10 +813,10 @@ main {
       <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span
           class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a
         class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span
-		  class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
-		  <hr class="featurette-divider">
-	</div>
-	<!-- <div class="long"></div> -->
+          class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
+      <hr class="featurette-divider">
+    </div>
+    <!-- <div class="long"></div> -->
 
 
 
@@ -986,22 +964,25 @@ main {
 
   </main>
 
-  <footer class="footer d-flex justify-content-around align-items-center flex-wrap container">
-	<div class="">
-	  <ul class="list-unstyled">
-		<li><a href="" target="_blank" title="Join us on Facebook"
-      class="">
-<img class="social-footer" src="images/instagram.svg" alt="">
-    </a></li>
-    <li><a href="" target="_blank" title="Join us on Facebook"
-      class="">
-<img class="social-footer" src="images/facebook.svg" alt="">
-    </a></li>
-    <li><a href="" target="_blank" title="Join us on Facebook"
-      class="">
-<img class="social-footer" src="images/Telegram.svg" alt="">
-    </a></li>
-		<!-- <li><a href="http://instagram.com/blackpizzastudio" target="_blank" title="Join us on Instagram" class=""><i
+  <footer>
+    
+      <ul class="list-unstyled d-flex">
+        <li>
+          <a href="" target="_blank" title="Join us on Telegram" class="">
+            <img class="social-footer-icon" src="images/telega.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank" title="Join us on Facebook" class="">
+            <img class="social-footer-icon" src="images/faceb.svg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="" target="_blank" title="Join us on Instagram" class="">
+            <img class="social-footer-icon" src="images/inst.svg" alt="">
+          </a>
+        </li>
+        <!-- <li><a href="http://instagram.com/blackpizzastudio" target="_blank" title="Join us on Instagram" class=""><i
 			  class=""></i></a></li>
 		<li><a href="" target="_blank" title="Join us on Telegram" class="">
        <svg width="24px" height="24px"
@@ -1011,17 +992,16 @@ main {
 			  <path id="telegram-5"
 				d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z" />
       </svg> -->
-    </a></li>
-	  </ul>
-	</div>
-	<div>
-	  <img class="footer-logo" src="images/game-console.svg" alt="">
-	</div>
-	<div>
-    <p>+380992141468</p>
-    <p>console-arend@gmail.com</p>
-	  <p>Все права защищены. ©2017</p>
-	</div>
+      </ul>
+    
+    <div>
+      <img class="footer-logo" src="images/game-console.svg" alt="">
+    </div>
+    <div>
+      <p>+380992141468</p>
+      <p>console-arend@gmail.com</p>
+      <p>Все права защищены. ©2017</p>
+    </div>
 
   </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
