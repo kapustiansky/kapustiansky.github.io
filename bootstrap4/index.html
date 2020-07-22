@@ -24,42 +24,23 @@
 <meta name="theme-color" content="#acacac">
 </head>
 <style>
-  body {
-    font-family: 'PT Mono', monospace;
-  }
-
-  /* #myCarousel h4 {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 0.1rem;
-  } */
-
-  /* ul .nav-link {
-    font-family: 'PT Mono', monospace;
-  } */
-
-  .name {
-    /* margin-left: 3.9px;
-    margin-right: 3.9px; */
-    /* letter-spacing: 1px; */
-    /* font-family: 'PT Mono', monospace; */
-    /* font-size: 0.9rem;
-    letter-spacing: -0.1rem; */
-  }
-
-
-  .bg-dark {
-    background-color: #0D2840 !important;
-  }
 
   body {
+    font-family: 'PT Mono', monospace;
     min-height: 75rem;
     padding-top: 4.6rem;
-    background: linear-gradient(0.45turn, #F25C05, #414AF2, #F085F2);
+    background: linear-gradient(0.45turn, #F25C05, #414AF2, #bb53bd);
+    /* background: linear-gradient(0.45turn, #c94e06, #2c0d40, #2c0d40); */
   }
 
-  /* .navbar-toggler {
-    border-color: #F29F05!important;
-} */
+  .bg-dark {
+    /* background-color: #0D2840 !important; */
+    background-color: #2c0d40 !important;
+  } 
+
+  /* .featurette-divider {
+    background-color: #08e1fd !important;
+  } */
 
   .nav-link {
     background: linear-gradient(to bottom right, #D93DCF, #F29F05);
@@ -72,8 +53,6 @@
     background: #F29F05;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* border-color: #F29F05; */
-    /* border: 1px solid; */
   }
 
   .carousel-item h4 {
@@ -264,12 +243,6 @@
     }
   }
 
-  /* .carousel-but {
-    position: relative;
-    width: 100%;
-    overflow: visible;
-} */
-
   #carousel-inner-padding {
     padding-bottom: 8rem;
   }
@@ -277,13 +250,6 @@
   .row-top-padding {
     padding-top: 1rem;
   }
-
-
-
-  /* .long {
-  border-bottom: 1px solid red;
-  width: 12rem;
-} */
 
   main {
     text-align: center;
@@ -295,7 +261,6 @@
   }
 
   .marketing h2 {
-    /* font-family: 'PT Mono', monospace; */
     font-family: 'Press Start 2P', cursive;
     margin-top: 26px;
     font-size: 1.6rem;
@@ -365,7 +330,6 @@ background: linear-gradient(45deg, #f80153, #ffffff, #ffffff, #f80153 );
 background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* font-weight: bold; */
   }
 
   .decorate-1 h2 {
@@ -485,11 +449,6 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
   #myCarousel .carousel-item {
     height: 100%;
     min-height: 550px;
-  }
-
-  #myCarousel {
-    /* background-color: #ffffff2a; */
-    /* border-bottom: .3mm ridge rgba(0, 0, 0, 0.6); */
   }
 
   .carousel-control-next,
@@ -677,7 +636,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     /* position: relative; */
     /* width: 100%; */
     min-height: 180px;
-    background-color: #0D2840 !important;
+    background-color: #2c0d40 !important;
     text-align: center;
     /* padding: 10px 0; */
     /* z-index: 1; */
@@ -712,13 +671,6 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     align-items:center;
   }
 
-  /* footer li {
-    margin-left: 5px;
-    margin-right: 5px;
-  } */
-
-
-
   /* на xs */
   @media (max-width: 768px) {
 
@@ -751,12 +703,6 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     padding-bottom: 0;
 }
 
-/* .active {
-  display: flex;
-  align-items:center;
-  justify-content: center;
-} */
-
 }
 
   /* footer end */
@@ -767,21 +713,11 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
 <body>
 
   <header>
-
-
-
-
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-
-
-
-
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-
       <a class="navbar-brand" href="#">
         <img class="img-slide logotipe i1" src="images/Assassins.svg" alt="">
         <img class="img-slide logotipe i2" src="images/Batman.svg" alt="">
@@ -790,13 +726,9 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         <img class="img-slide logotipe i5" src="images/Mario.svg" alt="">
         <img class="img-slide logotipe i6" src="images/Tic_Tac_Toe.svg" alt="">
         <img class="img-slide logotipe i7" src="images/Avengers.svg" alt="">
-        <!-- <img class="logotipe" src="images/game-console.svg" alt=""> -->
         <img class="img-slide logotipe i8" src="images/game-console.svg" alt="">
       </a>
-
-
       <a class="navbar-brand logo-text" href="#">
-        <div class="">
           <div class="name">
             <span class="l">L</span>
             <span class="e">E</span>
@@ -806,19 +738,9 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
             <span>&nbsp;</span>
             <span class="g">G</span>
             <span class="o">O</span>
-            <!-- <span class="a">G</span>
-            <span class="r">I</span>-->
             <span class="o2">!</span>
-
-          </div>
-        </div>
+          </div>   
       </a>
-
-
-
-
-
-
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -1055,28 +977,6 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
 
     </div><!-- /.container -->
 
-    <!-- FOOTER -->
-    <!-- <footer class="footer">
-      <div class="social-area">
-        <ul>
-          <li><a href="https://www.facebook.com/blackpizza?fref=ts" target="_blank" title="Join us on Facebook"
-              class="shr-btn-facebook"><svg class="bi bi-alarm-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M5.5.5A.5.5 0 0 1 6 0h4a.5.5 0 0 1 0 1H9v1.07a7.002 7.002 0 0 1 3.537 12.26l.817.816a.5.5 0 0 1-.708.708l-.924-.925A6.967 6.967 0 0 1 8 16a6.967 6.967 0 0 1-3.722-1.07l-.924.924a.5.5 0 0 1-.708-.708l.817-.816A7.002 7.002 0 0 1 7 2.07V1H5.999a.5.5 0 0 1-.5-.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1zm-5 4a.5.5 0 0 0-1 0v3.882l-1.447 2.894a.5.5 0 1 0 .894.448l1.5-3A.5.5 0 0 0 8.5 9V5z"/>
-              </svg></a></li>
-          <li><a href="http://instagram.com/blackpizzastudio" target="_blank" title="Join us on Instagram"
-              class="shr-btn-instagram"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://soundcloud.com/dailydose-sound" target="_blank" title="Join us on Soundcloud"
-              class="shr-btn-soundcloud"><svg class="bi bi-alarm-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M5.5.5A.5.5 0 0 1 6 0h4a.5.5 0 0 1 0 1H9v1.07a7.002 7.002 0 0 1 3.537 12.26l.817.816a.5.5 0 0 1-.708.708l-.924-.925A6.967 6.967 0 0 1 8 16a6.967 6.967 0 0 1-3.722-1.07l-.924.924a.5.5 0 0 1-.708-.708l.817-.816A7.002 7.002 0 0 1 7 2.07V1H5.999a.5.5 0 0 1-.5-.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1zm-5 4a.5.5 0 0 0-1 0v3.882l-1.447 2.894a.5.5 0 1 0 .894.448l1.5-3A.5.5 0 0 0 8.5 9V5z"/>
-              </svg></a></li>
-        </ul>
-      </div>
-      <div class="credits">
-        <p>©2017 <span class="footer-white">BlackPizza</span></p><img class="slice-footer"
-          src="http://blackpizza.com/wp-content/uploads/2014/12/slice-pizza.png" alt="Pizz and love">
-      </div>
-    </footer> -->
-
 
   </main>
 
@@ -1098,16 +998,6 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
             <img class="social-footer-icon" src="images/inst.svg" alt="">
           </a>
         </li>
-        <!-- <li><a href="http://instagram.com/blackpizzastudio" target="_blank" title="Join us on Instagram" class=""><i
-			  class=""></i></a></li>
-		<li><a href="" target="_blank" title="Join us on Telegram" class="">
-       <svg width="24px" height="24px"
-			  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-			  xml:space="preserve" xmlns:serif="http://www.serif.com/"
-			  style="fill:#F29F05;fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-			  <path id="telegram-5"
-				d="M12,0c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12Zm0,2c5.514,0 10,4.486 10,10c0,5.514 -4.486,10 -10,10c-5.514,0 -10,-4.486 -10,-10c0,-5.514 4.486,-10 10,-10Zm2.692,14.889c0.161,0.115 0.368,0.143 0.553,0.073c0.185,-0.07 0.322,-0.228 0.362,-0.42c0.435,-2.042 1.489,-7.211 1.884,-9.068c0.03,-0.14 -0.019,-0.285 -0.129,-0.379c-0.11,-0.093 -0.263,-0.12 -0.399,-0.07c-2.096,0.776 -8.553,3.198 -11.192,4.175c-0.168,0.062 -0.277,0.223 -0.271,0.4c0.006,0.177 0.125,0.33 0.296,0.381c1.184,0.354 2.738,0.847 2.738,0.847c0,0 0.725,2.193 1.104,3.308c0.047,0.139 0.157,0.25 0.301,0.287c0.145,0.038 0.298,-0.001 0.406,-0.103c0.608,-0.574 1.548,-1.461 1.548,-1.461c0,0 1.786,1.309 2.799,2.03Zm-5.505,-4.338l0.84,2.769l0.186,-1.754c0,0 3.243,-2.925 5.092,-4.593c0.055,-0.048 0.062,-0.13 0.017,-0.188c-0.045,-0.057 -0.126,-0.071 -0.188,-0.032c-2.143,1.368 -5.947,3.798 -5.947,3.798Z" />
-      </svg> -->
       </ul>
     
     <div>
