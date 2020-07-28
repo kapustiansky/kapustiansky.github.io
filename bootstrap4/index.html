@@ -748,7 +748,38 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     padding-bottom: 0;
 }
 
+.nav-link {
+    background: rgb(229, 255, 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #myCarousel .carousel-item {
+    height: 100%;
+    min-height: 650px;
 }
+
+}
+
+@media ( min-width: 992px ) {
+
+#myCarousel .carousel-item {
+  height: 100%;
+  min-height: 400px;
+}
+
+}
+
+@media ( min-width: 1450px ) {
+
+#myCarousel .carousel-item {
+  height: 100%;
+  min-height: 550px;
+}
+
+}
+
+
 
   /* footer end */
 </style>
@@ -844,7 +875,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
           <div class="mask flex-center">
 
             <div class="row align-items-center">
-              <div class="col-md-7 col-12 order-md-1 order-2">
+              <div class="col-lg-7 col-12 order-lg-1 order-2">
                 <div class="container">
                   <h4>Устрой<br>веселую тусовку</h4>
                   <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br>
@@ -852,8 +883,14 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
                   <a href="#">ПОДРОБНО</a>
                 </div>
               </div>
-              <div class="col-md-5 col-12 order-md-2 order-1"><img src="images/sg.jpg"
-                  class="mx-auto" alt="slide"></div>
+              <div class="col-lg-5 col-12 order-lg-2 order-1">                
+                <picture class="mx-auto">
+                <source srcset="images/tu.jpg" media="(min-width: 768px)">
+                <source srcset="images/sg.jpg" media="(max-width: 768px)">
+                  <img src="images/sg.jpg"
+                  class="mx-auto" alt="slide">
+               </picture>
+              </div>
             </div>
 
           </div>
@@ -870,7 +907,8 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
                 </div>
               </div>
               <div class="col-md-5 col-12 order-md-2 order-1"><img src="images/vr-sm.jpg" class="mx-auto"
-                  alt="slide"></div>
+                  alt="slide">
+                </div>
 
             </div>
           </div>
@@ -887,8 +925,12 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
                   <a href="#">ПОДРОБНО</a>
                 </div>
               </div>
-              <div class="col-md-5 col-12 order-md-2 order-1"><img src="images/LU2.jpg" class="mx-auto"
-                  alt="slide">
+              <div class="col-md-5 col-12 order-md-2 order-1">                <picture class="mx-auto">
+                <source srcset="images/2077.jpg" media="(min-width: 768px)">
+                <source srcset="images/LoU-min.jpg" media="(max-width: 768px)">
+                  <img src="images/LoU-min.jpg"
+                  alt="Last of us-2 ps4">
+               </picture>
               </div>
             </div>
 
@@ -1057,7 +1099,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     </div>
 
   </footer>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -1077,7 +1119,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     // $(document).ready(function(){
     //   $('#myCarousel').height($(window).height());
     // })
-  </script>
+  </script> -->
 
 </body>
 
