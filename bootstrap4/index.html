@@ -39,7 +39,11 @@
     background-color: #1e0136 !important;
     /* background-color: #000000 !important; */
     /* background-color: #2c0d40 !important; */
-  } 
+  }
+
+  .bd-color {
+    background:rgba(255, 255, 255, 0.137);
+  }
 
   /* .featurette-divider {
     background-color: #08e1fd !important;
@@ -768,6 +772,12 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
   min-height: 400px;
 }
 
+.bd-color {
+    background:none;
+  }
+
+
+
 }
 
 @media ( min-width: 1450px ) {
@@ -883,12 +893,11 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
                   <a href="#">ПОДРОБНО</a>
                 </div>
               </div>
-              <div class="col-lg-5 col-12 order-lg-2 order-1">                
-                <picture class="mx-auto">
-                <source srcset="images/tu.jpg" media="(min-width: 768px)">
-                <source srcset="images/sg.jpg" media="(max-width: 768px)">
-                  <img src="images/sg.jpg"
-                  class="mx-auto" alt="slide">
+              <div class="col-lg-5 col-12 order-lg-2 order-1 bd-color">                
+                <picture>
+                <source srcset="images/party-max.jpg" media="(min-width: 992px)">
+                <source srcset="images/party-min.jpg" media="(max-width: 992px)">
+                  <img class="mx-auto" src="images/party-min.jpg" alt="party console">
                </picture>
               </div>
             </div>
@@ -898,7 +907,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         <div class="carousel-item">
           <div class="mask flex-center">
             <div class="row align-items-center">
-              <div class="col-md-7 col-12 order-md-1 order-2">
+              <div class="col-lg-7 col-12 order-lg-1 order-2">
                 <div class="container">
                   <h4>Попробуй новые<br>ощущения</h4>
                   <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br>
@@ -906,8 +915,12 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
                   <a href="#">ПОДРОБНО</a>
                 </div>
               </div>
-              <div class="col-md-5 col-12 order-md-2 order-1"><img src="images/vr-sm.jpg" class="mx-auto"
-                  alt="slide">
+              <div class="col-lg-5 col-12 order-lg-2 order-1 bd-color">
+                <picture>
+                  <source srcset="images/vr-max.jpg" media="(min-width: 992px)">
+                  <source srcset="images/vr-min.jpg" media="(max-width: 992px)">
+                    <img class="mx-auto" src="images/vr-min.jpg" alt="vr-ps4">
+                 </picture>
                 </div>
 
             </div>
@@ -917,7 +930,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
           <div class="mask flex-center">
 
             <div class="row align-items-center">
-              <div class="col-md-7 col-12 order-md-1 order-2">
+              <div class="col-lg-7 col-12 order-lg-1 order-2">
                 <div class="container">
                   <h4>Зацени<br>свежий эксклюзтв</h4>
                   <p>Играй в эксклюзивные игры любых производителей без необходимости <br>
@@ -925,11 +938,11 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
                   <a href="#">ПОДРОБНО</a>
                 </div>
               </div>
-              <div class="col-md-5 col-12 order-md-2 order-1">                <picture class="mx-auto">
-                <source srcset="images/2077.jpg" media="(min-width: 768px)">
-                <source srcset="images/LoU-min.jpg" media="(max-width: 768px)">
-                  <img src="images/LoU-min.jpg"
-                  alt="Last of us-2 ps4">
+              <div class="col-lg-5 col-12 order-lg-2 order-1 bd-color">                
+                <picture>
+                <source srcset="images/2077.jpg" media="(min-width: 992px)">
+                <source srcset="images/last-min.jpg" media="(max-width: 992px)">
+                  <img class="mx-auto" src="images/last-min.jpg" alt="Last of us-2 ps4">
                </picture>
               </div>
             </div>
