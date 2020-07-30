@@ -293,16 +293,18 @@ background: linear-gradient(135deg,#f23ef8 , #ffffff, #ffffff, #f23ef8 );
   }
 
   .decorate-3 a {
-    background:#a91afc;
-    border-color: #a91afc;
-    box-shadow: 0 0 4px #330b4b;
-  }
-
-  .decorate-3 a:hover {
     box-shadow: 0 0 8px #e176f7;
     color: #e176f7;
     background: #f8f8f800;
     border-color: #e176f7;
+  }
+
+  .decorate-3 a:hover {
+
+
+    background:#a91afc;
+    border-color: #a91afc;
+    box-shadow: 0 0 4px #330b4b;
   }
 
   .decorate-2 .dec-text {
@@ -317,16 +319,18 @@ background: linear-gradient(45deg, #f80153, #ffffff, #ffffff, #f80153 );
   }
 
   .decorate-2 a {
-    background-color: #f7644a;
-    border-color: #ff5e41;
-    box-shadow: 0 0 4px #792f22;
-  }
-
-  .decorate-2 a:hover {
     box-shadow: 0 0 8px #ff5e41;
     color: #ff5e41;
     background: #f8f8f800;
     border-color: #ff5e41;
+  }
+
+  .decorate-2 a:hover {
+
+
+    background-color: #f7644a;
+    border-color: #ff5e41;
+    box-shadow: 0 0 4px #792f22;
   }
 
 
@@ -342,16 +346,18 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
   }
 
   .decorate-1 a {
-    background-color: #f23ef8;
-    border-color: #f23ef8;
-    box-shadow: 0 0 4px #4e0b50;
-  }
 
-  .decorate-1 a:hover {
+
     box-shadow: 0 0 8px #f23ef8;
     color: #f23ef8;
     background: #f8f8f800;
     border-color: #f23ef8;
+  }
+
+  .decorate-1 a:hover {
+    background-color: #f23ef8;
+    border-color: #f23ef8;
+    box-shadow: 0 0 4px #4e0b50;
   }
 
   .img-shadow-1 {
@@ -367,16 +373,16 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
 
 
   .featurette a {
-    background-color: #f7644a;
-    border-color: #ff5e41;
-    box-shadow: 0 0 4px #792f22;
+    box-shadow: 0 0 8px #e176f7;
+    color: #e176f7;
+    background: #f8f8f800;
+    border-color: #e176f7;
   }
 
   .featurette a:hover {
-    box-shadow: 0 0 8px #f23ef8;
-    color: #f23ef8;
-    background: #f8f8f800;
-    border-color: #f23ef8;
+    background:#a91afc;
+    border-color: #a91afc;
+    box-shadow: 0 0 4px #330b4b;
   }
 
   /* .rounded-circle {
@@ -425,23 +431,28 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
   }
 
   #myCarousel .carousel-item a {
-    background: #F47735;
+
     font-size: 14px;
-    color: #FFF;
+
     padding: 13px 32px;
     display: inline-block;
     font-weight: bold;
     border-radius: .25rem;
-    box-shadow: 0 0 4px #772e0c;
+  
+
+
+    text-decoration: none;
+    box-shadow: 0 0 8px #ffd900;
+    color: #ffd900;
+    background: #f8f8f800;
   }
 
   #myCarousel .carousel-item a:hover {
     /* background: #ff5e00; */
     /* box-shadow: 0 0 8px #F47735; */
-    text-decoration: none;
-    box-shadow: 0 0 8px #ffd900;
-    color: #ffd900;
-    background: #f8f8f800;
+    box-shadow: 0 0 4px #772e0c;
+    color: #FFF;
+    background: #F47735;
   }
 
   #myCarousel .carousel-item h4 {
@@ -1045,10 +1056,14 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
       <div class="row featurette">
         <div class="order-1">
           <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-          <p><a class="btn btn-secondary btn-lg" href="#" role="button">Заказать</a></p>
+          <p><a class="btn btn-secondary btn-lg" href="#" role="button">ЗАКАЖИ СЕЙЧАС</a></p>
         </div>
-        <div class="order-2">
-          <img class="img-fluid mx-auto" src="images/praise.jpg" alt="pay">
+        <div class="order-2 px-md-3">
+          <picture>
+            <source srcset="images/praise.jpg" media="(min-width: 992px)">
+            <source srcset="images/praise-min.jpg" media="(max-width: 992px)">
+              <img class="img-fluid mx-auto" src="images/praise.jpg" alt="pay">
+           </picture>
         </div>
       </div>
 
