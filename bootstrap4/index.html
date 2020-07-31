@@ -45,10 +45,6 @@
     background:rgba(255, 255, 255, 0.137);
   }
 
-  /* .featurette-divider {
-    background-color: #08e1fd !important;
-  } */
-
   .nav-link {
     background: linear-gradient(to bottom right, #D93DCF, #F29F05);
     -webkit-background-clip: text;
@@ -63,14 +59,6 @@
   }
 
   .carousel-item h4 {
-    /* background: linear-gradient(90deg, #e7f157, #d9ff01); */
-    /* background: linear-gradient(90deg, #4d01ff, #8c01ff, #8c01ff, #4d01ff); */
-    /* background: linear-gradient(to top right, #033dfc, #02ac49); */
-    /* background: linear-gradient(to top right, #8403fc, #aa06ca); */
-    /* -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    /* color: #4f0594!important;
-    text-shadow: 0 1px #01fff2, 1px 0 #01fff2, 0 -1px #01fff2, -1px 0 #01fff2; */
     color: #ffd900!important;
   }
 
@@ -143,25 +131,12 @@
     animation-delay: 3.8s;
   }
 
-      /*
-  .s3 {
-    -webkit-animation: logo-animate 2s infinite;
-    animation: logo-animate 2s infinite;
-    animation-delay: 3.9s;
-  }
-  .s4 {
-    -webkit-animation: logo-animate 2s infinite;
-    animation: logo-animate 4s infinite;
-    animation-delay: 4s;
-  } */
-
   .logo-text {
     display: none;
   }
 
   .sc-link {
     display: block;
-    margin: 0;
     width: 200px;
   }
 
@@ -180,10 +155,6 @@
     width: 45px;
   }
 
-  .navbar-brand {
-    margin: 0;
-  }
-
   .img-slide {
     width: 45px;
     position: absolute;
@@ -192,47 +163,38 @@
     margin-left: -22.5px;
     margin-top: -22.5px;
     opacity: 0;
-    /* filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.9)); */
     filter: drop-shadow(0 0 4px rgba(82, 233, 253, 0.493));
   }
 
   .i1 {
-    
     animation: sl .5s linear .3s forwards;
   }
 
   .i2 {
-    
     animation: sl .4s linear .8s forwards;
   }
 
-  .i3 {
-    
+  .i3 {  
     animation: sl .3s linear 1.2s forwards;
   }
 
-  .i4 {
-    
+  .i4 {   
     animation: sl .2s linear 1.5s forwards;
   }
 
   .i5 {
-    
     animation: sl .2s linear 1.7s forwards;
   }
 
   .i6 {
-    
     animation: sl .2s linear 1.9s forwards;
   }
 
   .i7 {
-    
     animation: sl .2s linear 2.1s forwards;
   }
 
   .i8 {
-    
     animation: sl-2 .1s linear 2.3s forwards;
   }
 
@@ -254,14 +216,6 @@
 
   #carousel-inner-padding {
     padding-bottom: 8rem;
-  }
-
-  .row-top-padding {
-    padding-top: 1rem;
-  }
-
-  main {
-    text-align: center;
   }
 
   .marketing h2 {
@@ -679,27 +633,14 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
 
 
   /* footer */
+
   footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* position: relative; */
-    /* width: 100%; */
     min-height: 180px;
     background-color: #1e0136 !important;
-    text-align: center;
-    /* padding: 10px 0; */
-    /* z-index: 1; */
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-top: 25px;
-    padding-bottom: 15px;
   }
 
   .footer-logo {
     width: 80px;
-    margin-left: 100px;
-    margin-right: 100px;
     filter: drop-shadow(0px 3px 6px rgba(82, 233, 253, 0.493));
   }
 
@@ -707,14 +648,18 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     width: 30px;
   }
 
-  footer p {
+  footer p, a {
     color: rgba(82, 233, 253, 0.493);
     font-size: .8rem;
     margin-bottom: 0.4rem;
   }
 
-  footer ul {
+  footer a:hover {
+    text-decoration: none;
+    color: rgba(82, 233, 253, 0.493);
+  }
 
+  footer ul {
     min-width: 180px;
     justify-content: space-around;
     margin-bottom: 0;
@@ -734,11 +679,6 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
 
   footer {
     flex-direction: column;
-  }
-
-  .footer-logo {
-    margin-top: 30px;
-    margin-bottom: 30px;
   }
 
   .social-footer-icon {
@@ -768,10 +708,6 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     #navbarCollapse {
       height: 65px!important;
     }
-
-    /* .sc-link {
-      margin: 0;
-    } */
 
     .cont-namber-head {
       margin-top: 6px;
@@ -849,7 +785,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand m-0" href="index.html">
         <img class="img-slide logotipe i1" src="images/Assassins.svg" alt="">
         <img class="img-slide logotipe i2" src="images/Batman.svg" alt="">
         <img class="img-slide logotipe i3" src="images/Baby_Groot.svg" alt="">
@@ -859,7 +795,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         <img class="img-slide logotipe i7" src="images/Avengers.svg" alt="">
         <img class="img-slide logotipe i8" src="images/game-console.svg" alt="">
       </a>
-      <a class="navbar-brand logo-text" href="#">
+      <a class="navbar-brand m-0 logo-text" href="tel:+380992141468">
           <div class="lets-go">
             <span class="l">L</span>
             <span class="e">E</span>
@@ -886,23 +822,23 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
             <a class="nav-link" href="#">Условия</a>
           </li>
         </ul>
-        <ul class="sc-link list-unstyled d-flex justify-content-around align-items-center flex-wrap">
+        <ul class="sc-link m-0 list-unstyled d-flex justify-content-around align-items-center flex-wrap">
           <li>
-            <a href="" target="_blank" title="Join us on Telegram" class="">
-              <img class="social-header-icon" src="images/Telegram.svg" alt="">
+            <a href="https://t.me/oleg_kapustianky" target="_blank" rel="noopener" title="Напиши нам в Telegram">
+              <img class="social-header-icon" src="images/Telegram.svg" alt="Telegram">
             </a>
           </li>
           <li>
-            <a href="" target="_blank" title="Join us on Facebook" class="">
-              <img class="social-header-icon" src="images/Facebook.svg" alt="">
+            <a href="https://www.facebook.com/oleg.kapustiansky" target="_blank" rel="noopener" title="Страничка на Фейсбуке">
+              <img class="social-header-icon" src="images/Facebook.svg" alt="Facebook">
             </a>
           </li>
           <li>
-            <a href="" target="_blank" title="Join us on Instagram" class="">
-              <img class="social-header-icon" src="images/Instagram.svg" alt="">
+            <a href="https://www.instagram.com/oleg_kapustiansky/" rel="noopener" target="_blank" title="Мы в Инсте">
+              <img class="social-header-icon" src="images/Instagram.svg" alt="Instagram">
             </a>
           </li>
-          <a class="" href="#">
+          <a href="tel:+380992141468" title="Закажи сейчас!">
             <div class="cont-namber-head">
               <span class="l">0</span><span class="e">9</span><span class="t">9</span>
               <span class="s">2</span><span class="g">1</span><span class="o">4</span>
@@ -917,7 +853,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     </nav>
   </header>
 
-  <main role="main">
+  <main class="text-center" role="main">
 
     <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -1019,7 +955,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
           <p class="dec-text" >Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
             vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
             magna.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">Заказать »</a></p>
+          <p><a class="btn btn-secondary" href="tel:+380673102145" role="button">Заказать »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 row-top-padding decorate-2">
           <img class="rounded-circle" src="images/vr-0.jpg" alt="">
@@ -1027,7 +963,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
           <p class="dec-text" >Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
             mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
             condimentum nibh.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">Заказать »</a></p>
+          <p><a class="btn btn-secondary" href="tel:+380673102145" role="button">Заказать »</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4 row-top-padding decorate-3">
           <img class="rounded-circle" src="images/rdr2.jpg" alt="">
@@ -1035,7 +971,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
           <p class="dec-text" >Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
             felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
             massa justo sit amet risus.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">Заказать »</a></p>
+          <p><a class="btn btn-secondary" href="tel:+380673102145" role="button">Заказать »</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
       <!-- START THE FEATURETTES -->
@@ -1056,7 +992,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
       <div class="row justify-content-center">
         <div class="order-1">
           <h2 class="mb-4">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="mb-4 mb-lg-5"><a class="btn btn-lg praise-btn" href="#" role="button">ЗАКАЖИ СЕЙЧАС</a></p>
+          <p class="mb-4 mb-lg-5"><a class="btn btn-lg praise-btn" href="tel:+380673102145" role="button">ЗАКАЖИ СЕЙЧАС</a></p>
         </div>
         <div class="order-2 px-3">
           <picture>
@@ -1064,7 +1000,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
             <source srcset="images/praise-min.jpg" media="(max-width: 992px)">
               <img class="img-fluid mx-auto img-shadow-2" src="images/praise.jpg" alt="pay">
            </picture>
-           <p class="mt-4 mt-lg-5"><a class="btn btn-lg praise-btn" href="#" role="button">НУ ЖЕ! ТЫЦЯЙ!</a></p>
+           <p class="mt-4 mt-lg-5"><a class="btn btn-lg praise-btn" href="tel:+380673102145" role="button">НУ ЖЕ! ТЫЦЯЙ!</a></p>
         </div>
       </div>
         <hr>
@@ -1082,30 +1018,30 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         <hr>
     </div>
   </main>
-  <footer>   
-      <ul class="list-unstyled d-flex">
+  <footer class="d-flex justify-content-around align-items-center text-center p-3">   
+      <ul class="list-unstyled d-flex pt-2">
         <li>
-          <a href="" target="_blank" title="Join us on Telegram" class="">
-            <img class="social-footer-icon" src="images/Telegram.svg" alt="">
+          <a href="https://t.me/oleg_kapustianky" target="_blank" rel="noopener" title="Пиши нам в Telegram">
+            <img class="social-footer-icon" src="images/Telegram.svg" alt="Telegram">
           </a>
         </li>
         <li>
-          <a href="" target="_blank" title="Join us on Facebook" class="">
-            <img class="social-footer-icon" src="images/Facebook.svg" alt="">
+          <a href="https://www.facebook.com/oleg.kapustiansky" target="_blank" rel="noopener" title="Страничка на Фейсбуке">
+            <img class="social-footer-icon" src="images/Facebook.svg" alt="Facebook">
           </a>
         </li>
         <li>
-          <a href="" target="_blank" title="Join us on Instagram" class="">
-            <img class="social-footer-icon" src="images/Instagram.svg" alt="">
+          <a href="https://www.instagram.com/oleg_kapustiansky/" rel="noopener" target="_blank" title="Мы в Инсте">
+            <img class="social-footer-icon" src="images/Instagram.svg" alt="Instagram">
           </a>
         </li>
       </ul>   
     <div>
-      <img class="footer-logo" src="images/game-console.svg" alt="">
+      <img class="footer-logo my-4" src="images/game-console.svg" alt="">
     </div>
     <div>
-      <p>+380992141468</p>
-      <p>time.to.game@gmail.com</p>
+      <p><a href="tel:+380673102145" title="Звякни нам">+38(099)2141468</a></p>
+      <p><a href="mailto:kapustianskyov@gmail.com" target="_blank" title="Напиши нам письмо">time.to.game@gmail.com</a></p>
       <p>©2020 Все права защищены.</p>
     </div>
   </footer>
