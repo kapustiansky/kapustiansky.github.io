@@ -364,6 +364,10 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     box-shadow: 0 0 8px #01d9ff;
   }
 
+  .img-shadow-2 {
+    box-shadow: 0 0 8px #be045b;
+  }
+
   .img-shadow-3 {
     box-shadow: 0 0 8px #ff8801;
   }
@@ -372,22 +376,20 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
 
 
 
-  .featurette a {
+  .praise-btn {
     box-shadow: 0 0 8px #e176f7;
     color: #e176f7;
     background: #f8f8f800;
     border-color: #e176f7;
+    padding: .4rem 2rem;
   }
 
-  .featurette a:hover {
+  .praise-btn:hover {
+    color: #ffffff;
     background:#a91afc;
     border-color: #a91afc;
     box-shadow: 0 0 4px #330b4b;
   }
-
-  /* .rounded-circle {
-    box-shadow: 0 0 6px #290141;
-} */
 
   
 
@@ -747,6 +749,10 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
 
   @media (min-width: 768px) {
 
+    .img-shadow-2 {
+    box-shadow: 0 0 8px #000000;
+  }
+
     nav {
       box-shadow: 0 2px 2px 2px #1e0136;
     }
@@ -1032,46 +1038,39 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
           <p><a class="btn btn-secondary" href="#" role="button">Заказать »</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-
-
       <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span>
+        <hr>
+      <div class="row">
+        <div class="col-md-7 order-md-2">
+          <h2>First featurette heading. <span class="text-muted">It’ll blow your mind.</span>
           </h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
             semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
             commodo.</p>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 order-md-1">
           <img class="img-fluid mx-auto img-shadow-1" src="images/p.jpg" alt="play">
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
+        <hr>
+      <div class="row justify-content-center">
         <div class="order-1">
-          <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-          <p><a class="btn btn-secondary btn-lg" href="#" role="button">ЗАКАЖИ СЕЙЧАС</a></p>
+          <h2 class="mb-4">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="mb-4 mb-lg-5"><a class="btn btn-lg praise-btn" href="#" role="button">ЗАКАЖИ СЕЙЧАС</a></p>
         </div>
         <div class="order-2 px-3">
           <picture>
             <source srcset="images/praise.jpg" media="(min-width: 992px)">
             <source srcset="images/praise-min.jpg" media="(max-width: 992px)">
-              <img class="img-fluid mx-auto" src="images/praise.jpg" alt="pay">
+              <img class="img-fluid mx-auto img-shadow-2" src="images/praise.jpg" alt="pay">
            </picture>
+           <p class="mt-4 mt-lg-5"><a class="btn btn-lg praise-btn" href="#" role="button">НУ ЖЕ! ТЫЦЯЙ!</a></p>
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
+        <hr>
+      <div class="row">
         <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <h2>And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
             semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
             commodo.</p>
@@ -1080,18 +1079,10 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
           <img class="img-fluid mx-auto img-shadow-3" src="images/y.jpg" alt="you first">
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-    </div><!-- /.container -->
-
-
+        <hr>
+    </div>
   </main>
-
-  <footer>
-    
+  <footer>   
       <ul class="list-unstyled d-flex">
         <li>
           <a href="" target="_blank" title="Join us on Telegram" class="">
@@ -1108,8 +1099,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
             <img class="social-footer-icon" src="images/Instagram.svg" alt="">
           </a>
         </li>
-      </ul>
-    
+      </ul>   
     <div>
       <img class="footer-logo" src="images/game-console.svg" alt="">
     </div>
@@ -1118,7 +1108,6 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
       <p>time.to.game@gmail.com</p>
       <p>©2020 Все права защищены.</p>
     </div>
-
   </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -1129,7 +1118,6 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
-
   <script>
     (function () {
       $('.carousel').carousel({
@@ -1137,7 +1125,5 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
       })
     })()
   </script>
-
 </body>
-
 </html>
