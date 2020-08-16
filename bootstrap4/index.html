@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 
-  <title>Аренда игровых консолей: PS4, Xbox, Nintendo в Ужгороде</title>
+  <title>Аренда игровых консолей: PS4, Xbox, Nintendo в Хуст</title>
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -26,6 +26,7 @@
 <style>
 
   body {
+    position: relative;
     font-family: 'PT Mono', monospace;
     min-height: 75rem;
     padding-top: 4.6rem;
@@ -33,6 +34,8 @@
     /* background: linear-gradient(0.45turn, #F25C05, #414AF2, #bb53bd); */
     /* background: linear-gradient(0.45turn, #c94e06, #2c0d40, #2c0d40); */
   }
+
+
 
   .bg-dark {
     /* background-color: #0D2840 !important; */
@@ -56,6 +59,10 @@
     background: #F29F05;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  ul .active {
+    background: #F29F05!important;
   }
 
   .carousel-item h4 {
@@ -217,6 +224,8 @@
   #carousel-inner-padding {
     padding-bottom: 8rem;
   }
+
+
 
   .marketing h2 {
     font-family: 'Press Start 2P', cursive;
@@ -648,7 +657,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     width: 30px;
   }
 
-  footer p, a {
+  footer p, footer a {
     color: rgba(82, 233, 253, 0.493);
     font-size: .8rem;
     margin-bottom: 0.4rem;
@@ -777,9 +786,9 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
 
 
 
-<body>
+<body data-spy="scroll" data-target="#scrollspy">
 
-  <header>
+  <header id="too-top">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -793,7 +802,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         <img class="img-slide logotipe i5" src="images/Mario.svg" alt="">
         <img class="img-slide logotipe i6" src="images/Tic_Tac_Toe.svg" alt="">
         <img class="img-slide logotipe i7" src="images/Avengers.svg" alt="">
-        <img class="img-slide logotipe i8" src="images/game-console.svg" alt="">
+        <img class="img-slide logotipe i8" src="images/game-console.svg" alt="Аренда приставок Ужгород">
       </a>
       <a class="navbar-brand m-0 logo-text" href="tel:+380992141468">
           <div class="lets-go">
@@ -809,17 +818,17 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
           </div>   
       </a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
+        <ul id="scrollspy" class="navbar-nav mr-auto">
           <li class="nav-item">
             <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-            <a class="nav-link" href="#">Выгода</a>
+            <a class="nav-link" href="#profit">Выгода</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Стоимость</a>
+            <a class="nav-link" href="#price">Прайс</a>
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
-            <a class="nav-link" href="#">Условия</a>
+            <a class="nav-link" href="#terms">Условия</a>
           </li>
         </ul>
         <ul class="sc-link m-0 list-unstyled d-flex justify-content-around align-items-center flex-wrap">
@@ -871,7 +880,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
                   <h4>Устрой<br>веселую тусовку</h4>
                   <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br>
                     necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
-                  <a href="#">ПОДРОБНО</a>
+                  <a href="#console">ПОДРОБНО</a>
                 </div>
               </div>
               <div class="col-lg-5 col-12 order-lg-2 order-1 bd-color">                
@@ -893,7 +902,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
                   <h4>Попробуй новые<br>ощущения</h4>
                   <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br>
                     necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
-                  <a href="#">ПОДРОБНО</a>
+                  <a href="#vr">ПОДРОБНО</a>
                 </div>
               </div>
               <div class="col-lg-5 col-12 order-lg-2 order-1 bd-color">
@@ -916,7 +925,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
                   <h4>Зацени<br>свежий эксклюзтв</h4>
                   <p>Играй в эксклюзивные игры любых производителей без необходимости <br>
                     покупать консоль или ждать выхода кроссплатформенной версии.</p>
-                  <a href="#">ПОДРОБНО</a>
+                  <a href="#games">ПОДРОБНО</a>
                 </div>
               </div>
               <div class="col-lg-5 col-12 order-lg-2 order-1 bd-color">                
@@ -949,7 +958,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-        <div class="col-lg-4 row-top-padding decorate-1">
+        <div id="console" class="col-lg-4 row-top-padding decorate-1">
           <img class="rounded-circle" src="images/dual.jpg" alt="">
           <h2>Консоли</h2>
           <p class="dec-text" >Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
@@ -957,7 +966,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
             magna.</p>
           <p><a class="btn btn-secondary" href="tel:+380673102145" role="button">Заказать »</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 row-top-padding decorate-2">
+        <div id="vr" class="col-lg-4 row-top-padding decorate-2">
           <img class="rounded-circle" src="images/vr-0.jpg" alt="">
           <h2>VR</h2>
           <p class="dec-text" >Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
@@ -965,7 +974,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
             condimentum nibh.</p>
           <p><a class="btn btn-secondary" href="tel:+380673102145" role="button">Заказать »</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4 row-top-padding decorate-3">
+        <div id="games" class="col-lg-4 row-top-padding decorate-3">
           <img class="rounded-circle" src="images/rdr2.jpg" alt="">
           <h2>Игры</h2>
           <p class="dec-text" >Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
@@ -976,7 +985,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
       </div><!-- /.row -->
       <!-- START THE FEATURETTES -->
         <hr>
-      <div class="row">
+      <div id="profit" class="row">
         <div class="col-md-7 order-md-2">
           <h2>First featurette heading. <span class="text-muted">It’ll blow your mind.</span>
           </h2>
@@ -989,7 +998,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         </div>
       </div>
         <hr>
-      <div class="row justify-content-center">
+      <div id="price" class="row justify-content-center">
         <div class="order-1">
           <h2 class="mb-4">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
           <p class="mb-4 mb-lg-5"><a class="btn btn-lg praise-btn" href="tel:+380673102145" role="button">ЗАКАЖИ СЕЙЧАС</a></p>
@@ -1004,7 +1013,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         </div>
       </div>
         <hr>
-      <div class="row">
+      <div id="terms" class="row">
         <div class="col-md-7">
           <h2>And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
@@ -1037,7 +1046,9 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         </li>
       </ul>   
     <div>
-      <img class="footer-logo my-4" src="images/game-console.svg" alt="">
+      <a class="navbar-brand" href="#too-top">
+        <img class="footer-logo my-4" src="images/game-console.svg" alt="аренда приставки">
+      </a>
     </div>
     <div>
       <p><a href="tel:+380673102145" title="Звякни нам">+38(099)2141468</a></p>
@@ -1058,8 +1069,12 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     (function () {
       $('.carousel').carousel({
         interval: 6000
-      })
+      });
+
+      $('body').scrollspy({ target: '#scrollspy' });
     })()
+
+
   </script>
 </body>
 </html>
