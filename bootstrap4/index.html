@@ -25,6 +25,10 @@
 </head>
 <style>
 
+html {
+  scroll-behavior: smooth; 
+}
+
   body {
     position: relative;
     font-family: 'PT Mono', monospace;
@@ -56,13 +60,15 @@
   }
 
   .nav-link:hover {
-    background: #F29F05;
+    background: #00ffff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   ul .active {
-    background: #F29F05!important;
+    background: #ff00dd;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .carousel-item h4 {
@@ -352,6 +358,11 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
     background:#a91afc;
     border-color: #a91afc;
     box-shadow: 0 0 4px #330b4b;
+  }
+
+  .anchor-top {
+    padding-top: 5.1rem;
+    margin-top: -5.1rem;
   }
 
   
@@ -820,15 +831,13 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul id="scrollspy" class="navbar-nav mr-auto">
           <li class="nav-item">
-            <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-            <a class="nav-link" href="#profit">Выгода</a>
+            <a class="nav-link close-menu" href="#profit">Выгода</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#price">Прайс</a>
+            <a class="nav-link close-menu" href="#price">Прайс</a>
           </li>
           <li class="nav-item">
-            <!-- <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
-            <a class="nav-link" href="#terms">Условия</a>
+            <a class="nav-link close-menu" href="#terms">Условия</a>
           </li>
         </ul>
         <ul class="sc-link m-0 list-unstyled d-flex justify-content-around align-items-center flex-wrap">
@@ -878,9 +887,9 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
               <div class="col-lg-7 col-12 order-lg-1 order-2">
                 <div class="container">
                   <h4>Устрой<br>веселую тусовку</h4>
-                  <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br>
-                    necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
-                  <a href="#console">ПОДРОБНО</a>
+                  <p>Пригласи друзей, устрой игровую тусу, зарубись с компанией в FIFA-2020. <br>
+                    Одолей друзей в Mortal Kombat 11 или просто попробуй что-то новое.</p>
+                  <a href="#console">ПОДРОБНЕЕ</a>
                 </div>
               </div>
               <div class="col-lg-5 col-12 order-lg-2 order-1 bd-color">                
@@ -900,9 +909,9 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
               <div class="col-lg-7 col-12 order-lg-1 order-2">
                 <div class="container">
                   <h4>Попробуй новые<br>ощущения</h4>
-                  <p>Lorem ipsum dolor sit amet. Reprehenderit, qui blanditiis quidem rerum <br>
-                    necessitatibus praesentium voluptatum deleniti atque corrupti.</p>
-                  <a href="#vr">ПОДРОБНО</a>
+                  <p>Возьмите в аренду PlayStation VR. 360 градусный обзор сделает вас частью виртуально мира. <br>
+                    Погрузитесь в мир виртуальной реальности. Непередаваемые ощущения гарантированы!</p>
+                  <a href="#vr">ПОДРОБНЕЕ</a>
                 </div>
               </div>
               <div class="col-lg-5 col-12 order-lg-2 order-1 bd-color">
@@ -922,10 +931,10 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
             <div class="row align-items-center">
               <div class="col-lg-7 col-12 order-lg-1 order-2">
                 <div class="container">
-                  <h4>Зацени<br>свежий эксклюзтв</h4>
+                  <h4>Зацени<br>новые игры</h4>
                   <p>Играй в эксклюзивные игры любых производителей без необходимости <br>
                     покупать консоль или ждать выхода кроссплатформенной версии.</p>
-                  <a href="#games">ПОДРОБНО</a>
+                  <a href="#games">ПОДРОБНЕЕ</a>
                 </div>
               </div>
               <div class="col-lg-5 col-12 order-lg-2 order-1 bd-color">                
@@ -961,31 +970,29 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         <div id="console" class="col-lg-4 row-top-padding decorate-1">
           <img class="rounded-circle" src="images/dual.jpg" alt="">
           <h2>Консоли</h2>
-          <p class="dec-text" >Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-            vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna.</p>
+          <p class="dec-text" >Кто из нас не хотел бы в кругу друзей или в полном одиночестве порубиться в культовые игры на XBOX?
+            Или испробовать знаменитые эксклюзывы Sony PlayStation?
+          </p>
           <p><a class="btn btn-secondary" href="tel:+380673102145" role="button">Заказать »</a></p>
         </div><!-- /.col-lg-4 -->
         <div id="vr" class="col-lg-4 row-top-padding decorate-2">
           <img class="rounded-circle" src="images/vr-0.jpg" alt="">
           <h2>VR</h2>
-          <p class="dec-text" >Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-            mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh.</p>
+          <p class="dec-text" >Надень виртуальную реальность! Попробуй всякие приблуды! Ощути свободу в игре! 
+            Ведь все эти технические навороты страсть как охота попробовать!</p>
           <p><a class="btn btn-secondary" href="tel:+380673102145" role="button">Заказать »</a></p>
         </div><!-- /.col-lg-4 -->
         <div id="games" class="col-lg-4 row-top-padding decorate-3">
           <img class="rounded-circle" src="images/rdr2.jpg" alt="">
           <h2>Игры</h2>
-          <p class="dec-text" >Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-            felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-            massa justo sit amet risus.</p>
+          <p class="dec-text" >Достойный выбор разных игр для самых жаждущих. Мы стараемся поддерживать актуальные игровые новинки.
+            Окунись в мир незабываемые перключений.</p>
           <p><a class="btn btn-secondary" href="tel:+380673102145" role="button">Заказать »</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
       <!-- START THE FEATURETTES -->
         <hr>
-      <div id="profit" class="row">
+      <div id="profit" class="row anchor-top">
         <div class="col-md-7 order-md-2">
           <h2>First featurette heading. <span class="text-muted">It’ll blow your mind.</span>
           </h2>
@@ -998,7 +1005,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         </div>
       </div>
         <hr>
-      <div id="price" class="row justify-content-center">
+      <div id="price" class="row justify-content-center anchor-top">
         <div class="order-1">
           <h2 class="mb-4">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
           <p class="mb-4 mb-lg-5"><a class="btn btn-lg praise-btn" href="tel:+380673102145" role="button">ЗАКАЖИ СЕЙЧАС</a></p>
@@ -1013,7 +1020,7 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
         </div>
       </div>
         <hr>
-      <div id="terms" class="row">
+      <div id="terms" class="row anchor-top">
         <div class="col-md-7">
           <h2>And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
@@ -1067,14 +1074,17 @@ background: linear-gradient(135deg, #F085F2, #ffffff, #ffffff, #F085F2 );
   </script>
   <script>
     (function () {
+      // slide time interval
       $('.carousel').carousel({
         interval: 6000
       });
-
+      //scrollspy activation bootstrap4
       $('body').scrollspy({ target: '#scrollspy' });
+      //automatic closing of the mobile menu after typing
+      $('.close-menu').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
+    });
     })()
-
-
   </script>
 </body>
 </html>
