@@ -277,7 +277,7 @@
             }
 
             .card:not(:first-child) {
-                margin-left: -110px;
+                margin-left: -60px;
             }
 
             .card:hover {
@@ -285,7 +285,7 @@
             }
 
             .card:hover~.card {
-                left: 80px;
+                left: 55px;
             }
 
             .card:hover .card-text {
@@ -305,6 +305,31 @@
 
             .hr-card {
                 display: none;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+
+            .card {
+                /* transform: translateY(0); */
+                /* transform: translateX(-20px); */
+
+            }
+
+            .card:not(:first-child) {
+                margin-left: -110px;
+            }
+
+            .card:hover .container:first-child {
+                /* transform: translateY(0); */
+            }
+
+            .card:hover~.card {
+                transform: translateX(10px);
+                /* right: -70px;
+                margin-left: -70px; */
+                /* margin-left: 20px; */
             }
 
         }
