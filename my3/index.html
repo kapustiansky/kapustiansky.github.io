@@ -268,6 +268,19 @@ height: 90vh;
 footer {
             height: 10%;
         }
+
+.card {
+            height: 350px;
+            width: 150px;
+        }
+
+        .card:not(:first-child) {
+            margin-left: -150px;
+        }
+
+        .card:hover~.card {         
+            left: 150px;
+        }
      
 
         @media (max-width: 576px) {
