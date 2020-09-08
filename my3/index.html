@@ -279,7 +279,14 @@ footer {
 flex-direction: row;
 /* border: solid rgba(255, 186, 0, 1); */
      /* box-shadow: none; */
-border: linear-gradient(to left, #743ad5, #d53a9d);
+border-width: 3px;
+   border-style: solid;
+   border-image: 
+      linear-gradient(
+         to bottom, 
+         red, 
+         rgba(0, 0, 0, 0)
+      ) 1 100%;
   }
 
         .card:not(:first-child) {
