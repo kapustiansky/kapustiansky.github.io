@@ -286,7 +286,7 @@ border-width: 2px;
          to left, 
       red, 
       rgba(0, 0, 0, 0)
-    ) 10% stretch;
+    ) 1 100%;
   }
 
         .card:not(:first-child) {
@@ -295,8 +295,16 @@ border-width: 2px;
         }
 
 .card:hover {
-            transform: translateY(0);
+            /* transform: translateY(0); */
             transition: 0.4s ease-out;
+border-width: 3px;
+   border-style: solid;
+   border-image: 
+      linear-gradient(
+         to left, 
+      red, 
+      rgba(0, 0, 0, 0)
+    ) 10% stretch;
         }
 
         .card:hover~.card {         
