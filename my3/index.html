@@ -244,10 +244,31 @@
         /* media queries */
         @media (min-width: 1371px) {
 
-        .icon {
-            width: 35px;
-            height: 35px;
+            .icon {
+                width: 35px;
+                height: 35px;
+            }
         }
+
+        @media (max-width: 970px) {
+
+            .nav {
+                margin-right: 0;
+            }
+
+            .site-header__wrapper {
+                flex-direction: column;
+                width: 100vw;
+                margin-top: 20px;
+            }
+
+            header ul {
+                margin: 6px;
+            }
+
+            .hr-top {
+                margin-top: 10px;
+            }
         }
 
         @media (max-width: 769px) {
@@ -257,17 +278,8 @@
             }
 
             .icon {
-            width: 27px;
-            height: 27px;
-        }
-
-            .nav {
-                margin-right: 0;
-            }
-
-            .site-header__wrapper {
-                flex-direction: column;
-                width: 100vw;
+                width: 25px;
+                height: 25px;
             }
 
             body {
@@ -303,6 +315,8 @@
                 /* transform: translateY(0); */
                 transition: 0.4s ease-out;
                 /* transform: translateX(-20px); */
+                height: 285px;
+                width: 140px;
             }
 
             .card:hover {
@@ -322,13 +336,13 @@
 
             .title {
                 writing-mode: tb-rl;
-                margin: 5px 0 0 7px;
+                margin: 4px 0 0 4px;
                 font-size: calc(15px + (2 + 2 * 0.7) * ((100vw - 320px) / 1370));
                 /* font-size: calc(12px + (2 + 2 * 0.7) * ((100vw - 320px) / 1370)); */
             }
 
             .card-text {
-                padding: 6px;
+                padding: 5px;
                 font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1370));
                 /* font-size: calc(13px + (2 + 2 * 0.7) * ((100vw - 320px) / 1370)); */
             }
@@ -338,14 +352,6 @@
             }
 
         }
-
-                /* @media (max-width: 576px) {
-            .icon {
-                width: 25px;
-                height: 25px;
-            }
-
-        } */
 
         @media (max-width: 374px) {
 
@@ -365,10 +371,6 @@
                 margin-top: 13px;
             }
 
-            .hr-top {
-                margin-top: 10px;
-            }
-
             .card-text {
                 padding: 3px;
             }
@@ -376,12 +378,7 @@
             .title {
                 margin: 2px 0 0 3px;
             }
-
-            header ul {
-                margin: 5px;
-            }
         }
-
     </style>
 </head>
 
