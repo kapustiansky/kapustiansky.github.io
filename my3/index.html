@@ -42,6 +42,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            font-size: calc(14px + 2 * (100vw / 1370));
         }
 
         .brand {
@@ -140,10 +141,11 @@
 
         .title {
             /* position: absolute;
-            left: 20px;
-            top: 15px; */
+                left: 20px;
+                top: 15px; */
             /* position: absolute; */
             margin: 5px 0 15px 15px;
+            font-size: calc(12px + 2 * (100vw / 1370));
         }
 
         .hr-card {
@@ -155,6 +157,7 @@
             padding: 8px 15px;
             font-family: 'Titillium Web', sans-serif;
             color: #3d3c3f;
+            font-size: calc(13px + 2 * (100vw / 1370));
         }
 
         .card:hover .card-text {
@@ -163,13 +166,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transition: background .8s ease-out;
-            background-position: 200px; 
+            background-position: 200px;
         }
 
 
         /* .card:not(:first-child) {
-    margin-left: -50px;
-} */
+        margin-left: -50px;
+    } */
 
         /* FOOTER */
 
@@ -181,7 +184,7 @@
         }
 
         /* Let's style the wrapper in such away that, 
-it should always be at the center of the browser */
+    it should always be at the center of the browser */
         .wrapper {
             /* transform: translate(-50%, -50%); */
             width: 30%;
@@ -193,8 +196,8 @@ it should always be at the center of the browser */
         }
 
         /* Style the list items inside the UL list, by setting its width, height and line-height 
-  and float them to left and set its border and border-radius.
- */
+      and float them to left and set its border and border-radius.
+     */
         .wrapper ul {
             display: flex;
             width: 100%;
@@ -208,7 +211,7 @@ it should always be at the center of the browser */
         }
 
         /* Style the icons by setting its color and margin-top value to 20px 
-to align it properly */
+    to align it properly */
 
         .icon {
             width: 30px;
@@ -246,126 +249,139 @@ to align it properly */
         }
 
         /* media queries */
-@media (max-width: 700px) {
-            * {
-            
-        } 
+        @media (min-width: 1371px) {
 
-               .nav {
-            margin-right: 0;
+        .icon {
+            width: 35px;
+            height: 35px;
+        }
         }
 
-.site-header__wrapper {
-            flex-direction: column;
-            width: 100vw;
+        @media (max-width: 769px) {
+
+            header {
+                font-size: calc(14px + (2 + 2 * 0.7) * ((100vw -320px) / 1370));
+            }
+
+            .nav {
+                margin-right: 0;
+            }
+
+            .site-header__wrapper {
+                flex-direction: column;
+                width: 100vw;
+            }
+
+            body {
+                height: 90vh;
+            }
+
+            .wrapper {
+                width: 50%;
+            }
+
+            footer {
+                height: 10%;
+            }
+
+            .card {
+                height: 350px;
+                width: 150px;
+                flex-direction: row;
+                border-width: 4px;
+                border-style: solid;
+                border-image:
+                    linear-gradient(to bottom,
+                        red,
+                        rgba(0, 0, 0, 0)) 1 100%;
+            }
+
+            .card:not(:first-child) {
+                margin-left: -110px;
+
+            }
+
+            .card {
+                /* transform: translateY(0); */
+                transition: 0.4s ease-out;
+                /* transform: translateX(-20px); */
+            }
+
+            .card:hover {
+                /* transform: translateY(0); */
+                transition: 0.4s ease-out;
+
+            }
+
+            .card:hover~.card {
+                left: 80px;
+            }
+
+            .card:hover .card-text {
+
+                background-position: 130px;
+            }
+
+            .title {
+                writing-mode: tb-rl;
+                margin: 5px 0 0 7px;
+                font-size: calc(12px + (2 + 2 * 0.7) * ((100vw -320px) / 1370));
+            }
+
+            .card-text {
+                padding: 6px;
+                font-size: calc(13px + (2 + 2 * 0.7) * ((100vw -320px) / 1370));
+            }
+
+            .hr-card {
+                display: none;
+            }
+
         }
 
-body {
-height: 90vh;
-}
+                /* @media (max-width: 576px) {
+            .icon {
+                width: 25px;
+                height: 25px;
+            }
 
-.wrapper {          
-            width: 50%;         
-        }
+        } */
 
-footer {
-            height: 10%;
-        }
+        @media (max-width: 374px) {
 
-.card {
-            height: 350px;
-            width: 150px;
-flex-direction: row;
-/* border: solid rgba(255, 186, 0, 1); */
-     /* box-shadow: none; */
-border-width: 4px;
-   border-style: solid;
-   border-image: 
-      linear-gradient(
-         to bottom, 
-      red, 
-      rgba(0, 0, 0, 0)
-    ) 1 100%;
-  }
 
-        .card:not(:first-child) {
-            margin-left: -110px;
-
-        }
-
-.card:hover {
-            /* transform: translateY(0); */
-            transition: 0.4s ease-out;
-transform: translateX(-20);
-  }
-        }
-
-        .card:hover~.card {         
-            left: 80px;
-        }
-
-.card:hover .card-text {
-            
-            background-position: 130px; 
-        }
-
-.title {
-writing-mode:tb-rl;
-margin: 5px 0 0 7px;
-}
-
-.card-text {
-            padding: 6px;
-        }
-.hr-card {
-            display: none;
-        }
-}
-     
-
-        @media (max-width: 576px) {
             .icon {
                 width: 20px;
                 height: 20px;
             }
-        }
 
-        @media (min-width: 1370px) {
-
-            .icon {
-                width: 40px;
-                height: 40px;
-            }
-        }
-
-        /* @media screen and (max-width: 640px) {
-            .wrapper {
-                width: 350px;
+            .card {
+                border-width: 3px;
+                height: 265px;
+                width: 120px;
             }
 
-            .wrapper ul li {
+            .site-header__wrapper {
+                margin-top: 13px;
+            }
+
+            .hr-top {
                 margin-top: 10px;
             }
 
-            .wrapper ul li.google {
-                margin-left: 60px;
+            .card-text {
+                padding: 3px;
+            }
+
+            .title {
+                margin: 2px 0 0 3px;
+            }
+
+            header ul {
+                margin: 5px;
             }
         }
 
-
-        @media screen and (max-width: 340px) {
-            .wrapper {
-                width: 150px;
-            }
-
-            .wrapper ul li {
-                margin: 15px;
-            }
-
-            .wrapper ul li.google {
-                margin-left: 15px;
-            }
-        } */
     </style>
 </head>
 
@@ -395,7 +411,8 @@ margin: 5px 0 0 7px;
             <div class="card">
                 <h3 class="title">SOFT SKILLS</h3>
                 <hr class="hr-card">
-                <p class="card-text"><span class="button-helper"></span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p class="card-text"><span class="button-helper"></span>Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.
                     Corporis quod voluptatem quisquam blanditiis sed magni?</p>
             </div>
             <div class="card">
