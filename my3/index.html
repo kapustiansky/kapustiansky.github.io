@@ -4,21 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet"> -->
+    <title>MY</title>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
     <!-- шрифт логотипа -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Wallpoet&display=swap" rel="stylesheet">
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
     <style>
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-            /* font-family: 'Open Sans', sans-serif; */
             font-family: 'Archivo Black', sans-serif;
             font-size: 100%;
             color: rgb(253, 253, 253);
@@ -42,7 +37,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            font-size: calc(14px + 2 * (100vw / 1370));
+            font-size: calc(15px + 3 * (100vw / 1370));
         }
 
         .brand {
@@ -51,7 +46,7 @@
         }
 
         .nav {
-            margin-right: 10rem;
+            margin-right: 11rem;
         }
 
         .site-header__wrapper {
@@ -140,12 +135,9 @@
         }
 
         .title {
-            /* position: absolute;
-                left: 20px;
-                top: 15px; */
-            /* position: absolute; */
             margin: 5px 0 15px 15px;
-            font-size: calc(12px + 2 * (100vw / 1370));
+            /* font-size: calc(12px + 2 * (100vw / 1370)); */
+            font-size: calc(15px + 2 * (100vw / 1370));
         }
 
         .hr-card {
@@ -157,7 +149,8 @@
             padding: 8px 15px;
             font-family: 'Titillium Web', sans-serif;
             color: #3d3c3f;
-            font-size: calc(13px + 2 * (100vw / 1370));
+            font-size: calc(14px + 2 * (100vw / 1370));
+            /* font-size: calc(13px + 2 * (100vw / 1370)); */
         }
 
         .card:hover .card-text {
@@ -260,8 +253,13 @@
         @media (max-width: 769px) {
 
             header {
-                font-size: calc(14px + (2 + 2 * 0.7) * ((100vw -320px) / 1370));
+                font-size: calc(15px + (3 + 3 * 0.7) * ((100vw - 320px) / 1370));
             }
+
+            .icon {
+            width: 27px;
+            height: 27px;
+        }
 
             .nav {
                 margin-right: 0;
@@ -325,12 +323,14 @@
             .title {
                 writing-mode: tb-rl;
                 margin: 5px 0 0 7px;
-                font-size: calc(12px + (2 + 2 * 0.7) * ((100vw -320px) / 1370));
+                font-size: calc(15px + (2 + 2 * 0.7) * ((100vw - 320px) / 1370));
+                /* font-size: calc(12px + (2 + 2 * 0.7) * ((100vw - 320px) / 1370)); */
             }
 
             .card-text {
                 padding: 6px;
-                font-size: calc(13px + (2 + 2 * 0.7) * ((100vw -320px) / 1370));
+                font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1370));
+                /* font-size: calc(13px + (2 + 2 * 0.7) * ((100vw - 320px) / 1370)); */
             }
 
             .hr-card {
