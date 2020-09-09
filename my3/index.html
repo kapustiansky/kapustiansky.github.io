@@ -123,10 +123,11 @@
         .card:hover~.card {
             position: relative;
             left: 50px;
-            transition: 0.7s ease-out;
+            transition: 0.4s ease-out;
         }
 
-        .title {
+        .title,
+        .title-x {
             margin: 5px 0 15px 15px;
             font-size: calc(15px + 2 * (100vw / 1370));
         }
@@ -136,7 +137,8 @@
             border-color: #17141d;
         }
 
-        .card-text {
+        .card-text,
+        .card-text-x {
             padding: 8px 15px;
             font-family: 'Titillium Web', sans-serif;
             color: #3d3c3f;
@@ -144,6 +146,14 @@
         }
 
         .card:hover .card-text {
+            background: linear-gradient(45deg, #3d3c3f 0%, rgb(255, 251, 4) 65%, rgb(253, 153, 3) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: background .8s ease-out;
+            background-position: 200px;
+        }
+
+        .card:hover .card-text-x {
             background: linear-gradient(45deg, #3d3c3f 0%, rgb(255, 251, 4) 65%, rgb(253, 153, 3) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -272,16 +282,10 @@
                     linear-gradient(to bottom,
                         red,
                         rgba(0, 0, 0, 0)) 1 100%;
-                /* transform: translateY(0); */
-                /* transform: translateX(-20px); */
             }
 
             .card:not(:first-child) {
                 margin-left: -60px;
-            }
-
-            .card:hover {
-                /* transform: translateY(0); */
             }
 
             .card:hover~.card {
@@ -292,14 +296,20 @@
                 background-position: 110px;
             }
 
-            .title {
+            .card:hover .card-text-x {
+                background-position: 110px;
+            }
+
+            .title,
+            .title-x {
                 writing-mode: tb-rl;
-                margin: 4px 0 0 4px;
+                margin: 4px 0 0 2px;
                 font-size: calc(15px + (2 + 2 * 0.7) * ((100vw - 320px) / 1370));
             }
 
-            .card-text {
-                padding: 6px;
+            .card-text,
+            .card-text-x {
+                padding: 8px;
                 font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1370));
             }
 
@@ -311,27 +321,13 @@
 
         @media (max-width: 576px) {
 
-            .card {
-                /* transform: translateY(0); */
-                /* transform: translateX(-20px); */
-
-            }
-
             .card:not(:first-child) {
                 margin-left: -110px;
             }
 
-            .card:hover .container:first-child {
-                /* transform: translateY(0); */
-            }
-
             .card:hover~.card {
-                transform: translateX(10px);
-                /* right: -70px;
-                margin-left: -70px; */
-                /* margin-left: 20px; */
+                left: 90px;
             }
-
         }
 
         @media (max-width: 374px) {
@@ -351,7 +347,8 @@
                 margin-top: 13px;
             }
 
-            .card-text {
+            .card-text,
+            .card-text-x {
                 padding: 3px;
             }
 
@@ -359,7 +356,12 @@
                 background-position: 90px;
             }
 
-            .title {
+            .card:hover .card-text-x {
+                background-position: 90px;
+            }
+
+            .title,
+            .title-x {
                 margin: 2px 0 0 3px;
             }
 
@@ -390,7 +392,7 @@
 
     <main>
         <div class="container">
-            <div class="card">
+            <div class="card lol">
                 <h3 class="title">SOFT SKILLS</h3>
                 <hr class="hr-card">
                 <p class="card-text"><span class="button-helper"></span>Lorem ipsum dolor sit amet consectetur
@@ -410,9 +412,9 @@
                     Corporis quod voluptatem quisquam blanditiis sed magni?</p>
             </div>
             <div class="card">
-                <h3 class="title">HOBBIES</h3>
+                <h3 class="title-x">HOBBIES</h3>
                 <hr class="hr-card">
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p class="card-text-x">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Corporis quod voluptatem quisquam blanditiis sed magni?.</p>
             </div>
         </div>
@@ -476,7 +478,27 @@
         </div>
     </footer>
     <script>
+        (function () {
+            // var card = document.querySelectorAll('.card');
 
+            // [].forEach.call(card, function(item) {
+            //     item.addEventListener('click', function(e) {
+            //         if (e.target.innerHtml == card[0]) {
+            //             console.log(card[0]);
+            //         }
+            //     })
+            // })
+            if (window.matchMedia("(max-width: 576px)").matches) {
+                document.querySelector('body').addEventListener('click', (e) => {
+                    if (e.target.className == 'title' || e.target.className == 'card-text') {
+                        console.log(e.target.className);
+                        document.querySelector('.lol').style.marginLeft = '-90px';
+                    } else {
+                        document.querySelector('.lol').style.marginLeft = '0px';
+                    }
+                });
+            }
+        })();
     </script>
 
 </body>
