@@ -485,9 +485,6 @@
         </div>
     </footer>
     <script>
-document.addEventListener('click',(e)=>{
-    document.documentElement.style.setProperty('--main-hue', #fff);
-  })
         (function () {
             // var card = document.querySelectorAll('.card');
 
@@ -506,6 +503,7 @@ document.addEventListener('click',(e)=>{
                     } else {
                         document.querySelector('.lol').style.marginLeft = '0px';
                     }
+document.documentElement.style.setProperty('--main-hue', #fff);
                 });
             }
         })();
