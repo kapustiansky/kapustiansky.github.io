@@ -15,7 +15,7 @@
   --dark-bg: #100e17;
   --dark-bgcard: #17141d;
   --dark-sh: #000;
-
+/* ^убрать когда пропишу онлоад^ */
   --bg-hue: var(--dark-bg);
   --bgcard-hue: var(--dark-bgcard);
   --sh-hue: var(--dark-sh);
@@ -286,7 +286,7 @@
             .card {
                 height: 320px;
                 width: 145px;
-                /* box-shadow: -1rem 0 1rem #BD5C51; */
+                box-shadow: -1rem 0 1rem var(--sh-hue);
                 flex-direction: row;
                 border-width: 4px;
                 border-style: solid;
@@ -495,17 +495,54 @@
 //   document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
 //   console.log(arrayRandElement(arr));
 //   })
+const arr = ['#100e17', '#FD7C6E', '#4169E1'];
+// dark theme #100e17
+const darkCard = '#17141d';
+const darkSh = '#000';
+//coral theme #FD7C6E
+const coralCard = '#FF9387';
+const coralSh = '#d36d61';
+
+
 
 function arrayRandElement(arr) {
     var rand = Math.floor(Math.random() * arr.length);
     return arr[rand];
 }
 
-var arr = ['#100e17', '#E36F62', '#003153', '#A5260A', '#FF1493', '#00BFFF', '#FD7C6E', '#4169E1', '#FF7E00'];
-
 document.querySelector('body').addEventListener('click', (e) => {
-            document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
+
+    const mainColor = arrayRandElement(arr).toString();
+    //console.log(mainColor);
+
+    if(mainColor === '#FD7C6E') {
+        document.documentElement.style.setProperty('--bg-hue', mainColor);
+        document.documentElement.style.setProperty('--bgcard-hue', coralCard);
+        document.documentElement.style.setProperty('--sh-hue', coralSh);
+       // console.log(mainColor);
+    }
+    if(mainColor === '#100e17') {
+        document.documentElement.style.setProperty('--bg-hue', mainColor);
+        document.documentElement.style.setProperty('--bgcard-hue', darkCard);
+        document.documentElement.style.setProperty('--sh-hue', darkSh);
+       // console.log(mainColor);
+    }
+            
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             if (window.matchMedia("(max-width: 576px)").matches) {
                 document.querySelector('body').addEventListener('click', (e) => {
