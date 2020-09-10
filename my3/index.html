@@ -12,9 +12,10 @@
     <style>
 
 :root {
-  --bg-color: #100e17;
-  --text-color: #fff;
-  --main-hue : var(--bg-color);
+  --red-hue: 360;
+  --blue-hue: 240;
+  --green-hue: 120;
+  --main-hue : var(--red-hue);
 }
 
         * {
@@ -29,7 +30,7 @@
         }
 
         body {
-            background-color: var(--bg-color);
+            background-color: hsl(var(--main-hue) , 50%, 50%);
             height: 100vh;
             display: flex;
             justify-content: space-between;
