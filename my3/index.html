@@ -28,7 +28,7 @@
         }
 
         body {
-            background-color: hsl(var(--bg-hue), 24%, 7%);
+            background-color: hsl(var(--bg-hue) , 24%, 7%);
             height: 100vh;
             display: flex;
             justify-content: space-between;
@@ -108,9 +108,9 @@
             flex-direction: column;
             height: 280px;
             width: 200px;
-            background-color: hsl(var(--bg-hue), 18%, 10%);
+            background-color: hsl(var(--bg-hue) , 18%, 10%);
             border-radius: 10px;
-            box-shadow: -1rem 0 3rem hsl(var(--bg-hue), 0%, 0%);
+            box-shadow: -1rem 0 3rem hsl(var(--bg-hue) , 0%, 0%);
             /*   margin-left: -50px; */
             transition: 0.4s ease-out;
             position: relative;
@@ -495,7 +495,7 @@ function arrayRandElement(arr) {
 }
 
 // var arr = ['#100e17', '#003153', '#A5260A', '#FF1493', '#00BFFF', '#FD7C6E', '#4169E1', '#FF7E00'];
-var arr = ['#253', '#6', '#328', '#11'];
+var arr = ['253', '6', '328', '11'];
 
 document.addEventListener("DOMContentLoaded", function() {
   document.documentElement.style.setProperty('--main-hue', arrayRandElement(arr));})
