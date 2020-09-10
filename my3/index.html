@@ -502,6 +502,9 @@ const darkSh = '#000';
 //coral theme #FD7C6E
 const coralCard = '#fc8679';
 const coralSh = '#d36d61';
+//blue theme #4169E1
+const blueCard = '#0e6bee';
+const blueSh = '#0047AB';
 
 
 
@@ -525,6 +528,12 @@ document.querySelector('body').addEventListener('click', (e) => {
         document.documentElement.style.setProperty('--bg-hue', mainColor);
         document.documentElement.style.setProperty('--bgcard-hue', darkCard);
         document.documentElement.style.setProperty('--sh-hue', darkSh);
+       // console.log(mainColor);
+    }
+    if(mainColor === '#100e17') {
+        document.documentElement.style.setProperty('--bg-hue', mainColor);
+        document.documentElement.style.setProperty('--bgcard-hue', blueCard);
+        document.documentElement.style.setProperty('--sh-hue', blueSh);
        // console.log(mainColor);
     }
             
