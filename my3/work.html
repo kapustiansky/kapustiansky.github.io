@@ -1,0 +1,23 @@
+<script>
+    (function () {
+        // var card = document.querySelectorAll('.card');
+
+        // [].forEach.call(card, function(item) {
+        //     item.addEventListener('click', function(e) {
+        //         if (e.target.innerHtml == card[0]) {
+        //             console.log(card[0]);
+        //         }
+        //     })
+        // })
+        if (window.matchMedia("(max-width: 576px)").matches) {
+            document.querySelector('body').addEventListener('click', (e) => {
+                if (e.target.className == 'title' || e.target.className == 'card-text') {
+                    console.log(e.target.className);
+                    document.querySelector('.lol').style.marginLeft = '-90px';
+                } else {
+                    document.querySelector('.lol').style.marginLeft = '0px';
+                }
+            });
+        }
+    })();
+</script>
