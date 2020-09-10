@@ -495,7 +495,7 @@
 //   document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
 //   console.log(arrayRandElement(arr));
 //   })
-const arr = ['#100e17', '#FD7C6E', '#4169E1'];
+const arr = ['#100e17', '#FD7C6E', '#4169E1', '#db0000'];
 // dark theme #100e17
 const darkCard = '#17141d';
 const darkSh = '#000';
@@ -505,6 +505,9 @@ const coralSh = '#d36d61';
 //blue theme #4169E1
 const blueCard = '#0e6bee';
 const blueSh = '#0047AB';
+//navy theme #db0000
+const navyCard = '#001b3d';
+const navySh = '#101822';
 
 
 
@@ -534,6 +537,12 @@ document.querySelector('body').addEventListener('click', (e) => {
         document.documentElement.style.setProperty('--bg-hue', mainColor);
         document.documentElement.style.setProperty('--bgcard-hue', blueCard);
         document.documentElement.style.setProperty('--sh-hue', blueSh);
+       // console.log(mainColor);
+    }
+    if(mainColor === '#db0000') {
+        document.documentElement.style.setProperty('--bg-hue', mainColor);
+        document.documentElement.style.setProperty('--bgcard-hue', navyCard);
+        document.documentElement.style.setProperty('--sh-hue', navySh);
        // console.log(mainColor);
     }
             
