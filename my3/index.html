@@ -12,8 +12,13 @@
     <style>
 
 :root {
-  --dark-hue: 11;
-  --bg-hue : var(--dark-hue);
+  --dark-bg: #100e17;
+  --dark-bgcard: #17141d;
+  --dark-sh: #000;
+
+  --bg-hue: var(--dark-bg);
+  --bgcard-hue: var(--dark-bgcard);
+  --sh-hue: var(--dark-sh);
 }
 
         * {
@@ -28,7 +33,7 @@
         }
 
         body {
-            background-color: hsl(var(--bg-hue) , 24%, 7%);
+            background-color: var(--bg-hue);
             height: 100vh;
             display: flex;
             justify-content: space-between;
@@ -108,9 +113,9 @@
             flex-direction: column;
             height: 280px;
             width: 200px;
-            background-color: hsl(var(--bg-hue) , 18%, 10%);
+            background-color: var(--bgcard-hue);
             border-radius: 10px;
-            box-shadow: -1rem 0 3rem hsl(var(--bg-hue) , 0%, 0%);
+            box-shadow: -1rem 0 3rem var(--sh-hue);
             /*   margin-left: -50px; */
             transition: 0.4s ease-out;
             position: relative;
@@ -281,6 +286,7 @@
             .card {
                 height: 320px;
                 width: 145px;
+                /* box-shadow: -1rem 0 1rem #BD5C51; */
                 flex-direction: row;
                 border-width: 4px;
                 border-style: solid;
@@ -485,30 +491,22 @@
     </footer>
     <script>
         (function () {
-
-
-
+// document.addEventListener("DOMContentLoaded", function() {
+//   document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
+//   console.log(arrayRandElement(arr));
+//   })
 
 function arrayRandElement(arr) {
     var rand = Math.floor(Math.random() * arr.length);
     return arr[rand];
 }
 
-// var arr = ['#100e17', '#003153', '#A5260A', '#FF1493', '#00BFFF', '#FD7C6E', '#4169E1', '#FF7E00'];
-var arr = ['253', '6', '328', '11'];
+var arr = ['#100e17', '#E36F62', '#003153', '#A5260A', '#FF1493', '#00BFFF', '#FD7C6E', '#4169E1', '#FF7E00'];
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.documentElement.style.setProperty('--main-hue', arrayRandElement(arr));})
+document.querySelector('body').addEventListener('click', (e) => {
+            document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
+});
 
-            // var card = document.querySelectorAll('.card');
-
-            // [].forEach.call(card, function(item) {
-            //     item.addEventListener('click', function(e) {
-            //         if (e.target.innerHtml == card[0]) {
-            //             console.log(card[0]);
-            //         }
-            //     })
-            // })
             if (window.matchMedia("(max-width: 576px)").matches) {
                 document.querySelector('body').addEventListener('click', (e) => {
                     if (e.target.className == 'title' || e.target.className == 'card-text') {
@@ -517,7 +515,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     } else {
                         document.querySelector('.lol').style.marginLeft = '0px';
                     }
-document.documentElement.style.setProperty('--main-hue', arrayRandElement(arr));
+            //document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
                 });
             }
         })();
