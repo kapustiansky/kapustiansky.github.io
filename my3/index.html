@@ -12,7 +12,7 @@
     <style>
 
 :root {
-  --dark-hue: #100e17;
+  --dark-hue: 253;
   --bg-hue : var(--dark-hue);
 }
 
@@ -28,7 +28,7 @@
         }
 
         body {
-            background-color: hsl(var(--bg-hue), 97%, 71%);
+            background-color: hsl(var(--bg-hue), 24%, 7%);
             height: 100vh;
             display: flex;
             justify-content: space-between;
@@ -495,7 +495,7 @@ function arrayRandElement(arr) {
 }
 
 // var arr = ['#100e17', '#003153', '#A5260A', '#FF1493', '#00BFFF', '#FD7C6E', '#4169E1', '#FF7E00'];
-var arr = ['6'];
+var arr = ['253', '6'];
 
 document.addEventListener("DOMContentLoaded", function() {
   document.documentElement.style.setProperty('--main-hue', arrayRandElement(arr));})
