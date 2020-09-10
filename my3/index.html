@@ -487,6 +487,19 @@
     </footer>
     <script>
         (function () {
+
+
+
+function arrayRandElement(arr) {
+    var rand = Math.floor(Math.random() * arr.length);
+    return arr[rand];
+}
+
+var arr = ['240', '120', '360'];
+
+
+
+
             // var card = document.querySelectorAll('.card');
 
             // [].forEach.call(card, function(item) {
@@ -504,7 +517,7 @@
                     } else {
                         document.querySelector('.lol').style.marginLeft = '0px';
                     }
-document.documentElement.style.setProperty('--main-hue', 240);
+document.documentElement.style.setProperty('--main-hue', arrayRandElement(arr));
                 });
             }
         })();
