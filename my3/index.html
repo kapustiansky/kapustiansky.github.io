@@ -23,6 +23,7 @@
 :root {
   --bg-color: rgb(253, 153, 3);
   --text-color: #fff;
+  --main-hue : var(--bg-color);
 }
 
         body {
@@ -482,6 +483,9 @@
         </div>
     </footer>
     <script>
+document.addEventListener('click',(e)=>{
+    document.documentElement.style.setProperty('--main-hue', 240);
+  })
         (function () {
             // var card = document.querySelectorAll('.card');
 
