@@ -567,9 +567,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
                 document.querySelector('body').addEventListener('click', (e) => {
                     if (e.target.className == 'title' || e.target.className == 'card-text') {
                         console.log(e.target.className);
-                        document.querySelector('.lol').style.marginLeft = '-90px';
+                        document.querySelector('.card').firstChild.style.marginLeft = '-90px';
                     } else {
-                        document.querySelector('.lol').style.marginLeft = '0px';
+                        document.querySelector('.card').firstChild.style.marginLeft = '0px';
                     }
             //document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
                 });
