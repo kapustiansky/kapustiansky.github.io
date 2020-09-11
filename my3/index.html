@@ -12,9 +12,9 @@
     <style>
 
 :root {
-  --dark-bg: #100e17;
+  /*--dark-bg: #100e17;
   --dark-bgcard: #17141d;
-  --dark-sh: #000;
+  --dark-sh: #000;*/
 /* ^убрать когда пропишу онлоад^ */
   --bg-hue: var(--dark-bg);
   --bgcard-hue: var(--dark-bgcard);
@@ -491,7 +491,7 @@
     </footer>
     <script>
         (function () {
-// document.addEventListener("DOMContentLoaded", function() {
+// document.addEventListener("click", function() {
 //   document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
 //   console.log(arrayRandElement(arr));
 //   })
@@ -516,7 +516,7 @@ function arrayRandElement(arr) {
     return arr[rand];
 }
 
-document.querySelector('body').addEventListener('click', (e) => {
+document.querySelector('body').addEventListener('DOMContentLoaded', (e) => {
 
     const mainColor = arrayRandElement(arr).toString();
     //console.log(mainColor);
