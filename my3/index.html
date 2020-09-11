@@ -405,7 +405,7 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
 
     <main>
         <div class="container">
-            <div class="card lol">
+            <div id="imFirst" class="card">
                 <h3 class="title">SOFT SKILLS</h3>
                 <hr class="hr-card">
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur
@@ -565,12 +565,11 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
             if (window.matchMedia("(max-width: 576px)").matches) {
                 document.querySelector('body').addEventListener('click', (e) => {
-let lol = document.querySelector('.container');
                     if (e.target.className == 'title' || e.target.className == 'card-text') {
                         console.log(e.target.className);
-                        firstChild(lol).style.marginLeft = '-90px';
+                        document.querySelector('#imFirst').style.marginLeft = '-90px';
                     } else {
-                        firstChild(lol).style.marginLeft = '0px';
+                        document.querySelector('#imFirst').style.marginLeft = '0px';
                     }
             //document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
                 });
