@@ -18,7 +18,7 @@
 /* ^убрать когда пропишу онлоад^ */
   --bg-hue: var(--dark-bg);
   --bgcard-hue: var(--dark-bgcard);
-  --sh-hue: var(--dark-sh);
+  /* --sh-hue: var(--dark-sh); */
 }
 
         * {
@@ -80,12 +80,12 @@
         }
 
         header a:hover {
-            color: #3d3c3f;
+            color: #282e33;
             transition: 0.3s ease-out;
         }
 
         .email a {
-            color: #3d3c3f;
+            color: #282e33;
         }
 
         .email:hover a {
@@ -115,7 +115,8 @@
             width: 200px;
             background-color: var(--bgcard-hue);
             border-radius: 10px;
-            box-shadow: -1rem 0 3rem var(--sh-hue);
+            /* box-shadow: -1rem 0 3rem var(--sh-hue); */
+            box-shadow: -1rem 0 1rem rgba(0, 0, 0, 0.774);
             /*   margin-left: -50px; */
             transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-out;
             position: relative;
@@ -153,7 +154,7 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
         .card-text-x {
             padding: 8px 15px;
             font-family: 'Titillium Web', sans-serif;
-            color: #3d3c3f;
+            color: #3b4349;
             font-size: calc(14px + 2 * (100vw / 1370));
         }
 
@@ -198,7 +199,7 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
             width: 30px;
             height: 30px;
             transition: all 0.5s ease;
-            fill: #3d3c3f;
+            fill: #282e33;
         }
 
         /*facebook*/
@@ -287,9 +288,10 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
             .card {
                 height: 320px;
                 width: 145px;
-                box-shadow: -0.5rem 0 0.5rem var(--sh-hue);
+                /* box-shadow: -0.5rem 0 0.5rem var(--sh-hue); */
                 flex-direction: row;
                 border-width: 4px;
+                box-shadow: -0.5rem 0 0.5rem rgba(0, 0, 0, 0.774);
                 border-style: solid;
                 border-image:
                     linear-gradient(to bottom,
@@ -389,7 +391,7 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
             <nav class="nav">
                 <ul>
                     <li>
-                        <a style="color:#3d3c3f;" href="">ABOUT ME</a>
+                        <a style="color: #282e33;" href="">ABOUT ME</a>
                     </li>
                     <li>
                         <a href="work.html">MY WORK'S</a>
@@ -499,16 +501,16 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
 const arr = ['#100e17', '#FD7C6E', '#4169E1', '#900020'];
 // dark theme #100e17
 const darkCard = '#17141d';
-const darkSh = '#000';
+//const darkSh = '#000';
 //coral theme #FD7C6E
 const coralCard = '#fc8679';
-const coralSh = '#d36d61';
+//const coralSh = '#d36d61';
 //blue theme #4169E1
 const blueCard = '#0e6bee';
-const blueSh = '#0047AB';
+//const blueSh = '#0047AB';
 //red theme #900020
-const navyCard = '#3E5F8A';
-const navySh = '#001b3d';
+const navyCard = '#002F55';
+//const navySh = '#001b3d';
 
 
 
@@ -525,25 +527,25 @@ document.addEventListener('DOMContentLoaded', (e) => {
     if(mainColor === '#FD7C6E') {
         document.documentElement.style.setProperty('--bg-hue', mainColor);
         document.documentElement.style.setProperty('--bgcard-hue', coralCard);
-        document.documentElement.style.setProperty('--sh-hue', coralSh);
+        //document.documentElement.style.setProperty('--sh-hue', coralSh);
        // console.log(mainColor);
     }
     if(mainColor === '#100e17') {
         document.documentElement.style.setProperty('--bg-hue', mainColor);
         document.documentElement.style.setProperty('--bgcard-hue', darkCard);
-        document.documentElement.style.setProperty('--sh-hue', darkSh);
+        //document.documentElement.style.setProperty('--sh-hue', darkSh);
        // console.log(mainColor);
     }
     if(mainColor === '#4169E1') {
         document.documentElement.style.setProperty('--bg-hue', mainColor);
         document.documentElement.style.setProperty('--bgcard-hue', blueCard);
-        document.documentElement.style.setProperty('--sh-hue', blueSh);
+        //document.documentElement.style.setProperty('--sh-hue', blueSh);
        // console.log(mainColor);
     }
     if(mainColor === '#900020') {
         document.documentElement.style.setProperty('--bg-hue', mainColor);
         document.documentElement.style.setProperty('--bgcard-hue', navyCard);
-        document.documentElement.style.setProperty('--sh-hue', navySh);
+        //document.documentElement.style.setProperty('--sh-hue', navySh);
        // console.log(mainColor);
     }
             
