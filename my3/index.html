@@ -491,7 +491,7 @@
     </footer>
     <script>
         (function () {
-// document.addEventListener("click", function() {
+// document.querySelector('body').addEventListener("click", function() {
 //   document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
 //   console.log(arrayRandElement(arr));
 //   })
@@ -516,7 +516,7 @@ function arrayRandElement(arr) {
     return arr[rand];
 }
 
-document.querySelector('body').addEventListener('DOMContentLoaded', (e) => {
+document.addEventListener('DOMContentLoaded', (e) => {
 
     const mainColor = arrayRandElement(arr).toString();
     //console.log(mainColor);
