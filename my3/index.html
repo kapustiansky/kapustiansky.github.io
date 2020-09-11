@@ -565,11 +565,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
             if (window.matchMedia("(max-width: 576px)").matches) {
                 document.querySelector('body').addEventListener('click', (e) => {
+let lol = document.querySelector('.container');
                     if (e.target.className == 'title' || e.target.className == 'card-text') {
                         console.log(e.target.className);
-                        document.querySelector('.container').firstChild.style.marginLeft = '-90px';
+                        firstChild(lol).style.marginLeft = '-90px';
                     } else {
-                        document.querySelector('.container').firstChild.style.marginLeft = '0px';
+                        firstChild(lol).style.marginLeft = '0px';
                     }
             //document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
                 });
