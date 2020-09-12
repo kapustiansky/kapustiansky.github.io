@@ -93,7 +93,7 @@
             transition: all 0.5s ease;
         } */
 
-        .gray {
+        .active {
             color: #282e33;
         }
 
@@ -104,10 +104,12 @@
         }
 
         /* MAIN */
-#imFirst, #imSecond {
-transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-out;
-/*margin-left: 0px;*/
-}
+
+        #imFirst,
+        #imSecond {
+            transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-out;
+            /*margin-left: 0px;*/
+        }
 
         .container {
             display: flex;
@@ -397,44 +399,44 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
 
 <body>
     <header>
-        <div class="site-header__wrapper">
-            <a href="#" class="brand">WEB DEVELOPMENT</a>
+        <div class="teme-target site-header__wrapper">
+            <a  href="#" class="teme-target brand">WEB DEVELOPMENT</a>
             <nav class="nav">
                 <ul>
                     <li>
                         <a href="#about" id="aboutMe">ABOUT ME</a>
                     </li>
                     <li>
-                        <a href="#work" id="myWork" >MY WORK'S</a>
+                        <a href="#work" id="myWork">MY WORK'S</a>
                     </li>
                 </ul>
             </nav>
             <div class="email">
-                <a href="">MAIL</a>
+                <a href="#">MAIL</a>
             </div>
         </div>
         <hr class="hr-top">
     </header>
 
     <main>
-        <section id="about" class="container">
-            <div id="imFirst" class="card">
-                <h3 class="title">SOFT SKILLS</h3>
+        <section id="about" class="teme-target container">
+            <div id="imFirst" class="margin-muvie card">
+                <h3 class="margin-muvie title">SOFT SKILLS</h3>
                 <hr class="hr-card">
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur
+                <p class="margin-muvie card-text">Lorem ipsum dolor sit amet consectetur
                     adipisicing elit.
                     Corporis quod voluptatem quisquam blanditiis sed magni?</p>
             </div>
-            <div class="card">
-                <h3 class="title">HARD SKILLS</h3>
+            <div class="margin-muvie card">
+                <h3 class="margin-muvie title">HARD SKILLS</h3>
                 <hr class="hr-card">
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p class="margin-muvie card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Corporis quod voluptatem quisquam blanditiis sed magni?</p>
             </div>
-            <div class="card">
-                <h3 class="title">AMBITIONS</h3>
+            <div class="margin-muvie card">
+                <h3 class="margin-muvie title">AMBITIONS</h3>
                 <hr class="hr-card">
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p class="margin-muvie card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Corporis quod voluptatem quisquam blanditiis sed magni?</p>
             </div>
             <div class="card">
@@ -444,16 +446,17 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
                     Corporis quod voluptatem quisquam blanditiis sed magni?.</p>
             </div>
         </section>
-        <section id="work" class="container">
-            <div id="imSecond" class="card">
-                <h3 class="title">LolChatt</h3>
+        <section id="work" class="teme-target container">
+            <div id="imSecond" class="margin-muvie card">
+                <h3 class="margin-muvie title">LolChatt</h3>
                 <hr class="hr-card">
-                <p class="card-text">Design, adaptive layout, database used MongoDB, personal server on Node.js, hosting on Heroku.</p>
+                <p class="margin-muvie card-text">Design, adaptive layout, database used MongoDB, personal server on Node.js, hosting
+                    on Heroku.</p>
             </div>
-            <div class="card">
-                <h3 class="title">Time to Game</h3>
+            <div class="margin-muvie card">
+                <h3 class="margin-muvie title">Time to Game</h3>
                 <hr class="hr-card">
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p class="margin-muvie card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Corporis quod voluptatem quisquam blanditiis sed magni?</p>
             </div>
             <div class="card">
@@ -463,7 +466,7 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="teme-target">
         <div class="wrapper">
             <ul>
                 <li>
@@ -523,7 +526,10 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
     </footer>
     <script>
         (function () {
-            
+            // document.querySelector('body').addEventListener("click", function() {
+            //   document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
+            //   console.log(arrayRandElement(arr));
+            //   })
 
 
             const arr = ['#100e17', '#FD7C6E', '#4169E1', '#900020'];
@@ -550,19 +556,19 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
             document.addEventListener('DOMContentLoaded', (e) => {
 
                 if (location.hash === '#work') {
-                        document.querySelector('#work').style.display = 'flex';
-                        document.querySelector('#about').style.display = 'none';
-                        
-                        document.querySelector('#myWork').classList.add('gray');
-                        document.querySelector('#aboutMe').classList.remove('gray');
-                    } 
-                    
-                if (location.hash !== '#work') {          
-                        document.querySelector('#about').style.display = 'flex';
-                        document.querySelector('#work').style.display = 'none';
-                        
-                        document.querySelector('#myWork').classList.remove('gray');
-                        document.querySelector('#aboutMe').classList.add('gray');
+                    document.querySelector('#work').style.display = 'flex';
+                    document.querySelector('#about').style.display = 'none';
+
+                    document.querySelector('#myWork').classList.add('active');
+                    document.querySelector('#aboutMe').classList.remove('active');
+                }
+
+                if (location.hash !== '#work') {
+                    document.querySelector('#about').style.display = 'flex';
+                    document.querySelector('#work').style.display = 'none';
+
+                    document.querySelector('#myWork').classList.remove('active');
+                    document.querySelector('#aboutMe').classList.add('active');
                 }
 
                 //locationHash();
@@ -603,61 +609,50 @@ transition: transform 0.4s ease-out, left 0.4s ease-out, margin-left 0.4s ease-o
 
             document.querySelector('nav').addEventListener('click', (e) => {
 
-                    if (e.target.id === "myWork") {
-                        document.querySelector('#work').style.display = 'flex';
-                        document.querySelector('#about').style.display = 'none';
-                        
-                        document.querySelector('#myWork').classList.add('gray');
-                        document.querySelector('#aboutMe').classList.remove('gray');
-                    } 
-                    
-                    if (e.target.id === "aboutMe") {          
-                        document.querySelector('#about').style.display = 'flex';
-                        document.querySelector('#work').style.display = 'none';
-                        
-                        document.querySelector('#myWork').classList.remove('gray');
-                        document.querySelector('#aboutMe').classList.add('gray');
+                if (e.target.id === "myWork") {
+                    document.querySelector('#work').style.display = 'flex';
+                    document.querySelector('#about').style.display = 'none';
+
+                    document.querySelector('#myWork').classList.add('active');
+                    document.querySelector('#aboutMe').classList.remove('active');
+                }
+
+                if (e.target.id === "aboutMe") {
+                    document.querySelector('#about').style.display = 'flex';
+                    document.querySelector('#work').style.display = 'none';
+
+                    document.querySelector('#myWork').classList.remove('active');
+                    document.querySelector('#aboutMe').classList.add('active');
+                }
+            });
+
+
+
+
+
+            document.querySelector('body').addEventListener("click", function (e) {
+
+                if (e.target.classList[0] == "teme-target" || e.target.localName == "body") {
+                    const mainColor = arrayRandElement(arr).toString();
+                    //console.log(e);
+                    if (mainColor === '#FD7C6E') {
+                        document.documentElement.style.setProperty('--bg-hue', mainColor);
+                        document.documentElement.style.setProperty('--bgcard-hue', coralCard);
                     }
-                });
-
-
- document.querySelector('body').addEventListener("click", function(e) {
-if (e.target.tagName !== "header" || e.target.tagName !== "footer") {
-               
-              const mainColor = arrayRandElement(arr).toString();
-                //console.log(mainColor);
-
-                if (mainColor === '#FD7C6E') {
-                    document.documentElement.style.setProperty('--bg-hue', mainColor);
-                    document.documentElement.style.setProperty('--bgcard-hue', coralCard);
-                    //document.documentElement.style.setProperty('--sh-hue', coralSh);
-                    // console.log(mainColor);
+                    if (mainColor === '#100e17') {
+                        document.documentElement.style.setProperty('--bg-hue', mainColor);
+                        document.documentElement.style.setProperty('--bgcard-hue', darkCard);
+                    }
+                    if (mainColor === '#4169E1') {
+                        document.documentElement.style.setProperty('--bg-hue', mainColor);
+                        document.documentElement.style.setProperty('--bgcard-hue', blueCard);
+                    }
+                    if (mainColor === '#900020') {
+                        document.documentElement.style.setProperty('--bg-hue', mainColor);
+                        document.documentElement.style.setProperty('--bgcard-hue', navyCard);
+                    }
                 }
-                if (mainColor === '#100e17') {
-                    document.documentElement.style.setProperty('--bg-hue', mainColor);
-                    document.documentElement.style.setProperty('--bgcard-hue', darkCard);
-                    //document.documentElement.style.setProperty('--sh-hue', darkSh);
-                    // console.log(mainColor);
-                }
-                if (mainColor === '#4169E1') {
-                    document.documentElement.style.setProperty('--bg-hue', mainColor);
-                    document.documentElement.style.setProperty('--bgcard-hue', blueCard);
-                    //document.documentElement.style.setProperty('--sh-hue', blueSh);
-                    // console.log(mainColor);
-                }
-                if (mainColor === '#900020') {
-                    document.documentElement.style.setProperty('--bg-hue', mainColor);
-                    document.documentElement.style.setProperty('--bgcard-hue', navyCard);
-                    //document.documentElement.style.setProperty('--sh-hue', navySh);
-                    // console.log(mainColor);
-                }
-}
-               })
-
-
-
-
-
+            })
 
 
 
@@ -669,15 +664,14 @@ if (e.target.tagName !== "header" || e.target.tagName !== "footer") {
 
             if (window.matchMedia("(max-width: 576px)").matches) {
                 document.querySelector('body').addEventListener('click', (e) => {
-                    if (e.target.className == 'title' || e.target.className == 'card-text') {
-                        console.log(e.target.className);
+                    //console.log(e.target.classList[0]);                  
+                    if (e.target.classList[0] == 'margin-muvie') {
                         document.querySelector('#imFirst').style.marginLeft = '-90px';
                         document.querySelector('#imSecond').style.marginLeft = '-90px';
                     } else {
                         document.querySelector('#imFirst').style.marginLeft = '0px';
-                        document.querySelector('#imSecond').style.marginLeft = '0px';
+                        document.querySelector('#imSecond').style.marginLeft = '0px';                      
                     }
-                    //document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
                 });
             }
         })();
