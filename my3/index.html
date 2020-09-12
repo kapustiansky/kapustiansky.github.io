@@ -523,10 +523,7 @@ margin-left: 0px;
     </footer>
     <script>
         (function () {
-            // document.querySelector('body').addEventListener("click", function() {
-            //   document.documentElement.style.setProperty('--bg-hue', arrayRandElement(arr));
-            //   console.log(arrayRandElement(arr));
-            //   })
+            
 
 
             const arr = ['#100e17', '#FD7C6E', '#4169E1', '#900020'];
@@ -623,6 +620,39 @@ margin-left: 0px;
                     }
                 });
 
+
+ document.querySelector('body').addEventListener("click", function(e) {
+if (e.target.tagName === "MAIN") {
+               
+              const mainColor = arrayRandElement(arr).toString();
+                //console.log(mainColor);
+
+                if (mainColor === '#FD7C6E') {
+                    document.documentElement.style.setProperty('--bg-hue', mainColor);
+                    document.documentElement.style.setProperty('--bgcard-hue', coralCard);
+                    //document.documentElement.style.setProperty('--sh-hue', coralSh);
+                    // console.log(mainColor);
+                }
+                if (mainColor === '#100e17') {
+                    document.documentElement.style.setProperty('--bg-hue', mainColor);
+                    document.documentElement.style.setProperty('--bgcard-hue', darkCard);
+                    //document.documentElement.style.setProperty('--sh-hue', darkSh);
+                    // console.log(mainColor);
+                }
+                if (mainColor === '#4169E1') {
+                    document.documentElement.style.setProperty('--bg-hue', mainColor);
+                    document.documentElement.style.setProperty('--bgcard-hue', blueCard);
+                    //document.documentElement.style.setProperty('--sh-hue', blueSh);
+                    // console.log(mainColor);
+                }
+                if (mainColor === '#900020') {
+                    document.documentElement.style.setProperty('--bg-hue', mainColor);
+                    document.documentElement.style.setProperty('--bgcard-hue', navyCard);
+                    //document.documentElement.style.setProperty('--sh-hue', navySh);
+                    // console.log(mainColor);
+                }
+}
+               })
 
 
 
