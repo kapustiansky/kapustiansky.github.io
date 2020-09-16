@@ -289,6 +289,10 @@ footer {
 				rgba(0, 0, 0, 0)) 1 100%;
 	}
 
+	.card a {
+		margin-bottom: 190px;
+	}
+
 	.card:not(:first-child) {
 		margin-left: -60px;
 	}
