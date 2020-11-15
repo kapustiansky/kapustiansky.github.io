@@ -28,6 +28,15 @@ button {
 	margin: .375rem;
 }
 
+.scan-cont {
+	min-width: 350px;
+	max-width: 500px;
+}
+
+#reader__filescan_input {
+	width: 300px !important;
+}
+
 </style>
 <body>
 	<div class="container my-5 px-0 z-depth-1">
@@ -38,7 +47,7 @@ button {
 	  
 		  <section class="my-5 mx-md-5 d-flex justify-content-center">
 	  
-			<div class="card" style="width: 500px" id="reader">
+			<div class="card scan-cont" id="reader">
 
 			</div>
 	  
@@ -53,12 +62,16 @@ button {
 </html>
 	<script src="html5-qrcode.min.js"></script>
 	<script>
-	function onScanSuccess(qrCodeMessage) {
-		// handle on success condition with the decoded message
-	}
 	
 	var html5QrcodeScanner = new Html5QrcodeScanner(
 		"reader", { fps: 10, qrbox: 250 });
+
+	function onScanSuccess(qrCodeMessage) {
+    // handle on success condition with the decoded message
+    html5QrcodeScanner.clear();
+    // ^ this will stop the scanner (video feed) and clear the scan area.
+}
+		
 	html5QrcodeScanner.render(onScanSuccess);
 	</script>
 </body>
