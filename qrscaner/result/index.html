@@ -56,7 +56,7 @@
 
             //let link = url.search;
             let text = window.location.search;
-            text = text.replace(/\?r={{/);
+            text = text.replace(/\?r={{/, '');
             console.log(text);
 
             document.querySelector('#link').insertAdjacentHTML('afterbegin', `
