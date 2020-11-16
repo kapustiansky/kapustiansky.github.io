@@ -81,7 +81,7 @@
 			const baseEncode = Base64.encode(this.login.value + ':' + this.password.value);			
 			localStorage.setItem('jwt', baseEncode);
 
-			document.location.replace("https://kapustiansky.github.io/qrscaner/scan/");
+			document.location.assign("https://kapustiansky.github.io/qrscaner/scan/");
 
 		  })
 		  })();
