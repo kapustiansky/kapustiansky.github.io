@@ -16,10 +16,7 @@
 </head>
 <script>
 (function () {
-	const JWT = localStorage.getItem('jwt');
-	console.log(JWT)
-	if (JWT === true) {
-		console.log('lol')
+	if (localStorage.getItem('jwt')) {
 		document.location.replace("https://kapustiansky.github.io/qrscaner/scan/");
 	}
 })();
