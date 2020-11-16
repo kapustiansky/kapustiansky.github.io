@@ -25,6 +25,8 @@
     }
 
     .link-container {
+        display: flex;
+        flex-direction: column;
         width: 35%;
         min-height: 200px;
         padding: 1rem 2rem 2rem 2rem;
@@ -45,9 +47,7 @@
     <section class="container"
         style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background.jpg); background-size: cover; background-position: center center;">
         <div id="link" class="link-container">
-            <strong>
-                You Result:
-            </strong>
+            <strong>You Result:</strong>
         </div>
     </section>
     <script>
@@ -56,9 +56,11 @@
 
             //let link = url.search;
             console.log(window.location.search);
+            let text = window.location.search;
+            text = text.replace(/\?r={{/);
 
             document.querySelector('#link').insertAdjacentHTML('afterbegin', `
-                   <a href="${window.location.search}" target="_blank">${window.location.search}</a>
+                   <a href="${text}" target="_blank">${text}</a>
 					`);
         })();
     </script>
