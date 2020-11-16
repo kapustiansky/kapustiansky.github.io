@@ -55,9 +55,9 @@
             //let url = new URL();
 
             //let link = url.search;
-            console.log(window.location.search);
             let text = window.location.search;
             text = text.replace(/\?r={{/);
+            console.log(text);
 
             document.querySelector('#link').insertAdjacentHTML('afterbegin', `
                    <a href="${text}" target="_blank">${text}</a>
