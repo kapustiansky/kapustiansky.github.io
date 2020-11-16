@@ -60,8 +60,9 @@
 
             //let link = url.search;
             let text = window.location.search;
-            text = text.replace(/\?r={{|}}/, '');
-            console.log(text);
+            lol = text.replace(/\?r={{/, '');
+            lol = lol.replace(/}}/, '')
+            console.log(lol);
 
             document.querySelector('#link').insertAdjacentHTML('beforeend', `
                    <a href="${text}" target="_blank">${text}</a>
