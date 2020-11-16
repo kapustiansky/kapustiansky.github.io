@@ -45,11 +45,13 @@
 	}
 </style>
 <script>
-	const JWT = localStorage.getItem('jwt');
+	(function (){
+		const JWT = localStorage.getItem('jwt');
 
-	if (JWT === null) {
-		document.location.replace("https://kapustiansky.github.io/qrscaner/login/");
-	}
+		if (JWT === null) {
+			document.location.replace("https://kapustiansky.github.io/qrscaner/login/");
+		}
+	})
 </script>
 <body>
 	<div class="container my-5 px-0 z-depth-1">
@@ -78,7 +80,11 @@
 		let result = document.querySelector('#scanned-result');
 		result.insertAdjacentHTML('afterbegin', `
                    <a href="${qrCodeMessage}" target="_blank">${qrCodeMessage}</a>
-                    `);
+					`);
+
+		
+					
+		document.location.assign("https://kapustiansky.github.io/qrscaner/result?r={{" + qrCodeMessage + "}}");
 	}
 
 	html5QrcodeScanner.render(onScanSuccess);
