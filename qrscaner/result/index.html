@@ -56,13 +56,8 @@
     </section>
     <script>
         (function() {
-            //let url = new URL();
-
-            //let link = url.search;
             let text = window.location.search;
-            lol = text.replace(/\?r={{/, '').replace(/}}/, '');
-            //lol = lol.replace(/}}/, '')
-            console.log(lol);
+            text = text.replace(/\?r={{/, '').replace(/}}/, '');
 
             document.querySelector('#link').insertAdjacentHTML('beforeend', `
                    <a href="${text}" target="_blank">${text}</a>
