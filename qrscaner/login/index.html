@@ -74,7 +74,7 @@
 	  <script>
 		  (function () {
 			document.querySelector('#login').addEventListener('submit', function(event) {
-			event.preventDefault();
+			//event.preventDefault();
 
 			const baseEncode = Base64.encode(this.login.value + ':' + this.password.value);			
 			localStorage.setItem('jwt', baseEncode);
