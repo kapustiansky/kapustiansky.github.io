@@ -60,8 +60,8 @@
 
             //let link = url.search;
             let text = window.location.search;
-            lol = text.replace(/\?r={{/, '');
-            lol = lol.replace(/}}/, '')
+            lol = text.replace(/\?r={{/, '').replace(/}}/, '');
+            //lol = lol.replace(/}}/, '')
             console.log(lol);
 
             document.querySelector('#link').insertAdjacentHTML('beforeend', `
