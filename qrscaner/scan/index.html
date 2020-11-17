@@ -5,17 +5,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Scaner</title>
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-	<!-- Google Fonts -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 	<!-- Bootstrap core CSS -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Material Design Bootstrap -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-
 </head>
 <style>
+	.container {
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
+	}
+
 	.card {
 		border: 0 !important;
 	}
@@ -31,6 +28,7 @@
 	.scan-cont {
 		min-width: 350px;
 		max-width: 500px;
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	}
 
 	#reader__filescan_input {
@@ -45,7 +43,7 @@
 	}
 </style>
 <script>
-	(function (){
+	(function () {
 		const JWT = localStorage.getItem('jwt');
 
 		if (JWT === null) {
@@ -53,43 +51,39 @@
 		}
 	})();
 </script>
+
 <body>
-	<div class="container my-5 px-0 z-depth-1">
-		<section class="p-5 my-md-5 d-flex justify-content-center"
+	<section class="container my-5 px-0 z-depth-1">
+		<div class="p-5 my-md-5 d-flex justify-content-center"
 			style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background.jpg); background-size: cover; background-position: center center;">
-			<section class="my-5 mx-md-5">
+			<div class="my-5 mx-md-5">
 				<div class="card scan-cont" id="reader"></div>
 				<div id="scanned-result"></div>
-			</section>
-		</section>
-	</div>
-</body>
+			</div>
+		</div>
+	</section>
 
-</html>
-<script src="html5-qrcode.min.js"></script>
-<script>
-	(function () {
-	var html5QrcodeScanner = new Html5QrcodeScanner(
-		"reader", {
-			fps: 10,
-			qrbox: 250
-		});
+	<script src="html5-qrcode.min.js"></script>
+	<script>
+		(function () {
+			let html5QrcodeScanner = new Html5QrcodeScanner(
+				"reader", {
+					fps: 10,
+					qrbox: 250
+				});
 
-	function onScanSuccess(qrCodeMessage) {
-		//html5QrcodeScanner.clear();
-		let result = document.querySelector('#scanned-result');
-		result.insertAdjacentHTML('afterbegin', `
+			function onScanSuccess(qrCodeMessage) {
+				//html5QrcodeScanner.clear();
+				let result = document.querySelector('#scanned-result');
+				result.insertAdjacentHTML('afterbegin', `
                    <a href="${qrCodeMessage}" target="_blank">${qrCodeMessage}</a>
 					`);
-
-		
-					
-		document.location.assign("https://kapustiansky.github.io/qrscaner/result?r={{" + qrCodeMessage + "}}");
-	}
-
-	html5QrcodeScanner.render(onScanSuccess);
-	})();
-</script>
+				document.location.assign("https://kapustiansky.github.io/qrscaner/result?r={{" + qrCodeMessage + "}}");
+				//document.location.assign(qrCodeMessage);
+			}
+			html5QrcodeScanner.render(onScanSuccess);
+		})();
+	</script>
 </body>
 
 </html>
