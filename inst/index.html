@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inst</title>
+</head>
+
+<body>
+    <form id="search">
+        <input class="input" />
+        <button type="submit">Ok</button>
+    </form>
+    <p class="bandl-tags"></p>
+    <script>
+        document.getElementById('search').addEventListener('submit', (e) => {
+            e.preventDefault()
+            let value = document.querySelector('.input').value;
+            //console.log(value)
+            fetchFun(value);
+        })
+
+        async function fetchFun(item) {
+            const req = await fetch(
+                `https://www.instagram.com/web/search/topsearch/?context=blended&count=10&query=%23${item}&rank_token=5&include_reel=true`
+            );
+            //console.log(req.headers);
+            const res = await req.json();
+            const hashtag = await res.hashtags;
+            return renderFun(hashtag.slice(0, 30));
+        }
+
+        function renderFun(item) {
+            item.map((hash) => {
+                document.querySelector('.bandl-tags').insertAdjacentHTML('beforeEnd', ` #${hash.hashtag.name}`)
+            })
+        }
+    </script>
+</body>
+
+</html>
