@@ -19,18 +19,18 @@
             e.preventDefault()
             let value = document.querySelector('.input').value;
             //console.log(value)
-            fetchFun(value);
+            //fetchFun(value);
         })
 
-        async function fetchFun(item) {
-            const req = await fetch(
-                `https://www.instagram.com/web/search/topsearch/?context=blended&count=10&query=%23${item}&rank_token=5&include_reel=true`
-            );
-            //console.log(req.headers);
-            const res = await req.json();
-            const hashtag = await res.hashtags;
-            return renderFun(hashtag.slice(0, 30));
-        }
+       // async function fetchFun(item) {
+        //    const req = await fetch(
+          //      `https://www.instagram.com/web/search/topsearch/?context=blended&count=10&query=%23${item}&rank_token=5&include_reel=true`
+         //   );
+         //   //console.log(req.headers);
+         //   const res = await req.json();
+         //   const hashtag = await res.hashtags;
+        //    return renderFun(hashtag.slice(0, 30));
+     //   }
 
         function renderFun(item) {
             item.map((hash) => {
