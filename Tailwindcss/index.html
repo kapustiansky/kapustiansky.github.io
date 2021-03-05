@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <header class="fixed bg-transparent text-gray-400 w-full py-2 transition duration-300 z-10 rounded-md">
-        <div class="flex items-center justify-between container mx-auto px-4 xl:px-24">
+    <header class="header">
+        <div class="header-cont">
             <div class="flex justify-between items-center">
                 <a href="#" class="sm:pr-6 my-2 hidden sm:block">
                     <img class="w-10 md:w-auto" width="57" height="60" src="./images/logo.svg" alt="you-seo-here">
@@ -30,71 +30,71 @@
                 <nav class="top-14 sm:top-20">
                     <ul class="flex">
                         <li class="relative cursor-pointer">
-                            <button type="button" class="text-sm md:text-base submenu-btn rounded-md transition duration-300 hover:bg-gray-50 hover:text-blue-700 text-gray-400 inline-flex justify-center px-2 lg:px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500" id="options-menu" aria-haspopup="true" aria-expanded="true">
+                            <button type="button" class="submenu-btn btn-drop-down" id="options-menu" aria-haspopup="true" aria-expanded="true">
                                 Features
                                 <svg class="-mr-1 ml-1.5 mt-1.5 h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                                 </svg>
                             </button>
-                            <ul class="hidden submenu origin-top-left absolute left-0 mt-2 w-56 rounded-md bg-gray-100 ring-1 ring-black ring-opacity-5">
-                                <li class="flex items-center"><a class="text-sm md:text-base block px-2 lg:px-5 py-2.5 rounded-md transition duration-300 hover:text-blue-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 w-full" href="#">Account settings</a></li>
-                                <li class="flex items-center"><a class="text-sm md:text-base block px-2 lg:px-5 py-2.5 rounded-md transition duration-300 hover:text-blue-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 w-full" href="#">Support</a></li>
-                                <li class="flex items-center"><a class="text-sm md:text-base block px-2 lg:px-5 py-2.5 rounded-md transition duration-300 hover:text-blue-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 w-full" href="#">License</a></li>
+                            <ul class="drop-down submenu">
+                                <li class="flex items-center"><a class="drop-down-item" href="#">Account settings</a></li>
+                                <li class="flex items-center"><a class="drop-down-item" href="#">Support</a></li>
+                                <li class="flex items-center"><a class="drop-down-item" href="#">License</a></li>
                             </ul>
                         </li>
-                        <li class="flex items-center"><a class="text-sm md:text-base transition duration-300 hover:text-blue-700 hover:bg-gray-50 focus:outline-none px-2 lg:px-5 py-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500" href="#">About</a></li>
-                        <li class="flex items-center"><a class="text-sm md:text-base transition duration-300 hover:text-blue-700 hover:bg-gray-50 focus:outline-none px-2 lg:px-5 py-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500" href=" #">Pricing</a></li>
-                        <li class="flex items-center"><a class="text-sm md:text-base transition duration-300 hover:text-blue-700 hover:bg-gray-50 focus:outline-none px-2 lg:px-5 py-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500" href=" #">Blog</a></li>
-                        <li class="flex items-center"><a class="text-sm md:text-base transition duration-300 hover:text-blue-700 hover:bg-gray-50 focus:outline-none px-2 lg:px-5 py-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500" href=" #">Contact Us</a></li>
+                        <li class="flex items-center"><a class="nav-element" href="#">About</a></li>
+                        <li class="flex items-center"><a class="nav-element" href="#">Pricing</a></li>
+                        <li class="flex items-center"><a class="nav-element" href="#">Blog</a></li>
+                        <li class="flex items-center"><a class="nav-element" href="#">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="flex items-center">
-                <button class="login-btn rounded-md transition duration-300 hover:text-blue-700 cursor-pointer mr-3 lg:mr-7 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500">Login</button>
+                <button class="login-btn btn-link login-btn mr-3 lg:mr-7">Login</button>
                 <div class="login-cont hidden z-20 inset-0 overflow-y-auto">
                     <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-56 text-center sm:block sm:p-0">
                         <div class="fixed inset-0 transition-opacity" aria-hidden="true">
                             <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
                         </div>
                         <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-                        <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog" aria-modal="true">
-                            <form class="space-y-5 p-7 bg-white rounded-lg shadow-md overflow-visible" action="#" method="POST">
+                        <div class="modal-cont" role="dialog" aria-modal="true">
+                            <form class="form" action="#" method="POST">
                                 <div>
-                                    <label for="login" class="text-gray-400 text-base md:text-lg font-normal">Your Login</label>
-                                    <input id="login" name="login" type="text" required class="mt-2.5 rounded-lg appearance-none w-full p-2 sm:p-4 border border-gray-300 placeholder-gray-300 text-gray-900 text-base md:text-lg font-normal focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10" placeholder="Write your login">
+                                    <label for="login" class="label">Your Login</label>
+                                    <input id="login" name="login" type="text" required class="input" placeholder="Write your login">
                                 </div>
                                 <div>
-                                    <label for="password" class="text-gray-400 text-base md:text-lg font-normal">Your Password</label>
-                                    <input id="password" name="password" type="password" required class="mt-2.5 rounded-lg appearance-none w-full p-2 sm:p-4 border border-gray-300 placeholder-gray-300 text-gray-900 text-base md:text-lg font-normal focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10" placeholder="Write your password">
+                                    <label for="password" class="label">Your Password</label>
+                                    <input id="password" name="password" type="password" required class="input" placeholder="Write your password">
                                 </div>
-                                <button type="submit" class="mr-4 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 bg-blue-600 text-white p-1.5 sm:p-2.5 lg:p-3.5 rounded-full text-sm md:text-base md:w-36 w-24 sm:w-28">Login</button>
-                                <button type="button" class="login-cont-close focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 bg-gray-400 text-white p-1.5 sm:p-2.5 lg:p-3.5 rounded-full text-sm md:text-base md:w-36 w-24 sm:w-28">Close</button>
+                                <button type="submit" class="btn-blue mr-4 md:w-36 w-24 sm:w-28">Login</button>
+                                <button type="button" class="login-cont-close btn-gray">Close</button>
                             </form>
                         </div>
                     </div>
                 </div>
-                <button class="auto-focus focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 bg-blue-600 text-white p-1.5 sm:p-2.5 lg:p-3.5 rounded-full text-center text-sm md:text-base md:w-36 w-28">Start Free Trial</button>
+                <button type="button" class="auto-focus btn-blue">Start Free Trial</button>
             </div>
         </div>
     </header>
     <main>
         <section class="section-1 pb-0 xl:pb-60">
             <div class="flex flex-col items-center px-6 pt-32 sm:pt-40 text-center">
-                <h1 class="text-gray-900 text-4xl sm:text-5xl md:text-6xl font-bold">Welcome to you<br>presonal SMS Dashboard</h1>
-                <h2 class="text-base font-normal mt-4 sm:mt-6 text-gray-500 max-w-screen-sm">Tempor minim anim eiusmod occaecat eu. In labore veniam incididunt mollit commodo nostrud non ex occaecat occaecat deserunt magna quis veniam.</h2>
+                <h1 class="h1">Welcome to you<br>presonal SMS Dashboard</h1>
+                <h2 class="h2">Tempor minim anim eiusmod occaecat eu. In labore veniam incididunt mollit commodo nostrud non ex occaecat occaecat deserunt magna quis veniam.</h2>
                 <div class="mt-4 sm:mt-7 flex">
-                    <button class="auto-focus mr-2.5 bg-blue-600 text-white p-1.5 sm:p-2.5 lg:p-3.5 rounded-full text-sm md:text-base md:w-36 w-28 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500">Start Free Trial</button>
-                    <a href="#discover" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 bg-white text-blue-600 p-1.5 sm:p-2.5 lg:p-3.5 rounded-full text-sm md:text-base w-28">
+                    <button type="button" class="auto-focus btn-blue mr-2.5">Start Free Trial</button>
+                    <a href="#discover" class="btn-white">
                         <p>Discover</p>
                     </a>
                 </div>
                 <div class="relative w-full xl:w-3/4 xl:my-0 mt-16 mb-12 flex flex-wrap justify-around">
-                    <picture class="xl:absolute left-0 -left-16 -top-28 mb-6 md:mb-0">
+                    <picture class="xl:absolute -left-16 -top-28 mb-6 md:mb-0">
                         <source srcset="./images/review-1.png" media="(min-width: 1280px)">
                         <source srcset="./images/review-min-1.png" media="(max-width: 1280px)">
                         <img src="./images/review-1.png" alt="you-seo-here">
                     </picture>
-                    <picture class="xl:absolute right-0 right-5 -top-10">
+                    <picture class="xl:absolute right-5 -top-10">
                         <source srcset="./images/review-2.png" media="(min-width: 1280px)">
                         <source srcset="./images/review-min-2.png" media="(max-width: 1280px)">
                         <img src="./images/review-2.png" alt="you-seo-here">
@@ -103,10 +103,10 @@
             </div>
         </section>
         <section class="flex flex-wrap justify-center items-center px-8 py-6">
-            <h4 class="text-gray-900 w-4/5 lg:max-w-sm text-xl md:text-2xl font-semibold lg:pr-12 text-left lg:pb-0 pb-6">
+            <h4 class="h4">
                 Nisi ad voluptate laboris dolor deserunt adipisicing ea amet mollit commodo voluptate aute adipisicing. Anim minim do exercitation&nbspid.
             </h4>
-            <ul class="w-3/5 lg:max-w-md md:max-w-sm text-green-500 text-base md:text-lg font-normal list-disc md:pl-10">
+            <ul class="w-3/5 lg:max-w-md md:max-w-sm list-style text-base md:text-lg font-normal list-disc md:pl-10">
                 <li class="pb-4">
                     <span class="text-gray-400">
                         Nisi ad voluptate laboris dolor deserunt adipisicing ea amet mollit commodo voluptate aute adipisicing.
@@ -127,23 +127,23 @@
         <section class="section-3 flex flex-col lg:flex-row justify-center items-center md:mt-11 mb-9 lg:max-h-72 px-10 sm:px-0">
             <div class="max-w-lg lg:w-1/3 lg:mr-7 py-4 lg:py-0">
                 <img class="xl:py-6 py-3 sm:block hidden" src="./images/login.svg" alt="you-seo-here">
-                <h3 class="text-gray-900 text-2xl font-semibold mb-1 xl:mb-1.5">Set up FREE Trial Account</h3>
+                <h3 class="h3">Set up FREE Trial Account</h3>
                 <p class="text-gray-500 text-base md:text-lg font-normal">
                     Duis pariatur ullamco Lorem magna duis Lorem. Nisi quis sit Lorem cupidatat eiusmod
                     ad et anim commodo dolor id voluptate cupidatat. Dolore ut excepteur enim tempor.
                 </p>
             </div>
             <div class="max-w-lg w-full lg:w-2/5 lg:ml-20 pb-4 lg:pb-0">
-                <form class="space-y-5 p-7 bg-white rounded-lg shadow-md overflow-visible" action="#" method="POST">
+                <form class="form" action="#" method="POST">
                     <div>
-                        <label for="email-address" class="text-gray-400 text-base md:text-lg font-normal">Your Email</label>
-                        <input id="email-address" name="email" type="email" autocomplete="email" required class="mt-2.5 rounded-lg appearance-none w-full p-2 sm:p-4 border border-gray-300 placeholder-gray-300 text-gray-900 text-base md:text-lg font-normal focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10" placeholder="Write here your email address">
+                        <label for="email-address" class="label">Your Email</label>
+                        <input id="email-address" name="email" type="email" autocomplete="email" required class="input" placeholder="Write here your email address">
                     </div>
                     <div>
-                        <label for="phone-number" class="text-gray-400 text-base md:text-lg font-normal">Your Phone number</label>
-                        <input id="phone-number" name="phone-number" type="tel" autocomplete="tel" required class="mt-2.5 rounded-lg appearance-none w-full p-2 sm:p-4 border border-gray-300 placeholder-gray-300 text-gray-900 text-base md:text-lg font-normal focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10" placeholder="Write here your phone number">
+                        <label for="phone-number" class="label">Your Phone number</label>
+                        <input id="phone-number" name="phone-number" type="tel" autocomplete="tel" required class="input" placeholder="Write here your phone number">
                     </div>
-                    <button type="submit" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 bg-blue-600 text-white p-1.5 sm:p-2.5 lg:p-3.5 rounded-full text-sm md:text-base md:w-36 w-28">Start Free Trial</button>
+                    <button type="submit" class="btn-blue">Start Free Trial</button>
                 </form>
             </div>
         </section>
@@ -154,14 +154,14 @@
                 </div>
                 <div class="max-w-lg order-none pb-9 px-8 xl:px-0">
                     <img class="xl:py-6 py-3" src="./images/sms-1.svg" alt="you-seo-here">
-                    <h3 class="text-gray-900 text-2xl font-semibold mb-1 xl:mb-1.5">Outbound SMS</h3>
+                    <h3 class="h3">Outbound SMS</h3>
                     <p class="text-gray-400 text-base md:text-lg font-normal">Create and store templates for messages you send on a regular basis. Duis pariatur ullamco Lorem magna duis Lorem.</p>
                 </div>
             </div>
             <div class="flex flex-wrap items-center justify-center mt-2">
                 <div class="max-w-lg xl:mr-12 sm:pb-16 px-8 xl:px-0">
                     <img class="xl:py-6 py-3" src="./images/sms-2.svg" alt="you-seo-here">
-                    <h3 class="text-gray-900 text-2xl font-semibold mb-1 xl:mb-1.5">Send SMS</h3>
+                    <h3 class="h3">Send SMS</h3>
                     <p class="max-w-lg text-gray-400 text-base md:text-lg font-normal">Send the same message to multiple recipients in one scheduled event. If you want to send multiple messages to multiple recepients in one event, please use the bulk upload option in the main menu.</p>
                 </div>
                 <div>
