@@ -1,0 +1,153 @@
+@import './theme_colors.css';
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.btn-blue {
+		@apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 text-white p-1.5 sm:p-2.5 lg:p-3.5 rounded-full text-sm md:text-base md:w-36 w-28 text-center;
+		background-color: var(--main-color);
+	}
+	.btn-white {
+		@apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 bg-white p-1.5 sm:p-2.5 lg:p-3.5 rounded-full text-sm md:text-base w-28;
+		color: var(--main-color);
+	}
+	.btn-gray {
+		@apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 bg-gray-400 text-white p-1.5 sm:p-2.5 lg:p-3.5 rounded-full text-sm md:text-base md:w-36 w-24 sm:w-28;
+	}
+	.btn-drop-down {
+		@apply text-sm md:text-base rounded-md transition duration-300 hover:bg-gray-50 hover:text-blue-700 text-gray-400 inline-flex justify-center px-2 lg:px-5 py-2.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500;
+	}
+	.btn-link {
+		@apply rounded-md transition duration-300 hover:text-blue-700 cursor-pointer text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500;
+	}
+	.drop-down {
+		@apply hidden origin-top-left absolute left-0 mt-2 w-56 rounded-md bg-gray-100 ring-1 ring-black ring-opacity-5;
+	}
+	.drop-down-item {
+		@apply text-sm md:text-base block px-2 lg:px-5 py-2.5 rounded-md transition duration-300 hover:text-blue-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500 w-full;
+	}
+	.header {
+		@apply fixed bg-transparent text-gray-400 w-full py-2 transition duration-300 z-10 rounded-md;
+	}
+	.header-cont {
+		@apply flex items-center justify-between container mx-auto px-4 xl:px-24;
+	}
+	.nav-element {
+		@apply text-sm md:text-base transition duration-300 hover:text-blue-700 hover:bg-gray-50 focus:outline-none px-2 lg:px-5 py-2.5 rounded-md focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-blue-500;
+	}
+	.h1 {
+		@apply text-4xl sm:text-5xl md:text-6xl font-bold;
+		color: var(--title-dark);
+	}
+	.h2 {
+		@apply text-base font-normal mt-4 sm:mt-6 max-w-screen-sm;
+		color: var(--dark-gray);
+	}
+	.h3 {
+		@apply text-2xl font-semibold mb-1 xl:mb-1.5;
+		color: var(--title-dark);
+	}
+	.h4 {
+		@apply w-4/5 lg:max-w-sm text-xl md:text-2xl font-semibold lg:pr-12 text-left lg:pb-0 pb-6;
+		color: var(--title-dark);
+	}
+	.form {
+		@apply space-y-5 p-7 bg-white rounded-lg shadow-md overflow-visible;
+	}
+	.label {
+		@apply text-gray-400 text-base md:text-lg font-normal;
+	}
+	.input {
+		@apply mt-2.5 rounded-lg appearance-none w-full p-2 sm:p-4 border border-gray-300 placeholder-gray-300 text-base md:text-lg font-normal focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10;
+		color: var(--title-dark);
+	}
+	.modal-cont {
+		@apply inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Proxima Nova', Proxima Nova;
+}
+
+.section-1 {
+	background-image: url(../images/mountains-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+
+.section-3 {
+	background-image: url(../images/section-3-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.sms-cont-1 {
+	background: url(../images/outbound-bg.svg) no-repeat;
+}
+
+.sms-cont-2 {
+	background: url(../images/send-sms-bg.svg) no-repeat;
+}
+
+.header-onscroll {
+	background-color: var(--header-bg);
+}
+
+.submenu-visible {
+	display: block;
+}
+
+.ligin-form-visible {
+	display: block;
+	position: fixed;
+}
+
+.list-style {
+	color: var(--green-color);
+}
+
+#check,
+.checkbtn {
+	display: none;
+}
+
+@media screen and (max-width: 1024px) {
+	.section-1 {
+		background-image: url(../images/mountains-min-bg.jpg);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.checkbtn {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	#check:checked ~ nav {
+		left: 0;
+	}
+
+	nav {
+		position: fixed;
+		width: 100%;
+		border-radius: 0.3rem;
+		background-color: var(--header-bg);
+		left: -100%;
+		display: flex;
+		justify-content: space-around;
+		transition: all 0.3s;
+		z-index: 99999;
+	}
+}
