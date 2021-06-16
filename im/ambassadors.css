@@ -1,0 +1,164 @@
+.ambassadors-first {
+    /* background-color: #ebf9ef; */
+    padding-bottom: 84px;
+}
+
+body {
+    background-color: #ebf9ef;
+}
+
+/* .ambassadors-first hr {
+    margin-top: 84px;
+    margin-bottom: 0;
+    width: 90%;
+	border: 0;
+	border-top: solid 0.5px #000000;
+} */
+hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 90%;
+	border: 0;
+	border-top: solid 0.5px #000000;
+}
+
+.ambassadors-gif-title {
+    width: 875px;
+    height: 60px;
+}
+
+.ambassadors-first-title-container > h1 {
+    font-family: "archia-bold";
+    font-size: 45px;
+    line-height: 1.31;
+    font-weight: bold;
+}
+
+.ambassadors-first-title-container > p {
+    font-family: 'archia-light';
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.79;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 23px 0 40px 0;
+    /* width: 80%; */
+}
+
+.ambassadors-gif-title img {
+    /* transform: scaleX(3.1) scaleY(3); */
+    width: 30%;
+    height: 100%;
+    /* width: 174px;
+    height: 60px; */
+}
+
+.ambassador-img {
+    width: 334px;
+    height: 400px;
+    background-color: black;
+    border: solid 1px white;
+}
+
+.ambassador-img img {
+    width: 100%;
+    height: auto;
+}
+
+.ambassador-title {
+    font-family: "archia-semibold";
+    font-size: 18px;
+    line-height: 1.39;
+    max-width: 285px;
+    padding-bottom: 16px;
+    padding-top: 14px;
+}
+
+.ambassador-name {
+    /* font-family: "archia-medium"; */
+    font-family: "archia-bold";
+    font-size: 14px;
+    line-height: 1.79;
+}
+
+.ambassador-name span {
+    margin: 0 10px;
+}
+
+.ambassador-position {
+    /* font-family: "archia-medium"; */
+    font-family: "archia-bold";
+    font-size: 14px;
+    line-height: 1.79;
+}
+
+.ambassador-info-container > span {
+    font-family: "archia";
+    font-size: 14px;
+    line-height: 1.79;
+    color: #282828
+}
+
+.ambassadors-second {
+    background-color: #ebf9ef;
+    padding-top: 65px;
+}
+
+.join-block-container .join-left h5 {
+    font-family: "archia";
+    font-size: 14px;
+    line-height: 1.79;
+    color: #282828;
+    margin-bottom: 0;
+}
+
+.join-block-container .join-left > p {
+    font-family: "archia-semibold";
+    font-size: 45px;
+    line-height: 1.13;
+    font-weight: 600;
+    max-width: 390px;
+}
+
+.join-block-container .join-right {
+    max-width: 496px;
+}
+
+.join-block-container .join-right > div span {
+    font-family: "archia-semibold";
+    font-size: 18px;
+    line-height: 1.79;
+}
+
+.join-block-container .join-right > div p {
+    font-family: "archia";
+    font-size: 14px;
+    line-height: 1.79;
+    color: #282828
+}
+
+
+.ambassador-card {
+    flex: 0 0 auto;
+    margin: 24px 0;
+}
+
+.our-ambassadors {
+    justify-content: space-between;
+}
+
+/* section {
+    padding-left: 138px;
+    padding-right: 138px;
+} */
+
+@media screen and (min-width: 1440px) {
+    .ambassadors-first {
+        padding-left: 138px;
+        padding-right: 138px;
+    }
+
+    .ambassadors-second > .container {
+        max-width: 1128px;
+    }
+}
