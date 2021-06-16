@@ -328,7 +328,7 @@
 }
 
 .сourses-third-title {
-	background: url('assets/img/brooke-cagle.png') 0 0;
+	background: url(assets/img/brooke-cagle.png) 0 0 no-repeat;
 	background-size: cover;
 	width: 90%;
 	/* position: absolute; */
@@ -453,6 +453,7 @@
 	margin-left: 73px;
 	margin-right: 11px;
 	border: solid 1px #979797;
+	background-color: #979797;
 	height: 22px;
 	width: 1px;
 	animation: rotate-minus 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -1106,10 +1107,10 @@
 	}
 
 	.сourses-third-title {
-		background: url(/assets/img/brooke-cagle.png) 50% 50%;
+		background: url(/assets/img/brooke-cagle.png) 50% 50% no-repeat;
 		background-size: cover;
 		top: -108px;
-		width: 277px;
+		max-width: 450px;
 		height: 205px;
 		min-height: 205px;
 	}
@@ -1291,6 +1292,10 @@
 	.footer_subscribe_form button {
 		margin-top: 0;
 	}
+
+	.сourses-third-title {
+		max-width: 320px;
+	}
 }
 
 @media screen and (max-width: 320px) {
@@ -1302,5 +1307,13 @@
 
 	.cont > div:nth-child(10) {
 		margin: 0 10px !important;
+	}
+
+	.сourses-third-advantages {
+		max-width: 248px;
+	}
+
+	.сourses-third-title {
+		max-width: 277px;
 	}
 }
