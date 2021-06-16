@@ -68,7 +68,7 @@
                 <span>Get in touch</span>
             </a>
             <button class="menu-btn">
-                <hr>
+                <span></span>
             </button>
         </div>
     </header>
@@ -221,7 +221,7 @@
                     <source srcset="/assets/img/img-8787-min.png" media="(max-width: 544px)">
                     <img src="/assets/img/img-8787.png" alt="" loading="lazy">
                 </picture> -->
-                <img src="https://kapustiansky.github.io/im/assets/img/img-8787.png" alt="" loading="lazy">
+                <img src="/assets/img/img-8787.png" alt="" loading="lazy">
             </div>
         </section>
         <section class="сourses-third position-relative">
@@ -410,9 +410,9 @@
                     <form id="footer_subscribe" class="footer_subscribe_form" novalidate="novalidate">
                         <!-- <form id="footer_subscribe" class="footer_subscribe_form"> -->
                         <label>
-                            <input type="email" id="footer_subs_email" placeholder="Type your email to join the waiting list">
+                            <input type="email" id="footer_subs_email" placeholder="Type your email here">
                         </label>
-                        <button>Join the list</button>
+                        <button>Join the waiting list</button>
                     </form>
                 </div>
             </div>
@@ -425,7 +425,7 @@
                         <source srcset="/assets/img/certificate-mockup-min.png" media="(max-width: 544px)">
                         <img src="/assets/img/certificate-mockup.jpg" alt="" loading="lazy">
                     </picture> -->
-                    <img src="https://kapustiansky.github.io/im/assets/img/certificate-mockup.jpg" alt="" loading="lazy">
+                    <img src="/assets/img/certificate-mockup.jpg" alt="" loading="lazy">
                 </div>
                 <div class="treiner-about">
                     <h5>Want to become a Chutzpah&nbspMaster Trainer?</h5>
@@ -613,16 +613,22 @@
                 //TOGGLE COLLAPSE
                 $('.accordion-header').on('click', function() {
 
+                    if (window.matchMedia("(max-width: 544px)").matches) {
+                        if ($(this).parent().find('.accordion-item-show').hasClass('accordion-item-show')) {
+                            $(this).css("padding-bottom", "0px");
+                        } else {
+                            $(this).css("padding-bottom", "88px");
+                        }
+                        $('.collapse.show').parent().find('.accordion-header').css("padding-bottom", "88px");
+                    }
+
                     if ($(this).parent().find('.accordion-item-show').hasClass('accordion-item-show')) {
-                        $(this).parent().find('.accordion-item-show').removeClass('accordion-item-show').addClass('deployed-item');                       
-                        $(this).css("padding-bottom", "0px");
+                        $(this).parent().find('.accordion-item-show').removeClass('accordion-item-show').addClass('deployed-item');
                     } else {
                         $(this).parent().find('.deployed-item').removeClass('deployed-item').addClass('accordion-item-show');
-                        $(this).css("padding-bottom", "88px");
                     }
 
                     $('.collapse.show').parent().find('.deployed-item').removeClass('deployed-item').addClass('accordion-item-show');
-                    $('.collapse.show').parent().find('.accordion-header').css("padding-bottom", "88px");
                     $('.collapse.show').collapse('toggle');
                     $(this).parent().find('.collapse').collapse('toggle');
 

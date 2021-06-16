@@ -328,7 +328,7 @@
 }
 
 .сourses-third-title {
-	background: url('https://kapustiansky.github.io/im/assets/img/brooke-cagle.png') 0 0;
+	background: url('assets/img/brooke-cagle.png') 0 0;
 	background-size: cover;
 	width: 90%;
 	/* position: absolute; */
@@ -443,6 +443,7 @@
 	border: solid 1px #979797;
 	height: 22px;
 	width: 1px;
+	background-color: #979797;
 	/* animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both; */
 	animation: rotate-plus 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -478,6 +479,7 @@
 .accordion-item-show::after {
 	content: '';
 	border: solid 1px #979797;
+	background-color: #979797;
 	height: 1px;
 	width: 22px;
 	position: absolute;
@@ -1027,11 +1029,13 @@
 	.сourses-second .slick-prev {
 		left: 0;
 		background-color: inherit;
+		z-index: 1;
 	}
 
 	.сourses-second .slick-next {
 		right: 0;
 		background-color: inherit;
+		z-index: 1;
 	}
 
 	.сourses-second .slick-arrow::before {
@@ -1177,7 +1181,7 @@
 
 	.сourses-third .accordion-header {
 		padding-bottom: 88px;
-		transition: padding .3s;
+		transition: padding 0.3s;
 	}
 
 	.padding-0 {
@@ -1215,14 +1219,14 @@
 	}
 
 	.special-slider-container .even-item span {
-		font-family: "archia-light";
+		font-family: 'archia-light';
 		line-height: 1.79;
 		font-size: 14px;
 		align-self: auto;
 	}
 
 	.special-slider-container .even-item div {
-		font-family: "archia-light";
+		font-family: 'archia-light';
 		line-height: 1.79;
 		font-size: 14px;
 		padding-top: 12px;
