@@ -328,7 +328,7 @@
 }
 
 .сourses-third-title {
-	background: url(https://kapustiansky.github.io/im/assets/img/brooke-cagle.png) 0 0;
+	background: url('https://kapustiansky.github.io/im/assets/img/brooke-cagle.png') 0 0;
 	background-size: cover;
 	width: 90%;
 	/* position: absolute; */
