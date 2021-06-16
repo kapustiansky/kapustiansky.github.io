@@ -75,8 +75,8 @@
     <main>
         <section class="ambassadors-first">
             <div class="container d-flex flex-column align-items-center">
-                <div class="ambassadors-first-title-container">
-                    <div class="ambassadors-gif-title">
+                <div class="ambassadors-first-title-container position-relative">
+                    <div class="ambassadors-gif-title position-absolute text-center">
                         <img src="assets/img/ambassadors.gif" alt="">
                     </div>
                     <h1 class="text-center">Meet The Chutzpah Ambassadors</h1>
@@ -87,8 +87,8 @@
                         Chutzpah Movement.
                     </p>
                 </div>
-                <div class="our-ambassadors row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                    <div class="ambassador-card">
+                <!-- <div class="our-ambassadors row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                    <div class="ambassador-card col">
                         <div class="ambassador-img">
                             <img src="/assets/img/img-8787.png" alt="">
                         </div>
@@ -107,7 +107,7 @@
                         </div>
 
                     </div>
-                    <div class="ambassador-card">
+                    <div class="ambassador-card col">
                         <div class="ambassador-img">
                             <img src="" alt="">
                         </div>
@@ -124,7 +124,7 @@
                             <span>ambassadors@chutzpahcenter.com</span>
                         </div>
                     </div>
-                    <div class="ambassador-card">
+                    <div class="ambassador-card col">
                         <div class="ambassador-img">
                             <img src="" alt="">
                         </div>
@@ -141,7 +141,7 @@
                             <span>ambassadors@chutzpahcenter.com</span>
                         </div>
                     </div>
-                    <div class="ambassador-card">
+                    <div class="ambassador-card col">
                         <div class="ambassador-img">
                             <img src="" alt="">
                         </div>
@@ -158,7 +158,7 @@
                             <span>ambassadors@chutzpahcenter.com</span>
                         </div>
                     </div>
-                    <div class="ambassador-card">
+                    <div class="ambassador-card col">
                         <div class="ambassador-img">
                             <img src="" alt="">
                         </div>
@@ -175,7 +175,7 @@
                             <span>ambassadors@chutzpahcenter.com</span>
                         </div>
                     </div>
-                    <div class="ambassador-card">
+                    <div class="ambassador-card col">
                         <div class="ambassador-img">
                             <img src="" alt="">
                         </div>
@@ -192,7 +192,7 @@
                             <span>ambassadors@chutzpahcenter.com</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- <hr> -->
         </section>
@@ -239,7 +239,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="join-form-container">
+                <div class="join-form-container join-form d-flex justify-content-between">
                     <div class="join-left">
                         <h5>Join the team</h5>
                         <p>
@@ -247,11 +247,42 @@
                             to join our journey.
                         </p>
                     </div>
-                    <form action=""></form>
+                    <form action="#" id="form1" class="join-form__form" novalidate="novalidate">
+                        <input name="name" type="text" placeholder="Name">
+                        <input name="email" required="" type="email" placeholder="Email">
+                        <input name="chutzpah" type="text" placeholder="Chutzpah is...">
+                        <input name="why" type="text" placeholder="Why me?">
+                        <input name="more" type="text" placeholder="More?">
+                        <button class="link-contact"><span>Send</span></button>
+                    </form>
                 </div>
             </div>
         </section>
-        <section></section>
+        <section class="ambassadors-third">
+            <div class="footer_subscribe">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer_subscribe_text">
+                            <h6>News &amp; Happenings</h6>
+                            <p>We’ve got lots of good stuff to share with you and we promise not to road-hog your inbox. </p>
+                        </div>
+                        <form id="footer_subscribe" class="footer_subscribe_form" novalidate="novalidate">
+                            <label>
+                                <input type="email" id="footer_subs_email" placeholder="Type your email here..">
+                            </label>
+                            <button>Subscribe</button>
+                        </form>
+                        <div class="footer_subscribe_success">
+                            <img src="https://chutzpahcenter.com/wp-content/themes/inbalarieli/images/footer_smile_icon.png" alt="Smile">
+                            <p>Thank you for subscribing!</p>
+                        </div>
+                        <button class="back-top">
+                            Back to top
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
 
