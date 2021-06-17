@@ -12,6 +12,10 @@
 	line-height: 0.83;
 }
 
+video::backdrop {
+	background-color: #ddeaf7;
+}
+
 .сourses-button {
 	width: 178px;
 }
@@ -283,7 +287,7 @@
 }
 
 .сourses-third-title {
-	background: url(https://kapustiansky.github.io/im/assets/img/brooke-cagle.png) 0 0 no-repeat;
+	background: url(assets/img/brooke-cagle.png) 0 0 no-repeat;
 	background-size: cover;
 	width: 90%;
 	top: -245px;
@@ -1021,7 +1025,7 @@
 	}
 
 	.сourses-third-title {
-		background: url(https://kapustiansky.github.io/im//assets/img/brooke-cagle.png) 50% 50% no-repeat;
+		background: url(/assets/img/brooke-cagle.png) 50% 50% no-repeat;
 		background-size: cover;
 		top: -108px;
 		max-width: 450px;
