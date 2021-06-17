@@ -33,19 +33,14 @@
 	width: 100%;
 	height: 250px;
 	overflow: hidden;
-	/* object-fit: cover; */
 }
 
 .video-conteiner video {
 	transform: scaleX(3.1) scaleY(3);
 	width: 100%;
 	height: 74%;
-	/* margin-bottom: 60px;
-	z-index: -1; */
 }
-/* .brarnds {
-	padding-top: 50px;
-} */
+
 @supports (gap: 5%) and (display: flex) {
 	.cont {
 		gap: 5%;
@@ -133,17 +128,15 @@
 
 .сourses-second-skills {
 	margin-top: 67px;
-	/* min-height: 124px; */
 }
 
 .сourses-second-skills div:nth-child(-n + 2) {
 	height: 70px;
 }
 
-/* .сourses-second-skills > div {
-	flex: 0 0 101px;
-	height: auto;
-} */
+.сourses-second-skills > div {
+	padding-left: 14px;
+}
 
 .сourses-second-skills p {
 	padding: 5px 2px;
@@ -163,14 +156,11 @@
 	z-index: 1;
 	align-self: flex-end;
 	color: #ffffff;
-
 	margin-right: -42px;
-	/* margin-bottom: -16px; */
 }
 
 .сourses-second-img {
 	position: absolute;
-	/* right: -175px; */
 	right: 0;
 	top: -52px;
 	flex: 0 0 auto;
@@ -184,12 +174,6 @@
 	width: 100%;
 	height: auto;
 	object-fit: cover;
-	/* height: auto;
-	max-height: 706px;
-	width: 100%;
-	max-width: 605px;
-	display: flex;
-	margin-left: auto; */
 }
 
 .сourses-second .slick-arrow {
@@ -221,28 +205,13 @@
 	right: -20px;
 }
 
-/* .сourses-second .slick-prev::after {
-	top: auto;
-}
-
-.сourses-second .slick-next::after {
-	top: auto;
-} */
-
 .courses-slider > div {
-	/* padding: 24px 38px 30px 38px; */
 	margin: 24px 4px 30px 4px;
 }
-
-/* .courses-slider .slick-list.draggable {
-    width: 398px;
-    height: auto;
-} */
 
 .courses-slider div > p {
 	font-size: 16px;
 	padding: 18px 38px;
-	/* font-weight: 600; */
 }
 
 .slider-card-review {
@@ -256,16 +225,8 @@
 	height: 258px;
 }
 
-/* .сourses-second .stat-card {
-	flex: 0 0 20%;
-} */
-
 .сourses-second .custom-cont {
 	padding: 0 7%;
-}
-
-.сourses-second .stat-card-wrapepr {
-	/* align-content: flex-start; */
 }
 
 .сourses-second .custom-cont .stat-card-wrapepr span {
@@ -277,7 +238,6 @@
 	font-style: normal;
 	letter-spacing: -1px;
 	position: relative;
-	/* margin-bottom: 25px; */
 }
 
 .сourses-second .custom-cont .stat-card-wrapepr span:after {
@@ -316,25 +276,18 @@
 	content: '' !important;
 }
 
-/* .сourses-second .contact-number {
-	flex: 0 0 auto;
-} */
 .сourses-third {
 	background-color: #ddeaf7;
-	/* position: relative; */
 	padding-top: 157px;
 	padding-bottom: 119px;
-	/* z-index: -1; */
 }
 
 .сourses-third-title {
-	background: url(https://kapustiansky.github.io/im/assets/img/brooke-cagle.png) 0 0 no-repeat;
+	background: url(assets/img/brooke-cagle.png) 0 0 no-repeat;
 	background-size: cover;
 	width: 90%;
-	/* position: absolute; */
 	top: -245px;
 	z-index: 0;
-	/* min-width: 1280px; */
 	min-height: 451px;
 	margin-left: auto;
 	margin-right: auto;
@@ -359,7 +312,6 @@
 
 .сourses-third-advantages > div {
 	flex: 0 0 28%;
-	/* min-height: 90px; */
 }
 
 .сourses-third-title h5 {
@@ -404,9 +356,7 @@
 	width: 100%;
 	padding: 20px 0;
 }
-/* .advantages-conteiner {
 
-} */
 .speshl-items > div {
 	background-color: #ffffff;
 	padding: 6px 16px;
@@ -414,7 +364,6 @@
 	flex: 0 0 auto;
 	width: max-content;
 	color: #282828;
-	/* gap: 20px; */
 }
 
 .speshl-items {
@@ -444,7 +393,6 @@
 	height: 22px;
 	width: 1px;
 	background-color: #979797;
-	/* animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both; */
 	animation: rotate-plus 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -557,13 +505,6 @@
 	min-width: 706px;
 }
 
-/* .special-slider-container > div {
-	width: 298px;
-	height: 408px;
-	box-sizing: border-box;
-	overflow: hidden;
-} */
-
 .special-slider-container .even-item {
 	width: 298px;
 	height: 408px;
@@ -642,7 +583,6 @@
 }
 
 .special-join-container form {
-	/* flex: 0 0 auto; */
 	min-width: 632px;
 }
 
@@ -664,7 +604,6 @@
 	top: 18px;
 	width: 102px;
 	height: 102px;
-	/* transform: rotate(-30deg); */
 	background-color: #ddeaf7;
 	border-radius: 50%;
 }
@@ -682,7 +621,7 @@
 
 .сourses-fifth {
 	padding-top: 56px;
-	padding-bottom: 73px;
+	padding-bottom: 90px;
 }
 
 .trainer-img-container {
@@ -714,27 +653,12 @@
 	color: #0a0a0a;
 }
 
-/* .сourses-second .container {
-	flex-flow: row wrap;
-} */
-
 @media screen and (max-width: 1294px) {
-	/* .сourses-second-slider {
-		margin-right: 40px;
-	}
-
-	.сourses-second-img {
-		max-width: 574px;
-	} */
-	/* .сourses-second {
-		background-color: #242424;
-	} */
 	.сourses-second .container {
 		flex-direction: column;
 		align-items: center;
 		max-width: none;
 		padding: 0;
-		/* background-color: #242424; */
 	}
 	.сourses-second-info {
 		order: 1;
@@ -745,18 +669,13 @@
 		margin-right: 0;
 		flex: none;
 		max-height: none;
-		/* align-self: center; */
-		/* margin-top: 215px; */
 	}
 	.сourses-second .slick-slider {
-		/* max-width: 398px; */
-		/* width: 100%; */
 		justify-content: center;
 	}
 
 	.сourses-second-img {
 		z-index: 1;
-		/* top: -70px; */
 		max-width: 636px;
 		left: 0;
 		right: 0;
@@ -812,10 +731,6 @@
 	.cont {
 		justify-content: center;
 	}
-
-	/* .trainer-img-container {
-		margin-right: 0;
-	} */
 }
 
 @media screen and (max-width: 768px) {
@@ -883,10 +798,6 @@
 		padding: 24px 15px;
 	}
 
-	.сourses-third-advantages > div {
-		/* flex: 0 0 32%; */
-	}
-
 	.advantages-title {
 		font-size: 16px;
 	}
@@ -939,7 +850,7 @@
 	}
 
 	.сourses-fifth {
-		padding-bottom: 114px;
+		padding-bottom: 105px;
 	}
 
 	.coming-container {
@@ -1075,11 +986,14 @@
 
 	.сourses-second-skills {
 		margin-top: 54px;
-		/* min-height: 250px; */
 	}
 
 	.сourses-second-skills div:nth-child(-n + 2) {
 		height: auto;
+	}
+
+	.сourses-second-skills > div {
+		padding-left: 0;
 	}
 
 	.сourses-second-skills div {
@@ -1107,7 +1021,7 @@
 	}
 
 	.сourses-third-title {
-		background: url(https://kapustiansky.github.io/im/assets/img/brooke-cagle.png) 50% 50% no-repeat;
+		background: url(/assets/img/brooke-cagle.png) 50% 50% no-repeat;
 		background-size: cover;
 		top: -108px;
 		max-width: 450px;
@@ -1161,8 +1075,6 @@
 
 	.сourses-third .accordion-item {
 		position: relative;
-		/* min-height: 190px; */
-		/* height: 162px; */
 	}
 
 	.сourses-third .accordion-body {
@@ -1259,7 +1171,6 @@
 	}
 
 	.special-join-container > p {
-		/* font-family: "archia-medium"; */
 		font-size: 16px;
 		margin-bottom: 14px;
 	}
