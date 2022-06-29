@@ -31,6 +31,22 @@
 }
 
 @font-face {
+  font-family: "TitilliumWeb-SemiBold";
+  font-display: swap;
+  src: url("./fonts/TitilliumWeb-SemiBold.woff2") format("woff2"), url("./fonts/TitilliumWeb-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu-Bold";
+  font-display: swap;
+  src: url("./fonts/Ubuntu-Bold.woff2") format("woff2"), url("./fonts/Ubuntu-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Roboto-Regular";
   font-display: swap;
   src: url("./fonts/Roboto-Regular.woff2") format("woff2"), url("./fonts/Roboto-Regular.woff") format("woff");
@@ -43,14 +59,6 @@
   font-display: swap;
   src: url("./fonts/Ubuntu-LightItalic.woff2") format("woff2"), url("./fonts/Ubuntu-LightItalic.woff") format("woff");
   font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Ubuntu-Bold";
-  font-display: swap;
-  src: url("./fonts/Ubuntu-Bold.woff2") format("woff2"), url("./fonts/Ubuntu-Bold.woff") format("woff");
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -194,7 +202,9 @@ header {
   top: 0;
   width: 100%;
   z-index: 10;
+  transition: background-color 0.3s linear, -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s linear;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s linear, -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header {
@@ -344,7 +354,8 @@ a {
 
 .top-center-image {
   z-index: 1;
-  filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.5)) drop-shadow(0px 0px 75px #ffffff);
+  -webkit-filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.5)) drop-shadow(0px 0px 75px #ffffff);
+          filter: drop-shadow(0px 4px 20px rgba(255, 255, 255, 0.5)) drop-shadow(0px 0px 75px #ffffff);
   width: 125px;
   height: 242px;
 }
@@ -352,8 +363,10 @@ a {
 .top-center-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .top-wrapper {
@@ -399,22 +412,43 @@ a {
 .top-block__down-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .top-block__down-arrow {
   display: none;
 }
 
-@keyframes bounce {
+@-webkit-keyframes bounce {
   0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 
   50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
 
@@ -432,7 +466,8 @@ a {
 .app-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .app-block__info {
@@ -482,7 +517,8 @@ a {
 .app-block__links > a img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .re-online-block {
@@ -589,8 +625,10 @@ a {
 .re-online-img img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: top;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .re-online {
@@ -650,7 +688,8 @@ a {
 .platform-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .delivery {
@@ -724,8 +763,10 @@ a {
 .delivery-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: top;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .delivery-image-min {
@@ -752,8 +793,10 @@ a {
 .delivery-image-min img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: top;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .questions-block {
@@ -803,7 +846,9 @@ a {
 }
 
 .spoiler-title span {
+  transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .spoiler-title span::before {
@@ -827,8 +872,10 @@ a {
 .questions-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: top;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .reviews {
@@ -865,7 +912,8 @@ a {
 .reviews-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .reviews-block__info {
@@ -900,7 +948,8 @@ a {
 .reviews-image-center,
 .reviews-image-bottom {
   position: absolute;
-  animation: bubble linear 7s infinite;
+  -webkit-animation: bubble linear 7s infinite;
+          animation: bubble linear 7s infinite;
 }
 
 .reviews-image-top img,
@@ -908,7 +957,8 @@ a {
 .reviews-image-bottom img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .reviews-image-top {
@@ -916,7 +966,8 @@ a {
   height: 199px;
   top: 20px;
   left: 0;
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .reviews-image-center {
@@ -924,7 +975,8 @@ a {
   height: 195px;
   top: 30%;
   right: 0;
-  animation-delay: 2.8s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
 }
 
 .reviews-image-bottom {
@@ -932,7 +984,8 @@ a {
   height: 155px;
   bottom: 0;
   left: 0;
-  animation-delay: 4.8s;
+  -webkit-animation-delay: 4.8s;
+          animation-delay: 4.8s;
 }
 
 .slider-dods {
@@ -982,7 +1035,8 @@ a {
 .balloons-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .contacts-form-block {
@@ -1029,6 +1083,8 @@ a {
 }
 
 .contacts-form input {
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin-bottom: 15px;
   line-height: 19px;
@@ -1038,6 +1094,22 @@ a {
   background-color: #eeeff2;
   border-radius: 8px;
   width: 100%;
+}
+
+.contacts-form input::-webkit-input-placeholder {
+  color: #4e5c66;
+}
+
+.contacts-form input::-moz-placeholder {
+  color: #4e5c66;
+}
+
+.contacts-form input:-ms-input-placeholder {
+  color: #4e5c66;
+}
+
+.contacts-form input::-ms-input-placeholder {
+  color: #4e5c66;
 }
 
 .contacts-form input::placeholder {
@@ -1057,7 +1129,8 @@ a {
 }
 
 .form-privacy a {
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   color: #565656;
   transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1091,7 +1164,8 @@ a {
   content: "";
   z-index: -1;
   position: absolute;
-  transform-origin: center;
+  -webkit-transform-origin: center;
+          transform-origin: center;
   border-radius: 9999px;
   width: 0;
   height: 250%;
@@ -1108,34 +1182,39 @@ a {
 }
 
 .balloons-top .balloon {
-  animation: bubble linear 7s infinite;
+  -webkit-animation: bubble linear 7s infinite;
+          animation: bubble linear 7s infinite;
 }
 
 .balloons-top div:nth-child(1) {
   position: absolute;
   top: 8%;
   left: 30%;
-  animation-delay: 2.3s;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
 }
 
 .balloons-top div:nth-child(1) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(2) {
   position: absolute;
   top: 10%;
   right: 34%;
-  animation-delay: 2.8s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
   z-index: 1;
 }
 
 .balloons-top div:nth-child(2) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(3) {
@@ -1143,65 +1222,75 @@ a {
   top: 18%;
   right: 17%;
   z-index: 1;
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .balloons-top div:nth-child(3) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(4) {
   position: absolute;
   top: 21%;
   left: 17%;
-  animation-delay: 2.1s;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
 }
 
 .balloons-top div:nth-child(4) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(5) {
   position: absolute;
   top: 35%;
   left: 4%;
-  animation-delay: 3.1s;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
 }
 
 .balloons-top div:nth-child(5) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(6) {
   position: absolute;
   top: 43%;
   right: 7%;
-  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .balloons-top div:nth-child(6) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(7) {
   position: absolute;
   top: 56%;
   left: 6%;
-  animation-delay: 2.3s;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
 }
 
 .balloons-top div:nth-child(7) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(8) {
@@ -1209,13 +1298,15 @@ a {
   top: 53%;
   left: 29%;
   z-index: 1;
-  animation-delay: 2.8s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
 }
 
 .balloons-top div:nth-child(8) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(9) {
@@ -1223,13 +1314,15 @@ a {
   top: 60%;
   right: 20%;
   z-index: 1;
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .balloons-top div:nth-child(9) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(10) {
@@ -1237,26 +1330,30 @@ a {
   top: 64%;
   left: 16%;
   z-index: 1;
-  animation-delay: 2.1s;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
 }
 
 .balloons-top div:nth-child(10) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(11) {
   position: absolute;
   top: 68%;
   right: 25%;
-  animation-delay: 3.1s;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
 }
 
 .balloons-top div:nth-child(11) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(12) {
@@ -1264,13 +1361,15 @@ a {
   top: 75%;
   right: 9%;
   z-index: 1;
-  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .balloons-top div:nth-child(12) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-top div:nth-child(13) {
@@ -1278,13 +1377,15 @@ a {
   top: 91%;
   left: 25%;
   z-index: 1;
-  animation-delay: 2.3s;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
 }
 
 .balloons-top div:nth-child(13) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .top-section {
@@ -1296,21 +1397,42 @@ a {
 }
 
 .balloons-online .balloon {
-  animation: bubble linear 7s infinite;
+  -webkit-animation: bubble linear 7s infinite;
+          animation: bubble linear 7s infinite;
 }
 
 .balloons-online div:nth-child(1) {
   position: absolute;
   top: 2%;
   left: 11%;
-  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  width: 80px;
+  height: 80px;
+}
+
+.balloons-online div:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-online div:nth-child(2) {
   position: absolute;
   top: 3%;
   right: 38%;
-  animation-delay: 2.8s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+  width: 106px;
+  height: 106px;
+}
+
+.balloons-online div:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-online div:nth-child(3) {
@@ -1318,7 +1440,17 @@ a {
   top: 81%;
   right: 3%;
   z-index: 1;
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  width: 92px;
+  height: 92px;
+}
+
+.balloons-online div:nth-child(3) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-delivery {
@@ -1333,14 +1465,16 @@ a {
 }
 
 .balloons-delivery .balloon {
-  animation: bubble linear 7s infinite;
+  -webkit-animation: bubble linear 7s infinite;
+          animation: bubble linear 7s infinite;
 }
 
 .balloons-delivery div:nth-child(1) {
   position: absolute;
   top: 8%;
   right: 15%;
-  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
   width: 32px;
   height: 32px;
 }
@@ -1348,15 +1482,30 @@ a {
 .balloons-delivery div:nth-child(1) img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .balloons-delivery div:nth-child(2) {
   display: none;
 }
 
+.balloons-delivery div:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .balloons-delivery div:nth-child(3) {
   display: none;
+}
+
+.balloons-delivery div:nth-child(3) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .reviews-section {
@@ -1368,21 +1517,28 @@ a {
 }
 
 .balloons-reviews .balloon {
-  animation: bubble linear 7s infinite;
+  -webkit-animation: bubble linear 7s infinite;
+          animation: bubble linear 7s infinite;
 }
 
 .balloons-reviews div:nth-child(1) {
   position: absolute;
   top: 4%;
   left: 40%;
-  animation-delay: 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  width: 71px;
+  height: 71px;
 }
 
 .balloons-reviews div:nth-child(2) {
   position: absolute;
   top: 8%;
   right: 12%;
-  animation-delay: 2.8s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
+  width: 106px;
+  height: 106px;
 }
 
 .balloons-reviews div:nth-child(3) {
@@ -1390,7 +1546,17 @@ a {
   top: 72%;
   right: 12%;
   z-index: 1;
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  width: 137px;
+  height: 137px;
+}
+
+.balloons-reviews div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .leaves-img {
@@ -1404,24 +1570,46 @@ a {
 .leaves-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .top-block__arrow-container.balloon {
-  animation: bubble linear 7s infinite;
+  -webkit-animation: bubble linear 7s infinite;
+          animation: bubble linear 7s infinite;
+}
+
+@-webkit-keyframes bubble {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @keyframes bubble {
   0% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
 
   100% {
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -1445,7 +1633,8 @@ footer {
 .footer-logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer-info {
@@ -1455,7 +1644,8 @@ footer {
 }
 
 .rotate-180 {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 @media screen and (min-width: 640px) {
@@ -1490,7 +1680,8 @@ footer {
     content: "";
     z-index: -1;
     position: absolute;
-    transform-origin: center;
+    -webkit-transform-origin: center;
+            transform-origin: center;
     border-radius: 9999px;
     width: 0;
     height: 250%;
@@ -1691,7 +1882,8 @@ footer {
 
   .delivery::before {
     background: radial-gradient(95.07% 139.28% at 50% -43.54%, #ffab00 0%, #ffcd68 29.64%, #ffab00 85.3%, #ffab00 100%);
-    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
     border-radius: 50%;
     top: 16px;
     left: -50%;
@@ -1758,7 +1950,8 @@ footer {
     left: -50%;
     width: 200%;
     background: radial-gradient(95.07% 139.28% at 50% -43.54%, #513e63 0%, #282837 29.64%, #4d4793 85.3%, #9260a9 100%);
-    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
     border-radius: 50%;
   }
 
@@ -1978,7 +2171,8 @@ footer {
     content: "";
     z-index: -1;
     position: absolute;
-    transform-origin: center;
+    -webkit-transform-origin: center;
+            transform-origin: center;
     border-radius: 9999px;
     width: 0;
     height: 250%;
@@ -2016,7 +2210,8 @@ footer {
   .top-center-image {
     width: 288px;
     height: 585px;
-    filter: drop-shadow(0px 4px 60px rgba(255, 255, 255, 0.5)) drop-shadow(0px 0px 140px #ffffff);
+    -webkit-filter: drop-shadow(0px 4px 60px rgba(255, 255, 255, 0.5)) drop-shadow(0px 0px 140px #ffffff);
+            filter: drop-shadow(0px 4px 60px rgba(255, 255, 255, 0.5)) drop-shadow(0px 0px 140px #ffffff);
   }
 
   .social-container {
@@ -2050,7 +2245,8 @@ footer {
   .top-block__down-arrow {
     display: block;
     position: absolute;
-    animation: bounce 1s infinite;
+    -webkit-animation: bounce 1s infinite;
+            animation: bounce 1s infinite;
   }
 
   .top-block__down-arrow::before {
@@ -2409,7 +2605,10 @@ footer {
     position: absolute;
     top: 70%;
     right: 31%;
-    animation-delay: 2.8s;
+    -webkit-animation-delay: 2.8s;
+            animation-delay: 2.8s;
+    width: 71px;
+    height: 71px;
   }
 
   .balloons-delivery div:nth-child(3) {
@@ -2418,7 +2617,10 @@ footer {
     top: 65%;
     right: 9%;
     z-index: 1;
-    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    width: 187px;
+    height: 187px;
   }
 
   .balloons-reviews {
